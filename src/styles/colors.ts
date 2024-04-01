@@ -9,17 +9,26 @@ export const colors = {
     main: '#fff',
     disabled: '#ccc',
   },
+  black: {
+    main: '#2D2D2D',
+  },
 
   primary: {
     main: '#f83d48',
+    normal: {
+      500: '#F83D48',
+    },
     hover: {
       300: '#FFA0A6',
       400: '#FF6A73',
       500: '#F83D48',
     },
     active: {
+      400: '#FF6A73',
       600: '#E61C28',
+      700: '#C1141E',
     },
+
     disabled: {
       100: '#FFE1E3',
       400: '#FF6A73',
@@ -29,39 +38,61 @@ export const colors = {
     },
   },
   secondary: {
-    main: '#2d2d2d',
-    disabled: {
-      100: '#E7E7E7',
-      400: '#D1D1D1',
-    },
-    hover: {
+    main: '#424242',
+    normal: {
+      200: '#D1D1D1',
       300: '#B0B0B0',
       400: '#888888',
-      500: '#6D6D6D',
+      800: '#424242',
+    },
+    disabled: {
+      50: '#F6F6F6',
+      200: '#D1D1D1',
+      300: '#B0B0B0',
+      400: '#888888',
+    },
+    hover: {
+      200: '#D1D1D1',
+      300: '#B0B0B0',
+      400: '#888888',
+      800: '#424242',
     },
     active: {
-      600: '#5D5D5D',
-    },
-    focus: {
-      500: '#6D6D6D',
+      50: '#F6F6F6',
+      200: '#D1D1D1',
+      400: '#888888',
+      800: '#424242',
     },
   },
   tertiary: {
     main: '#F8F6FC',
-    disabled: {
-      100: '#F1EEF9',
-      400: '#B6A2DE',
+    normal: {
+      50: '#F8F6FC',
+      200: '#E7E0F5',
+      700: '#6D4DA3',
     },
-    hover: {
+    disabled: {
+      50: '#F8F6FC',
+      200: '#E7E0F5',
       300: '#D3C7EC',
       400: '#B6A2DE',
-      500: '#997DCF',
+      500: '#D3C7EC',
+    },
+    hover: {
+      200: '#E7E0F5',
+      300: '#D3C7EC',
+      600: '#8261BC',
+      700: '#6D4DA3',
     },
     active: {
-      600: '#8261BC',
+      300: '#D3C7EC',
+      400: '#B6A2DE',
+      700: '#6D4DA3',
+      900: '#4C376C',
     },
     focus: {
       500: '#997DCF',
+      700: '#6D4DA3',
     },
   },
   red: {
@@ -76,4 +107,6 @@ export const colors = {
     800: '#A0141C',
     900: '#84181E',
     950: '#48070B',
+    1000: '#f83d48',
   },
+}
