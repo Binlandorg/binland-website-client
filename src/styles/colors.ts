@@ -63,6 +63,8 @@ export const colors = {
       400: '#888888',
       800: '#424242',
     },
+    selected: {},
+    focus: {},
   },
   tertiary: {
     main: '#F8F6FC',
