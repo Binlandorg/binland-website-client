@@ -11,7 +11,7 @@ export const ContainerSubTitleOffice = styled.div`
     line-height: 3rem;
     padding: 0 0.625rem;
     text-transform: uppercase;
-    color: ${colors.red[1000]};
+    color: ${colors.primary.main};
   }
 
   & > :nth-child(2) {
@@ -20,7 +20,7 @@ export const ContainerSubTitleOffice = styled.div`
     line-height: 3.125rem;
     padding: 0 0.625rem;
     text-transform: uppercase;
-    color: ${colors.secondary.main};
+    color: ${colors.black.main};
 
     .sub-title-point {
       color: ${colors.primary.main};

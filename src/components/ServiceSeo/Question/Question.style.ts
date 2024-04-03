@@ -45,7 +45,7 @@ export const TitleQuestion = styled.p`
   font-weight: 600;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 3rem;
-  color: ${colors.secondary.disabled};
+  color: ${colors.secondary.main};
 
   .title-question-seo {
     color: ${colors.red[1000]};

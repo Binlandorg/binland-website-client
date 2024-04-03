@@ -87,6 +87,6 @@ export const TitleHero = styled.h1`
   font-weight: 700;
   font-size: 5rem;
   line-height: 7.5rem;
-  color: ${colors.red[1000]};
+  color: ${colors.primary.main};
   text-transform: uppercase;
 `
