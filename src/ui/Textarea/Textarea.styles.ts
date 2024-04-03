@@ -30,7 +30,7 @@ export const TextareaLabel = styled.label`
     transform-origin: left;
     transition: transform 0.3s, color 0.3s;
     display: inline-block;
-    color: ${colors.secondary.main};
+    color: ${colors.black.main};
     padding-bottom: 0.25rem;
     position: absolute;
     top: 1.25rem;
@@ -52,7 +52,7 @@ export const TextareaLabel = styled.label`
 
   textarea:focus + span,
   textarea:not(:placeholder-shown) + span {
-    color: ${colors.secondary.selected};
+    color: ${colors.secondary.normal[300]};
     transform: translate(0, -40%) scale(0.8);
     padding-bottom: 0.25rem;
   }

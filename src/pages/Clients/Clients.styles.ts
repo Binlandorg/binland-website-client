@@ -92,7 +92,7 @@ export const HeroContentWrapper = styled.div`
 `
 
 export const IconsWrapper = styled.div`
-  background-color: ${colors.secondary.hover};
+  background-color: ${colors.secondary.hover[200]};
   max-width: 16.25rem;
   padding: 1.5rem;
   margin-inline: auto;
@@ -159,7 +159,7 @@ export const OurWorkWrapper = styled.div`
   }
 
   .our-works-title {
-    color: ${colors.secondary.main};
+    color: ${colors.black.main};
     text-transform: uppercase;
     font-weight: 600;
     font-size: clamp(2rem, 1.667rem + 1.481vw, 3rem);
@@ -172,7 +172,7 @@ export const OurWorkWrapper = styled.div`
   }
 
   .our-works-description {
-    color: ${colors.secondary.main};
+    color: ${colors.black.main};
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.5rem;

@@ -33,7 +33,7 @@ const TypeStyles = (type: string) => {
       `
     case 'secondary':
       return `
-        background-color: ${colors.secondary.selected};
+        background-color: ${colors.secondary.normal[300]};
       `
     default:
       break
