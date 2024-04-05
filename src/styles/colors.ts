@@ -76,7 +76,7 @@ export const colors = {
       200: '#E7E0F5',
       300: '#D3C7EC',
       400: '#B6A2DE',
-      500: '#D3C7EC',
+      500: '#997DCF',
     },
     hover: {
       200: '#E7E0F5',
