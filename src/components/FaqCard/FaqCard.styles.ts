@@ -9,7 +9,7 @@ export const Question = styled.div`
   justify-content: space-between;
   padding: 1rem;
   border-radius: 0.5rem;
-  color: ${colors.secondary.main};
+  color: ${colors.black.main};
   font-size: clamp(0.8rem, 4vw, 1.125rem);
   line-height: 1.75rem;
   font-weight: 400;
@@ -35,7 +35,7 @@ export const QuestionWrapper = styled.div`
 
   .selected {
     background-color: #ede9f6;
-    color: ${colors.secondary.main};
+    color: ${colors.black.main};
     font-weight: 700;
     font-size: clamp(0.8rem, 4vw, 1.125rem);
     line-height: 1.687rem;
@@ -56,6 +56,6 @@ export const AnswerFAQ = styled.div`
 `
 
 export const Response = styled.div`
-  color: #2d2d2d;
+  color: ${colors.black.main};
   font-size: clamp(0.8rem, 4vw, 1rem);
 `

@@ -36,7 +36,7 @@ export const Title = styled.h1<ISectionTitle>`
   font-size: 3rem;
   font-weight: 700;
   line-height: 7.5rem;
-  color: ${colors.secondary.main};
+  color: ${colors.black.main};
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     ${(props) => TitleSizeStyles(props.size)}

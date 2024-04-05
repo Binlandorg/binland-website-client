@@ -19,7 +19,7 @@ export const WrapperTechnologiesTitle = styled.div`
   align-items: center;
   text-align: center;
   gap: 2rem;
-  color: ${colors.secondary.disabled};
+  color: ${colors.secondary.main};
 
   @media screen and (min-width: ${breakpoints.lg}) {
     gap: 3rem;

@@ -30,7 +30,7 @@ export const NameFounder = styled.h4`
   font-weight: 700;
   line-height: normal;
   padding: 0.3125rem;
-  color: ${colors.secondary.main};
+  color: ${colors.black.main};
 `
 
 export const PositionFounder = styled.p`
@@ -43,7 +43,7 @@ export const PositionFounder = styled.p`
   font-weight: 500;
   line-height: normal;
   padding: 0.3125rem;
-  color: ${colors.red[1000]};
+  color: ${colors.primary.main};
 `
 
 export const QuoteFounder = styled.p`
@@ -52,7 +52,7 @@ export const QuoteFounder = styled.p`
   font-weight: 400;
   line-height: normal;
   padding: 0.3125rem;
-  color: ${colors.secondary.main};
+  color: ${colors.black.main};
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     text-align: start;

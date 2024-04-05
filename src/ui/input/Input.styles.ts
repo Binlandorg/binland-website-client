@@ -22,7 +22,7 @@ export const InputLabel = styled.label`
     transform-origin: left;
     transition: transform 0.3s, color 0.3s;
     display: inline-block;
-    color: ${colors.secondary.main};
+    color: ${colors.black.main};
   }
 
   input {
@@ -37,7 +37,7 @@ export const InputLabel = styled.label`
 
   input:focus + span,
   input:not(:placeholder-shown) + span {
-    color: ${colors.secondary.selected};
+    color: ${colors.secondary.normal[300]};
     transform: translate(0, -50%) scale(0.8);
   }
 `

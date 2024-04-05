@@ -18,7 +18,7 @@ export const ExternalLink = styled(TbExternalLink)`
   color: ${colors.white.main};
 
   &:hover {
-    color: ${colors.secondary.selected};
+    color: ${colors.secondary.normal[300]};
   }
 `
 
@@ -92,7 +92,7 @@ export const CardWrapper = styled.div`
   }
 
   .client-description {
-    color: ${colors.secondary.disabled};
+    color: ${colors.black.main};
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 1.125rem;

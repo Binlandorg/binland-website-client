@@ -45,7 +45,7 @@ export const InputBox = styled.div<InputBoxProps>`
 
   .arrow-button {
     cursor: pointer;
-    color: ${colors.secondary.selected};
+    color: ${colors.secondary.normal[300]};
     align-self: center;
   }
 `
@@ -62,7 +62,7 @@ export const Tag = styled.div`
   align-items: center;
   padding: 0.5rem 1rem;
   gap: 0.5rem;
-  background-color: ${colors.secondary.main};
+  background-color: ${colors.black.main};
   color: ${colors.white.main};
   border-radius: 0.5rem;
   border: 0.0625rem solid ${colors.white.main};
@@ -80,8 +80,8 @@ export const Tag = styled.div`
     cursor: pointer;
 
     &:hover {
-      background-color: ${colors.secondary.selected};
-      color: ${colors.secondary.main};
+      background-color: ${colors.secondary.normal[300]};
+      color: ${colors.black.main};
     }
   }
 `
@@ -110,20 +110,20 @@ export const OptionsWrapper = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: ${colors.secondary.selected};
+    background-color: ${colors.secondary.normal[300]};
     border-radius: 0.2rem;
   }
 
   &::-webkit-scrollbar-track {
-    background-color: ${colors.secondary.hover};
+    background-color: ${colors.secondary.hover[200]};
   }
 `
 
 export const StyledOption = styled.span`
   padding: 1.25rem 1.5rem;
   background-color: ${colors.gray[150]};
-  border-bottom: 0.0625rem solid ${colors.secondary.selected};
-  color: ${colors.secondary.disabled};
+  border-bottom: 0.0625rem solid ${colors.secondary.normal[300]};
+  color: ${colors.secondary.main};
   cursor: pointer;
 
   &:last-child {
@@ -131,7 +131,7 @@ export const StyledOption = styled.span`
   }
 
   &:hover {
-    background-color: ${colors.secondary.hover};
+    background-color: ${colors.secondary.hover[200]};
     color: ${colors.white.main};
   }
 `

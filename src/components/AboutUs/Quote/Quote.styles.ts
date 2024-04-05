@@ -5,7 +5,7 @@ import { colors } from 'styles/colors'
 import Section from 'ui/Section/Section'
 
 export const StyledQuote = styled(Section)`
-  background: ${colors.secondary.disabled};
+  background: ${colors.secondary.main};
   color: ${colors.white.main};
   margin: 1rem 0;
   padding: 2rem 1.5rem;
@@ -70,7 +70,7 @@ export const StyledQuote = styled(Section)`
       }
     }
   }
-  
+
   @media only screen and (min-width: ${breakpoints.lg}) {
     padding: 4rem 9.5rem;
   }

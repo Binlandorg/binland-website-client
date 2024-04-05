@@ -26,15 +26,15 @@ export const StyledAnchor = styled(NavLink)`
   }
 
   &:hover {
-    color: ${colors.primary.hover};
+    color: ${colors.primary.active[600]};
     border-radius: 0.125rem;
   }
 
   &:active,
   &:focus {
-    outline: 0.125rem solid ${colors.primary.focus};
-    border-radius:0.375rem;
-    color: ${colors.primary.focus};
+    outline: 0.125rem solid ${colors.primary.focus[500]};
+    border-radius: 0.375rem;
+    color: ${colors.primary.focus[500]};
   }
 
   @media only screen and (min-width: ${breakpoints.lg}) {

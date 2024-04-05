@@ -21,7 +21,7 @@ export const StyledSelect = styled.div<{ $type: string }>`
   border-radius: 0.6rem;
   padding: 0.5rem 0.75rem;
   color: ${({ $type }) =>
-    $type == 'primary' ? `${colors.white.main}` : `${colors.secondary.main}`};
+    $type == 'primary' ? `${colors.white.main}` : `${colors.black.main}`};
 `
 
 export const StyledSelectedValue = styled.div`
@@ -37,7 +37,7 @@ export const StyledSelectOptions = styled.div<IPosition>`
   min-width: 12.5rem;
   max-width: 21.875rem;
   border: none;
-  color: ${colors.secondary.main};
+  color: ${colors.black.main};
   border: 0.0625rem solid ${colors.body};
   border-radius: 1rem;
 
@@ -68,7 +68,7 @@ export const StyledSelectOption = styled.li<ISelectOption>`
   gap: 1rem;
 
   &:hover {
-    background: ${colors.secondary.hover};
+    background: ${colors.secondary.hover[200]};
     color: ${colors.white.main};
   }
 
