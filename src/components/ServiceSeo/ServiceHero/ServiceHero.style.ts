@@ -46,6 +46,7 @@ export const ContentHero = styled.div`
   @media only screen and (min-width: ${breakpoints.sm}) {
     width: 35.437rem;
     max-width: 100%;
+    padding: 3rem;
   }
 
   @media only screen and (min-width: ${breakpoints.md}) {
@@ -55,6 +56,7 @@ export const ContentHero = styled.div`
 
   .button-contact-us {
     width: 100%;
+    height: 3.5rem;
 
     @media only screen and (min-width: ${breakpoints.lg}) {
       width: fit-content;
@@ -63,30 +65,43 @@ export const ContentHero = styled.div`
 
   .hero-sub-title {
     font-weight: 500;
-    font-size: clamp(1.125rem, 4vw, 1.5rem);
+    font-size: clamp(1.125rem, 0.9545rem + 0.8523vw, 1.5rem);
     line-height: 1.687rem;
     color: ${colors.gray[50]};
     text-transform: uppercase;
+    @media only screen and (min-width: ${breakpoints.lg}) {
+      line-height: 2.25rem;
+    }
   }
 
   .hero-description {
     font-weight: 400;
-    font-size: clamp(0.875rem, 4vw, 1rem);
-    line-height: 1.5rem;
+    font-size: clamp(0.875rem, 0.8152rem + 0.2841vw, 1rem);
+    line-height: 1.312rem;
     color: ${colors.gray[50]};
+    @media only screen and (min-width: ${breakpoints.lg}) {
+      line-height: 1.5rem;
+    }
   }
 
   .button-link-contact-us {
     font-weight: 600;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: clamp(0.875rem, 0.8152rem + 0.2841vw, 1rem);
+    line-height: 1.3125rem;
+    @media only screen and (min-width: ${breakpoints.lg}) {
+      line-height: 1.5rem;
+    }
   }
 `
 
 export const TitleHero = styled.h1`
   font-weight: 700;
-  font-size: 5rem;
-  line-height: 7.5rem;
+  font-size: clamp(2rem, 0.6364rem + 6.8182vw, 5rem);
+  line-height: 4.5rem;
   color: ${colors.red[1000]};
   text-transform: uppercase;
+
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    line-height: 7.5rem;
+  }
 `

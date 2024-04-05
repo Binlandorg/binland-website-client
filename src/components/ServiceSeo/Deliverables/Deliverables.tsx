@@ -12,12 +12,6 @@ import {
 } from './Deliverables.style'
 import { IDeliverable } from 'types/components/service'
 
-// export interface IDeliverables {
-//   titleFinalDeliverables: string
-//   descriptionFinalDeliverables: string
-//   deliverables: Array<{ id: string; name: string }>
-// }
-
 const Deliverables: React.FC<IDeliverable> = ({
   question,
   description,
@@ -28,16 +22,13 @@ const Deliverables: React.FC<IDeliverable> = ({
       <Container size="xl">
         <SectionProjectDeliverables type="margin" size="sm">
           <QuestionWrapperService>
-            <ContentTitle>
-              {question}
-              {/* <span className="red-letter">entregables</span> */}
-            </ContentTitle>
+            <ContentTitle>{question}</ContentTitle>
             <ContentDescription>{description}</ContentDescription>
           </QuestionWrapperService>
           <WrapperProjectDeliverables>
             {items.map((element, index) => (
               <ProyectDeliverables key={index}>
-                <BsCheck className="icon-check" size={20} strokeWidth="1px" />
+                <BsCheck className="icon-check" size={31} strokeWidth="1px" />
                 <p>{element.name} </p>
               </ProyectDeliverables>
             ))}

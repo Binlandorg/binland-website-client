@@ -26,7 +26,6 @@ export const QuestionWrapperService = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 1.5rem;
-  text-align: center;
   gap: 2rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
@@ -36,23 +35,30 @@ export const QuestionWrapperService = styled.div`
 `
 
 export const ContentTitle = styled.h4`
-  font-weight: 600;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  font-size: clamp(2rem, 2.8295rem + 0.8523vw, 3.1rem);
   line-height: 3rem;
   color: ${colors.secondary.disabled};
+  text-align: center;
   .red-letter {
     color: ${colors.red[1000]};
+  }
+
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    line-height: 5.0625rem;
+    text-align: start;
   }
 `
 export const ContentDescription = styled.p`
   font-weight: 400;
-  font-size: clamp(1rem, 4vw, 1.125rem);
+  font-size: clamp(1rem, 0.9432rem + 0.2841vw, 1.125rem);
   line-height: 1.5rem;
   text-align: center;
   color: ${colors.secondary.disabled};
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     text-align: start;
+    line-height: 1.6875rem;
   }
 `
 export const WrapperProjectDeliverables = styled.div`
@@ -70,9 +76,13 @@ export const ProyectDeliverables = styled.div`
   align-items: center;
   gap: 0.75rem;
   font-weight: 400;
-  font-size: clamp(0.875rem, 4vw, 1rem);
+  font-size: clamp(0.875rem, 0.8182rem + 00.2841vw, 1rem);
   line-height: 1.312rem;
   color: #000000;
+
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    line-height: 1.5rem;
+  }
 
   .icon-check {
     background-color: rgba(248, 61, 72, 0.25);

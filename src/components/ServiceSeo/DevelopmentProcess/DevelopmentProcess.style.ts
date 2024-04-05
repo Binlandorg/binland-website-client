@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
 import Container from 'ui/Container/Container'
+import { IContainerUlTabs } from 'types/components/service'
 
 export const ContainerProcess = styled(Container)`
   margin: 0;
@@ -26,15 +27,23 @@ export const WrapperTitleProcess = styled.div`
   }
 
   .title-process {
-    font-weight: 600;
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: clamp(48px, calc(1.5 * 1rem), 72px);
+    font-weight: 700;
+    font-size: clamp(2rem, 1.375rem + 3.125vw, 3.375rem);
+    line-height: 3rem;
+
+    @media only screen and (min-width: ${breakpoints.lg}) {
+      line-height: 5.062rem;
+    }
   }
 
   .description-process {
     font-weight: 400;
-    font-size: 1.125rem;
-    line-height: 1.687rem;
+    font-size: clamp(1rem, 0.9432rem + 0.2841vw, 1.125rem);
+    line-height: 1.5rem;
+
+    @media only screen and (min-width: ${breakpoints.lg}) {
+      line-height: 1.687rem;
+    }
   }
   .red-word {
     color: ${colors.red[1000]};
@@ -44,7 +53,8 @@ export const WrapperTitleProcess = styled.div`
 export const WrapperTabs = styled.div`
   display: flex;
   flex-direction: column;
-  width: 19.5rem;
+  align-items: center;
+  width: 100%;
   height: 25.312rem;
   gap: 1.125rem;
 
@@ -56,49 +66,70 @@ export const WrapperTabs = styled.div`
   }
 `
 
-export const ContainerUlTabs = styled.ul`
-  list-style: none;
+export const ContainerUlTabs = styled.div<IContainerUlTabs>`
   display: flex;
   position: relative;
   border-radius: 6.25rem;
-  padding: 1rem;
+  padding: 1.5rem 2.625rem;
   justify-content: space-around;
   align-items: center;
   margin: 0;
+  width: ${(props) => props.$dimension}rem;
+  height: auto;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    width: auto;
+    height: ${(props) => props.$dimension}rem;
   }
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 15%;
-    width: 69%;
-    height: 0.062rem;
-    background-color: #f0c3c5;
-    transform: translateY(-50%);
-    z-index: 0;
+  .line {
+    width: 100%;
+    height: 0.125rem;
+    background-color: #e98b91;
 
     @media only screen and (min-width: ${breakpoints.lg}) {
-      content: '';
-      position: absolute;
-      top: 1.875rem;
-      width: 12.0625rem;
-      height: 0.1875rem;
-      background-color: #f0c3c5;
-      transform: rotate(90deg);
-      z-index: 0;
-      transform-origin: 0 0;
-      left: 52%;
+      width: 0.1875rem;
+      height: 100%;
+    }
+  }
+
+  .button-tabs {
+    position: relative;
+    border: none;
+    background: none;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .bubble {
+    display: flex;
+    position: absolute;
+    top: -0.375rem;
+    right: 0;
+    bottom: 0;
+    left: -0.375rem;
+    background-color: #e98b91;
+    width: 1.812rem;
+    height: 1.812rem;
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+    .bubble-two {
+      background-color: ${colors.red[1000]};
+      width: 0.8125rem;
+      height: 0.815rem;
+      border-radius: 50%;
+      margin: auto;
+      align-items: center;
     }
   }
 `
 
-export const TabsIcon = styled.li`
+export const TabsIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,18 +138,16 @@ export const TabsIcon = styled.li`
   font-size: 1.25rem;
   font-weight: 500;
   z-index: 2;
-  background-color: #f0c3c5;
   border-radius: 50%;
-  transition: all 0.3s;
   text-align: center;
+  color: transparent;
+  background-color: #e98b91;
+  transition: background-color 6s ease;
 
   &.selected {
     cursor: pointer;
-    height: 1.8125rem;
-    width: 1.8125rem;
-    color: ${colors.red[1000]};
-    background-color: #e98b91;
-    transform: scale(1.1);
+    height: 1rem;
+    width: 1rem;
   }
 
   &.desactive {
@@ -136,6 +165,13 @@ export const WrapperInfo = styled.div`
   color: ${colors.gray[50]};
   gap: 2rem;
 
+  @media only screen and (min-width: ${breakpoints.md}) {
+    width: 80%;
+    height: 100%;
+    padding: 3rem;
+    margin: auto;
+  }
+
   @media only screen and (min-width: ${breakpoints.lg}) {
     width: 38.75rem;
     height: 15.25rem;
@@ -143,14 +179,23 @@ export const WrapperInfo = styled.div`
   }
 
   .wrapper-info-title {
-    font-weight: 600;
-    font-size: 1.25rem;
-    line-height: 1.875rem;
+    font-weight: 700;
+    font-size: clamp(1rem, 0.9432rem + 0.2841vw, 1.125rem);
+    line-height: 1.5rem;
+
+    @media only screen and (min-width: ${breakpoints.md}) {
+      text-align: center;
+      line-height: 1.6875rem;
+    }
   }
 
   .wrapper-info-description {
     font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: clamp(0.875rem, 0.8182rem + 0.2841vw, 1rem);
+    line-height: 1.3rem;
+
+    @media only screen and (min-width: ${breakpoints.md}) {
+      line-height: 1.5rem;
+    }
   }
 `

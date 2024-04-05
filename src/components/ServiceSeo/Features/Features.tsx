@@ -11,7 +11,7 @@ const Features: React.FC<{ features: Array<IServiceFeature> }> = ({
   return (
     <WrapperService size="lg" type="margin">
       <WrapperTitle>
-        <h2 className="service-title-question">¿Que incluye'</h2>
+        <h2 className="service-title-question">¿Que incluye?</h2>
         <p className="service-title-response">
           Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad
           ya ceguera.{' '}

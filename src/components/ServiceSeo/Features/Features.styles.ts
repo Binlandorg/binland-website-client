@@ -10,7 +10,7 @@ export const WrapperService = styled(Section)`
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     padding: 5rem, 5rem, 10rem;
-    gap: 5rem;
+    gap: 2rem;
   }
 `
 export const WrapperTitle = styled.div`
@@ -19,25 +19,30 @@ export const WrapperTitle = styled.div`
   justify-content: center;
   align-items: center;
   color: ${colors.secondary.disabled};
-  gap: 2rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     gap: 0.6875rem;
   }
 
   .service-title-question {
-    font-weight: 600;
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.875rem;
+    font-weight: 700;
+    font-size: clamp(2rem, 1.375rem + 3.125vw, 3.375rem);
+    line-height: 3rem;
 
     @media only screen and (min-width: ${breakpoints.lg}) {
-      line-height: 4.5rem;
+      line-height: 5.062rem;
     }
   }
 
   .service-title-response {
     text-align: center;
-    font-size: 1rem;
+    font-weight: 400;
+    font-size: clamp(1rem, 0.9432rem + 0.2841vw, 1.125rem);
+    line-height: 1.5rem;
+
+    @media only screen and (min-width: ${breakpoints.lg}) {
+      line-height: 1.687rem;
+    }
   }
 `
 export const WrapperDescription = styled.div`
@@ -50,11 +55,10 @@ export const WrapperDescription = styled.div`
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     flex-direction: row;
-    gap: 3.125rem;
   }
 
   .wrapper-description-info {
-    width: 17.687rem;
+    width: 16.687rem;
     height: 24.312rem;
     display: flex;
     flex-direction: column;
@@ -78,16 +82,24 @@ export const WrapperDescription = styled.div`
     color: ${colors.red[1000]};
   }
 
-  .content-description-title {
+  .wrapper-title {
     font-weight: 600;
-    font-size: 1.25rem;
-    line-height: 1.875rem;
+    line-height: 2.25rem;
+    font-size: clamp(1.5rem, 1.2727rem + 1.136vw, 2rem);
+
+    @media only screen and (min-width: ${breakpoints.lg}) {
+      line-height: 3rem;
+    }
   }
 
   .content-description-info-p {
     font-weight: 400;
-    font-size: 0.875rem;
+    font-size: clamp(0.875rem, 0.8182rem + 0.2841vw, 1rem);
     line-height: 1.312rem;
     text-align: center;
+
+    @media only screen and (min-width: ${breakpoints.lg}) {
+      line-height: 1.5rem;
+    }
   }
 `

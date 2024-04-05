@@ -35,15 +35,23 @@ export const Tech = styled.div``
 
 export const TechnologiesTitle = styled.p`
   font-weight: 600;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 1.375rem + 3.125vw, 3.375rem);
   line-height: 3rem;
   .text-red {
     color: red;
+  }
+
+  @media screen and (min-width: ${breakpoints.lg}) {
+    line-height: 5.062rem;
   }
 `
 
 export const TechnologiesDescription = styled.p`
   font-weight: 400;
-  font-size: 1rem;
+  font-size: clamp(1rem, 0.9432rem + 0.2841vw, 1.125rem);
   line-height: 1.5rem;
+
+  @media screen and (min-width: ${breakpoints.lg}) {
+    line-height: 1.687rem;
+  }
 `

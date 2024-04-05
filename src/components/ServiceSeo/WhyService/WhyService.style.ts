@@ -16,6 +16,8 @@ export const WrapperQuestion = styled(Section)`
   }
 
   .img-service {
+    width: 19.5rem;
+    height: 14.062rem;
     border-radius: 1rem;
 
     @media only screen and (min-width: ${breakpoints.lg}) {
@@ -29,7 +31,6 @@ export const WrapperQuestionService = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   gap: 2rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
@@ -42,10 +43,10 @@ export const WrapperQuestionService = styled.div`
 `
 
 export const TitleQuestion = styled.p`
-  font-weight: 600;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 1.375rem + 3.125vw, 3.375rem);
   line-height: 3rem;
   color: ${colors.secondary.disabled};
+  text-align: center;
 
   .title-question-service {
     color: ${colors.red[1000]};
@@ -54,12 +55,18 @@ export const TitleQuestion = styled.p`
   }
 
   @media only screen and (min-width: ${breakpoints.lg}) {
-    line-height: 4.5rem;
+    line-height: 5.062rem;
+    text-align: start;
   }
 `
 export const TitleResponse = styled.div`
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  text-align: start;
+  font-size: clamp(0.875rem, 0.8182rem + 0.2841vw, 1rem);
+  line-height: 1.312rem;
+  text-align: center;
+
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    line-height: 1.5rem;
+    text-align: start;
+  }
 `

@@ -23,6 +23,36 @@ export const servicesInfo: Array<IService> = [
         description:
           'Proximo iba sublime uso alcalde acelero senoras corrian. Al apretaba ilegales la conyugal. Tome rio tios asi tres rito luz tras ella. Tio contaduria felicisima han paz escondidos lechuguino. ',
       },
+      {
+        icon: <FaLink size={24} />,
+        title: 'Backlinks',
+        description:
+          'Proximo iba sublime uso alcalde acelero senoras corrian. Al apretaba ilegales la conyugal. Tome rio tios asi tres rito luz tras ella. Tio contaduria felicisima han paz escondidos lechuguino. ',
+      },
+      {
+        icon: <FaLink size={24} />,
+        title: 'Backlinks',
+        description:
+          'Proximo iba sublime uso alcalde acelero senoras corrian. Al apretaba ilegales la conyugal. Tome rio tios asi tres rito luz tras ella. Tio contaduria felicisima han paz escondidos lechuguino. ',
+      },
+      {
+        icon: <FaLink size={24} />,
+        title: 'Backlinks',
+        description:
+          'Proximo iba sublime uso alcalde acelero senoras corrian. Al apretaba ilegales la conyugal. Tome rio tios asi tres rito luz tras ella. Tio contaduria felicisima han paz escondidos lechuguino. ',
+      },
+      {
+        icon: <FaLink size={24} />,
+        title: 'Backlinks',
+        description:
+          'Proximo iba sublime uso alcalde acelero senoras corrian. Al apretaba ilegales la conyugal. Tome rio tios asi tres rito luz tras ella. Tio contaduria felicisima han paz escondidos lechuguino. ',
+      },
+      {
+        icon: <FaLink size={24} />,
+        title: 'Backlinks',
+        description:
+          'Proximo iba sublime uso alcalde acelero senoras corrian. Al apretaba ilegales la conyugal. Tome rio tios asi tres rito luz tras ella. Tio contaduria felicisima han paz escondidos lechuguino. ',
+      },
     ],
     whyService: {
       question: '¿Por qué?',
@@ -36,11 +66,13 @@ export const servicesInfo: Array<IService> = [
         'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera.',
       steps: [
         {
+          id: 1,
           title: 'Diseño de wireframes1',
           description:
             'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron. ',
         },
         {
+          id: 2,
           title: 'Diseño de wireframes2',
           description:
             'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron. ',
@@ -100,26 +132,31 @@ export const servicesInfo: Array<IService> = [
         'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera.',
       steps: [
         {
+          id: 1,
           title: 'Diseño de wireframes',
           description:
             'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron. ',
         },
         {
+          id: 2,
           title: 'Diseño de wireframes2',
           description:
             'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron. ',
         },
         {
+          id: 3,
           title: 'Diseño de wireframes3',
           description:
             'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron. ',
         },
         {
+          id: 4,
           title: 'Diseño de wireframes',
           description:
             'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron. ',
         },
         {
+          id: 5,
           title: 'Diseño de wireframes2',
           description:
             'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron. ',
@@ -179,11 +216,25 @@ export const servicesInfo: Array<IService> = [
         'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera.',
       steps: [
         {
+          id: 1,
           title: 'Diseño de wireframes',
           description:
             'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron. ',
         },
         {
+          id: 2,
+          title: 'Diseño de wireframes',
+          description:
+            'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron. ',
+        },
+        {
+          id: 3,
+          title: 'Diseño de wireframes',
+          description:
+            'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron. ',
+        },
+        {
+          id: 4,
           title: 'Diseño de wireframes',
           description:
             'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron. ',

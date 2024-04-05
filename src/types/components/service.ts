@@ -1,28 +1,3 @@
-export interface IHeroPropsTitle {
-  id: string
-  serviceName: string
-  serviceSubTitle: string
-  serviceDescription: string
-}
-
-export interface IQuestionProps {
-  questionService: string
-  responseService: string
-}
-
-export interface TabInfo {
-  id: number
-  label: string
-  info: string
-}
-
-export interface ITechnologies {
-  key: string
-  image: string
-}
-
-/** Do not touch bellow here */
-
 export interface IServiceFeature {
   icon: React.ReactNode
   title: string
@@ -36,6 +11,7 @@ export interface IWhyService {
 }
 
 export interface IServiceDevelopmentStep {
+  id: number
   title: string
   description: string
 }
@@ -70,13 +46,13 @@ export interface IServiceHero {
   phraseQuote: string
 }
 export interface IService extends IServiceHero {
-  // id: string
-  // name: string
-  // description: string
-  // phraseQuote: string
   features: Array<IServiceFeature>
   whyService: IWhyService
   developmentProcess: IDevelopmentProcess
   deliverables: IDeliverable
   techStack: ITechStack
+}
+
+export interface IContainerUlTabs {
+  $dimension: number
 }
