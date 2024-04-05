@@ -1,24 +1,42 @@
 import { Link } from 'react-router-dom'
 import { FaStar } from 'react-icons/fa'
 import { TbExternalLink } from 'react-icons/tb'
+import { useEffect, useState } from 'react'
 
 import Container from 'ui/Container/Container'
-import SectionTitle from 'components/SectionTitle/SectionTitle'
+import Section from 'ui/Section/Section'
 import ButtonLink from 'ui/ButtonLink/ButtonLink'
-import ClientCard from './ClientCard/ClientCard'
-import { ExternalLink } from './ClientCard/ClientCard.styles'
-import { clientBrands, clientData } from './ClientsData'
+import SectionTitle from 'components/SectionTitle/SectionTitle'
+import Pagination from 'components/Pagination/Pagination'
+import ClientItems from './ClientCards/ClientCards'
+import { ExternalLink } from './ClientCards/ClientCards.styles'
+import { clientBrands, clientsData } from './ClientsData'
 import {
   SectionHero,
   HeroBackground,
   HeroContentWrapper,
   IconsWrapper,
   OurWorkWrapper,
-  SectionCards,
-  CardsWrapper,
 } from './Clients.styles'
+import { IClientCard } from 'types/components/clients'
+import { IData } from 'types/components/pagination'
 
 const Clients: React.FC = () => {
+  const [items, setItems] = useState<IClientCard[]>([])
+  const [currentPage, setCurrentPage] = useState(1)
+  const pageCount = clientsData.length
+
+  useEffect(() => {
+    const initialItem = clientsData[currentPage - 1]
+    setItems(initialItem)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPage])
+
+  const handlePageClick = (data: IData) => {
+    const selectedPage = data.selected
+    setCurrentPage(selectedPage + 1)
+  }
+
   return (
     <>
       <SectionHero type="margin" size="xl" id="section-hero">
@@ -78,20 +96,13 @@ const Clients: React.FC = () => {
           </OurWorkWrapper>
         </Container>
       </SectionHero>
-      <SectionCards type="padding" size="xl">
-        <CardsWrapper size="xl">
-          {clientData.map((client) => (
-            <ClientCard
-              key={client.id}
-              id={client.id}
-              image={client.image}
-              to={client.to}
-              name={client.name}
-              description={client.description}
-            />
-          ))}
-        </CardsWrapper>
-      </SectionCards>
+      <Section size="xl" type="margin">
+        <Pagination
+          handlePageClick={handlePageClick}
+          pageCount={pageCount}
+          child={<ClientItems currentItems={items} />}
+        />
+      </Section>
     </>
   )
 }

@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
-import Container from 'ui/Container/Container'
 import Section from 'ui/Section/Section'
 import HeroImg from './../../assets/images/ClientsPage/mockup-ui-chat.webp'
 
@@ -140,7 +139,7 @@ export const OurWorkWrapper = styled.div`
     height: 25rem;
     position: absolute;
     top: 40rem;
-    z-index: 10;
+    z-index: 2;
   }
 
   .our-works-content {
@@ -237,15 +236,4 @@ export const OurWorkWrapper = styled.div`
 
 export const SectionCards = styled(Section)`
   margin: auto;
-`
-
-export const CardsWrapper = styled(Container)`
-  flex-direction: row;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 1rem;
-
-  @media only screen and (min-width: ${breakpoints.lg}) {
-    padding: 0;
-  }
 `

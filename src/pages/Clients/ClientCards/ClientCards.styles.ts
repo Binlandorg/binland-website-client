@@ -1,8 +1,18 @@
-import { TbExternalLink } from 'react-icons/tb'
 import styled from 'styled-components'
+import { TbExternalLink } from 'react-icons/tb'
 
+import Container from 'ui/Container/Container'
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
+
+export const CardsWrapper = styled(Container)`
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0;
+  gap: 1rem;
+  padding: 0;
+`
 
 export const ExternalLink = styled(TbExternalLink)`
   color: ${colors.white.main};
@@ -18,7 +28,7 @@ export const CardWrapper = styled.div`
   flex-direction: column;
   border-radius: 1rem;
   padding: 1.5rem;
-  max-width: 25.375rem;
+  max-width: 25rem;
   height: fit-content;
   gap: 0.75rem;
 

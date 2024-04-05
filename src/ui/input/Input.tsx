@@ -1,7 +1,9 @@
 import { useRef } from 'react'
-import { InputWrapper, InputLabel } from './Input.styles'
 
-interface IStyledInput {
+import { InputWrapper, InputLabel } from './Input.styles'
+import { WithClassName } from 'types/components/shared'
+
+interface IStyledInput extends WithClassName {
   id: string
   type?: 'text' | 'number' | 'email' | 'password'
   name?: string
@@ -21,6 +23,7 @@ const Input: React.FC<IStyledInput> = ({
   value,
   placeholder = '',
   label,
+  className,
 }) => {
   const inputRef = useRef<HTMLInputElement | null>(null)
   const handleWrapperClick = () => {
@@ -30,7 +33,7 @@ const Input: React.FC<IStyledInput> = ({
   }
 
   return (
-    <InputWrapper onClick={handleWrapperClick}>
+    <InputWrapper onClick={handleWrapperClick} className={className}>
       <InputLabel>
         <input
           ref={inputRef}
@@ -40,6 +43,7 @@ const Input: React.FC<IStyledInput> = ({
           value={value}
           onChange={onChange}
           onBlur={onBlur}
+          className="input"
           placeholder={placeholder}
         />
         <span>{label}</span>
