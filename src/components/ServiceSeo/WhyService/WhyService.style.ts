@@ -5,8 +5,8 @@ import Section from 'ui/Section/Section'
 import { colors } from 'styles/colors'
 
 export const WrapperQuestion = styled(Section)`
-  width: 19.5rem;
   flex-wrap: wrap;
+  padding: 3rem 1.5rem;
   gap: 3rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {

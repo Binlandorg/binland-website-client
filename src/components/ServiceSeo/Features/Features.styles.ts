@@ -47,8 +47,7 @@ export const WrapperTitle = styled.div`
 `
 export const WrapperDescription = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
   color: ${colors.secondary.disabled};
