@@ -14,7 +14,10 @@ export const BackgroundService = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100%;
+  height: 529px;
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    height: 100%;
+  }
 `
 
 export const WrapperHero = styled(Container)`

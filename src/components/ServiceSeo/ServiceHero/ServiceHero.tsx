@@ -22,7 +22,7 @@ const ServiceHero: React.FC<IServiceHero> = ({
         <WrapperHero size="xl">
           <ContentHero>
             <div>
-              <p className="hero-sub-title">{phraseQuote} </p>
+              <h4 className="hero-sub-title">{phraseQuote} </h4>
               <TitleHero>{name}</TitleHero>
               <span className="hero-description">{description}</span>
             </div>
