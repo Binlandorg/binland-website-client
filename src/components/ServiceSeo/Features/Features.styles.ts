@@ -18,7 +18,8 @@ export const WrapperTitle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: ${colors.secondary.disabled};
+  color: ${colors.secondary.main};
+  gap: 2rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     gap: 0.6875rem;
@@ -50,7 +51,7 @@ export const WrapperDescription = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  color: ${colors.secondary.disabled};
+  color: ${colors.secondary.main};
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     flex-direction: row;
@@ -78,7 +79,7 @@ export const WrapperDescription = styled.div`
   }
 
   .wrapper-title-icon {
-    color: ${colors.red[1000]};
+    color: ${colors.primary.main};
   }
 
   .wrapper-title {

@@ -98,7 +98,7 @@ export const TitleHero = styled.h1`
   font-weight: 700;
   font-size: clamp(2rem, 0.6364rem + 6.8182vw, 5rem);
   line-height: 4.5rem;
-  color: ${colors.red[1000]};
+  color: ${colors.primary.main};
   text-transform: uppercase;
 
   @media only screen and (min-width: ${breakpoints.lg}) {

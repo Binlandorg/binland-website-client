@@ -1,7 +1,7 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import { breakpoints } from "shared/breakpoints"
-import { colors } from "styles/colors"
+import { breakpoints } from 'shared/breakpoints'
+import { colors } from 'styles/colors'
 
 export const VerticalTabsWrapper = styled.div`
   display: flex;
@@ -19,12 +19,9 @@ export const TabsWrapper = styled.ul`
   @media only screen and (min-width: ${breakpoints.md}) {
     display: block;
   }
-
 `
 
 export const SelectService = styled.div`
-  
-
   @media only screen and (min-width: ${breakpoints.md}) {
     display: none;
   }
@@ -41,9 +38,9 @@ export const SingleTab = styled.li`
   cursor: pointer;
 
   &.selected {
-    background: ${colors.body};
+    background: ${colors.gray[150]};
     opacity: 1;
-    color: ${colors.secondary.main};
+    color: ${colors.black.main};
   }
 `
 
@@ -52,7 +49,7 @@ export const ContentWrapper = styled.div`
   height: 21.875rem;
   display: flex;
   flex-direction: column;
-  background: ${colors.body};
+  background: ${colors.gray[150]};
   border-radius: 1rem;
   border-top-left-radius: 0;
   padding: 0.75rem;
@@ -67,7 +64,7 @@ export const MobileSelectService = styled.div`
   background: ${colors.gray[150]};
   margin-bottom: 1.5rem;
   border-radius: 0.5rem;
-  
+
   @media only screen and (min-width: ${breakpoints.md}) {
     display: none;
   }

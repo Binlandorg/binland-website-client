@@ -13,7 +13,8 @@ import LetsLearn from 'pages/LetsLearn/LetsLearn'
 import Services from 'pages/Services/Services'
 import Clients from 'pages/Clients/Clients'
 import ServiceTemplate from 'components/ServiceTemplate/ServiceTemplate'
-// import { servicesInfo } from 'data/services'
+import Blog from 'pages/Blog/Blog'
+import Saas from 'pages/Saas/Saas'
 
 const AppRouter: React.FC = () => {
   return (
@@ -21,7 +22,7 @@ const AppRouter: React.FC = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="/clients" element={<Clients />} />
-        <Route path="/products" element={<>Products</>} />
+        <Route path="/saas" element={<Saas />} />
         <Route path="/portafolio" element={<Portafolio />} />
         <Route path="/lets-learn" element={<LetsLearn />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -30,7 +31,7 @@ const AppRouter: React.FC = () => {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/blog" element={<>blog</>} />
+        <Route path="/blog" element={<Blog />} />
         <Route
           path="/frequently-asked-question"
           element={<FrequenltyAskedQuestion />}

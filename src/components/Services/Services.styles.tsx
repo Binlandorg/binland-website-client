@@ -1,11 +1,11 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import { breakpoints } from "shared/breakpoints"
-import { colors } from "styles/colors"
-import Container from "ui/Container/Container"
-import Section from "ui/Section/Section"
+import { breakpoints } from 'shared/breakpoints'
+import { colors } from 'styles/colors'
+import Container from 'ui/Container/Container'
+import Section from 'ui/Section/Section'
 
-export const ClientsSection = styled(Section)`
+export const ServicesSection = styled(Section)`
   gap: 5rem;
 `
 

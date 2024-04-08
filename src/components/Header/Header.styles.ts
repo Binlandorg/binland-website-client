@@ -12,7 +12,7 @@ export const StyledHeader = styled.header`
   height: 4.5rem;
   max-height: 4.5rem;
 
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 10;
 `

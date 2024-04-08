@@ -142,9 +142,9 @@ const FormContacUs: React.FC = () => {
         <div className="recaptcha-container">
           <ReCAPTCHA
             ref={captcha}
-            id='captcha'
+            id="captcha"
             onChange={handleCaptchaChange}
-            sitekey={import.meta.env.VITE_REACT_APP_SITE_KEY}
+            sitekey={import.meta.env.VITE_REACT_APP_RECAPTCHA_SITE_KEY}
             className="g-recaptcha"
           />
           {errorCaptcha && <Error>Por favor, acepta el captcha.</Error>}

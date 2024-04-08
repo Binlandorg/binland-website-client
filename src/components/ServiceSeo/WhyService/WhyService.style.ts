@@ -45,7 +45,7 @@ export const WrapperQuestionService = styled.div`
 export const TitleQuestion = styled.p`
   font-size: clamp(2rem, 1.375rem + 3.125vw, 3.375rem);
   line-height: 3rem;
-  color: ${colors.secondary.disabled};
+  color: ${colors.secondary.main};
   text-align: center;
 
   .title-question-service {

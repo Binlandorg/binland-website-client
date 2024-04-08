@@ -6,7 +6,7 @@ import VerticalTabs from 'components/Tabs/VerticalTabs/VerticalTabs'
 import useIntlMessages from 'hooks/useIntlMessages'
 import Container from 'ui/Container/Container'
 import {
-  ClientsSection,
+  ServicesSection,
   CustomSingleWord,
   ServicesTitle,
   ServicesWrapper,
@@ -162,7 +162,7 @@ const Services: React.FC = () => {
   ]
 
   return (
-    <ClientsSection id="clients-section" size="lg" type="margin">
+    <ServicesSection id="clients-section" size="lg" type="margin">
       <ServicesWrapper size="xl" isfullwidth>
         <Container size="sm">
           <ServicesTitle>
@@ -178,9 +178,9 @@ const Services: React.FC = () => {
           </ServicesTitle>
         </Container>
         <HorizontalTabs items={items} />
-        <MobileServices items={items}/>
+        <MobileServices items={items} />
       </ServicesWrapper>
-    </ClientsSection>
+    </ServicesSection>
   )
 }
 
