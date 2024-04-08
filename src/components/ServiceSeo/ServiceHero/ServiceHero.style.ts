@@ -33,7 +33,7 @@ export const SectionHero = styled(Section)`
 `
 
 export const ContentHero = styled.div`
-  width: 19.5rem;
+  min-width: 19.5rem;
   height: 100%;
   display: flex;
   flex-direction: column;

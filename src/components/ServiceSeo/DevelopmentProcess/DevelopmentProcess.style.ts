@@ -70,7 +70,7 @@ export const ContainerUlTabs = styled.div<IContainerUlTabs>`
   display: flex;
   position: relative;
   border-radius: 6.25rem;
-  padding: 1.5rem 2.625rem;
+  padding: 1.5rem;
   justify-content: space-around;
   align-items: center;
   margin: 0;
