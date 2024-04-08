@@ -23,7 +23,7 @@ export const ContainerItems = styled(Container)`
   }
 
   .break-link {
-    color: ${colors.secondary.selected};
+    color: ${colors.secondary.main};
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 1.875rem;
@@ -34,12 +34,12 @@ export const ContainerItems = styled(Container)`
   }
 
   .disabled-previous-next {
-    color: ${colors.secondary.selected};
+    color: ${colors.secondary.main};
   }
 
   .paginate-li {
     list-style: none;
-    background-color: ${colors.secondary.selected};
+    background-color: ${colors.secondary.main};
     color: ${colors.secondary.main};
     display: grid;
     place-content: center;
