@@ -5,6 +5,8 @@ import { colors } from 'styles/colors'
 import Section from 'ui/Section/Section'
 
 export const SectionTechnologies = styled(Section)`
+  margin: 1.5rem 0;
+  padding: 3rem 1rem;
   gap: 3rem;
 
   @media screen and (min-width: ${breakpoints.lg}) {
@@ -33,25 +35,15 @@ export const WrapperTechnologies = styled.div`
 
 export const Tech = styled.div``
 
-export const TechnologiesTitle = styled.p`
-  font-weight: 600;
+export const TechnologiesTitle = styled.h2`
+  font-weight: 700;
   font-size: clamp(2rem, 1.375rem + 3.125vw, 3.375rem);
-  line-height: 3rem;
-  .text-red {
-    color: red;
-  }
-
-  @media screen and (min-width: ${breakpoints.lg}) {
-    line-height: 5.062rem;
-  }
+  line-height: 1.5;
 `
 
-export const TechnologiesDescription = styled.p`
+export const TechnologiesDescription = styled.h5`
+  margin: 0;
   font-weight: 400;
   font-size: clamp(1rem, 0.9432rem + 0.2841vw, 1.125rem);
-  line-height: 1.5rem;
-
-  @media screen and (min-width: ${breakpoints.lg}) {
-    line-height: 1.687rem;
-  }
+  line-height: 1.5;
 `

@@ -12,10 +12,10 @@ const Features: React.FC<{ features: Array<IServiceFeature> }> = ({
     <WrapperService size="lg" type="margin">
       <WrapperTitle>
         <h2 className="service-title-question">¿Que incluye?</h2>
-        <p className="service-title-response">
+        <h5 className="service-title-response">
           Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad
           ya ceguera.{' '}
-        </p>
+        </h5>
       </WrapperTitle>
       <WrapperDescription>
         {features?.map((element, index) => (

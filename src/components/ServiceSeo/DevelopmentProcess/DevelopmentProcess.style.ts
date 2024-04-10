@@ -6,9 +6,9 @@ import Container from 'ui/Container/Container'
 import { IContainerUlTabs } from 'types/components/service'
 
 export const ContainerProcess = styled(Container)`
+  padding: 0;
   margin: 0;
   gap: 3rem;
-  padding: 3rem 1.5rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     gap: 5rem;
@@ -29,22 +29,16 @@ export const WrapperTitleProcess = styled.div`
   .title-process {
     font-weight: 700;
     font-size: clamp(2rem, 1.375rem + 3.125vw, 3.375rem);
-    line-height: 3rem;
-
-    @media only screen and (min-width: ${breakpoints.lg}) {
-      line-height: 5.062rem;
-    }
+    line-height: 1.5;
   }
 
   .description-process {
+    margin: 0;
     font-weight: 400;
     font-size: clamp(1rem, 0.9432rem + 0.2841vw, 1.125rem);
-    line-height: 1.5rem;
-
-    @media only screen and (min-width: ${breakpoints.lg}) {
-      line-height: 1.687rem;
-    }
+    line-height: 1.5;
   }
+
   .red-word {
     color: ${colors.red[1000]};
   }
@@ -55,14 +49,13 @@ export const WrapperTabs = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 25.312rem;
   gap: 1.125rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     flex-direction: row;
     width: 45.375rem;
     height: 15.25rem;
-    gap: 3rem;
+    gap: 2.812rem;
   }
 `
 
@@ -181,21 +174,12 @@ export const WrapperInfo = styled.div`
   .wrapper-info-title {
     font-weight: 700;
     font-size: clamp(1rem, 0.9432rem + 0.2841vw, 1.125rem);
-    line-height: 1.5rem;
-
-    @media only screen and (min-width: ${breakpoints.md}) {
-      text-align: center;
-      line-height: 1.6875rem;
-    }
+    line-height: 1.5;
   }
 
   .wrapper-info-description {
     font-weight: 400;
     font-size: clamp(0.875rem, 0.8182rem + 0.2841vw, 1rem);
-    line-height: 1.3rem;
-
-    @media only screen and (min-width: ${breakpoints.md}) {
-      line-height: 1.5rem;
-    }
+    line-height: 1.5;
   }
 `

@@ -1,6 +1,6 @@
 export const getTransitionDimension = (steps: number) => {
-  const baseDimension = 100
-  const dimensionPerStep = 50
+  const baseDimension = 90
+  const dimensionPerStep = 38
 
   const totalDimension = baseDimension + dimensionPerStep * (steps - 1)
 

@@ -10,7 +10,8 @@ export const ContainerProjectFinal = styled.div`
 `
 
 export const SectionProjectDeliverables = styled(Section)`
-  padding: 3rem 1.5rem;
+  padding: 3rem 0;
+  margin: 0;
   gap: 3rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
@@ -25,7 +26,6 @@ export const QuestionWrapperService = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 1.5rem;
   gap: 2rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
@@ -34,36 +34,34 @@ export const QuestionWrapperService = styled.div`
   }
 `
 
-export const ContentTitle = styled.h4`
+export const ContentTitle = styled.h2`
+  min-width: 19.5rem;
   font-weight: 700;
-  font-size: clamp(2rem, 2.8295rem + 0.8523vw, 3.1rem);
-  line-height: 3rem;
-  color: ${colors.secondary.disabled};
+  font-size: 2rem;
+  line-height: 1.5;
+  color: ${colors.black.main};
   text-align: center;
-  .red-letter {
-    color: ${colors.primary.main};
-  }
 
   @media only screen and (min-width: ${breakpoints.lg}) {
-    line-height: 5.0625rem;
     text-align: start;
   }
 `
 export const ContentDescription = styled.p`
+  min-width: 19.5rem;
   font-weight: 400;
   font-size: clamp(1rem, 0.9432rem + 0.2841vw, 1.125rem);
-  line-height: 1.5rem;
+  line-height: 1.5;
   text-align: center;
   color: ${colors.secondary.main};
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     text-align: start;
-    line-height: 1.6875rem;
   }
 `
 export const WrapperProjectDeliverables = styled.div`
+  min-width: 19.5rem;
   display: grid;
-  gap: 1.5rem;
+  gap: 0.75rem;
   grid-template-columns: repeat(2, 1fr);
 
   @media only screen and (min-width: ${breakpoints.lg}) {
@@ -77,12 +75,8 @@ export const ProyectDeliverables = styled.div`
   gap: 0.75rem;
   font-weight: 400;
   font-size: clamp(0.875rem, 0.8182rem + 00.2841vw, 1rem);
-  line-height: 1.312rem;
+  line-height: 1.5;
   color: #000000;
-
-  @media only screen and (min-width: ${breakpoints.lg}) {
-    line-height: 1.5rem;
-  }
 
   .icon-check {
     background-color: rgba(248, 61, 72, 0.25);

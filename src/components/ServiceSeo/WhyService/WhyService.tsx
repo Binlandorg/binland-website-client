@@ -14,9 +14,7 @@ export const WhyService: React.FC<IWhyService> = ({
   return (
     <WrapperQuestion type="padding" size="sm">
       <WrapperQuestionService>
-        <TitleQuestion>
-          <span className="title-question-service">{question}</span>
-        </TitleQuestion>
+        <TitleQuestion>{question}</TitleQuestion>
         <TitleResponse>{answer}</TitleResponse>
       </WrapperQuestionService>
       <img src={image} alt="image-service" className="img-service" />

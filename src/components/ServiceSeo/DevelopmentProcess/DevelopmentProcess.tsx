@@ -28,11 +28,8 @@ const DevelopmentProcess: React.FC<IDevelopmentProcess> = ({
     <Section size="lg" type="padding">
       <ContainerProcess size="xl">
         <WrapperTitleProcess>
-          <p className="title-process">
-            {question}
-            {/* <span className="red-word">proceso</span> */}
-          </p>
-          <p className="description-process">{description}</p>
+          <h2 className="title-process">{question}</h2>
+          <h5 className="description-process">{description}</h5>
         </WrapperTitleProcess>
         <WrapperTabs>
           <ContainerUlTabs $dimension={getTransitionDimension(steps.length)}>
@@ -72,7 +69,7 @@ const DevelopmentProcess: React.FC<IDevelopmentProcess> = ({
                 key={index}
                 style={{ display: activeTab === step.id ? '' : 'none' }}
               >
-                <p className="wrapper-info-title">{step.title}</p>
+                <h5 className="wrapper-info-title">{step.title}</h5>
                 <p className="wrapper-info-description">{step.description}</p>
               </WrapperInfo>
             ))}

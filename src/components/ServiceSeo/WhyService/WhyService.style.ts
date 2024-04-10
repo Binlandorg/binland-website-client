@@ -6,7 +6,7 @@ import { colors } from 'styles/colors'
 
 export const WrapperQuestion = styled(Section)`
   flex-wrap: wrap;
-  padding: 3rem 1.5rem;
+  padding: 3rem 0;
   gap: 3rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
@@ -16,11 +16,10 @@ export const WrapperQuestion = styled(Section)`
   }
 
   .img-service {
-    width: 19.5rem;
-    height: 14.062rem;
+    width: 100%;
     border-radius: 1rem;
 
-    @media only screen and (min-width: ${breakpoints.lg}) {
+    @media only screen and (min-width: ${breakpoints.sm}) {
       width: 27.562rem;
       height: 27.562rem;
     }
@@ -28,6 +27,7 @@ export const WrapperQuestion = styled(Section)`
 `
 
 export const WrapperQuestionService = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,31 +42,25 @@ export const WrapperQuestionService = styled.div`
   }
 `
 
-export const TitleQuestion = styled.p`
+export const TitleQuestion = styled.h2`
   font-size: clamp(2rem, 1.375rem + 3.125vw, 3.375rem);
-  line-height: 3rem;
-  color: ${colors.secondary.main};
+  color: ${colors.red[1000]};
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-weight: 700;
   text-align: center;
 
-  .title-question-service {
-    color: ${colors.red[1000]};
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-
   @media only screen and (min-width: ${breakpoints.lg}) {
-    line-height: 5.062rem;
     text-align: start;
   }
 `
-export const TitleResponse = styled.div`
+export const TitleResponse = styled.p`
   font-weight: 400;
   font-size: clamp(0.875rem, 0.8182rem + 0.2841vw, 1rem);
-  line-height: 1.312rem;
+  line-height: 1.5;
   text-align: center;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
-    line-height: 1.5rem;
     text-align: start;
   }
 `

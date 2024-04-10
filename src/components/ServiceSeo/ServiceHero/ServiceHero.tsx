@@ -24,7 +24,7 @@ const ServiceHero: React.FC<IServiceHero> = ({
             <div>
               <h4 className="hero-sub-title">{phraseQuote} </h4>
               <TitleHero>{name}</TitleHero>
-              <span className="hero-description">{description}</span>
+              <p className="hero-description">{description}</p>
             </div>
             <div>
               <ButtonLink

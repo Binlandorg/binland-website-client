@@ -14,13 +14,15 @@ export const BackgroundService = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 529px;
+  min-height: 33.06rem;
+
   @media only screen and (min-width: ${breakpoints.lg}) {
-    height: 100%;
+    max-height: 56.25rem;
   }
 `
 
 export const WrapperHero = styled(Container)`
+  padding-top: 60px;
   @media only screen and (min-width: ${breakpoints.md}) {
     justify-content: flex-start;
     align-items: start;
@@ -36,7 +38,7 @@ export const SectionHero = styled(Section)`
 `
 
 export const ContentHero = styled.div`
-  width: 19.5rem;
+  min-width: 19.5rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -69,42 +71,29 @@ export const ContentHero = styled.div`
   .hero-sub-title {
     font-weight: 500;
     font-size: clamp(1.125rem, 0.9545rem + 0.8523vw, 1.5rem);
-    line-height: 1.687rem;
+    line-height: 1.5;
     color: ${colors.gray[50]};
     text-transform: uppercase;
-    @media only screen and (min-width: ${breakpoints.lg}) {
-      line-height: 2.25rem;
-    }
   }
 
   .hero-description {
     font-weight: 400;
     font-size: clamp(0.875rem, 0.8152rem + 0.2841vw, 1rem);
-    line-height: 1.312rem;
     color: ${colors.gray[50]};
-    @media only screen and (min-width: ${breakpoints.lg}) {
-      line-height: 1.5rem;
-    }
+    line-height: 1.5rem;
   }
 
   .button-link-contact-us {
     font-weight: 600;
     font-size: clamp(0.875rem, 0.8152rem + 0.2841vw, 1rem);
-    line-height: 1.3125rem;
-    @media only screen and (min-width: ${breakpoints.lg}) {
-      line-height: 1.5rem;
-    }
+    line-height: 1.5;
   }
 `
 
 export const TitleHero = styled.h1`
   font-weight: 700;
   font-size: clamp(2rem, 0.6364rem + 6.8182vw, 5rem);
-  line-height: 4.5rem;
+  line-height: 1.5;
   color: ${colors.primary.main};
   text-transform: uppercase;
-
-  @media only screen and (min-width: ${breakpoints.lg}) {
-    line-height: 7.5rem;
-  }
 `
