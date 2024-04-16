@@ -59,6 +59,15 @@ const FormContacUs: React.FC = () => {
   const [errorCaptcha, setErrorCaptcha] = useState<string>('')
   const captcha = useRef(null)
 
+  let siteKey
+
+  try {
+    siteKey = import.meta.env.VITE_REACT_APP_RECAPTCHA_SITE_KEY
+  } catch (error) {
+    console.error('Error con la clave del sitio de reCAPTCHA:', error)
+    siteKey = null
+  }
+
   const intl = useIntlMessages()
   const formik = useFormik({
     initialValues,
@@ -140,13 +149,15 @@ const FormContacUs: React.FC = () => {
           <Error>{intl(formik.errors.message)}</Error>
         ) : null}
         <div className="recaptcha-container">
-          <ReCAPTCHA
-            ref={captcha}
-            id="captcha"
-            onChange={handleCaptchaChange}
-            sitekey={import.meta.env.VITE_REACT_APP_RECAPTCHA_SITE_KEY}
-            className="g-recaptcha"
-          />
+          {siteKey && (
+            <ReCAPTCHA
+              ref={captcha}
+              id="captcha"
+              onChange={handleCaptchaChange}
+              sitekey={siteKey}
+              className="g-recaptcha"
+            />
+          )}
           {errorCaptcha && <Error>Por favor, acepta el captcha.</Error>}
         </div>
         <ButtonForm type="primary" rightIcon={<TbSend />}>
