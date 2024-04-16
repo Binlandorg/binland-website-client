@@ -33,7 +33,7 @@ const AppRouter: React.FC = () => {
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/article-name" element={<Article />} />
+        <Route path="/blog/:article-name" element={<Article />} />
         <Route
           path="/frequently-asked-question"
           element={<FrequenltyAskedQuestion />}
