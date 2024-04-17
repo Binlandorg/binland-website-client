@@ -3,7 +3,7 @@ import {
   SectioContactUsPage,
   SectionTitleHero,
   Title,
-  WrapperContactUs,
+  ContactUsContentWrapper,
 } from './ContactUs.styles'
 import { ContactUsWrapper } from 'components/ContactUs/ContactUs.styles'
 import ContactUsInformation from 'components/ContactUs/ContactUsInformation/ContactUsInformation'
@@ -19,10 +19,10 @@ const ContactUs: React.FC = () => {
       </ContactUsHero>
       <SectioContactUsPage size="md" type="padding">
         <ContactUsWrapper size="xl">
-          <WrapperContactUs>
+          <ContactUsContentWrapper>
             <ContactUsInformation />
             <FormContacUs />
-          </WrapperContactUs>
+          </ContactUsContentWrapper>
         </ContactUsWrapper>
       </SectioContactUsPage>
     </>

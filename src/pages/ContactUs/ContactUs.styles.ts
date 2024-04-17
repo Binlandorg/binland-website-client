@@ -48,7 +48,7 @@ export const SectioContactUsPage = styled(Section)`
     padding: 5rem 5rem 10rem 5rem;
   }
 `
-export const WrapperContactUs = styled(ContentWrapper)`
+export const ContactUsContentWrapper = styled(ContentWrapper)`
   padding: 0;
   gap: 0.875rem;
 `
