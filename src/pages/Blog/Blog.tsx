@@ -1,5 +1,6 @@
 import Section from 'ui/Section/Section'
 import { BlogHero, BlogWrapper } from './Blog.styles'
+import Subscribe from './Subscribe/Subscribe'
 
 const Blog: React.FC = () => {
   return (
@@ -14,17 +15,7 @@ const Blog: React.FC = () => {
         {/*questionable if the search will be performed within the component pagination */}
       </div>
       <div>Pagination component</div>
-      <div>
-        <div>
-          <h2>Suscríbete</h2>
-          <p>deseas estar mas pendiente de más articulos</p>
-          <div>
-            <input type="email" />
-            <button>Suscríbete</button>
-          </div>
-        </div>
-        <div>img suscríbete</div>
-      </div>
+      <Subscribe />
     </BlogWrapper>
   )
 }

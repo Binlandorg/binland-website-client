@@ -11,7 +11,7 @@ export const ContentQuestions = styled.div`
 `
 
 export const ContactUsQuestion = styled.p`
-  color: ${colors.red[1000]};
+  color: ${colors.primary.main};
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -35,7 +35,7 @@ export const IconContactUs = styled.div`
   height: 3.125rem;
   display: flex;
   align-items: center;
-  background-color: ${colors.secondary.disabled};
+  background-color: ${colors.black.main};
   border-radius: 0.5rem;
   padding: 1rem;
   font-size: 0.75rem;
@@ -61,7 +61,7 @@ export const ContentButton = styled.div`
     height: 3.5rem;
     display: flex;
     align-items: center;
-    color: ${colors.secondary.disabled};
+    color: ${colors.black.main};
     background-color: ${colors.gray[50]};
     font-size: 1rem;
     padding: 1rem, 1.5rem, 1rem, 1.5rem;
@@ -71,14 +71,14 @@ export const ContentButton = styled.div`
     gap: 0.625rem;
 
     &:hover {
-      background-color: ${colors.secondary.selected};
+      background-color: ${colors.secondary.normal[300]};
       outline: none;
     }
   }
 
   .popup-button-custom::after {
     content: url(${calendlyIcon});
-    color: ${colors.secondary.disabled};
+    color: ${colors.secondary.main};
   }
 `
 export const QuestionButton = styled.p`

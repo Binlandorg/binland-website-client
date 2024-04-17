@@ -30,7 +30,7 @@ export const MessageWrapper = styled.div`
     font-size: 2.25rem;
     line-height: 3rem;
     text-transform: uppercase;
-    color: ${colors.secondary.main};
+    color: ${colors.black.main};
 
     @media only screen and (min-width: ${breakpoints.lg}) {
       font-size: 3rem;
@@ -38,7 +38,7 @@ export const MessageWrapper = styled.div`
   }
 
   .error-page-sub-title {
-    color: ${colors.secondary.disabled};
+    color: ${colors.secondary.main};
     font-size: 1rem;
     font-weight: 600;
 

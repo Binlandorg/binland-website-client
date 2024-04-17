@@ -18,12 +18,12 @@ export const ContainerDetails = styled.div`
 `
 export const ItemDetails = styled.div`
   padding: 1.3rem;
-  background-color: #fff;
+  background-color: ${colors.gray[50]};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  color: ${colors.secondary.disabled};
+  color: ${colors.secondary.main};
   border-radius: 0.9375rem;
 
   & span {

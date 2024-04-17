@@ -28,8 +28,8 @@ const Header: React.FC = () => {
       href: '/clients',
     },
     {
-      name: 'Apps',
-      href: '/products',
+      name: 'Saas',
+      href: '/saas',
     },
     {
       name: 'Aprendamos',

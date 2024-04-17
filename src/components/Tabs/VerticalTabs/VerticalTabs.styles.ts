@@ -40,7 +40,7 @@ export const SingleTab = styled.li`
   &.selected {
     background: ${colors.gray[150]};
     opacity: 1;
-    color: ${colors.secondary.main};
+    color: ${colors.black.main};
   }
 `
 

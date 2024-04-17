@@ -15,7 +15,7 @@ export const FaqTitle = styled.h1`
   color: ${colors.gray[50]};
   font-size: clamp(2rem, 1.667rem + 1.481vw, 3rem);
   text-align: center;
-  background: ${colors.secondary.main};
+  background: ${colors.black.main};
   width: 100%;
   height: 12.125rem;
   border-radius: 1rem;

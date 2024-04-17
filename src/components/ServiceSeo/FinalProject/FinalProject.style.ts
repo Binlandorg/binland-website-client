@@ -41,7 +41,7 @@ export const ContentTitle = styled.h4`
   line-height: 3rem;
   color: ${colors.secondary.disabled};
   .red-letter {
-    color: ${colors.red[1000]};
+    color: ${colors.primary.main};
   }
 `
 export const ContentDescription = styled.p`
@@ -49,7 +49,7 @@ export const ContentDescription = styled.p`
   font-size: clamp(1rem, 4vw, 1.125rem);
   line-height: 1.5rem;
   text-align: center;
-  color: ${colors.secondary.disabled};
+  color: ${colors.secondary.main};
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     text-align: start;
