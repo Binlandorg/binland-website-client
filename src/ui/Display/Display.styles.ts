@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { IDisplayProps } from 'types/ui/Display'
 
 const sizeStyles = (size: string) => {
