@@ -4,7 +4,7 @@ import { FontWeight } from 'styles/typography'
 import { IH3Props } from 'types/ui/Titles'
 
 const StyledH3 = styled.h3<IH3Props>`
-  font-weight: ${(props) => FontWeight[props.weight]};
+  font-weight: ${(props) => FontWeight[props.$weight]};
   font-size: clamp(1.5rem, 1rem + 1.6vw, 2rem);
   line-height: 1.5;
 `
