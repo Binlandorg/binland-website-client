@@ -35,7 +35,7 @@ export const IconContactUs = styled.div`
   height: 3.125rem;
   display: flex;
   align-items: center;
-  background-color: ${colors.black.main};
+  background-color: ${colors.secondary.normal[800]};
   border-radius: 0.5rem;
   padding: 1rem;
   font-size: 0.75rem;
@@ -71,7 +71,7 @@ export const ContentButton = styled.div`
     gap: 0.625rem;
 
     &:hover {
-      background-color: ${colors.secondary.normal[300]};
+      background-color: ${colors.secondary.hover[300]};
       outline: none;
     }
   }
