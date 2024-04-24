@@ -50,6 +50,11 @@ export const TitleAndButtonSection = styled.div`
     }
   }
 
+  /**Hero we hide see more button because this page isn't ready */
+  .hide--seemore-button {
+    display: none;
+  }
+
   .span-point {
     color: ${colors.primary.main};
   }
