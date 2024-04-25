@@ -58,7 +58,7 @@ export const WrapperIcon = styled.div`
   border-radius: 100%;
 
   &:hover {
-    background-color: ${colors.secondary.hover[200]};
+    background-color: ${colors.secondary.hover[400]};
   }
 `
 

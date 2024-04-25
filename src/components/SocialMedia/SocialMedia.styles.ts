@@ -19,7 +19,7 @@ export const SocialMediaWrapper = styled.div`
     background-color: ${colors.secondary.main};
 
     &:hover {
-      background-color: ${colors.secondary.main};
+      background-color: ${colors.secondary.normal[400]};
     }
   }
 `
