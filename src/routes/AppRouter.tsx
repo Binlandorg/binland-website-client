@@ -15,6 +15,7 @@ import Clients from 'pages/Clients/Clients'
 import Blog from 'pages/Blog/Blog'
 import Seo from 'pages/Services/Seo/Seo'
 import Saas from 'pages/Saas/Saas'
+import Article from 'pages/Article/Article'
 
 const AppRouter: React.FC = () => {
   return (
@@ -32,6 +33,7 @@ const AppRouter: React.FC = () => {
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:article-name" element={<Article />} />
         <Route
           path="/frequently-asked-question"
           element={<FrequenltyAskedQuestion />}
