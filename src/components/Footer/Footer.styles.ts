@@ -32,7 +32,7 @@ export const FooterWrapper = styled(Container)`
     padding-bottom: 6rem;
   }
 
-  @media only screen and (min-width: ${breakpoints.lg}) {
+  @media only screen and (min-width: ${breakpoints.xl}) {
     flex-direction: row;
   }
 `
