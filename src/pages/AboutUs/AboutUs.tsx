@@ -3,6 +3,7 @@ import Quote from 'components/AboutUs/Quote/Quote'
 import BinlandInformation from 'components/AboutUs/BinlandInformation/BinlandInformation'
 import Founders from 'components/AboutUs/Founders/Founders'
 import Office from 'components/AboutUs/Offices/Office'
+import { Collaborators } from 'components/AboutUs/Collaborators/Collaborators'
 
 const AboutUs = () => {
   return (
@@ -10,6 +11,7 @@ const AboutUs = () => {
       <Quote />
       <BinlandInformation />
       <Founders />
+      <Collaborators />
       <Office />
     </Container>
   )
