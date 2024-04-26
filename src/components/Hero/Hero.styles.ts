@@ -118,13 +118,13 @@ export const SectionHero = styled.section`
     }
 
     .span-black {
-      color: ${colors.secondary.main};
+      color: ${colors.black.main};
       font-weight: 700;
     }
   }
 
   .button-contact-us {
-    background-color: ${colors.secondary.main};
+    background-color: ${colors.black.main};
     color: ${colors.white.main};
     border: none;
     outline: none;
@@ -139,11 +139,11 @@ export const SectionHero = styled.section`
     gap: 1rem;
 
     &:hover {
-      background-color: ${colors.secondary.hover};
+      background-color: ${colors.secondary.hover[900]};
     }
 
     &:active {
-      background-color: ${colors.secondary.focus};
+      background-color: ${colors.secondary.active[800]};
     }
   }
 `

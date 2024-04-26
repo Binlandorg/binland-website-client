@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
-import Container from 'ui/Container/Container'
 import Section from 'ui/Section/Section'
 import HeroImg from './../../assets/images/ClientsPage/mockup-ui-chat.webp'
 
@@ -92,7 +91,7 @@ export const HeroContentWrapper = styled.div`
 `
 
 export const IconsWrapper = styled.div`
-  background-color: ${colors.secondary.hover};
+  background-color: ${colors.secondary.hover[200]};
   max-width: 16.25rem;
   padding: 1.5rem;
   margin-inline: auto;
@@ -140,7 +139,7 @@ export const OurWorkWrapper = styled.div`
     height: 25rem;
     position: absolute;
     top: 40rem;
-    z-index: 10;
+    z-index: 2;
   }
 
   .our-works-content {
@@ -159,7 +158,7 @@ export const OurWorkWrapper = styled.div`
   }
 
   .our-works-title {
-    color: ${colors.secondary.main};
+    color: ${colors.black.main};
     text-transform: uppercase;
     font-weight: 600;
     font-size: clamp(2rem, 1.667rem + 1.481vw, 3rem);
@@ -172,7 +171,7 @@ export const OurWorkWrapper = styled.div`
   }
 
   .our-works-description {
-    color: ${colors.secondary.main};
+    color: ${colors.black.main};
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.5rem;
@@ -237,15 +236,4 @@ export const OurWorkWrapper = styled.div`
 
 export const SectionCards = styled(Section)`
   margin: auto;
-`
-
-export const CardsWrapper = styled(Container)`
-  flex-direction: row;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 1rem;
-
-  @media only screen and (min-width: ${breakpoints.lg}) {
-    padding: 0;
-  }
 `

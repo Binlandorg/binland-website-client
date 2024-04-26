@@ -11,7 +11,7 @@ const typeStyles = (type: string) => {
         background-color: ${colors.primary.main};
 
         &:focus {
-          outline: 0.125rem solid ${colors.secondary.focus};
+          outline: 0.125rem solid ${colors.primary.focus[500]};
         }
 
         &:active {
@@ -19,14 +19,14 @@ const typeStyles = (type: string) => {
         }
 
         &:hover {
-          background-color: ${colors.primary.hover};
+          background-color: ${colors.primary.active[400]};
         }
       `
     case 'secondary':
       return `
-        color: ${colors.secondary.main};
+        color: ${colors.secondary.normal[800]};
         background: none;
-        border: 0.125rem solid ${colors.secondary.main};
+        border: 0.125rem solid ${colors.secondary.normal[800]};
 
         &:active {
           outline: none;
@@ -37,7 +37,7 @@ const typeStyles = (type: string) => {
         }
 
         &:hover {
-          background-color: ${colors.secondary.hover};
+          background-color: ${colors.secondary.hover[300]};
           color: ${colors.white.main};
         }
       `

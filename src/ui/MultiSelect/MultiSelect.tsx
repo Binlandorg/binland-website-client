@@ -9,6 +9,8 @@ import {
   MirroredIcon,
   StyledOption,
   OptionsWrapper,
+  DisplayOptions,
+  MultiSelectWrapper,
 } from './MultiSelect.styles'
 import InputSearch from '../InputSearch/InputSearch'
 import useOutsideClick from 'hooks/useClickOutside'
@@ -52,6 +54,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
     )
 
     setSuggestions(filteredOptions)
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm])
 
@@ -62,6 +65,10 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
     onChange(updatedSelectedServices)
     if (inputRef.current !== null) {
       inputRef.current.focus()
+    }
+
+    if (updatedSelectedServices.length === suggestions.length) {
+      setIsOpen((prev) => !prev)
     }
   }
 
@@ -77,7 +84,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
   }
 
   return (
-    <div ref={refOptions}>
+    <MultiSelectWrapper ref={refOptions} $isOpen={isOpen}>
       <InputBox onClick={() => setIsOpen((prev) => !prev)} $isOpen={isOpen}>
         <div className="input-box-wrapper">
           <span className="span-question">{label}</span>
@@ -91,22 +98,23 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
           <TagsWrapper onClick={(e) => e.stopPropagation()}>
             {selectedServices?.map((service) => (
               <Tag key={service.key}>
-                {service.name}
-                <IoClose
-                  className="icon-close"
-                  size={20}
-                  onClick={() => handleRemoveService(service)}
-                />
+                <span>{service.name}</span>
+                <div className="icon-close-wrapper">
+                  <IoClose
+                    className="icon-close"
+                    size={20}
+                    onClick={() => handleRemoveService(service)}
+                  />
+                </div>
               </Tag>
             ))}
           </TagsWrapper>
         )}
       </InputBox>
       {isOpen && (
-        <>
+        <DisplayOptions $isOpen={isOpen}>
           <InputSearch
             ref={inputRef}
-            type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder={placeholder}
@@ -124,9 +132,9 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
               ) : null
             })}
           </OptionsWrapper>
-        </>
+        </DisplayOptions>
       )}
-    </div>
+    </MultiSelectWrapper>
   )
 }
 

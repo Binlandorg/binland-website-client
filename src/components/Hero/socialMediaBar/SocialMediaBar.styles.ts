@@ -33,7 +33,7 @@ const TypeStyles = (type: string) => {
       `
     case 'secondary':
       return `
-        background-color: ${colors.secondary.selected};
+        background-color: ${colors.secondary.normal[300]};
       `
     default:
       break
@@ -58,7 +58,7 @@ export const WrapperIcon = styled.div`
   border-radius: 100%;
 
   &:hover {
-    background-color: ${colors.secondary.hover};
+    background-color: ${colors.secondary.hover[400]};
   }
 `
 

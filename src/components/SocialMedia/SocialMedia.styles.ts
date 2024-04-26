@@ -16,10 +16,10 @@ export const SocialMediaWrapper = styled.div`
     height: 3rem;
     border-radius: 100%;
     color: ${colors.white.main};
-    background-color: ${colors.secondary.disabled};
+    background-color: ${colors.secondary.main};
 
     &:hover {
-      background-color: ${colors.secondary.selected};
+      background-color: ${colors.secondary.normal[400]};
     }
   }
 `

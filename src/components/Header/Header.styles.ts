@@ -11,10 +11,11 @@ export const StyledHeader = styled.header`
   width: 100%;
   height: 4.5rem;
   max-height: 4.5rem;
+  background: #fff;
 
-  position: fixed;
+  position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
 `
 
 export const HeaderWrapper = styled(Container)`
@@ -62,6 +63,10 @@ export const DesktopNavigation = styled.nav`
 
     .nav-items li a {
       padding: 0.25rem 0;
+    }
+
+    .nav-items li a:focus {
+      padding: 0.25rem 0.5rem;
     }
 
     .nav-buttons {

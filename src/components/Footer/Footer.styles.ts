@@ -7,7 +7,7 @@ import Container from 'ui/Container/Container'
 export const StyledFooter = styled.footer`
   width: 100%;
   min-height: 20rem;
-  background: ${colors.secondary.main};
+  background: ${colors.black.main};
   color: ${colors.white.main};
 `
 

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
 import calendlyIcon from '../../../../assets/images/imgContactUs/calendly-icon.svg'
+import { FontWeight } from 'styles/typography'
 
 export const ContentQuestions = styled.div`
   display: flex;
@@ -11,7 +12,7 @@ export const ContentQuestions = styled.div`
 `
 
 export const ContactUsQuestion = styled.p`
-  color: ${colors.red[1000]};
+  color: ${colors.primary.main};
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -35,7 +36,7 @@ export const IconContactUs = styled.div`
   height: 3.125rem;
   display: flex;
   align-items: center;
-  background-color: ${colors.secondary.disabled};
+  background-color: ${colors.secondary.normal[800]};
   border-radius: 0.5rem;
   padding: 1rem;
   font-size: 0.75rem;
@@ -57,28 +58,30 @@ export const ContentButton = styled.div`
   margin: 0.875rem 0;
 
   .popup-button-custom {
-    width: 8.187rem;
-    height: 3.5rem;
     display: flex;
     align-items: center;
-    color: ${colors.secondary.disabled};
-    background-color: ${colors.gray[50]};
-    font-size: 1rem;
-    padding: 1rem, 1.5rem, 1rem, 1.5rem;
+    justify-content: center;
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    font-weight: ${FontWeight["semibold"]};
+    color: ${colors.secondary.normal[800]};
+    background-color: ${colors.tertiary.normal[50]};
+    font-size: clamp(0.875rem, 0.832rem + 0.192vw, 1rem);
     border-radius: 0.5rem;
     line-height: 100%;
     cursor: pointer;
     gap: 0.625rem;
 
     &:hover {
-      background-color: ${colors.secondary.selected};
+      background-color: ${colors.secondary.hover[300]};
+      color: ${colors.secondary.hover[900]};
       outline: none;
     }
   }
 
   .popup-button-custom::after {
     content: url(${calendlyIcon});
-    color: ${colors.secondary.disabled};
+    color: ${colors.secondary.main};
   }
 `
 export const QuestionButton = styled.p`

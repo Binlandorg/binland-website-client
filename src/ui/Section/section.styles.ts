@@ -33,12 +33,12 @@ export const StyledSection = styled.section<IStyledSection>`
   ${(props) =>
     props.type === 'margin'
       ? `margin: calc(${sizeStyles(props.size)} / 2) auto`
-      : `padding: calc(${sizeStyles(props.size)} / 2) auto`};
+      : `padding: calc(${sizeStyles(props.size)} / 2) 0`};
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     ${(props) =>
       props.type === 'margin'
         ? `margin: ${sizeStyles(props.size)} auto`
-        : `padding: ${sizeStyles(props.size)} auto`};
+        : `padding: ${sizeStyles(props.size)} 0`};
   }
 `

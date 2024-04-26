@@ -19,7 +19,7 @@ export const Line = styled.div`
   width: 100%;
   height: 0.125rem;
   border-radius: 1rem;
-  background-color: ${colors.secondary.main};
+  background-color: ${colors.black.main};
 
   &::after {
     content: '';
@@ -27,7 +27,7 @@ export const Line = styled.div`
     width: calc(50vw - ${breakpoints.xs} / 2 + 1rem);
     height: 0.125rem;
     border-radius: 1rem;
-    background-color: ${colors.secondary.main};
+    background-color: ${colors.black.main};
     left: 0;
 
     @media only screen and (min-width: ${breakpoints.md}) {
@@ -51,7 +51,7 @@ export const Text = styled.div`
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
-  color: ${colors.secondary.main};
+  color: ${colors.black.main};
 
   .founder-point {
     color: ${colors.primary.main};

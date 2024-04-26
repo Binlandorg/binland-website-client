@@ -27,5 +27,5 @@ export const SupportChat = styled.p`
   font-size: clamp(0.875rem, 4vw, 1rem);
   line-height: 1.5rem;
   font-weight: 400;
-  color: ${colors.secondary.main};
+  color: ${colors.black.main};
 `
