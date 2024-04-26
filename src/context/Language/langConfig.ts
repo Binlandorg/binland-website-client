@@ -6,10 +6,6 @@ export interface ILanguagaConfiguration {
   name: string
 }
 
-export interface ILanguageOptions {
-  [index: string]: ILanguagaConfiguration
-}
-
 export const languageOptions: ILanguagaConfiguration[] = [
   {
     id: 'en',
