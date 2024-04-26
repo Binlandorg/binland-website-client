@@ -12,13 +12,15 @@ export const StyledAnchor = styled(NavLink)`
   color: ${colors.primary.main};
   text-decoration: none;
   font-size: 0.875rem;
-  padding: 0.25rem 0.25rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
 
-  /** we use this to style the current selected navbar item */
+  /** we use this to style the current (active) selected navbar item */
   &[aria-current='page'] {
-    color: blue;
+    color: ${colors.primary.active[700]};
+
+    border-bottom: 2px solid ${colors.primary.active[700]};
   }
 
   &.is-active {

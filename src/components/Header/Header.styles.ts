@@ -11,8 +11,9 @@ export const StyledHeader = styled.header`
   width: 100%;
   height: 4.5rem;
   max-height: 4.5rem;
+  background: #fff;
 
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 10;
 `
