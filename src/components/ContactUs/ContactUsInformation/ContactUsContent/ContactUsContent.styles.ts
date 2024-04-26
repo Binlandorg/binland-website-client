@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
 import calendlyIcon from '../../../../assets/images/imgContactUs/calendly-icon.svg'
+import { FontWeight } from 'styles/typography'
 
 export const ContentQuestions = styled.div`
   display: flex;
@@ -57,14 +58,15 @@ export const ContentButton = styled.div`
   margin: 0.875rem 0;
 
   .popup-button-custom {
-    width: 8.187rem;
-    height: 3.5rem;
     display: flex;
     align-items: center;
-    color: ${colors.black.main};
-    background-color: ${colors.gray[50]};
-    font-size: 1rem;
-    padding: 1rem, 1.5rem, 1rem, 1.5rem;
+    justify-content: center;
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    font-weight: ${FontWeight["semibold"]};
+    color: ${colors.secondary.normal[800]};
+    background-color: ${colors.tertiary.normal[50]};
+    font-size: clamp(0.875rem, 0.832rem + 0.192vw, 1rem);
     border-radius: 0.5rem;
     line-height: 100%;
     cursor: pointer;
@@ -72,6 +74,7 @@ export const ContentButton = styled.div`
 
     &:hover {
       background-color: ${colors.secondary.hover[300]};
+      color: ${colors.secondary.hover[900]};
       outline: none;
     }
   }
