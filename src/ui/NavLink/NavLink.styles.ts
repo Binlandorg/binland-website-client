@@ -3,6 +3,7 @@ import { breakpoints } from 'shared/breakpoints'
 import styled from 'styled-components'
 
 import { colors } from 'styles/colors'
+import { FontWeight } from 'styles/typography'
 
 export const StyledListItem = styled.li`
   list-style-type: none;
@@ -11,14 +12,15 @@ export const StyledListItem = styled.li`
 export const StyledAnchor = styled(NavLink)`
   color: ${colors.primary.main};
   text-decoration: none;
-  font-size: 0.875rem;
-  padding: 0.25rem 0.25rem;
+  font-size: 1rem;
+  font-weight: ${FontWeight["semibold"]};
   display: flex;
   flex-direction: column;
 
-  /** we use this to style the current selected navbar item */
+  /** we use this to style the current (active) selected navbar item */
   &[aria-current='page'] {
-    color: blue;
+    color: ${colors.primary.active[700]};
+    border-bottom: 2px solid ${colors.primary.active[700]};
   }
 
   &.is-active {
@@ -26,15 +28,15 @@ export const StyledAnchor = styled(NavLink)`
   }
 
   &:hover {
-    color: ${colors.primary.active[600]};
-    border-radius: 0.125rem;
+    color: ${colors.primary.main};
+    border-bottom: 2px solid  ${colors.primary.main};
   }
 
-  &:active,
+  
   &:focus {
-    outline: 0.125rem solid ${colors.primary.focus[500]};
-    border-radius: 0.375rem;
-    color: ${colors.primary.focus[500]};
+    border: 0.125rem solid ${colors.primary.main};
+    border-radius: 1rem;
+    color: ${colors.primary.main};
   }
 
   @media only screen and (min-width: ${breakpoints.lg}) {

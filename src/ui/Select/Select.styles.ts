@@ -68,7 +68,7 @@ export const StyledSelectOption = styled.li<ISelectOption>`
   gap: 1rem;
 
   &:hover {
-    background: ${colors.secondary.hover[200]};
+    background: ${colors.tertiary.hover[200]};
     color: ${colors.white.main};
   }
 

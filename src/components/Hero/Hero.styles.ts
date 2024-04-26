@@ -139,11 +139,11 @@ export const SectionHero = styled.section`
     gap: 1rem;
 
     &:hover {
-      background-color: ${colors.secondary.hover[200]};
+      background-color: ${colors.secondary.hover[900]};
     }
 
     &:active {
-      background-color: ${colors.secondary.active[50]};
+      background-color: ${colors.secondary.active[800]};
     }
   }
 `

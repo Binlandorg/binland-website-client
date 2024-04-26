@@ -19,14 +19,14 @@ const typeStyles = (type: string) => {
         }
 
         &:hover {
-          background-color: ${colors.primary.active[600]};
+          background-color: ${colors.primary.active[400]};
         }
       `
     case 'secondary':
       return `
-        color: ${colors.black.main};
+        color: ${colors.secondary.normal[800]};
         background: none;
-        border: 0.125rem solid ${colors.black.main};
+        border: 0.125rem solid ${colors.secondary.normal[800]};
 
         &:active {
           outline: none;

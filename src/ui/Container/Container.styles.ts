@@ -1,3 +1,4 @@
+import { breakpoints } from 'shared/breakpoints'
 import styled from 'styled-components'
 
 import { IStyledContainer } from 'types/ui/Container'
@@ -29,10 +30,14 @@ export const StyledContainer = styled.div<IStyledContainer>`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   margin: auto;
   flex-direction: column;
   width: ${({ $isfullwidth }) => ($isfullwidth ? '100%' : '')};
 
   ${(props) => sizeStyles(props.size)}
+
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    padding: 0 5rem;
+  }
 `
