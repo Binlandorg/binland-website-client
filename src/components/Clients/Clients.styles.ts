@@ -11,10 +11,12 @@ export const StyledClientsSection = styled.section`
 `
 
 export const ClientsSectionWrapper = styled(Container)`
-  padding: 4rem 1rem 3rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
-    padding: 7rem 2rem 6rem;
+    padding-top: 7rem;
+    padding-bottom: 6rem;
   }
 `
 
@@ -35,6 +37,7 @@ export const TitleAndButtonSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   width: 100%;
 
@@ -69,7 +72,7 @@ export const BrandingsWrapper = styled.div`
   flex-wrap: wrap;
 
   .branding-img {
-    width: 6rem;
+    width: 10rem;
     height: auto;
     opacity: 0.5;
   }
