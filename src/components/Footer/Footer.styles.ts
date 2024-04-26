@@ -14,11 +14,10 @@ export const StyledFooter = styled.footer`
 export const FooterWrapper = styled(Container)`
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding: 3rem 1.5rem;
   font-size: 0.875rem;
   align-items: flex-start;
-  gap: 2.5rem;
+  gap: 3rem;
 
   .text-footer {
     font-size: 0.875rem;
@@ -35,11 +34,24 @@ export const FooterWrapper = styled(Container)`
 export const FooterLogoWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 2rem;
 
   .footer-logo {
-    width: 11.25rem;
+    width: 12rem;
     height: auto;
+  }
+`
+
+export const FooterInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* flex-grow: 1;
+  justify-content: space-evenly; */
+  width: 100%;
+  gap: 1.5rem;
+
+  @media only screen and (min-width: ${breakpoints.md}) {
+    flex-direction: row;
   }
 `
 
@@ -59,12 +71,6 @@ export const FooterLinks = styled.div`
     color: ${colors.primary.main};
   }
 
-  .title-links {
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.65rem;
-  }
-
   .container-links {
     display: flex;
     flex-direction: column;
@@ -81,10 +87,8 @@ export const FooterSocialMedia = styled.div`
   flex-direction: column;
   gap: 1.5rem;
 
-  .title-social-media {
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.65rem;
+  :nth-child(2) {
+    align-self: flex-start;
   }
 
   .container-email {
