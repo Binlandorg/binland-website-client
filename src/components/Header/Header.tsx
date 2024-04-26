@@ -16,38 +16,14 @@ import logo from '../../assets/images/logo/binland-logo.svg'
 import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher'
 import NavLink from 'ui/NavLink/NavLink'
 import ButtonLink from 'ui/ButtonLink/ButtonLink'
+import { NavbarItems } from './Header.data'
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const intl = useIntlMessages()
 
-  const navbarItems = [
-    {
-      name: 'Clients',
-      href: '/clients',
-    },
-    {
-      name: 'Saas',
-      href: '/saas',
-    },
-    {
-      name: 'Aprendamos',
-      href: '/lets-learn',
-    },
-    {
-      name: 'Servicios',
-      href: '/services',
-    },
-    {
-      name: 'Nosotros',
-      href: '/about-us',
-    },
-    {
-      name: 'Blog',
-      href: '/blog',
-    },
-  ]
+  const navbarItems = NavbarItems
 
   const handleIsOpen = () => {
     setIsOpen((prev) => !prev)
