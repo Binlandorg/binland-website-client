@@ -12,4 +12,6 @@ export const ContentWrapper = styled.div`
 export const SeeMoreButton = styled(Button)`
   width: fit-content;
   margin-left: auto;
+  /** TODO: remove this style when see more button will be functional */
+  display: none;
 `
