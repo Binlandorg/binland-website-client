@@ -14,7 +14,8 @@ export const StyledFooter = styled.footer`
 export const FooterWrapper = styled(Container)`
   flex-direction: column;
   justify-content: space-between;
-  padding: 3rem 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   font-size: 0.875rem;
   align-items: flex-start;
   gap: 3rem;
@@ -25,9 +26,14 @@ export const FooterWrapper = styled(Container)`
     line-height: 1.5rem;
   }
 
+  @media only screen and (min-width: ${breakpoints.md}) {
+    gap: 4rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
   @media only screen and (min-width: ${breakpoints.lg}) {
     flex-direction: row;
-    gap: 1rem;
   }
 `
 
@@ -40,18 +46,25 @@ export const FooterLogoWrapper = styled.div`
     width: 12rem;
     height: auto;
   }
+
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    width: 35%;
+  }
 `
 
 export const FooterInfo = styled.div`
   display: flex;
   flex-direction: column;
-  /* flex-grow: 1;
-  justify-content: space-evenly; */
   width: 100%;
   gap: 1.5rem;
 
   @media only screen and (min-width: ${breakpoints.md}) {
     flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    gap: 3.125rem;
   }
 `
 
@@ -78,7 +91,7 @@ export const FooterLinks = styled.div`
   }
 
   @media only screen and (min-width: ${breakpoints.lg}) {
-    gap: 1.5rem;
+    gap: 2rem;
   }
 `
 
@@ -87,14 +100,29 @@ export const FooterSocialMedia = styled.div`
   flex-direction: column;
   gap: 1.5rem;
 
-  :nth-child(2) {
+  .social-media__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @media only screen and (min-width: ${breakpoints.md}) {
+      gap: 1.5rem;
+    }
+  }
+
+  .social-media__content > div:first-child {
     align-self: flex-start;
   }
 
   .container-email {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 0.5rem;
     word-break: break-all;
+  }
+
+  @media only screen and (min-width: ${breakpoints.md}) {
+    gap: 2rem;
   }
 `

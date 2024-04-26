@@ -49,10 +49,12 @@ const Footer: React.FC = () => {
           </FooterLinks>
           <FooterSocialMedia>
             <H5 $weight="bold">{intl('footer.contact.us')}</H5>
-            <SocialMedia />
-            <div className="container-email">
-              <HiOutlineMail size={20} style={{ color: 'white' }} />
-              <span className="text-footer">binland.contacto@gmail.com</span>
+            <div className="social-media__content">
+              <SocialMedia />
+              <div className="container-email">
+                <HiOutlineMail size={20} style={{ color: 'white' }} />
+                <span className="text-footer">binland.contacto@gmail.com</span>
+              </div>
             </div>
           </FooterSocialMedia>
         </FooterInfo>
