@@ -12,9 +12,7 @@ interface ILine extends IProps {
   $width?: number
 }
 
-export const StyledSectionAboutUs = styled(Section)`
-  overflow-x: hidden;
-`
+export const StyledSectionAboutUs = styled(Section)``
 
 export const SectionContainer = styled(Container)`
   width: 100%;

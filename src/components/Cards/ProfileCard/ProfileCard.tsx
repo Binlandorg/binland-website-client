@@ -41,7 +41,7 @@ const ProfileCard: React.FC<IProfileCard> = ({
   return (
     <StyledProfileCard>
       <CardImageContainer>
-        <CardImage src={image} />
+        <CardImage src={new URL(image, import.meta.url).href} />
       </CardImageContainer>
       <CardData>
         <CardDataContainer>
