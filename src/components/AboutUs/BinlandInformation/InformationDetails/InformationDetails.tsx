@@ -1,3 +1,5 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+
 import useIntlMessages from 'hooks/useIntlMessages'
 import {
   ContainerDetails,
@@ -6,7 +8,6 @@ import {
 } from './InformationDetails.style'
 import Reveal from 'components/Reveal/Reveal'
 import imageURL from '../../../../assets/images/imgAboutUs/people.svg'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const InformationDetails = () => {
   const intl = useIntlMessages()

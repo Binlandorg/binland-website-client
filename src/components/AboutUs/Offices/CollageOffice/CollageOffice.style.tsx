@@ -1,5 +1,6 @@
-import { breakpoints } from 'shared/breakpoints'
 import styled from 'styled-components'
+
+import { breakpoints } from 'shared/breakpoints'
 
 interface ISize {
   width: number

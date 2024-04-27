@@ -7,13 +7,7 @@ import redgirldownImageURL from '../../../../assets/images/aboutus-oficinas-06.w
 import programmergirlImageURL from '../../../../assets/images/aboutus-oficinas-07.webp'
 import officesImageURL from '../../../../assets/images/aboutus-oficinas-08.webp'
 import team2ImageURL from '../../../../assets/images/aboutus-oficinas-03.webp'
-
-interface ICollage {
-  id: number
-  url: string
-  alt: string
-  name: string
-}
+import { ICollage } from 'types/components/aboutus'
 
 const collageData: ICollage[] = [
   {

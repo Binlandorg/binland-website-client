@@ -27,3 +27,10 @@ export interface ITitle extends PropsWithChildren{
   titlePosition: 'left' | 'right'
   description?: IDescription | undefined
 }
+
+export interface ICollage {
+  id: number
+  url: string
+  alt: string
+  name: string
+}

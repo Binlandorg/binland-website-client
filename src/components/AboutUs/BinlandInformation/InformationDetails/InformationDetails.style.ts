@@ -56,11 +56,6 @@ export const ItemDetails = styled.div`
     width: 100%;
     text-align: center;
   }
-
-  /* &:nth-child(3) {
-    background-image: url('src/assets/images/imgAboutUs/people.svg');
-    background-size: cover;
-  } */
 `
 export const Statistics = styled.p`
   font-size: 1.5rem;
