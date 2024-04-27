@@ -1,55 +1,46 @@
-import { useEffect, useState } from 'react'
-import { useAllPrismicDocumentsByType } from '@prismicio/react'
+import useIntlMessages from 'hooks/useIntlMessages'
+import ProfileCard from 'components/Cards/ProfileCard/ProfileCard'
+import foundersData from './FoundersData'
+import { IProfileCard } from 'types/components/aboutus'
+import {
+  FoundersContainer,
+  FoundersContent,
+  FoundersItem,
+  FoundersList,
+  StyledFoundersSection,
+} from './Founders.styles'
 
-import TeamMemberCard from 'components/AboutUs/Founders/TeamMemberCard/TeamMemberCard'
-import { MembersWrapper } from 'pages/AboutUs/AboutUs.styles'
-import Section from 'ui/Section/Section'
-import { TitleFounders } from './TitleFounders/TitleFounders'
-
-interface IFounder {
-  id: string
-  name: string
-  position: string
-  image: string
-  quote: string
-  website_url?: string
-  github_url?: string
-}
-
-export const Founders: React.FC = () => {
-  const [founders, { state }] = useAllPrismicDocumentsByType('founders', {
-    lang: 'en-us',
-  })
-
-  const [founderMembers, setFounderMembers] = useState<Array<IFounder>>([])
-
-  useEffect(() => {
-    founders?.map((founder) => {
-      const newFounder: IFounder = {
-        id: founder.uid || '',
-        name: founder.data.founder[0]?.text,
-        position: founder.data.position[0]?.text,
-        image: founder.data.picture.url,
-        quote: founder.data.quote[0]?.text,
-        github_url: founder.data.github.url,
-      }
-      setFounderMembers((prev) => [...prev, newFounder])
-    })
-  }, [founders])
+const Founders : React.FC = () => {
+  const intl = useIntlMessages()
 
   return (
-    <Section size="lg" type="margin">
-      <TitleFounders />
-      <MembersWrapper>
-        {state === 'loading' ? (
-          <p>Loading...</p>
-        ) : (
-          founderMembers.map((member) => {
-            return <TeamMemberCard key={member.id} {...member} />
-          })
-        )}
-      </MembersWrapper>
-    </Section>
+    <StyledFoundersSection
+      title={intl('about.us.founders.title')}
+      titlePosition="left"
+    >
+      <FoundersContent>
+        <FoundersContainer size="xl">
+          <FoundersList>
+            {
+              foundersData?.map((founder) => {
+                const { id, image, fullName, position, quote, networks } = founder as IProfileCard
+                return (
+                  <FoundersItem key={id}>
+                    <ProfileCard
+                      image={image}
+                      fullName={fullName}
+                      position={position}
+                      quote={quote}
+                      networks={networks}
+                    />
+                  </FoundersItem>
+                )
+              })
+            }
+          </FoundersList>
+        </FoundersContainer>
+      </FoundersContent>
+    </StyledFoundersSection>
   )
 }
 
