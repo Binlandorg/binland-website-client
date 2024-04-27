@@ -1,7 +1,7 @@
 import { FiGithub } from 'react-icons/fi'
 import { AiOutlineGlobal } from 'react-icons/ai'
+import { FaLinkedin } from 'react-icons/fa'
 
-import H4 from 'ui/Titles/H4'
 import {
   CardData,
   CardDataContainer,
@@ -14,19 +14,21 @@ import {
   AnchorIcon,
   CardImage,
   CardImageContainer,
+  ProfileData,
 } from './ProfileCard.styles'
+import H4 from 'ui/Titles/H4'
+import Paragraph from 'ui/Paragraph/Paragraph'
+import { IName, IProfileCard } from 'types/components/aboutus'
 
-type Network = {
-  name: 'github'| 'personalpage'
-  url: string
-}
-
-interface IProfileCard {
-  image: string | './src/assets/images/default.jpg'
-  fullName: string
-  position: string
-  quote: string
-  networks?: Network[]
+const GetIcon = ({ name } : IName) => {
+  switch (name.toLocaleLowerCase()) {
+    case 'github':
+      return <FiGithub />
+    case 'linkedin':
+      return <FaLinkedin />
+    default:
+      return <AiOutlineGlobal />
+  }
 }
 
 const ProfileCard: React.FC<IProfileCard> = ({
@@ -43,9 +45,13 @@ const ProfileCard: React.FC<IProfileCard> = ({
       </CardImageContainer>
       <CardData>
         <CardDataContainer>
-          <ProfileName><H4 $weight="bold">{fullName}</H4></ProfileName>
-          <ProfilePosition><H4 $weight="medium">{position}</H4></ProfilePosition>
-          <ProfileQuote><p>{quote}</p></ProfileQuote>
+          <ProfileData>
+            <ProfileName><H4 $weight="bold">{fullName}</H4></ProfileName>
+            <ProfilePosition><H4 $weight="medium">{position}</H4></ProfilePosition>
+          </ProfileData>
+          <ProfileQuote>
+            <Paragraph $style='italic' $weight='regular'>"{quote}"</Paragraph>
+          </ProfileQuote>
           <ProfileNetworks>
             {
               networks?.map((network, id) => (
@@ -55,9 +61,7 @@ const ProfileCard: React.FC<IProfileCard> = ({
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {
-                      network.name === 'github'? <FiGithub/> : <AiOutlineGlobal/>
-                    }
+                    <GetIcon name={network.name}/>
                   </AnchorIcon>
                 </ProfileNetwork>
               ))

@@ -1,4 +1,7 @@
 import useIntlMessages from 'hooks/useIntlMessages'
+import ProfileCard from 'components/Cards/ProfileCard/ProfileCard'
+import foundersData from './Founders.json'
+import { IProfileCard } from 'types/components/aboutus'
 import {
   FoundersContainer,
   FoundersContent,
@@ -6,81 +9,8 @@ import {
   FoundersList,
   StyledFoundersSection,
 } from './Founders.styles'
-import ProfileCard from 'components/Cards/ProfileCard/ProfileCard'
 
-const foundersData = [
-  {
-    image:
-      'https://t4.ftcdn.net/jpg/04/10/43/77/360_F_410437733_hdq4Q3QOH9uwh0mcqAhRFzOKfrCR24Ta.jpg',
-    fullName: 'Margarita G.',
-    position: 'Designer',
-    quote:
-      '“Hola que tal? Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal”',
-    networks: [
-      {
-        name: 'github',
-        url: 'https://github.com/margarita.g',
-      },
-      {
-        name: 'PersonalWebSite',
-        url: 'https://github.com/margarita.g',
-      },
-    ],
-  },
-  {
-    image:
-      'https://t4.ftcdn.net/jpg/04/10/43/77/360_F_410437733_hdq4Q3QOH9uwh0mcqAhRFzOKfrCR24Ta.jpg',
-    fullName: 'Margarita G.',
-    position: 'Designer',
-    quote:
-      '“Hola que tal? Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal”',
-    networks: [
-      {
-        name: 'github',
-        url: 'https://github.com/margarita.g',
-      },
-      {
-        name: 'personalpage',
-        url: 'https://github.com/margarita.g',
-      },
-    ],
-  },
-  {
-    image:
-      'https://t4.ftcdn.net/jpg/04/10/43/77/360_F_410437733_hdq4Q3QOH9uwh0mcqAhRFzOKfrCR24Ta.jpg',
-    fullName: 'Margarita G.',
-    position: 'Data Science Manager',
-    quote:
-      '“Hola que tal? Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal”',
-    networks: [
-      {
-        name: 'github',
-        url: 'https://github.com/margarita.g',
-      },
-    ],
-  },
-  {
-    image:
-      'https://t4.ftcdn.net/jpg/04/10/43/77/360_F_410437733_hdq4Q3QOH9uwh0mcqAhRFzOKfrCR24Ta.jpg',
-    fullName: 'Margarita G.',
-    position: 'Data Science Manager',
-    quote:
-      '“Hola que tal? Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal”',
-    networks: [
-      {
-        name: 'github',
-        url: 'https://github.com/margarita.g',
-      },
-    ],
-  },
-]
-
-type Network = {
-  name: 'github'| 'personalpage'
-  url: string
-}
-
-const Founders = () => {
+const Founders : React.FC = () => {
   const intl = useIntlMessages()
 
   return (
@@ -92,8 +22,8 @@ const Founders = () => {
         <FoundersContainer size="xl">
           <FoundersList>
             {
-              foundersData.map((founder, id) => {
-                const { image, fullName, position, quote, networks } = founder
+              foundersData?.map((founder) => {
+                const { id, image, fullName, position, quote, networks } = founder as IProfileCard
                 return (
                   <FoundersItem key={id}>
                     <ProfileCard
@@ -101,7 +31,7 @@ const Founders = () => {
                       fullName={fullName}
                       position={position}
                       quote={quote}
-                      networks={networks as Network[]}
+                      networks={networks}
                     />
                   </FoundersItem>
                 )

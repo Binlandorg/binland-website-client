@@ -1,0 +1,78 @@
+[
+  {
+    "id": "1",
+    "image": "/src/assets/images/chris-profile.webp",
+    "fullName": "Crhistian Turpo Apaza",
+    "position": "CEO",
+    "quote": "Quien tiene paciencia, obtendrá lo que desea.",
+    "networks": [
+      {
+        "name": "github",
+        "url": "https://github.com/CrhistianT7"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/crhistianturpo/"
+      },
+      {
+        "name": "PersonalWebSite",
+        "url": "https://www.andrewturpo.com/"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "image": "/src/assets/images/jonathan-profile.webp",
+    "fullName": "Jonathan M. Alarcón",
+    "position": "Full Stack Developer",
+    "quote": "Las decisiones dificiles requieren voluntades fuertes.",
+    "networks": [
+      {
+        "name": "github",
+        "url": "https://github.com/mardecera"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/mardecerax/"
+      },
+      {
+        "name": "personalpage",
+        "url": "https://mardecera.com"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "image": "/src/assets/images/gustavo-profile.webp",
+    "fullName": "Gustavo Ugarte",
+    "position": "Full Stack Developer",
+    "quote": "El fracaso solo es un paso hacia el éxito",
+    "networks": [
+      {
+        "name": "github",
+        "url": "https://github.com/GustavoUT22"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/gustavougartetorres/"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "image": "/src/assets/images/ricardo-profile.webp",
+    "fullName": "Ricardo Mamani Calcina",
+    "position": "Frontend Developer",
+    "quote": "La ocasión hay que crearla, no esperar a que llegue.",
+    "networks": [
+      {
+        "name": "github",
+        "url": "https://github.com/RicardoC23"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ricardoc23-developer/"
+      }
+    ]
+  }
+]

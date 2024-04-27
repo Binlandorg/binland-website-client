@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { colors } from 'styles/colors'
 import Container from 'ui/Container/Container'
-import Section from 'ui/Select/Select'
+import Section from 'ui/Section/Section'
 
 interface IProps {
   $position: 'left' | 'right'
@@ -12,14 +12,14 @@ interface ILine extends IProps {
   $width?: number
 }
 
-export const StyledSection = styled(Section)`
+export const StyledSectionAboutUs = styled(Section)`
   overflow-x: hidden;
 `
 
 export const SectionContainer = styled(Container)`
   width: 100%;
   padding: 0;
-  gap: 3rem;
+  gap: 2rem;
 `
 
 export const SectionTitle = styled.div<IProps>`
@@ -49,15 +49,19 @@ export const Line = styled.div<ILine>`
   height: 0.125rem;
   background-color: ${colors.secondary.main};
   position: relative;
-
+  
   &::after {
     content: '';
     position: absolute;
-    width: calc(100vw - ${({$width}) => `${$width}px`} + 1rem);
+    width: calc((100vw - ${({$width}) => `${$width}px`})/2 - 8.5px);
     height: 0.125rem;
     border-radius: 1rem;
     background-color: ${colors.secondary.main};
     ${({ $position }) => `${$position}: 100%;`}
+
+    @media (max-width: 500px){
+      width: calc((100vw - ${({$width}) => `${$width}px`})/2);
+    }
   }  
 `
 export const SectionDescription = styled(Container)``
