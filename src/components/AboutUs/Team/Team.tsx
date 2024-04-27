@@ -1,6 +1,6 @@
 import useIntlMessages from 'hooks/useIntlMessages'
 import ProfileCard from 'components/Cards/ProfileCard/ProfileCard'
-import teamData from './Team.json'
+import teamData from './TeamData'
 import { IProfileCard } from 'types/components/aboutus'
 import {
   StyledTeamSection,
