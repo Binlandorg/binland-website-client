@@ -7,9 +7,13 @@ import {
 } from './ContactUs.styles'
 import SectionTitle from 'components/SectionTitle/SectionTitle'
 
-const ContactUs: React.FC = () => {
+interface IContactUsProps {
+  id: string
+}
+
+const ContactUs: React.FC<IContactUsProps> = ({ id }) => {
   return (
-    <SectionContactUs size="xl" type="padding">
+    <SectionContactUs id={id} size="xl" type="padding">
       <ContactUsWrapper size="xl">
         <SectionTitle size="lg" text="Contactanos" />
         <ContentWrapper>

@@ -9,7 +9,7 @@ const Home = () => {
       <Hero />
       <Services />
       <Clients />
-      <ContactUs />
+      <ContactUs id="home-contact-us"/>
     </>
   )
 }

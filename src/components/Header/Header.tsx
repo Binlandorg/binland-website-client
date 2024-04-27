@@ -17,6 +17,7 @@ import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher'
 import NavLink from 'ui/NavLink/NavLink'
 import ButtonLink from 'ui/ButtonLink/ButtonLink'
 import { NavbarItems } from './Header.data'
+import ButtonAnchor from 'ui/ButtonAnchor/ButtonAnchor'
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -67,21 +68,26 @@ const Header: React.FC = () => {
           <DesktopNavigation>
             <ul className="nav-items">
               {navbarItems.map((navItem) => (
-                <NavLink
-                  key={navItem.name}
-                  item={navItem}
-                />
+                <NavLink key={navItem.name} item={navItem} />
               ))}
             </ul>
             <div className="nav-buttons">
               <ButtonLink
-                to="/contact-us"
+                to="/#home-contact-us"
                 type="secondary"
                 size="lg"
                 isfullwidth={isOpen}
               >
                 {intl('home.navbar.button.contact.us')}
               </ButtonLink>
+              <a href="/#home-contact-us">
+                {intl('home.navbar.button.contact.us')}
+              </a>
+              <ButtonAnchor>
+                <a href="/#home-contact-us">
+                  {intl('home.navbar.button.contact.us')}
+                </a>
+              </ButtonAnchor>
               <LanguageSwitcher />
             </div>
           </DesktopNavigation>
