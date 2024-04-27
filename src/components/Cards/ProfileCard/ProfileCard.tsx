@@ -41,7 +41,7 @@ const ProfileCard: React.FC<IProfileCard> = ({
   return (
     <StyledProfileCard>
       <CardImageContainer>
-        <CardImage src={image} />
+        <CardImage src={image} threshold={100}/>
       </CardImageContainer>
       <CardData>
         <CardDataContainer>

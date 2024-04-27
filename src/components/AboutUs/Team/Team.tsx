@@ -9,6 +9,7 @@ import {
   TeamContainer,
   TeamList,
 } from './Team.styles'
+import Reveal from 'components/Reveal/Reveal'
 
 const Team: React.FC = () => {
   const intl = useIntlMessages()
@@ -25,15 +26,17 @@ const Team: React.FC = () => {
               teamData?.map((collaborator) => {
                 const { id, image, fullName, position, quote, networks } = collaborator as IProfileCard
                 return (
-                  <TeamItem key={id}>
-                    <ProfileCard
-                      image={image}
-                      fullName={fullName}
-                      position={position}
-                      quote={quote}
-                      networks={networks}
-                    />
-                  </TeamItem>
+                  <Reveal key={id}>
+                    <TeamItem>
+                      <ProfileCard
+                        image={image}
+                        fullName={fullName}
+                        position={position}
+                        quote={quote}
+                        networks={networks}
+                      />
+                    </TeamItem>
+                  </Reveal>
                 )
               })
             }

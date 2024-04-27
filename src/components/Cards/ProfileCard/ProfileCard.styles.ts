@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 import { breakpoints } from "shared/breakpoints"
 import { colors } from "styles/colors"
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 export const StyledProfileCard = styled.div`
   display: flex;
@@ -21,7 +22,7 @@ export const CardImageContainer = styled.div`
   justify-content: center;
 `
 
-export const CardImage = styled.img`
+export const CardImage = styled(LazyLoadImage)`
   width: 100px;
   height: 100px;
   max-width: 170px;

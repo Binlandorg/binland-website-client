@@ -62,9 +62,25 @@ export const Line = styled.div<ILine>`
     }
   }  
 `
-export const SectionDescription = styled(Container)``
-export const DescriptionSubTitle = styled.div``
-export const DescriptionTitle = styled.div``
+export const SectionDescription = styled(Container)`
+  padding: 0;
+  justify-content: flex-start;
+  margin: 0;
+  align-items: flex-start;
+  width: 100%;
+`
+export const DescriptionSubTitle = styled.div`
+  & h4{
+    text-transform: uppercase;
+    color: ${ colors.primary.main }
+  }
+`
+export const DescriptionTitle = styled.div`
+  & h3{
+    text-transform: uppercase;
+    color: ${ colors.secondary.main }
+  }
+`
 export const SectionContent = styled.div``
 export const TitleDot = styled.span`
   color: ${colors.primary.main};

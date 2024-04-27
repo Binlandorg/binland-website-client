@@ -7,8 +7,18 @@ export const ContainerDetails = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 0.625rem;
   padding: 0 0.625rem;
+
+  .reveal > div{
+    height: 100%;
+  }
+
+  & > .reveal:nth-child(3) > div > div{
+    padding: 0;
+  }
+
 
   @media only screen and (min-width: ${breakpoints.md}) {
     grid-template-columns: repeat(2, 1fr);
@@ -17,6 +27,7 @@ export const ContainerDetails = styled.div`
   }
 `
 export const ItemDetails = styled.div`
+  height: 100%;
   padding: 1.3rem;
   background-color: ${colors.gray[50]};
   display: flex;
@@ -25,6 +36,7 @@ export const ItemDetails = styled.div`
   align-items: flex-start;
   color: ${colors.secondary.main};
   border-radius: 0.9375rem;
+  overflow: hidden;
 
   & span {
     opacity: 50%;
@@ -45,10 +57,10 @@ export const ItemDetails = styled.div`
     text-align: center;
   }
 
-  &:nth-child(3) {
+  /* &:nth-child(3) {
     background-image: url('src/assets/images/imgAboutUs/people.svg');
     background-size: cover;
-  }
+  } */
 `
 export const Statistics = styled.p`
   font-size: 1.5rem;

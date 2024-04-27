@@ -17,7 +17,7 @@ export interface IProfileCard {
   networks?: INetwork[]
 }
 
-interface IDescription {
+export interface IDescription {
   subTitle: string
   title: string
 }
