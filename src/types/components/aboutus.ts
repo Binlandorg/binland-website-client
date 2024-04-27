@@ -17,7 +17,7 @@ export interface IProfileCard {
   networks?: INetwork[]
 }
 
-interface IDescription {
+export interface IDescription {
   subTitle: string
   title: string
 }
@@ -26,4 +26,11 @@ export interface ITitle extends PropsWithChildren{
   title: string
   titlePosition: 'left' | 'right'
   description?: IDescription | undefined
+}
+
+export interface ICollage {
+  id: number
+  url: string
+  alt: string
+  name: string
 }

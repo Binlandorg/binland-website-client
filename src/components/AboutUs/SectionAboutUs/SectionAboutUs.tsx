@@ -35,7 +35,7 @@ const SectionAboutUs : React.FC<ITitle> = ({title, titlePosition, description, c
                 <H4 $weight="medium">{description.title}</H4>
               </DescriptionSubTitle>
               <DescriptionTitle>
-                <H3 $weight="semibold">{description.subTitle}</H3>
+                <H3 $weight="semibold">{description.subTitle}<TitleDot>.</TitleDot></H3>
               </DescriptionTitle>
             </SectionDescription>
           ) : (<></>)

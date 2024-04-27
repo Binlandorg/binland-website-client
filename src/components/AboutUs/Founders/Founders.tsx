@@ -9,6 +9,7 @@ import {
   FoundersList,
   StyledFoundersSection,
 } from './Founders.styles'
+import Reveal from 'components/Reveal/Reveal'
 
 const Founders : React.FC = () => {
   const intl = useIntlMessages()
@@ -25,15 +26,17 @@ const Founders : React.FC = () => {
               foundersData?.map((founder) => {
                 const { id, image, fullName, position, quote, networks } = founder as IProfileCard
                 return (
-                  <FoundersItem key={id}>
-                    <ProfileCard
-                      image={image}
-                      fullName={fullName}
-                      position={position}
-                      quote={quote}
-                      networks={networks}
-                    />
-                  </FoundersItem>
+                  <Reveal key={id}>
+                    <FoundersItem>
+                      <ProfileCard
+                        image={image}
+                        fullName={fullName}
+                        position={position}
+                        quote={quote}
+                        networks={networks}
+                      />
+                    </FoundersItem>
+                  </Reveal>
                 )
               })
             }
