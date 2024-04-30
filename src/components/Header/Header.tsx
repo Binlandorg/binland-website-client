@@ -15,9 +15,9 @@ import {
 import logo from '../../assets/images/logo/binland-logo.svg'
 import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher'
 import NavLink from 'ui/NavLink/NavLink'
-import ButtonLink from 'ui/ButtonLink/ButtonLink'
+// import ButtonLink from 'ui/ButtonLink/ButtonLink'
 import { NavbarItems } from './Header.data'
-import ButtonAnchor from 'ui/ButtonAnchor/ButtonAnchor'
+import Button from 'ui/Button/Button'
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -72,21 +72,11 @@ const Header: React.FC = () => {
               ))}
             </ul>
             <div className="nav-buttons">
-              {/* 
-                TODO: restore this component when contact us page is live again
-              <ButtonLink
-                to="/#home-contact-us"
-                type="secondary"
-                size="lg"
-                isfullwidth={isOpen}
-              >
-                {intl('home.navbar.button.contact.us')}
-              </ButtonLink> */}
-              <ButtonAnchor>
-                <a href="/#home-contact-us">
+              <a className="temporary-anchor" href="/#home-contact-us">
+                <Button type="secondary" size="lg" $isfullwidth={isOpen}>
                   {intl('home.navbar.button.contact.us')}
-                </a>
-              </ButtonAnchor>
+                </Button>
+              </a>
               <LanguageSwitcher />
             </div>
           </DesktopNavigation>
@@ -114,7 +104,7 @@ const Header: React.FC = () => {
                   />
                 ))}
               </ul>
-              <ButtonLink
+              {/* <ButtonLink
                 to="/contact-us"
                 type="secondary"
                 size="lg"
@@ -122,7 +112,17 @@ const Header: React.FC = () => {
                 isfullwidth={true}
               >
                 {intl('home.navbar.button.contact.us')}
-              </ButtonLink>
+              </ButtonLink> */}
+              <a className="temporary-anchor" href="/#home-contact-us">
+              <Button
+                type="secondary"
+                size="lg"
+                onClick={handleIsOpen}
+                $isfullwidth={true}
+              >
+                {intl('home.navbar.button.contact.us')}
+              </Button>
+              </a>
             </MobileNavigation>
           )}
         </AnimatePresence>
