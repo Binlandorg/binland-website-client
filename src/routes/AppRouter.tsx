@@ -3,13 +3,13 @@ import { Route, Routes } from 'react-router-dom'
 /** TODO: Uncomment code when page is ready to be production */
 
 import Layout from 'components/Layout/Layout'
-import AboutUs from 'pages/AboutUs/AboutUs'
-import ContactUs from 'pages/ContactUs/ContactUs'
 import Home from 'pages/Home/Home'
+import AboutUs from 'pages/AboutUs/AboutUs'
 import PageNotFound from 'pages/PageNotFound/PageNotFound'
 import PrivacyPolicy from 'pages/PrivacyPolicy/PrivacyPolicy'
 import TermsOfService from 'pages/TermsOfService/TermsOfService'
 import FrequenltyAskedQuestion from 'pages/FrequentlyAskedQuestion/FrequentlyAskedQuestion'
+// import ContactUs from 'pages/ContactUs/ContactUs'
 // import Portafolio from 'pages/Portafolio/Portafolio'
 // import LetsLearn from 'pages/LetsLearn/LetsLearn'
 // import Services from 'pages/Services/Services'
@@ -33,7 +33,7 @@ const AppRouter: React.FC = () => {
         {/* <Route path="/services/seo" element={<Seo />} /> */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
-        <Route path="/contact-us" element={<ContactUs />} />
+        {/* <Route path="/contact-us" element={<ContactUs />} /> */}
         {/* <Route path="/blog" element={<Blog />} /> */}
         {/* <Route path="/blog/:article-name" element={<Article />} /> */}
         <Route
