@@ -12,20 +12,9 @@ import {
   DisplayOptions,
   MultiSelectWrapper,
 } from './MultiSelect.styles'
-import InputSearch from '../InputSearch/InputSearch'
+import InputSearch from '../SearchMultiSelect/SearchMultiSelect'
 import useOutsideClick from 'hooks/useClickOutside'
-
-interface IServiceOptions {
-  key: string
-  name: string
-}
-
-interface MultiSelectProps {
-  options: IServiceOptions[]
-  onChange: (selectedServices: IServiceOptions[]) => void
-  placeholder: string
-  label: string
-}
+import { IServiceOptions, MultiSelectProps } from 'types/ui/Multiselect'
 
 const MultiSelect: React.FC<MultiSelectProps> = ({
   options,

@@ -2,14 +2,11 @@ import styled from 'styled-components'
 import { FiSearch } from 'react-icons/fi'
 
 import { colors } from 'styles/colors'
+import { InputBoxProps } from 'types/ui/Multiselect'
 
 export const MirroredIcon = styled(FiSearch)`
   transform: scaleX(-1);
 `
-
-interface InputBoxProps {
-  $isOpen: boolean
-}
 
 export const MultiSelectWrapper = styled.div<InputBoxProps>`
   position: relative;

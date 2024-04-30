@@ -22,10 +22,13 @@ const Clients: React.FC = () => {
               {intl('home.clients.section.title')}
               <span className="span-point">.</span>
             </h2>
-            <ButtonLink type="secondary" to="/portafolio">
-              {intl('home.clients.section.button')}
-              <TbExternalLink size={25} />
-            </ButtonLink>
+            {/**Here we hide this button because the page of this path isn't ready */}
+            <div style={{ display: 'none' }}>
+              <ButtonLink type="secondary" to="/portafolio">
+                {intl('home.clients.section.button')}
+                <TbExternalLink size={25} />
+              </ButtonLink>
+            </div>
           </TitleAndButtonSection>
           <Brandings />
         </ClientsSectionContent>
