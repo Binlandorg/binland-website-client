@@ -1,10 +1,15 @@
 import { PropsWithChildren } from 'react'
-import Button from 'ui/Button/Button'
+
+import { StyledButtonAnchor } from './ButtonAnchor.styles'
 
 interface IButtonAnchorProps extends PropsWithChildren {}
 
+/** Componente created only for launch, there where no button anchor component
+ * Delete when contact us page is available again
+ */
+
 const ButtonAnchor: React.FC<IButtonAnchorProps> = ({ children }) => {
-  return <Button type="secondary">{children}</Button>
+  return <StyledButtonAnchor type="secondary">{children}</StyledButtonAnchor>
 }
 
 export default ButtonAnchor

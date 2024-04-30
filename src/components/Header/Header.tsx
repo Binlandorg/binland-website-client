@@ -72,6 +72,8 @@ const Header: React.FC = () => {
               ))}
             </ul>
             <div className="nav-buttons">
+              {/* 
+                TODO: restore this component when contact us page is live again
               <ButtonLink
                 to="/#home-contact-us"
                 type="secondary"
@@ -79,10 +81,7 @@ const Header: React.FC = () => {
                 isfullwidth={isOpen}
               >
                 {intl('home.navbar.button.contact.us')}
-              </ButtonLink>
-              <a href="/#home-contact-us">
-                {intl('home.navbar.button.contact.us')}
-              </a>
+              </ButtonLink> */}
               <ButtonAnchor>
                 <a href="/#home-contact-us">
                   {intl('home.navbar.button.contact.us')}
