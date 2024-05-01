@@ -11,10 +11,13 @@ export const StyledClientsSection = styled.section`
 `
 
 export const ClientsSectionWrapper = styled(Container)`
-  padding: 4rem 1rem 3rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
-    padding: 7rem 2rem 6rem;
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+    padding-inline: 1rem;
   }
 `
 
@@ -26,7 +29,6 @@ export const ClientsSectionContent = styled.div`
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     flex-direction: row;
-    justify-content: space-between;
     gap: 5rem;
   }
 `
@@ -35,8 +37,17 @@ export const TitleAndButtonSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   width: 100%;
+
+  & h2 {
+    text-align: center;
+
+    @media only screen and (min-width: ${breakpoints.lg}) {
+      text-align: left;
+    }
+  }
 
   .clients-title {
     font-weight: 600;
@@ -56,7 +67,7 @@ export const TitleAndButtonSection = styled.div`
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     gap: 3rem;
-    max-width: 18rem;
+    max-width: 24.5rem;
     align-items: normal;
   }
 `
@@ -65,17 +76,31 @@ export const BrandingsWrapper = styled.div`
   display: flex;
   padding: 1rem;
   justify-content: space-evenly;
+  align-items: center;
   gap: 2rem 3rem;
   flex-wrap: wrap;
 
+  .container-img {
+    width: 10rem;
+    height: 10rem;
+    display: grid;
+    place-content: center;
+  }
+
   .branding-img {
-    width: 6rem;
+    width: 100%;
     height: auto;
     opacity: 0.5;
+    filter: brightness(-50%);
+  }
+
+  :first-child {
+    width: 16rem;
   }
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     gap: 4.5rem 10rem;
-    align-content: center;
+    width: 100%;
+    justify-content: center;
   }
 `

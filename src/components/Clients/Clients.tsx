@@ -9,6 +9,7 @@ import {
   ClientsSectionContent,
   TitleAndButtonSection,
 } from './Clients.styles'
+import H2 from 'ui/Titles/H2'
 
 const Clients: React.FC = () => {
   const intl = useIntlMessages()
@@ -18,10 +19,10 @@ const Clients: React.FC = () => {
       <ClientsSectionWrapper size="xl">
         <ClientsSectionContent>
           <TitleAndButtonSection>
-            <h2 className="clients-title">
+            <H2>
               {intl('home.clients.section.title')}
               <span className="span-point">.</span>
-            </h2>
+            </H2>
             {/**Here we hide this button because the page of this path isn't ready */}
             <div style={{ display: 'none' }}>
               <ButtonLink type="secondary" to="/portafolio">

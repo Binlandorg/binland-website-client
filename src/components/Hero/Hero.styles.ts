@@ -136,6 +136,10 @@ export const SectionHero = styled.section`
       background-color: ${colors.secondary.active[800]};
     }
   }
+
+  .temporary-anchor {
+    text-decoration: none;
+  }
 `
 
 export const CustomMessageHero = styled.b`

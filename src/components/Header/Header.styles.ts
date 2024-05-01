@@ -40,6 +40,10 @@ export const HamburgerIcon = styled.div`
 export const DesktopNavigation = styled.nav`
   display: none;
 
+  .temporary-anchor {
+    text-decoration: none;
+  }
+
   @media only screen and (min-width: ${breakpoints.lg}) {
     position: relative;
     display: flex;
