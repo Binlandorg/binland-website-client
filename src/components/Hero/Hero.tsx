@@ -1,9 +1,10 @@
 import { BsArrowRight } from 'react-icons/bs'
 
-import ButtonLink from 'ui/ButtonLink/ButtonLink'
+//import ButtonLink from 'ui/ButtonLink/ButtonLink'
 import { SectionHero } from './Hero.styles'
 import SocialMediaBar from './socialMediaBar/SocialMediaBar'
 import imgHero from './../../assets/images/imgHome/home-hero.svg'
+import Button from 'ui/Button/Button'
 
 const Hero = () => {
   return (
@@ -20,14 +21,20 @@ const Hero = () => {
               Algo mas <span className="span-black">interesante</span> que lo
               anterior
             </h2>
-            <ButtonLink
+            <a className='temporary-anchor' href="/#home-contact-us">
+              <Button type="secondary" className="button-contact-us">
+                <BsArrowRight size={20} />
+                Contáctanos
+              </Button>
+            </a>
+            {/* <ButtonLink
               type="secondary"
               to="/contact-us"
               className="button-contact-us"
             >
               <BsArrowRight size={20} />
               Contáctanos
-            </ButtonLink>
+            </ButtonLink> */}
           </div>
         </div>
       </div>

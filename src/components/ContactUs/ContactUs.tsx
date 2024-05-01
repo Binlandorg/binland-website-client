@@ -9,7 +9,7 @@ import SectionTitle from 'components/SectionTitle/SectionTitle'
 
 const ContactUs: React.FC = () => {
   return (
-    <SectionContactUs size="xl" type="padding">
+    <SectionContactUs id="home-contact-us" size="xl" type="padding">
       <ContactUsWrapper size="xl">
         <SectionTitle size="lg" text="Contactanos" />
         <ContentWrapper>

@@ -1,12 +1,10 @@
 import { forwardRef } from 'react'
-import { InputSearchWrapper, StyledInputSearch } from './InputSearch.styles'
 
-interface ISearch {
-  value: string
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
-  placeholder?: string
-  icon?: React.ReactNode
-}
+import {
+  InputSearchWrapper,
+  StyledInputSearch,
+} from './SearchMultiSelect.styles'
+import { ISearch } from 'types/ui/SearchMultiSelect'
 
 const InputSearch = forwardRef<HTMLInputElement, ISearch>(
   ({ value, onChange, placeholder, icon }, ref) => {
