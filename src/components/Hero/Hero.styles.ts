@@ -7,11 +7,15 @@ export const SectionHero = styled.section`
   width: 100%;
   padding-block: 2rem 4rem;
   display: flex;
+  height: 96svh;
+  height: 96vh;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
-    padding-block: 4rem 6rem;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   --wrapper-max-width: 80rem;
@@ -38,7 +42,7 @@ export const SectionHero = styled.section`
     background: linear-gradient(to top left, #720620 5%, #f83d48 60%);
     box-shadow: 0.625rem 0.5rem 0.625rem 0 rgba(0, 0, 0, 0.2);
     border-radius: 0 1.25rem 1.25rem 0;
-    min-height: 30.875rem;
+    min-height: 75vh;
     grid-column: 1 / 4;
     display: grid;
     grid-template-columns:
@@ -47,7 +51,7 @@ export const SectionHero = styled.section`
       minmax(0, calc(var(--wrapper-max-width) / 2 + 4rem));
 
     @media only screen and (min-width: ${breakpoints.lg}) {
-      min-height: 36.875rem;
+      min-height: 70vh;
     }
   }
 
@@ -63,16 +67,19 @@ export const SectionHero = styled.section`
     }
   }
 
-  .hero-content > img {
+  .img__hero {
     display: none;
 
     @media only screen and (min-width: ${breakpoints.lg}) {
       grid-column: 2/ 3;
-      margin-top: auto;
-      margin-bottom: -15%;
-      display: flex;
-      position: relative;
-      z-index: 1;
+      aspect-ratio: 1 / 1.1;
+      object-fit: cover;
+      margin: auto auto -20%;
+      mask-image: linear-gradient(black 95%, transparent);
+      display: block;
+      width: calc(var(--wrapper-max-width) / 2.5);
+      height: auto;
+      filter: drop-shadow(0.75rem 0 0.25rem rgba(0, 0, 0, 0.1));
     }
   }
 
@@ -86,7 +93,11 @@ export const SectionHero = styled.section`
 
     @media only screen and (min-width: ${breakpoints.lg}) {
       grid-column: 3/ 4;
-      padding: 3rem;
+      padding-inline: 3rem;
+    }
+
+    .hero-message {
+      color: ${colors.white.main};
     }
 
     .small-message {
@@ -94,27 +105,6 @@ export const SectionHero = styled.section`
       font-weight: 600;
       font-size: 1rem;
       line-height: 1.5rem;
-    }
-
-    .hero-message {
-      display: inline-block;
-      font-weight: 600;
-      font-size: clamp(2.5rem, 1.875rem + 2.778vw, 4.375rem);
-      text-align: left;
-      line-height: 3.75rem;
-      color: ${colors.white.main};
-
-      @media only screen and (min-width: ${breakpoints.xs}) {
-        line-height: 4.25rem;
-      }
-
-      @media only screen and (min-width: 450px) {
-        line-height: 5.625rem;
-      }
-
-      @media only screen and (min-width: ${breakpoints.lg}) {
-        line-height: 6.5rem;
-      }
     }
 
     .span-black {
@@ -146,4 +136,9 @@ export const SectionHero = styled.section`
       background-color: ${colors.secondary.active[800]};
     }
   }
+`
+
+export const CustomMessageHero = styled.b`
+  text-align: left;
+  color: ${colors.secondary.main};
 `
