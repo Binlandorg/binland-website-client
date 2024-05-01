@@ -9,9 +9,11 @@ import {
   FooterLogoWrapper,
   FooterSocialMedia,
   FooterLinks,
+  FooterInfo,
 } from './Footer.styles'
 import SocialMedia from 'components/SocialMedia/SocialMedia'
 import { enterpriseLinks, legalLinks } from './Footer.data'
+import H5 from 'ui/Titles/H5'
 
 const Footer: React.FC = () => {
   const intl = useIntlMessages()
@@ -24,34 +26,38 @@ const Footer: React.FC = () => {
           </Link>
           <p> &copy; Binland 2024. {intl('footer.all.rights.reserved')}.</p>
         </FooterLogoWrapper>
-        <FooterLinks>
-          <h4 className="title-links">Legal</h4>
-          <div className="container-links">
-            {legalLinks.map((element) => (
-              <Link key={element.id} to={element.to} className="link-item">
-                <span className="text-footer">{intl(element.name)}</span>
-              </Link>
-            ))}
-          </div>
-        </FooterLinks>
-        <FooterLinks>
-          <h4 className="title-links">{intl('footer.enterprise')}</h4>
-          <div className="container-links">
-            {enterpriseLinks.map((element) => (
-              <Link key={element.id} to={element.to} className="link-item">
-                <span className="text-footer">{intl(element.name)}</span>
-              </Link>
-            ))}
-          </div>
-        </FooterLinks>
-        <FooterSocialMedia>
-          <h4 className="title-social-media">{intl('footer.contact.us')}</h4>
-          <SocialMedia />
-          <div className="container-email">
-            <HiOutlineMail size={20} style={{ color: 'white' }} />
-            <span className="text-footer">binland.contacto@gmail.com</span>
-          </div>
-        </FooterSocialMedia>
+        <FooterInfo>
+          <FooterLinks>
+            <H5 $weight="bold">Legal</H5>
+            <div className="container-links">
+              {legalLinks.map((element) => (
+                <Link key={element.id} to={element.to} className="link-item">
+                  <span className="text-footer">{intl(element.name)}</span>
+                </Link>
+              ))}
+            </div>
+          </FooterLinks>
+          <FooterLinks>
+            <H5 $weight="bold">{intl('footer.enterprise')}</H5>
+            <div className="container-links">
+              {enterpriseLinks.map((element) => (
+                <Link key={element.id} to={element.to} className="link-item">
+                  <span className="text-footer">{intl(element.name)}</span>
+                </Link>
+              ))}
+            </div>
+          </FooterLinks>
+          <FooterSocialMedia>
+            <H5 $weight="bold">{intl('footer.contact.us')}</H5>
+            <div className="social-media__content">
+              <SocialMedia />
+              <div className="container-email">
+                <HiOutlineMail size={20} style={{ color: 'white' }} />
+                <span className="text-footer">binland.contacto@gmail.com</span>
+              </div>
+            </div>
+          </FooterSocialMedia>
+        </FooterInfo>
       </FooterWrapper>
     </StyledFooter>
   )
