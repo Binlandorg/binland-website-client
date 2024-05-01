@@ -144,5 +144,5 @@ export const SectionHero = styled.section`
 
 export const CustomMessageHero = styled.b`
   text-align: left;
-  color: ${colors.secondary.main};
+  color: ${colors.black.main};
 `

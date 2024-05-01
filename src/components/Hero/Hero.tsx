@@ -2,7 +2,7 @@ import { BsArrowRight } from 'react-icons/bs'
 import { FormattedMessage } from 'react-intl'
 // import useElementSize from '@custom-react-hooks/use-element-size'
 
-//import ButtonLink from 'ui/ButtonLink/ButtonLink'
+import ButtonLink from 'ui/ButtonLink/ButtonLink'
 import { SectionHero } from './Hero.styles'
 import SocialMediaBar from './socialMediaBar/SocialMediaBar'
 import imgHero from './../../assets/images/girl-using-virtual-reality-glasses-cropped.webp'
