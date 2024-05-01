@@ -4,13 +4,14 @@ import { colors } from 'styles/colors'
 import { breakpoints } from 'shared/breakpoints'
 import Container from 'ui/Container/Container'
 
-export const PageNotFoundWrapper = styled(Container)`
+export const StyledPageNotFound = styled(Container)`
   flex-grow: 1;
   align-items: center;
-  gap: 1.125rem;
+  gap: 3rem;
+  height: calc(100vh - 4.5rem);
 
   .not-found-img {
-    margin-bottom: 2.5rem;
+    width: 100%;
   }
 
   .button-not-found {
@@ -23,7 +24,7 @@ export const MessageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: 1rem;
+  gap: .5rem;
 
   .error-page-title {
     font-weight: 800;
@@ -45,5 +46,13 @@ export const MessageWrapper = styled.div`
     @media only screen and (min-width: ${breakpoints.lg}) {
       font-size: 1.5rem;
     }
+  }
+`
+export const ImageWrapper = styled.div`
+  max-width: 43.5rem;
+  width: 100%;
+
+  @media only screen and (max-width: ${breakpoints.xs}){
+    width: 17.5rem;
   }
 `
