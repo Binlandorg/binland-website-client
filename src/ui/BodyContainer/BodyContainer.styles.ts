@@ -8,6 +8,7 @@ export const StyledBodyContainer = styled.div`
   justify-content: center;
   padding: 0 1.5rem;
   width: 100%;
+  max-width: 80rem; /* 1280px */
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     padding: 0 5rem;
