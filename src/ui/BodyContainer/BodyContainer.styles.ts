@@ -10,6 +10,6 @@ export const StyledBodyContainer = styled.div`
   width: 100%;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
-    padding: 0 5rem;s
+    padding: 0 5rem;
   }
 `
