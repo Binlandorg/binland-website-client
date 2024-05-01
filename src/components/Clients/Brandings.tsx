@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
-import naturalEcoFriendly from './../../assets/images/brandings/imagotipo-horizontal.svg'
-import oasisRestaurant from './../../assets/images/brandings/oasis-restaurant.webp'
+import naturalEcoFriendly from './../../assets/images/naturaleza-ecoamigable.svg'
+import oasisRestaurant from './../../assets/images/logo-oasis-op.webp'
 import { BrandingsWrapper } from './Clients.styles'
 
 interface Brand {
@@ -24,12 +24,14 @@ const Brandings: React.FC = () => {
   return (
     <BrandingsWrapper>
       {brands.map((brand) => (
-        <img
-          key={brand.id}
-          className="branding-img"
-          src={brand.src}
-          alt={brand.name}
-        />
+        <div className="container-img">
+          <img
+            key={brand.id}
+            className="branding-img"
+            src={brand.src}
+            alt={brand.name}
+          />
+        </div>
       ))}
     </BrandingsWrapper>
   )
