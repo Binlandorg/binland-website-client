@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react'
 
-import Google from './../../assets/images/brandings/google.svg'
-import Github from './../../assets/images/brandings/github.svg'
-import Windows from './../../assets/images/brandings/windows.svg'
-import Amazon from './../../assets/images/brandings/amazon.svg'
-import Meta from './../../assets/images/brandings/meta.svg'
+import naturalEcoFriendly from './../../assets/images/naturaleza-ecoamigable.svg'
+import oasisRestaurant from './../../assets/images/logo-oasis-op.webp'
 import { BrandingsWrapper } from './Clients.styles'
 
 interface Brand {
@@ -13,11 +10,8 @@ interface Brand {
   name: string
 }
 const Brands: Brand[] = [
-  { id: 1, src: Google, name: 'google' },
-  { id: 2, src: Github, name: 'github' },
-  { id: 3, src: Windows, name: 'windows' },
-  { id: 4, src: Amazon, name: 'amazon' },
-  { id: 5, src: Meta, name: 'meta' },
+  { id: 1, src: naturalEcoFriendly, name: 'naturaleza eco-amigable' },
+  { id: 2, src: oasisRestaurant, name: 'Oasis restaurant' },
 ]
 
 const Brandings: React.FC = () => {
@@ -30,12 +24,14 @@ const Brandings: React.FC = () => {
   return (
     <BrandingsWrapper>
       {brands.map((brand) => (
-        <img
-          key={brand.id}
-          className="branding-img"
-          src={brand.src}
-          alt={brand.name}
-        />
+        <div className="container-img">
+          <img
+            key={brand.id}
+            className="branding-img"
+            src={brand.src}
+            alt={brand.name}
+          />
+        </div>
       ))}
     </BrandingsWrapper>
   )
