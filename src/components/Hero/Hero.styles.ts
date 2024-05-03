@@ -164,8 +164,7 @@ export const ImageWrapper = styled.div`
     width: var(--vhTablet); //600px
     height: var(--vhTablet); //600px
     bottom: 0;
-    left: inherit;
-    right: 2%;
+    left: 0;
   }
 
   @media only screen and (min-width: ${ breakpoints.xxl }) {
