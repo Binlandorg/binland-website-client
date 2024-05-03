@@ -4,7 +4,7 @@
   "home.navbar.link.learn.with.us": "Learn with us",
   "home.navbar.link.services": "Services",
   "home.navbar.button.contact.us": "Contact us",
-  "home.hero.slogan": "We transform needs into digital solutions",
+  "home.hero.slogan": "We transform <b>needs</b> into digital solutions",
   "home.hero.subslogan": "May the world set its eyes on you",
   "home.hero.contact.us.button.title": "Contact us",
   "home.services.title": "Something creative that includes <b>{service}</b> on it",
@@ -38,9 +38,9 @@
   "about.us.founders.title": "Founders",
   "about.us.team.title": "Team",
   "about.us.offices.title": "Offices",
-  "about.us.offices.sub.title.collage": "Our team supports us", 
+  "about.us.offices.sub.title.collage": "Our team supports us",
   "about.us.offices.title.collage": "The foundations of good projects are here",
-  
+
   "contact.us.hero.title": "Contact Us",
   "contact.us.hero.description": "Were here for you. Reach out using the form belowa",
   "contact.us.calendly.button": "Schedule a meeting",
@@ -59,7 +59,7 @@
   "contact.us.form.label.phone": "Phone",
   "contact.us.form.label.message": "Message",
 
-  "contact.us.form.input.message.placeholder":  "Write a message here...",
+  "contact.us.form.input.message.placeholder": "Write a message here...",
 
   "contact.us.form.title": "Contact us",
   "contact.us.form.button": "Send",
@@ -81,6 +81,6 @@
   "footer.about.us": "About us",
   "footer.projects": "Projects",
   "footer.FAQ": "FAQ",
-  
+
   "validation.input.required.message": "This field is required"
 }

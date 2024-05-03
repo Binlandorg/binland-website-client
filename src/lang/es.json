@@ -4,7 +4,7 @@
   "home.navbar.link.learn.with.us": "Aprende con nosotros",
   "home.navbar.link.services": "Servicios",
   "home.navbar.button.contact.us": "Contáctanos",
-  "home.hero.slogan": "Transformamos necesidades en soluciones digitales",
+  "home.hero.slogan": "Transformamos <b>necesidades</b> en soluciones digitales",
   "home.hero.subslogan": "Que el mundo ponga los ojos en ti",
   "home.hero.contact.us.button.title": "Contáctanos",
   "home.services.title": "Algo creativo que incluya <b>{service}</b> en ello",
@@ -40,7 +40,7 @@
   "about.us.offices.title": "Oficinas",
   "about.us.offices.sub.title.collage": "Nuestro equipo nos respalda",
   "about.us.offices.title.collage": "Los cimientos de buenos proyectos estan aqui",
-  
+
   "contact.us.hero.title": "Contáctanos",
   "contact.us.hero.description": "Estamos aquí por tí. Comuníquese usando el siguiente formulario",
   "contact.us.calendly.button": "Agenda tu reunión",
@@ -59,7 +59,7 @@
   "contact.us.form.label.phone": "Teléfono",
   "contact.us.form.label.message": "Mensaje",
 
-  "contact.us.form.input.message.placeholder":  "Escribe tu mensaje aquí...",
+  "contact.us.form.input.message.placeholder": "Escribe tu mensaje aquí...",
 
   "contact.us.form.title": "Contáctanos",
   "contact.us.form.button": "Enviar",
@@ -80,7 +80,6 @@
   "footer.about.us": "Acerca de nosotros",
   "footer.projects": "Proyectos",
   "footer.FAQ": "Preguntas frecuentes",
-
 
   "validation.input.required.message": "Este campo es requerido"
 }
