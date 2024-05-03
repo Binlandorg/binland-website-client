@@ -1,54 +1,74 @@
-import { BsArrowRight } from 'react-icons/bs'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import { BsArrowRight as IconArrowLeft } from 'react-icons/bs'
 import { FormattedMessage } from 'react-intl'
-// import useElementSize from '@custom-react-hooks/use-element-size'
 
-import ButtonLink from 'ui/ButtonLink/ButtonLink'
-import { SectionHero } from './Hero.styles'
-import SocialMediaBar from './socialMediaBar/SocialMediaBar'
-import imgHero from './../../assets/images/girl-using-virtual-reality-glasses-cropped.webp'
 import useIntlMessages from 'hooks/useIntlMessages'
+import SocialMediaBar from './socialMediaBar/SocialMediaBar'
+import {
+  ContentText,
+  HeroContentWrapper,
+  Content,
+  HeroContent,
+  ImageWrapper,
+  NetworkWrapper,
+  StyledHero,
+  NetworkWrapperInside,
+} from './Hero.styles'
+import H5 from 'ui/Titles/H5'
 import Display from 'ui/Display/Display'
-import { CustomMessageHero } from './Hero.styles'
+import heroImgURL from './../../assets/images/girl-using-virtual-reality-glasses-cropped-v2.webp'
+
+interface IHeroImgData {
+  src: string
+  alt: string
+}
+
+const heroImgData: IHeroImgData = {
+  src: heroImgURL,
+  alt: 'Girl using virtual reality glasses',
+}
 
 const Hero = () => {
   const intl = useIntlMessages()
-  console.log(intl)
 
   return (
-    <SectionHero>
-      <div className="full-width-left-side">
-        <div className="hero-content">
-          <div>
-            <SocialMediaBar type="primary" direction="column" />
-          </div>
-          <img className="img__hero" src={imgHero} />
-          <div>
-            <p className="small-message">{intl('home.hero.subslogan')}</p>
-            <Display className="hero-message" size="lg">
-              <FormattedMessage
-                defaultMessage=""
-                id="home.hero.slogan"
-                values={{
-                  service: intl('home.hero.slogan'),
-                  b: (str) => <CustomMessageHero>{str}</CustomMessageHero>,
-                }}
-              />
-            </Display>
-            <ButtonLink
-              type="secondary"
-              to="/contact-us"
-              className="button-contact-us"
-            >
-              <BsArrowRight size={20} />
-              {intl('home.hero.contact.us.button.title')}
-            </ButtonLink>
-          </div>
-        </div>
-      </div>
-      <div className="social-bar-horizontal">
-        <SocialMediaBar type="secondary" direction="row" />
-      </div>
-    </SectionHero>
+    <StyledHero type='margin' size='xl'>
+      <HeroContent>
+        <HeroContentWrapper>
+          <NetworkWrapperInside>
+            <SocialMediaBar type="secondary" direction="column" />
+          </NetworkWrapperInside>
+          <Content>
+            <ContentText>
+              <H5 $weight="bold">{intl('home.hero.subslogan')}</H5>
+              <Display size="lg">
+                <FormattedMessage
+                  id="hero-slogan"
+                  defaultMessage={intl('home.hero.slogan')}
+                  values={{
+                    b: (chunks) => <b>{chunks}</b>,
+                  }}
+                />
+              </Display>
+            </ContentText>
+            <a href="#home-contact-us">
+              <IconArrowLeft size={20} />
+              <span>{intl('home.hero.contact.us.button.title')}</span>
+            </a>
+          </Content>
+        </HeroContentWrapper>
+        <NetworkWrapper>
+          <SocialMediaBar type="secondary" direction="row" />
+        </NetworkWrapper>
+      </HeroContent>
+      <ImageWrapper>
+        <LazyLoadImage
+          src={heroImgData.src}
+          alt={heroImgData.alt}
+          threshold={100}
+        />
+      </ImageWrapper>
+    </StyledHero>
   )
 }
 

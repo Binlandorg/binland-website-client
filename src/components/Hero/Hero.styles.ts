@@ -2,131 +2,96 @@ import styled from 'styled-components'
 
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
+import Section from 'ui/Section/Section'
 
-export const SectionHero = styled.section`
+export const StyledHero = styled(Section)`
+  height: 100vh;
   width: 100%;
-  padding-block: 2rem 4rem;
+  position: relative;
+
+  @media only screen and (min-width: ${ breakpoints.xs }) {
+    height: calc(100vh - 4.5rem);
+    margin-top: 0;
+  }
+`
+
+export const HeroContent = styled.div`
+  position: relative;
+  left: -0.75rem;
+  width: calc(100vw - 1.5rem);
   display: flex;
-  height: 96svh;
-  height: 96vh;
   flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
+  gap: 0.875rem;
 
-  @media only screen and (min-width: ${breakpoints.lg}) {
-    padding-top: 0;
-    padding-bottom: 0;
+  @media only screen and (min-width: ${ breakpoints.lg }) {
+    width: calc(100vw - 5rem);
+    left: -2.5rem;
   }
 
-  --wrapper-max-width: 80rem;
-  --wrapper-padding-inline: 1rem;
+  @media only screen and (min-width: ${ breakpoints.full }) {
+    position: static;
+    width: 100%;
+  }
 
-  .social-bar-horizontal {
+  @media only screen and (min-width: ${ breakpoints["2k"] }) {
+    width: 90rem;
+    height: 51.625rem;
+  }
+
+  @media only screen and (min-width: ${ breakpoints["4k"] }) {
+    width: 126.75rem;
+    height: 78.5625rem;
+  }
+`
+
+export const HeroContentWrapper = styled.div`
+  background: linear-gradient(to top left, #720620 5%, #f83d48 60%);
+  box-shadow: 0.625rem 0.5rem 0.625rem 0 rgba(0, 0, 0, 0.2);
+  padding: 3.8rem 2rem 3.8rem 1.5rem;
+  border-radius: 0rem 1rem 1rem 0rem;
+
+  @media only screen and (min-width: ${ breakpoints.lg }) {
     display: flex;
-
-    @media only screen and (min-width: ${breakpoints.lg}) {
-      display: none;
-    }
+    justify-content: space-between;
+    padding-left: 0rem;
+    padding: 5rem 5rem 5rem 0rem;
   }
 
-  .full-width-left-side {
-    display: grid;
-    grid-template-columns:
-      minmax(var(--wrapper-padding-inline), 1fr)
-      minmax(0, calc(var(--wrapper-max-width) / 2 - 1rem))
-      minmax(0, calc(var(--wrapper-max-width) / 2 - 1rem))
-      minmax(var(--wrapper-padding-inline), 1fr);
+  @media only screen and (min-width: ${ breakpoints.full }) {
+    border-radius: 1rem;
   }
 
-  .hero-content {
-    background: linear-gradient(to top left, #720620 5%, #f83d48 60%);
-    box-shadow: 0.625rem 0.5rem 0.625rem 0 rgba(0, 0, 0, 0.2);
-    border-radius: 0 1.25rem 1.25rem 0;
-    min-height: 75vh;
-    grid-column: 1 / 4;
-    display: grid;
-    grid-template-columns:
-      minmax(var(--wrapper-padding-inline), 1fr)
-      minmax(0, calc(var(--wrapper-max-width) / 2 - 4rem))
-      minmax(0, calc(var(--wrapper-max-width) / 2 + 4rem));
+  @media only screen and (min-width: ${ breakpoints["2k"] }) {
+    height: 100%;
+  }
+`
 
-    @media only screen and (min-width: ${breakpoints.lg}) {
-      min-height: 70vh;
-    }
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 1;
+
+  @media only screen and (min-width: ${ breakpoints.lg }) {
+    max-width: 37rem;
   }
 
-  .hero-content > :first-child {
-    display: none;
-
-    @media only screen and (min-width: ${breakpoints.lg}) {
-      grid-column: 1 / 2;
-      display: grid;
-      align-items: center;
-      position: relative;
-      z-index: 10;
-    }
+  @media only screen and (min-width: ${ breakpoints["2k"] }) {
+    justify-content: center;
   }
 
-  .img__hero {
-    display: none;
-
-    @media only screen and (min-width: ${breakpoints.lg}) {
-      grid-column: 2/ 3;
-      aspect-ratio: 1 / 1.1;
-      object-fit: cover;
-      margin: auto auto -20%;
-      mask-image: linear-gradient(black 95%, transparent);
-      display: block;
-      width: calc(var(--wrapper-max-width) / 2.5);
-      height: auto;
-      filter: drop-shadow(0.75rem 0 0.25rem rgba(0, 0, 0, 0.1));
-    }
-  }
-
-  .hero-content > :last-child {
-    grid-column: 2 / 4;
-    display: grid;
-    justify-content: flex-start;
-    align-content: center;
-    gap: 2rem;
-    padding-inline: 1rem;
-
-    @media only screen and (min-width: ${breakpoints.lg}) {
-      grid-column: 3/ 4;
-      padding-inline: 3rem;
-    }
-
-    .hero-message {
-      color: ${colors.white.main};
-    }
-
-    .small-message {
-      color: ${colors.white.main};
-      font-weight: 600;
-      font-size: 1rem;
-      line-height: 1.5rem;
-    }
-
-    .span-black {
-      color: ${colors.black.main};
-      font-weight: 700;
-    }
-  }
-
-  .button-contact-us {
+  & a[href='#home-contact-us'] {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
     background-color: ${colors.black.main};
     color: ${colors.white.main};
     border: none;
     outline: none;
     padding: 1rem 1.5rem;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 1.5rem;
     border-radius: 1rem;
-    height: auto;
-    width: fit-content;
-    display: flex;
     gap: 1rem;
+    text-decoration: none;
 
     &:hover {
       background-color: ${colors.secondary.hover[900]};
@@ -136,13 +101,101 @@ export const SectionHero = styled.section`
       background-color: ${colors.secondary.active[800]};
     }
   }
+`
 
-  .temporary-anchor {
-    text-decoration: none;
+export const ContentText = styled.div`
+  color: ${colors.white.main};
+
+  & h4 {
+    margin-bottom: 1rem;
+    word-break: break-all;
+  }
+
+  & > span {
+    word-break: break-all;
+  }
+
+  & span b {
+    color: ${colors.black.main};
+  }
+
+  @media only screen and (min-width: ${ breakpoints.lg }) {
+    & h4,
+    & > span {
+      word-break: normal;
+    }
   }
 `
 
-export const CustomMessageHero = styled.b`
-  text-align: left;
-  color: ${colors.black.main};
+export const NetworkWrapper = styled.div`
+  & div[direction='row'] {
+    display: flex;
+    width: fit-content;
+  }
+
+  @media only screen and (min-width: ${ breakpoints.lg }) {
+    display: none;
+  }
+`
+
+export const NetworkWrapperInside = styled.div`
+  display: none;
+  align-items: center;
+
+  @media only screen and (min-width: ${ breakpoints.lg }) {
+    display: flex;
+    z-index: 2;
+
+    & div[direction='column'] {
+      height: fit-content;
+      background-color: ${colors.black.main};
+    }
+  }
+`
+
+export const ImageWrapper = styled.div`
+  display: none;
+
+  @media only screen and (min-width: ${ breakpoints.lg }) {
+    --vhTablet: 44vh;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    width: var(--vhTablet); //600px
+    height: var(--vhTablet); //600px
+    bottom: 0;
+    left: inherit;
+    right: 2%;
+  }
+
+  @media only screen and (min-width: ${ breakpoints.xxl }) {
+    --vhLaptop: 68.4vh;
+    justify-content: flex-start;
+    width: var(--vhLaptop); //700px
+    height: var(--vhLaptop); //700px
+    left: -4%;
+    right: inherit;
+
+    & img {
+      filter: drop-shadow(0.75rem 0 0.25rem rgba(0, 0, 0, 0.1));
+    }
+  }
+
+  @media only screen and (min-width: ${ breakpoints.full }) {
+    left: -5%;
+  }
+
+  @media only screen and (min-width: ${ breakpoints["2k"] }) {
+    --vh2K: 66vh;
+    width: var(--vh2K); //950px
+    height: var(--vh2K); //950px
+    left: -20%;
+  }
+
+  @media only screen and (min-width: ${ breakpoints["4k"] }) {
+    --vh4K: 68.5vh;
+    width: var(--vh4K); //1480px
+    height: var(--vh4K); //1480px
+    left: -39%;
+  }
 `
