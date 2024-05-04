@@ -17,6 +17,8 @@ import H5 from 'ui/Titles/H5'
 
 const Footer: React.FC = () => {
   const intl = useIntlMessages()
+  const currentYear = new Date().getFullYear()
+
   return (
     <StyledFooter>
       <FooterWrapper size="xl" isfullwidth>
@@ -24,7 +26,7 @@ const Footer: React.FC = () => {
           <Link to="/" rel="noopener noreferrer">
             <img className="footer-logo" src={logo} alt="Binland logo" />
           </Link>
-          <p> &copy; Binland 2024. {intl('footer.all.rights.reserved')}.</p>
+          <p> &copy; Binland {currentYear}. {intl('footer.all.rights.reserved')}.</p>
         </FooterLogoWrapper>
         <FooterInfo>
           <FooterLinks>

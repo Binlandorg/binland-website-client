@@ -9,7 +9,11 @@ export const StyledFooter = styled.footer`
   min-height: 20rem;
   background: ${colors.black.main};
   color: ${colors.white.main};
-  padding-inline: 1rem;
+  padding-inline: 1.5rem;
+
+  @media only screen and (min-width: ${breakpoints.lg}){
+    padding-inline: 5rem;
+  }
 `
 
 export const FooterWrapper = styled(Container)`
