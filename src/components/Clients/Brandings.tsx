@@ -24,13 +24,8 @@ const Brandings: React.FC = () => {
   return (
     <BrandingsWrapper>
       {brands.map((brand) => (
-        <div className="container-img">
-          <img
-            key={brand.id}
-            className="branding-img"
-            src={brand.src}
-            alt={brand.name}
-          />
+        <div className="container-img" key={brand.id}>
+          <img className="branding-img" src={brand.src} alt={brand.name} />
         </div>
       ))}
     </BrandingsWrapper>
