@@ -12,18 +12,25 @@ export const StyledHeader = styled.header`
   height: 4.5rem;
   max-height: 4.5rem;
   background: #fff;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+  padding-inline: 1.5rem;
 
   position: sticky;
   top: 0;
   z-index: 20;
+
+  @media only screen and (min-width: ${ breakpoints.lg }){
+    padding-inline: 5rem;
+  }
 `
 
 export const HeaderWrapper = styled(Container)`
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   position: relative;
-  padding: 1rem 1rem;
+  padding: 1rem 0rem;
   height: 4.5rem;
 `
 
@@ -31,17 +38,28 @@ export const HamburgerIcon = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  
+  & > div > div + div{
+    border-radius: 18px !important;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  }
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     display: none;
   }
-`
+
+  `
 
 export const DesktopNavigation = styled.nav`
   display: none;
-
+  
   .temporary-anchor {
     text-decoration: none;
+  }
+
+  & .temporary-anchor + div > div + div{
+    border-radius: 18px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   }
 
   @media only screen and (min-width: ${breakpoints.lg}) {
@@ -53,7 +71,6 @@ export const DesktopNavigation = styled.nav`
     align-items: center;
     background: none;
     top: 0;
-    height: 4.5rem;
 
     .nav-items {
       display: flex;
@@ -66,15 +83,15 @@ export const DesktopNavigation = styled.nav`
     }
 
     .nav-items li a {
-      padding: 0.25rem 0;
-    }
-
-    .nav-items li a:focus {
-      padding: 0.25rem 0.5rem;
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+      line-height: 1;
+      border-radius: 0.6rem;
     }
 
     .nav-buttons {
       display: flex;
+      align-items: center;
       gap: 1rem;
     }
   }
@@ -85,16 +102,20 @@ export const MobileNavigation = styled.nav`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 0.75rem;
   background: ${colors.white.main};
   height: 100vh;
   height: 100svh;
+  height: 100lvh;
+  height: 100dvh;
   font-weight: 500;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
   gap: 1.5rem;
   padding: 1.625rem;
+
+  .temporary-anchor {
+    text-decoration: none;
+    width: 100%;
+  }
 
   .nav-items {
     width: 100%;
@@ -108,10 +129,30 @@ export const MobileNavigation = styled.nav`
   }
 
   .nav-items li a {
-    padding: 1.5rem 0;
+    width: 100%;
+    font-size: 1rem;
+    padding: 1.5rem 1rem;
+    line-height: 1;
+    border-radius: 0.6rem;
+    text-align: center;
   }
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     display: none;
+  }
+
+  & .close {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3rem;
+    border: none;
+    background: none;
+
+    &:active {
+      background-color: ${colors.secondary.active[200]};
+    }
   }
 `

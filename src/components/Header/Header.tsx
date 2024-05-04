@@ -73,7 +73,7 @@ const Header: React.FC = () => {
             </ul>
             <div className="nav-buttons">
               <a className="temporary-anchor" href="/#home-contact-us">
-                <Button type="secondary" size="lg" $isfullwidth={isOpen}>
+                <Button type="secondary" $isfullwidth={isOpen}>
                   {intl('home.navbar.button.contact.us')}
                 </Button>
               </a>
@@ -92,9 +92,9 @@ const Header: React.FC = () => {
               transition={{ duration: 0.4 }}
               exit="exit"
             >
-              <div>
-                <CgClose onClick={handleIsOpen} cursor={'pointer'} size={20} />
-              </div>
+              <button className='close' onClick={handleIsOpen}>
+                <CgClose cursor={'pointer'} size={20} />
+              </button>
               <ul className="nav-items">
                 {navbarItems.map((navItem) => (
                   <NavLink
@@ -116,7 +116,6 @@ const Header: React.FC = () => {
               <a className="temporary-anchor" href="/#home-contact-us">
               <Button
                 type="secondary"
-                size="lg"
                 onClick={handleIsOpen}
                 $isfullwidth={true}
               >
