@@ -11,7 +11,7 @@ export const StyledHeader = styled.header`
   width: 100%;
   height: 4.5rem;
   max-height: 4.5rem;
-  background: #fff;
+  background: ${colors.body};
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
   padding-inline: 1.5rem;
 
