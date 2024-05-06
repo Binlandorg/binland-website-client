@@ -1,6 +1,6 @@
 import useIntlMessages from 'hooks/useIntlMessages'
-import leftQuotationMark from './../../../assets/images/Quote/left-quotation-mark.svg'
-import rightQuotationMark from './../../../assets/images/Quote/right-quotation-mark.svg'
+// import IconLeftQuote from './../../../assets/images/Quote/left-quotation-mark.svg'
+// import IconRightQuote from './../../../assets/images/Quote/right-quotation-mark.svg'
 import { StyledQuote } from './Quote.styles'
 
 export const Quote = () => {
@@ -9,11 +9,11 @@ export const Quote = () => {
   return (
     <StyledQuote size="lg" type="padding">
       <div className="left-quotation-mark">
-        <img src={leftQuotationMark} alt="left quotation mark" />
+        {/* <IconLeftQuote/> */}
       </div>
       <p className="quote">{intl('about.us.quote.description')}</p>
       <div className="right-quotation-mark">
-        <img src={rightQuotationMark} alt="right quotation mark" />
+        {/* <IconRightQuote/> */}
       </div>
     </StyledQuote>
   )

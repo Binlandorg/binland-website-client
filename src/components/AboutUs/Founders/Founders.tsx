@@ -1,6 +1,6 @@
 import useIntlMessages from 'hooks/useIntlMessages'
 import ProfileCard from 'components/Cards/ProfileCard/ProfileCard'
-import foundersData from './FoundersData'
+import foundersData from './Founders.data'
 import { IProfileCard } from 'types/components/aboutus'
 import {
   FoundersContainer,
