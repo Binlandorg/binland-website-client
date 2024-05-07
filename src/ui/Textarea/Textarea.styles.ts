@@ -2,14 +2,30 @@ import styled from 'styled-components'
 
 import { colors } from '../../styles/colors'
 import { breakpoints } from 'shared/breakpoints'
+import { ITextareaWrapper } from 'types/ui/Textarea'
 
-export const TextareaWrapper = styled.div`
-  background-color: ${colors.gray[150]};
+export const TextareaWrapper = styled.div<ITextareaWrapper>`
+  background-color: ${colors.tertiary.normal[50]};
   padding: 1.5rem 1rem;
   border-radius: 0.375rem;
   height: auto;
   min-height: 9.375rem;
   position: relative;
+  margin-bottom: 0.5rem;
+
+  &:focus-within,
+  &:active {
+    border: 0.125rem solid ${colors.tertiary.focus[500]};
+  }
+  ${(props) =>
+    props.$isError &&
+    `
+    border: 0.125rem solid ${colors.primary.normal[500]};
+    &:focus-within,
+    &:active {
+      border: 0.125rem solid ${colors.primary.normal[500]};
+    }
+  `}
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     padding: 1.5rem 1.75rem;
@@ -56,4 +72,12 @@ export const TextareaLabel = styled.label`
     transform: translate(0, -40%) scale(0.8);
     padding-bottom: 0.25rem;
   }
+`
+
+export const ErrorTextarea = styled.span`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: ${colors.primary.normal[500]};
 `
