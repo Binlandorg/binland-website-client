@@ -1,12 +1,29 @@
 import styled from 'styled-components'
 
 import { colors } from '../../styles/colors'
+import { IInputWrapper } from 'types/ui/Input'
 
-export const InputWrapper = styled.div`
-  background-color: ${colors.gray[150]};
+export const InputWrapper = styled.div<IInputWrapper>`
+  background-color: ${colors.tertiary.normal[50]};
   padding: 1.5rem 1.75rem 1rem;
   border-radius: 0.375rem;
   width: 100%;
+  margin-bottom: 0.5rem;
+
+  &:focus-within,
+  &:active {
+    border: 0.125rem solid ${colors.tertiary.focus[500]};
+  }
+
+  ${(props) =>
+    props.$isError &&
+    `
+    border: 0.125rem solid ${colors.primary.normal[500]};
+    &:focus-within,
+    &:active {
+      border: 0.125rem solid ${colors.primary.normal[500]};
+    }
+  `}
 `
 
 export const InputLabel = styled.label`
@@ -40,4 +57,12 @@ export const InputLabel = styled.label`
     color: ${colors.secondary.normal[300]};
     transform: translate(0, -50%) scale(0.8);
   }
+`
+
+export const ErrorMessage = styled.span`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: ${colors.primary.normal[500]};
 `

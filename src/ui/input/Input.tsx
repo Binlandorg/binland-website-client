@@ -1,18 +1,8 @@
 import { useRef } from 'react'
+import { MdError } from 'react-icons/md'
 
-import { InputWrapper, InputLabel } from './Input.styles'
-import { WithClassName } from 'types/components/shared'
-
-interface IStyledInput extends WithClassName {
-  id: string
-  type?: 'text' | 'number' | 'email' | 'password'
-  name?: string
-  value: string | number
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
-  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void
-  placeholder?: string
-  label?: string
-}
+import { InputWrapper, InputLabel, ErrorMessage } from './Input.styles'
+import { IStyledInput } from 'types/ui/Input'
 
 const Input: React.FC<IStyledInput> = ({
   id,
@@ -24,31 +14,45 @@ const Input: React.FC<IStyledInput> = ({
   placeholder = '',
   label,
   className,
+  error = null,
 }) => {
   const inputRef = useRef<HTMLInputElement | null>(null)
-  const handleWrapperClick = () => {
+
+  const handleWrapperClick = (): void => {
     if (inputRef.current) {
       inputRef.current.focus()
     }
   }
 
   return (
-    <InputWrapper onClick={handleWrapperClick} className={className}>
-      <InputLabel>
-        <input
-          ref={inputRef}
-          id={id || name}
-          type={type}
-          name={name}
-          value={value}
-          onChange={onChange}
-          onBlur={onBlur}
-          className="input"
-          placeholder={placeholder}
-        />
-        <span>{label}</span>
-      </InputLabel>
-    </InputWrapper>
+    <div>
+      <InputWrapper
+        onClick={handleWrapperClick}
+        className={className}
+        $isError={Boolean(error)}
+      >
+        <InputLabel>
+          <input
+            ref={inputRef}
+            id={id || name}
+            type={type}
+            name={name}
+            value={value}
+            onChange={onChange}
+            onBlur={onBlur}
+            className="input"
+            placeholder={placeholder}
+          />
+          <span>{label}</span>
+        </InputLabel>
+      </InputWrapper>
+      {error && (
+        <ErrorMessage>
+          <MdError />
+          {error}
+        </ErrorMessage>
+      )}
+    </div>
   )
 }
 

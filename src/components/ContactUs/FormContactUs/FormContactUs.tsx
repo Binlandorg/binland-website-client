@@ -103,10 +103,13 @@ const FormContacUs: React.FC = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.fullName}
+          error={
+            formik.errors.fullName && formik.touched.fullName
+              ? intl(formik.errors.fullName)
+              : null
+          }
         />
-        {formik.errors.fullName && formik.touched.fullName ? (
-          <Error>{intl(formik.errors.fullName)}</Error>
-        ) : null}
+
         <Input
           label="Email *"
           type="email"
@@ -115,10 +118,12 @@ const FormContacUs: React.FC = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.email}
+          error={
+            formik.errors.email && formik.touched.email
+              ? intl(formik.errors.email)
+              : null
+          }
         />
-        {formik.errors.email && formik.touched.email ? (
-          <Error>{intl(formik.errors.email)}</Error>
-        ) : null}
         <Input
           label="País"
           type="text"
@@ -127,10 +132,12 @@ const FormContacUs: React.FC = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.country}
+          error={
+            formik.errors.country && formik.touched.country
+              ? intl(formik.errors.country)
+              : null
+          }
         />
-        {formik.errors.country && formik.touched.country ? (
-          <Error>{intl(formik.errors.country)}</Error>
-        ) : null}
         <MultiSelect
           options={servicesOptions}
           onChange={setSelectedServices}
