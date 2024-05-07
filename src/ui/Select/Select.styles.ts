@@ -38,7 +38,7 @@ export const StyledSelectOptions = styled.div<IPosition>`
   max-width: 21.875rem;
   border: none;
   color: ${colors.black.main};
-  border: 0.0625rem solid ${colors.body};
+  border: 1px solid ${colors.tertiary.normal[200]};
   border-radius: 1rem;
 
   li:first-child {
@@ -64,12 +64,18 @@ export const StyledSelectOption = styled.li<ISelectOption>`
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
-  border-bottom: 0.125rem solid ${colors.body};
+  border-bottom: 1px solid ${colors.tertiary.normal[200]};
   gap: 1rem;
 
   &:hover {
     background: ${colors.tertiary.hover[200]};
-    color: ${colors.white.main};
+
+    & .point-selected {
+      ${({ selected }) =>
+        selected
+          ? `border: 0.25rem solid ${colors.tertiary.hover[300]}`
+          : `background-color: ${colors.tertiary.hover[300]}`};
+    }
   }
 
   .point-selected {

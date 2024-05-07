@@ -13,28 +13,46 @@ export const StyledAnchor = styled(NavLink)`
   color: ${colors.primary.main};
   text-decoration: none;
   font-size: 1rem;
-  font-weight: ${FontWeight["semibold"]};
+  font-weight: ${FontWeight['semibold']};
   display: flex;
   flex-direction: column;
+  position: relative;
 
   /** we use this to style the current (active) selected navbar item */
   &[aria-current='page'] {
     color: ${colors.primary.active[700]};
-    border-bottom: 2px solid ${colors.primary.active[700]};
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: ${colors.primary.active[700]};
+      bottom: 0px;
+      left: 0px;
+    }
   }
 
   &.is-active {
     color: red;
   }
 
-  &:hover {
-    color: ${colors.primary.main};
-    border-bottom: 2px solid  ${colors.primary.main};
+  &:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: ${colors.primary.main};
+    bottom: 0px;
+    left: 0px;
   }
 
-  
+  &:focus::after {
+    width: 0%;
+  }
+
   &:focus {
-    border: 0.125rem solid ${colors.primary.main};
+    outline: 0.125rem solid ${colors.primary.main};
     border-radius: 1rem;
     color: ${colors.primary.main};
   }
