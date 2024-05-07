@@ -8,6 +8,8 @@ export const StyledClientsSection = styled.section`
   box-shadow: 0 0 1.25rem 0 rgba(30, 26, 26, 0.5);
   background-color: ${colors.white.main};
   width: 100%;
+  position: relative;
+  width: calc(100vw - 18px);
 `
 
 export const ClientsSectionWrapper = styled(Container)`
