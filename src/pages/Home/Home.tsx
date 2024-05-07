@@ -8,7 +8,7 @@ import Container from 'ui/Container/Container'
 const Home = () => {
   return (
     <BodyContainer>
-      <Container size='xl'>
+      <Container size='xl' isfullwidth>
         <Hero />
         <Services />
         <Clients />
