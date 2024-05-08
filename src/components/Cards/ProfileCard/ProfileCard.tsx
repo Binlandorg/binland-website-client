@@ -19,8 +19,9 @@ import {
 import H4 from 'ui/Titles/H4'
 import Paragraph from 'ui/Paragraph/Paragraph'
 import { IName, IProfileCard } from 'types/components/aboutus'
+import defaultImgURL from '../../../assets/images/default-image-profile.webp'
 
-const GetIcon = ({ name } : IName) => {
+const GetIcon: React.FC<IName> = ({ name } : IName) => {
   switch (name.toLocaleLowerCase()) {
     case 'github':
       return <FiGithub />
@@ -41,7 +42,7 @@ const ProfileCard: React.FC<IProfileCard> = ({
   return (
     <StyledProfileCard>
       <CardImageContainer>
-        <CardImage src={image} threshold={200}/>
+        <CardImage src={image.url ?? defaultImgURL } threshold={200}/>
       </CardImageContainer>
       <CardData>
         <CardDataContainer>

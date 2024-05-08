@@ -15,7 +15,7 @@ const Reveal: React.FC<IReveal> = ({ children, classname }: IReveal) => {
   }, [isInView, mainControls])
 
   return (
-    <div ref={ref} style={{ overflow: 'hidden' }} className={classname}>
+    <div ref={ref} style={{ overflow: 'hidden', position: 'relative' }} className={classname}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },

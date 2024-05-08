@@ -2,11 +2,15 @@ import crhisImageURL from '../../../assets/images/chris-profile.webp'
 import jonathanImageURL from '../../../assets/images/jonathan-profile.webp'
 import gustavoImageURL from '../../../assets/images/gustavo-profile.webp'
 import ricardoImageURL from '../../../assets/images/ricardo-profile.webp'
+import { IFoundersData } from 'types/components/aboutus'
 
-const founderData = [
+const founderData: IFoundersData[] = [
   {
     id: '1',
-    image: crhisImageURL,
+    image: {
+      url: crhisImageURL,
+      alt: 'Imagen del CEO de la compañia, Crhistian Turpo',
+    },
     fullName: 'Crhistian Turpo Apaza',
     position: 'CEO',
     quote: 'Quien tiene paciencia, obtendrá lo que desea.',
@@ -27,10 +31,14 @@ const founderData = [
   },
   {
     id: '2',
-    image: jonathanImageURL,
+    image: {
+      url: jonathanImageURL,
+      alt: 'Imagen de uno de los fundadores, Jonathan Cervantes',
+    },
     fullName: 'Jonathan M. Alarcón',
     position: 'Full Stack Developer',
-    quote: 'Las decisiones dificiles requieren voluntades fuertes.',
+    quote:
+      'Programa siempre tu código como si el tipo que va a tener que mantenerlo en el futuro fuera un violento psicópata que sabe donde vives.',
     networks: [
       {
         name: 'github',
@@ -48,7 +56,10 @@ const founderData = [
   },
   {
     id: '3',
-    image: gustavoImageURL,
+    image: {
+      url: gustavoImageURL,
+      alt: 'Imagen de uno de los fundadores, Gustavo Ugarte',
+    },
     fullName: 'Gustavo Ugarte',
     position: 'Full Stack Developer',
     quote: 'El fracaso solo es un paso hacia el éxito',
@@ -65,7 +76,10 @@ const founderData = [
   },
   {
     id: '4',
-    image: ricardoImageURL,
+    image: {
+      url: ricardoImageURL,
+      alt: 'Imagen de uno de los fundadores, Ricardo Mamani',
+    },
     fullName: 'Ricardo Mamani Calcina',
     position: 'Frontend Developer',
     quote: 'La ocasión hay que crearla, no esperar a que llegue.',
