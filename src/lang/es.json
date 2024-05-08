@@ -36,6 +36,16 @@
   "about.us.binland.information.details.collaborators": "Colaboradores",
   "about.us.binland.information.details.services": "Servicios",
   "about.us.founders.title": "Fundadores",
+  "about.us.position.ceo": "CEO",
+  "about.us.position.full.stack.developer": "Desarrollador Full Stack",
+  "about.us.position.frontend.developer": "Desarrollador Frontend",
+  "about.us.position.trainee": "Trainee",
+  "about.us.quote.christian.turpo.apaza": "Quien tiene paciencia, obtendrá lo que desea.",
+  "about.us.quote.jonathan.cervantes.alarcon": "Programa siempre tu código como si el tipo que va a tener que mantenerlo en el futuro fuera un violento psicópata que sabe donde vives.",
+  "about.us.quote.gustavo.ugarte": "El fracaso solo es un paso hacia el éxito.",
+  "about.us.quote.ricardo.mamani.calcina": "La ocasión hay que crearla, no esperar a que llegue.",
+  "about.us.quote.paty.apaestegui.rodriguez": "No malgastes tu tiempo, pues de esa materia está formada la vida.",
+  "about.us.quote.diego.lopez.vega": "Las contraseñas son como la ropa interior. No puedes dejar que nadie la vea, debes cambiarla regularmente y no debes compartirla con extraños.",
   "about.us.team.title": "Equipo",
   "about.us.offices.title": "Oficinas",
   "about.us.offices.sub.title.collage": "Nuestro equipo nos respalda",
@@ -81,5 +91,12 @@
   "footer.projects": "Proyectos",
   "footer.FAQ": "Preguntas frecuentes",
 
-  "validation.input.required.message": "Este campo es requerido"
+  "validation.input.required.message": "Este campo es requerido",
+
+  "image.profile.alt.crhistian.turpo.apaza": "Imagen del CEO de la compañia, Crhistian Turpo",
+  "image.profile.alt.jonathan.cervantes.alarcon": "Imagen de uno de los fundadores, Jonathan Cervantes",
+  "image.profile.alt.gustavo.ugarte": "Imagen de uno de los fundadores, Gustavo Ugarte",
+  "image.profile.alt.ricardo.mamani.calcina": "Imagen de uno de los fundadores, Ricardo Mamani",
+  "image.profile.alt.paty.apaestegui.rodriguez": "Colaboradora Paty Apaestegui",
+  "image.profile.alt.diego.lopez.vega": "Colaborador Diego López"
 }

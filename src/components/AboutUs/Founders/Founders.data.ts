@@ -9,11 +9,11 @@ const founderData: IFoundersData[] = [
     id: '1',
     image: {
       url: crhisImageURL,
-      alt: 'Imagen del CEO de la compañia, Crhistian Turpo',
+      alt: 'image.profile.alt.crhistian.turpo.apaza',
     },
     fullName: 'Crhistian Turpo Apaza',
-    position: 'CEO',
-    quote: 'Quien tiene paciencia, obtendrá lo que desea.',
+    position: "about.us.position.ceo",
+    quote: 'about.us.quote.christian.turpo.apaza',
     networks: [
       {
         name: 'github',
@@ -33,12 +33,11 @@ const founderData: IFoundersData[] = [
     id: '2',
     image: {
       url: jonathanImageURL,
-      alt: 'Imagen de uno de los fundadores, Jonathan Cervantes',
+      alt: 'image.profile.alt.jonathan.cervantes.alarcon',
     },
     fullName: 'Jonathan M. Alarcón',
-    position: 'Full Stack Developer',
-    quote:
-      'Programa siempre tu código como si el tipo que va a tener que mantenerlo en el futuro fuera un violento psicópata que sabe donde vives.',
+    position: 'about.us.position.full.stack.developer',
+    quote: 'about.us.quote.jonathan.cervantes.alarcon',
     networks: [
       {
         name: 'github',
@@ -58,11 +57,11 @@ const founderData: IFoundersData[] = [
     id: '3',
     image: {
       url: gustavoImageURL,
-      alt: 'Imagen de uno de los fundadores, Gustavo Ugarte',
+      alt: 'image.profile.alt.gustavo.ugarte',
     },
     fullName: 'Gustavo Ugarte',
-    position: 'Full Stack Developer',
-    quote: 'El fracaso solo es un paso hacia el éxito',
+    position: 'about.us.position.full.stack.developer',
+    quote: 'about.us.quote.gustavo.ugarte',
     networks: [
       {
         name: 'github',
@@ -78,11 +77,11 @@ const founderData: IFoundersData[] = [
     id: '4',
     image: {
       url: ricardoImageURL,
-      alt: 'Imagen de uno de los fundadores, Ricardo Mamani',
+      alt: 'image.profile.alt.ricardo.mamani.calcina',
     },
     fullName: 'Ricardo Mamani Calcina',
-    position: 'Frontend Developer',
-    quote: 'La ocasión hay que crearla, no esperar a que llegue.',
+    position: 'about.us.position.frontend.developer',
+    quote: 'about.us.quote.ricardo.mamani.calcina',
     networks: [
       {
         name: 'github',

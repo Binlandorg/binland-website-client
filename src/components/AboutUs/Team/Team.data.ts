@@ -7,11 +7,11 @@ const teamData: ITeamData[] = [
     id: '1',
     image: {
       url: patyImageURL,
-      alt: 'Colaboradora Paty Apaestegui',
+      alt: 'image.profile.alt.paty.apaestegui.rodriguez',
     },
     fullName: 'Paty Apaestegui Rodríguez',
-    position: 'Trainee',
-    quote: 'No malgastes tu tiempo, pues de esa materia está formada la vida.',
+    position: 'about.us.position.trainee',
+    quote: 'about.us.quote.paty.apaestegui.rodriguez',
     networks: [
       {
         name: 'GitHub',
@@ -27,12 +27,11 @@ const teamData: ITeamData[] = [
     id: '2',
     image: {
       url: diegoImageURL,
-      alt: 'Colaborador Diego López',
+      alt: 'image.profile.alt.diego.lopez.vega',
     },
     fullName: 'Diego López Vega',
-    position: 'Trainee',
-    quote:
-      'Las contraseñas son como la ropa interior. No puedes dejar que nadie la vea, debes cambiarla regularmente y no debes compartirla con extraños.',
+    position: 'about.us.position.trainee',
+    quote: 'about.us.quote.diego.lopez.vega',
     networks: [
       {
         name: 'GitHub',
