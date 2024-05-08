@@ -1,3 +1,4 @@
+import { breakpoints } from 'shared/breakpoints'
 import styled from 'styled-components'
 
 import { colors } from 'styles/colors'
@@ -60,6 +61,11 @@ export const SectionDescription = styled(Container)`
   margin: 0;
   align-items: flex-start;
   width: 100%;
+  margin-top: 3rem;
+
+  @media only screen and (min-width: ${breakpoints.xxl}){
+    margin-top: 7rem;
+  }
 `
 export const DescriptionSubTitle = styled.div`
   & h4{

@@ -55,12 +55,13 @@ export const InformationDetails = styled.div`
     width: 100%;
     height: 100%;
 
-    & h4 {
+    & h5 {
       color: ${colors.secondary.normal[800]};
       opacity: 0.5;
+      margin: 0;
     }
 
-    & h4::first-letter {
+    & h5::first-letter {
       text-transform: capitalize;
     }
   }

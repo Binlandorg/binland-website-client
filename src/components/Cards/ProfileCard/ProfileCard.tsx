@@ -42,31 +42,39 @@ const ProfileCard: React.FC<IProfileCard> = ({
   return (
     <StyledProfileCard>
       <CardImageContainer>
-        <CardImage src={image.url ?? defaultImgURL } threshold={200}/>
+        <CardImage
+          src={image.url ?? defaultImgURL}
+          alt={image.alt}
+          threshold={200}
+        />
       </CardImageContainer>
       <CardData>
         <CardDataContainer>
           <ProfileData>
-            <ProfileName><H4 $weight="bold">{fullName}</H4></ProfileName>
-            <ProfilePosition><H4 $weight="medium">{position}</H4></ProfilePosition>
+            <ProfileName>
+              <H4 $weight="bold">{fullName}</H4>
+            </ProfileName>
+            <ProfilePosition>
+              <H4 $weight="medium">{position}</H4>
+            </ProfilePosition>
           </ProfileData>
           <ProfileQuote>
-            <Paragraph $style='italic' $weight='regular'>"{quote}"</Paragraph>
+            <Paragraph $style="italic" $weight="regular">
+              "{quote}"
+            </Paragraph>
           </ProfileQuote>
           <ProfileNetworks>
-            {
-              networks?.map((network, id) => (
-                <ProfileNetwork key={id}>
-                  <AnchorIcon
-                    href={network.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <GetIcon name={network.name}/>
-                  </AnchorIcon>
-                </ProfileNetwork>
-              ))
-            }
+            {networks?.map((network, id) => (
+              <ProfileNetwork key={id}>
+                <AnchorIcon
+                  href={network.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GetIcon name={network.name} />
+                </AnchorIcon>
+              </ProfileNetwork>
+            ))}
           </ProfileNetworks>
         </CardDataContainer>
       </CardData>

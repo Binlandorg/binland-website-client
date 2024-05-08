@@ -27,7 +27,7 @@ const Information: React.FC = () => {
               <H4 $weight="regular">
                 {intl('about.us.binland.information.sub.title')}
               </H4>
-              <H3 $weight="semibold">
+              <H3 $weight="bold">
                 {intl('about.us.binland.information.title')}
                 <span className="dot">.</span>
               </H3>

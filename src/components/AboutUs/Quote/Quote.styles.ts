@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
 import { FontWeight } from 'styles/typography'
+import sloganBGImageURL from '../../../assets/images/mockup-ui-chat.webp'
 
 export const StyledQuote = styled.div`
-  background-color: ${colors.secondary.main};
   color: ${colors.white.main};
   padding: 1.5rem;
   border-radius: 1rem;
@@ -14,6 +14,20 @@ export const StyledQuote = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  &::after{
+    content: "";
+    width: 110%;
+    height: 110%;
+    background-image: url(${sloganBGImageURL});
+    background-size: cover;
+    background-position-y: 22%;
+    position: absolute;
+    z-index: -1;
+    filter: blur(15px);
+  }
 
   @media only screen and (min-width: ${breakpoints.md}) {
     padding: 5rem;
