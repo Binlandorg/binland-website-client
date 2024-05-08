@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react"
 
 export interface IH3Props extends PropsWithChildren {
-  $weight: "medium" | "semibold"
+  $weight: "medium" | "semibold" | "bold"
 }
 
 export interface IH4Props extends PropsWithChildren {
