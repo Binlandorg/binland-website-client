@@ -132,11 +132,11 @@ export const StyledOption = styled.span`
 
   &:hover {
     background-color: ${colors.tertiary.hover[300]};
-    color: ${colors.white.main};
+    color: ${colors.tertiary.active[700]};
   }
 
   &:active {
     background-color: ${colors.tertiary.active[400]};
-    color: ${colors.white.main};
+    color: ${colors.tertiary.active[700]};
   }
 `
