@@ -12,16 +12,16 @@ export const InputWrapper = styled.div<IInputWrapper>`
 
   &:focus-within,
   &:active {
-    border: 0.125rem solid ${colors.tertiary.focus[500]};
+    outline: 0.125rem solid ${colors.tertiary.focus[500]};
   }
 
   ${(props) =>
     props.$isError &&
     `
-    border: 0.125rem solid ${colors.primary.normal[500]};
+    outline: 0.125rem solid ${colors.primary.normal[500]};
     &:focus-within,
     &:active {
-      border: 0.125rem solid ${colors.primary.normal[500]};
+      outline: 0.125rem solid ${colors.primary.normal[500]};
     }
   `}
 `

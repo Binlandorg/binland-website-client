@@ -37,8 +37,8 @@ const typeStyles = (type: string) => {
         }
 
         &:hover {
-          background-color: ${colors.secondary.hover[300]};
-          color: ${colors.white.main};
+          background-color: ${colors.secondary.hover[200]};
+          color: ${colors.secondary.hover[800]};
         }
       `
     default:
