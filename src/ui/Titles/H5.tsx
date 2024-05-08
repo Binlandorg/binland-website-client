@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { FontWeight } from "styles/typography"
 import { IH5Props } from "types/ui/Titles"
 
-const StyledH5 = styled.h4<IH5Props>`
+const StyledH5 = styled.h5<IH5Props>`
   font-weight: ${(props) => FontWeight[props.$weight]};
   font-size: clamp(1rem, 0.875rem + 0.4vw, 1.125rem);
   line-height: 1.5;
