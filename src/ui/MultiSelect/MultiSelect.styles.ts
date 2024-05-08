@@ -23,7 +23,7 @@ export const InputBox = styled.div<InputBoxProps>`
   padding: 1.5rem 1.75rem;
   border: ${({ $isOpen }) =>
     $isOpen &&
-    `0.1rem solid ${colors.primary.main}`}; /* change de color with the correct palette */
+    `0.1rem solid ${colors.tertiary.disabled[500]}`}; /* change de color with the correct palette */
   border-bottom: none;
   border-radius: ${({ $isOpen }) =>
     $isOpen ? '0.375rem 0.375rem 0 0' : '0.375rem'};
@@ -93,7 +93,7 @@ export const DisplayOptions = styled.div<InputBoxProps>`
   width: 100%;
   border: ${({ $isOpen }) =>
     $isOpen &&
-    `0.1rem solid ${colors.primary.main}`}; /* change de color with the correct palette */
+    `0.1rem solid ${colors.tertiary.disabled[500]}`}; /* change de color with the correct palette */
   border-top: none;
   border-radius: 0 0 0.375rem 0.375rem;
 `
@@ -121,7 +121,7 @@ export const OptionsWrapper = styled.div`
 
 export const StyledOption = styled.span`
   padding: 1.25rem 1.5rem;
-  background-color: ${colors.gray[150]};
+  background-color: ${colors.tertiary.main};
   border-bottom: 0.0625rem solid ${colors.secondary.normal[300]};
   color: ${colors.secondary.main};
   cursor: pointer;
@@ -131,7 +131,12 @@ export const StyledOption = styled.span`
   }
 
   &:hover {
-    background-color: ${colors.secondary.hover[200]};
+    background-color: ${colors.tertiary.hover[300]};
+    color: ${colors.white.main};
+  }
+
+  &:active {
+    background-color: ${colors.tertiary.active[400]};
     color: ${colors.white.main};
   }
 `
