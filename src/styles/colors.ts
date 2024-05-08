@@ -73,6 +73,7 @@ export const colors = {
     normal: {
       50: '#F8F6FC',
       200: '#E7E0F5',
+      300: '#D3C7EC',
       700: '#6D4DA3',
     },
     disabled: {
