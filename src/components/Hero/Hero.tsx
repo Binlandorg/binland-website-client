@@ -8,15 +8,16 @@ import {
   ContentText,
   HeroContentWrapper,
   Content,
-  HeroContent,
   ImageWrapper,
   NetworkWrapper,
-  StyledHero,
   NetworkWrapperInside,
+  SectionHero,
+  HeroContent
 } from './Hero.styles'
 import H5 from 'ui/Titles/H5'
 import Display from 'ui/Display/Display'
 import heroImgURL from './../../assets/images/girl-using-virtual-reality-glasses-cropped-v2.webp'
+import Container from 'ui/Container/Container'
 
 interface IHeroImgData {
   src: string
@@ -32,43 +33,45 @@ const Hero = () => {
   const intl = useIntlMessages()
 
   return (
-    <StyledHero type='margin' size='xl'>
-      <HeroContent>
-        <HeroContentWrapper>
-          <NetworkWrapperInside>
-            <SocialMediaBar type="secondary" direction="column" />
-          </NetworkWrapperInside>
-          <Content>
-            <ContentText>
-              <H5 $weight="bold">{intl('home.hero.subslogan')}</H5>
-              <Display size="lg">
-                <FormattedMessage
-                  id="hero-slogan"
-                  defaultMessage={intl('home.hero.slogan')}
-                  values={{
-                    b: (chunks) => <b>{chunks}</b>,
-                  }}
-                />
-              </Display>
-            </ContentText>
-            <a href="#home-contact-us">
-              <IconArrowLeft size={20} />
-              <span>{intl('home.hero.contact.us.button.title')}</span>
-            </a>
-          </Content>
-        </HeroContentWrapper>
-        <NetworkWrapper>
-          <SocialMediaBar type="secondary" direction="row" />
-        </NetworkWrapper>
-      </HeroContent>
-      <ImageWrapper>
-        <LazyLoadImage
-          src={heroImgData.src}
-          alt={heroImgData.alt}
-          threshold={100}
-        />
-      </ImageWrapper>
-    </StyledHero>
+    <SectionHero id='hero' type='padding' size='sm'>
+      <Container size='xl' isfullwidth>
+        <HeroContent>
+          <HeroContentWrapper>
+            <NetworkWrapperInside>
+              <SocialMediaBar type="secondary" direction="column" />
+            </NetworkWrapperInside>
+            <Content>
+              <ContentText>
+                <H5 $weight="bold">{intl('home.hero.subslogan')}</H5>
+                <Display size="lg">
+                  <FormattedMessage
+                    id="hero-slogan"
+                    defaultMessage={intl('home.hero.slogan')}
+                    values={{
+                      b: (chunks) => <b>{chunks}</b>,
+                    }}
+                  />
+                </Display>
+              </ContentText>
+              <a href="#home-contact-us">
+                <IconArrowLeft size={20} />
+                <span>{intl('home.hero.contact.us.button.title')}</span>
+              </a>
+            </Content>
+          </HeroContentWrapper>
+          <NetworkWrapper>
+            <SocialMediaBar type="secondary" direction="row" />
+          </NetworkWrapper>
+          <ImageWrapper>
+            <LazyLoadImage
+              src={heroImgData.src}
+              alt={heroImgData.alt}
+              threshold={100}
+            />
+          </ImageWrapper>
+        </HeroContent>
+      </Container>
+    </SectionHero>
   )
 }
 

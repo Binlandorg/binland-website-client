@@ -1,18 +1,27 @@
 import styled from 'styled-components'
 
-import Container from 'ui/Container/Container'
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
+import Section from 'ui/Section/Section'
 
-export const StyledClientsSection = styled.section`
+export const SectionClients = styled(Section)`
   box-shadow: 0 0 1.25rem 0 rgba(30, 26, 26, 0.5);
   background-color: ${colors.white.main};
-  width: 100%;
+  width: calc(100% + 3rem);
+  max-width: inherit;
+  padding: 1.5rem;
   position: relative;
-  width: calc(100vw - 18px);
+  left: -1.5rem;
+
+  @media only screen and (min-width: ${breakpoints.lg}){
+    width: calc(100% + 10rem);
+    left: -5rem;
+    padding: 5rem;
+  }
 `
 
-export const ClientsSectionWrapper = styled(Container)`
+export const ClientsSectionWrapper = styled.div`
+  width: 100%;
   padding-top: 4rem;
   padding-bottom: 3rem;
 

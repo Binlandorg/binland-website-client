@@ -4,15 +4,8 @@ import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
 import Section from 'ui/Section/Section'
 
-export const StyledHero = styled(Section)`
-  height: 100vh;
-  width: 100%;
-  position: relative;
-
-  @media only screen and (min-width: ${ breakpoints.xs }) {
-    height: calc(100vh - 4.5rem);
-    margin-top: 0;
-  }
+export const SectionHero = styled(Section)`
+  height: calc(100vh - 4.5rem);
 `
 
 export const HeroContent = styled.div`
