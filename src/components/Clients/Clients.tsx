@@ -4,7 +4,7 @@ import useIntlMessages from 'hooks/useIntlMessages'
 import ButtonLink from 'ui/ButtonLink/ButtonLink'
 import Brandings from './Brandings'
 import {
-  SectionClients,
+  ClientsSection,
   ClientsSectionWrapper,
   ClientsSectionContent,
   TitleAndButtonSection,
@@ -16,7 +16,7 @@ const Clients: React.FC = () => {
   const intl = useIntlMessages()
 
   return (
-    <SectionClients id='clients' size="lg" type="margin">
+    <ClientsSection id='clients' size="lg" type="margin">
       <Container size="xl" isfullwidth>
         <ClientsSectionWrapper>
           <ClientsSectionContent>
@@ -37,7 +37,7 @@ const Clients: React.FC = () => {
           </ClientsSectionContent>
         </ClientsSectionWrapper>
       </Container>
-    </SectionClients>
+    </ClientsSection>
   )
 }
 

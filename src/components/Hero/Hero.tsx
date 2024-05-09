@@ -11,7 +11,7 @@ import {
   ImageWrapper,
   NetworkWrapper,
   NetworkWrapperInside,
-  SectionHero,
+  HeroSection,
   HeroContent
 } from './Hero.styles'
 import H5 from 'ui/Titles/H5'
@@ -33,7 +33,7 @@ const Hero = () => {
   const intl = useIntlMessages()
 
   return (
-    <SectionHero id='hero' type='padding' size='sm'>
+    <HeroSection id='hero' type='padding' size='sm'>
       <Container size='xl' isfullwidth>
         <HeroContent>
           <HeroContentWrapper>
@@ -71,7 +71,7 @@ const Hero = () => {
           </ImageWrapper>
         </HeroContent>
       </Container>
-    </SectionHero>
+    </HeroSection>
   )
 }
 

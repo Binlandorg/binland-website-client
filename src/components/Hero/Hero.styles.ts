@@ -4,8 +4,8 @@ import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
 import Section from 'ui/Section/Section'
 
-export const SectionHero = styled(Section)`
-  height: calc(100vh - 4.5rem);
+export const HeroSection = styled(Section)`
+  height: calc(100vh - var(--header-height));
 `
 
 export const HeroContent = styled.div`
