@@ -151,10 +151,12 @@ const FormContacUs: React.FC = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.message}
+          error={
+            formik.errors.message && formik.touched.message
+              ? intl(formik.errors.message)
+              : null
+          }
         />
-        {formik.errors.message && formik.touched.message ? (
-          <Error>{intl(formik.errors.message)}</Error>
-        ) : null}
         <div className="recaptcha-container">
           {siteKey && (
             <ReCAPTCHA

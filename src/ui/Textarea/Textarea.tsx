@@ -1,18 +1,14 @@
-import { ChangeEvent, FocusEvent, useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 
-import { TextareaLabel, TextareaWrapper } from './Textarea.styles'
+import {
+  ErrorTextarea,
+  TextareaLabel,
+  TextareaWrapper,
+} from './Textarea.styles'
+import { IPropsTextarea } from 'types/ui/Textarea'
+import { MdError } from 'react-icons/md'
 
-interface IStyledTextarea {
-  label: string
-  name: string
-  placeholder?: string
-  id: string
-  value?: string
-  onBlur?: (event: FocusEvent<HTMLTextAreaElement>) => void
-  onChange?: (event: ChangeEvent<HTMLTextAreaElement>) => void
-}
-
-const Textarea: React.FC<IStyledTextarea> = ({
+const Textarea: React.FC<IPropsTextarea> = ({
   label,
   name,
   placeholder = '',
@@ -20,6 +16,7 @@ const Textarea: React.FC<IStyledTextarea> = ({
   value,
   onChange,
   onBlur,
+  error = null,
 }) => {
   const textAreaRef = useRef<HTMLTextAreaElement | null>(null)
   const handleWrapperClick = () => {
@@ -38,20 +35,28 @@ const Textarea: React.FC<IStyledTextarea> = ({
   useEffect(resizeTextArea, [value])
 
   return (
-    <TextareaWrapper onClick={handleWrapperClick}>
-      <TextareaLabel>
-        <textarea
-          ref={textAreaRef}
-          id={id || name}
-          name={name}
-          value={value}
-          onChange={onChange}
-          onBlur={onBlur}
-          placeholder={placeholder}
-        />
-        <span>{label}</span>
-      </TextareaLabel>
-    </TextareaWrapper>
+    <div>
+      <TextareaWrapper onClick={handleWrapperClick} $isError={Boolean(error)}>
+        <TextareaLabel>
+          <textarea
+            ref={textAreaRef}
+            id={id || name}
+            name={name}
+            value={value}
+            onChange={onChange}
+            onBlur={onBlur}
+            placeholder={placeholder}
+          />
+          <span>{label}</span>
+        </TextareaLabel>
+      </TextareaWrapper>
+      {error && (
+        <ErrorTextarea>
+          <MdError />
+          {error}
+        </ErrorTextarea>
+      )}
+    </div>
   )
 }
 

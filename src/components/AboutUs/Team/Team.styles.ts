@@ -1,18 +1,23 @@
 import styled from "styled-components"
 
-import Container from "ui/Container/Container"
 import SectionAboutUs from "../SectionAboutUs/SectionAboutUs"
+import { breakpoints } from "shared/breakpoints"
 
 export const StyledTeamSection = styled(SectionAboutUs)``
 export const TeamContent = styled.div`
-  padding: 5rem 0rem;
+  width: 100%;
+  padding: 3rem 0rem;
 `
-export const TeamContainer = styled(Container)``
 export const TeamList = styled.ul`
+  width: 100%;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
+
+  @media only screen and (min-width: ${breakpoints.xxl}){
+    padding: 5rem 0rem;
+  }
 `
 export const TeamItem = styled.li``
