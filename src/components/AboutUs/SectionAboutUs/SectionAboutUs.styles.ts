@@ -1,24 +1,17 @@
+import { breakpoints } from 'shared/breakpoints'
 import styled from 'styled-components'
 
 import { colors } from 'styles/colors'
 import Container from 'ui/Container/Container'
-import Section from 'ui/Section/Section'
 
 interface IProps {
   $position: 'left' | 'right'
 }
 
 interface ILine extends IProps {
-  $width?: number
+  $sectionWidth: number
+  $scrollbarWidth: number
 }
-
-export const StyledSectionAboutUs = styled(Section)``
-
-export const SectionContainer = styled(Container)`
-  width: 100%;
-  padding: 0;
-  gap: 2rem;
-`
 
 export const SectionTitle = styled.div<IProps>`
   width: 100%;
@@ -49,17 +42,17 @@ export const Line = styled.div<ILine>`
   position: relative;
   
   &::after {
+    --section-width: ${({$sectionWidth}) => `${$sectionWidth}px`};
+    --scrollbar-width: ${({$scrollbarWidth}) => `${$scrollbarWidth}px`};
+    --fix-100vw: calc(100vw - var(--scrollbar-width));
+    --line-width: calc((var(--fix-100vw) - var(--section-width)) / 2);
     content: '';
     position: absolute;
-    width: calc((100vw - ${({$width}) => `${$width}px`})/2 - 8.5px);
+    width: var(--line-width);
     height: 0.125rem;
     border-radius: 1rem;
     background-color: ${colors.secondary.main};
     ${({ $position }) => `${$position}: 100%;`}
-
-    @media (max-width: 500px){
-      width: calc((100vw - ${({$width}) => `${$width}px`})/2);
-    }
   }  
 `
 export const SectionDescription = styled(Container)`
@@ -68,6 +61,11 @@ export const SectionDescription = styled(Container)`
   margin: 0;
   align-items: flex-start;
   width: 100%;
+  margin-top: 3rem;
+
+  @media only screen and (min-width: ${breakpoints.xxl}){
+    margin-top: 7rem;
+  }
 `
 export const DescriptionSubTitle = styled.div`
   & h4{

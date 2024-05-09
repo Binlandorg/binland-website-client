@@ -1,21 +1,27 @@
 import { PropsWithChildren } from "react"
 
 export interface IName {
-  name : 'github' | 'personalpage' | 'linkedin'
+  name : string
 }
 
 export interface INetwork extends IName{
   url: string
 }
 
-export interface IProfileCard {
+export interface IFoundersData{
   id?: string
-  image: string | './src/assets/images/default.jpg'
+  image: {
+    url: string
+    alt: string
+  }
   fullName: string
   position: string
   quote: string
   networks?: INetwork[]
 }
+export interface ITeamData extends IFoundersData{}
+
+export interface IProfileCard extends IFoundersData{}
 
 export interface IDescription {
   subTitle: string
@@ -32,5 +38,11 @@ export interface ICollage {
   id: number
   url: string
   alt: string
+  name: string
+}
+
+export interface IDetailData {
+  id: number
+  amount: string
   name: string
 }

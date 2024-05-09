@@ -19,6 +19,11 @@ export const CollageContainer = styled.div<IContainerSize>`
   height: ${({ size }) => `${size.width}px`};
   grid-gap: 1rem;
   object-fit: cover;
+  margin-top: 1rem;
+
+  @media only screen and (min-width: ${breakpoints.xxl}){
+    margin-top: 3rem;
+  }
 
   & > div {
     width: 100%;

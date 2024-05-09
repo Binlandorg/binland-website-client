@@ -1,9 +1,8 @@
 import useIntlMessages from 'hooks/useIntlMessages'
 import ProfileCard from 'components/Cards/ProfileCard/ProfileCard'
-import foundersData from './FoundersData'
-import { IProfileCard } from 'types/components/aboutus'
+import foundersData from './Founders.data'
+import { IFoundersData } from 'types/components/aboutus'
 import {
-  FoundersContainer,
   FoundersContent,
   FoundersItem,
   FoundersList,
@@ -20,28 +19,26 @@ const Founders : React.FC = () => {
       titlePosition="left"
     >
       <FoundersContent>
-        <FoundersContainer size="xl">
-          <FoundersList>
-            {
-              foundersData?.map((founder) => {
-                const { id, image, fullName, position, quote, networks } = founder as IProfileCard
-                return (
-                  <Reveal key={id}>
-                    <FoundersItem>
-                      <ProfileCard
-                        image={image}
-                        fullName={fullName}
-                        position={position}
-                        quote={quote}
-                        networks={networks}
-                      />
-                    </FoundersItem>
+        <FoundersList>
+          {
+            foundersData?.map((founder) => {
+              const { id, image, fullName, position, quote, networks }: IFoundersData = founder
+              return (
+                <FoundersItem key={id}>
+                  <Reveal>
+                    <ProfileCard
+                      image={image}
+                      fullName={fullName}
+                      position={position}
+                      quote={quote}
+                      networks={networks}
+                    />
                   </Reveal>
-                )
-              })
-            }
-          </FoundersList>
-        </FoundersContainer>
+                </FoundersItem>
+              )
+            })
+          }
+        </FoundersList>
       </FoundersContent>
     </StyledFoundersSection>
   )

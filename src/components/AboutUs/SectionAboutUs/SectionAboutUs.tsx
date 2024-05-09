@@ -8,24 +8,26 @@ import {
   DescriptionSubTitle,
   DescriptionTitle,
   Line,
-  SectionContainer,
   SectionDescription,
   SectionTitle,
-  StyledSectionAboutUs,
   TitleDot,
   TitleLine,
 } from './SectionAboutUs.styles'
+import useScrollbarWidth from 'hooks/useScrollbarWidth'
+import Section from 'ui/Section/Section'
+import Container from 'ui/Container/Container';
 
 const SectionAboutUs : React.FC<ITitle> = ({title, titlePosition, description, children} : ITitle) => {
   const [setRef, size] = useElementSize()
+  const scrollbarWidth = useScrollbarWidth()
 
   return (
-    <StyledSectionAboutUs size="lg" type="margin">
-      <SectionContainer size="xl">
+    <Section size="sm" type="margin">
+      <Container size="xl" isfullwidth>
         <SectionTitle $position={titlePosition} ref={setRef}>
           <H2>{title}<TitleDot>.</TitleDot></H2>
           <TitleLine>
-            <Line $position={titlePosition} $width={size.width}></Line>
+            <Line $position={titlePosition} $sectionWidth={size.width} $scrollbarWidth={scrollbarWidth}></Line>
           </TitleLine>
         </SectionTitle>
         {
@@ -35,14 +37,14 @@ const SectionAboutUs : React.FC<ITitle> = ({title, titlePosition, description, c
                 <H4 $weight="medium">{description.title}</H4>
               </DescriptionSubTitle>
               <DescriptionTitle>
-                <H3 $weight="semibold">{description.subTitle}<TitleDot>.</TitleDot></H3>
+                <H3 $weight="bold">{description.subTitle}<TitleDot>.</TitleDot></H3>
               </DescriptionTitle>
             </SectionDescription>
           ) : (<></>)
         }
         { children }
-      </SectionContainer>
-    </StyledSectionAboutUs>
+      </Container>
+    </Section>
   )
 }
 
