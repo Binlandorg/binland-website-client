@@ -2,7 +2,7 @@ export interface ITextareaWrapper {
   $isError: boolean
 }
 
-export interface IStyledTextarea {
+export interface IPropsTextarea {
   label: string
   name: string
   placeholder?: string

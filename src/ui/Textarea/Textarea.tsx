@@ -5,10 +5,10 @@ import {
   TextareaLabel,
   TextareaWrapper,
 } from './Textarea.styles'
-import { IStyledTextarea } from 'types/ui/Textarea'
+import { IPropsTextarea } from 'types/ui/Textarea'
 import { MdError } from 'react-icons/md'
 
-const Textarea: React.FC<IStyledTextarea> = ({
+const Textarea: React.FC<IPropsTextarea> = ({
   label,
   name,
   placeholder = '',
