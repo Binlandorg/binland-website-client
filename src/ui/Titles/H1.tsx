@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import { IH1Props } from 'types/ui/Titles'
 import { colors } from 'styles/colors'
 
-const StyledH1 = styled.h1`
+const StyledH1 = styled.h1<IH1Props>`
   font-weight: bold;
   font-size: clamp(2rem, -1rem + 9.6vw, 5rem);
   line-height: 1.5;
   color: ${(props) =>
-    props.color ? `${props.color}` : `${colors.black.main}`};
+    props.color ? `${props.color}` : `${colors.white.main}`};
 
   .dot {
     color: ${colors.primary.main};
