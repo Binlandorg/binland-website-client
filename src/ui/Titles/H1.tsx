@@ -9,10 +9,19 @@ const StyledH1 = styled.h1`
   line-height: 1.5;
   color: ${(props) =>
     props.color ? `${props.color}` : `${colors.black.main}`};
+
+  .dot {
+    color: ${colors.primary.main};
+  }
 `
 
-const H1: React.FC<IH1Props> = (props) => {
-  return <StyledH1 {...props} />
+const H1: React.FC<IH1Props> = ({ children, ...props }) => {
+  return (
+    <StyledH1 {...props}>
+      {children}
+      <span className="dot">.</span>
+    </StyledH1>
+  )
 }
 
 export default H1

@@ -1,7 +1,7 @@
-import { PropsWithChildren } from 'react'
 import styled from 'styled-components'
 
 import { colors } from 'styles/colors'
+import { IH2Props } from 'types/ui/Titles'
 
 const StyledH2 = styled.h2`
   font-weight: bold;
@@ -9,10 +9,19 @@ const StyledH2 = styled.h2`
   line-height: 1.5;
   color: ${(props) =>
     props.color ? `${props.color}` : `${colors.black.main}`};
+
+  .dot {
+    color: ${colors.primary.main};
+  }
 `
 
-const H2: React.FC<PropsWithChildren> = ({ children }) => {
-  return <StyledH2>{children}</StyledH2>
+const H2: React.FC<IH2Props> = (props) => {
+  return (
+    <StyledH2>
+      {props.children}
+      {props.$withDot && <span className="dot">.</span>}
+    </StyledH2>
+  )
 }
 
 export default H2
