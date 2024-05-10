@@ -8,21 +8,19 @@ import { FontWeight } from 'styles/typography'
 export const ContentQuestions = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-`
+  gap: 0.5rem;
 
-export const ContactUsQuestion = styled.p`
-  color: ${colors.primary.main};
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.5rem;
-`
+  & h4{
+    color: ${colors.primary.main};
+  }
 
-export const ContactUsResponse = styled.p`
-  color: ${colors.gray[150]};
-  font-weight: 400;
-  font-size: 0.87rem;
-  line-height: 1.31rem;
+  & p{
+    color: ${colors.gray[150]};
+  }
+
+  @media only screen and (min-width: ${breakpoints.xxl}){
+    gap: 2rem;
+  }
 `
 
 export const ContactUsInformationIcons = styled.div`
@@ -53,9 +51,13 @@ export const IconContactUs = styled.div`
 export const ContentButton = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.875rem;
   justify-content: center;
   margin: 0.875rem 0;
+
+  & > p{
+    color: ${colors.gray[50]};
+  }
 
   .popup-button-custom {
     display: flex;
@@ -83,10 +85,8 @@ export const ContentButton = styled.div`
     content: url(${calendlyIcon});
     color: ${colors.secondary.main};
   }
-`
-export const QuestionButton = styled.p`
-  color: ${colors.gray[50]};
-  font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
+
+  @media only screen and (min-width: ${breakpoints.xxl}){
+    gap: 1rem;
+  }
 `

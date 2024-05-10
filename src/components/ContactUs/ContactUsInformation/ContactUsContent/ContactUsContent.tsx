@@ -5,13 +5,13 @@ import { PopupButton } from 'react-calendly'
 
 import {
   ContactUsInformationIcons,
-  ContactUsQuestion,
-  ContactUsResponse,
   ContentButton,
   ContentQuestions,
-  IconContactUs,
-  QuestionButton,
+  IconContactUs
 } from './ContactUsContent.styles'
+import H4 from 'ui/Titles/H4'
+import useIntlMessages from 'hooks/useIntlMessages'
+import Paragraph from 'ui/Paragraph/Paragraph'
 
 interface IContactInformation {
   id: number
@@ -36,32 +36,34 @@ const ContactInformation: IContactInformation[] = [
 ]
 
 const ContactUsContent: React.FC = () => {
+  const intl = useIntlMessages()
+
   return (
     <>
       <ContentQuestions>
-        <ContactUsQuestion>
-          ¿Tienes un proyecto en mente? Podemos ayudarte
-        </ContactUsQuestion>
-        <ContactUsResponse>
-          ¿Si tienes alguna duda? Solo envianos un mensaje o reserva una cita
-          para resolver sus dudas y poder poner en marcha su proyecto y volverlo
-          realidad.
-        </ContactUsResponse>
+        <H4 $weight="medium">{intl('contact.us.information.title')}</H4>
+        <Paragraph $weight="regular" $style="normal">
+          {intl('contact.us.information.description')}
+        </Paragraph>
       </ContentQuestions>
       <ContactUsInformationIcons>
         {ContactInformation.map((element) => (
           <IconContactUs key={element.id}>
             {element.icon}
-            <span>{element.info}</span>
+            <Paragraph $weight="regular" $style="normal">
+              {element.info}
+            </Paragraph>
           </IconContactUs>
         ))}
       </ContactUsInformationIcons>
       <ContentButton>
-        <QuestionButton>¿Desea agendar una cita?</QuestionButton>
+        <Paragraph $weight="regular" $style="normal">
+          {intl('contact.us.information.schedule.an.appointment.title')}
+        </Paragraph>
         <PopupButton
           url="https://calendly.com/binland-contacto"
           rootElement={document.getElementById('root')!}
-          text={'Agendar'}
+          text={intl('contact.us.information.schedule.an.appointment.button')}
           className="popup-button-custom"
         />
       </ContentButton>

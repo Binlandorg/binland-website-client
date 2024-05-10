@@ -54,6 +54,10 @@
   "contact.us.hero.title": "Contáctanos",
   "contact.us.hero.description": "Estamos aquí por tí. Comuníquese usando el siguiente formulario",
   "contact.us.calendly.button": "Agenda tu reunión",
+  "contact.us.information.title": "¿Tienes un proyecto en mente? ¡Podemos ayudarte!",
+  "contact.us.information.description": "¿Si tienes alguna duda? Solo envianos un mensaje o reserva una cita para resolver sus dudas y poder poner en marcha su proyecto y volverlo realidad.",
+  "contact.us.information.schedule.an.appointment.title": "¿Desea agendar una cita?",
+  "contact.us.information.schedule.an.appointment.button": "Agendar",
 
   "contact.us.form.input.firstname.validation": "Debe tener menos o igual a 30 caracteres",
   "contact.us.form.input.lastname.validation": "Debe tener menos o igual a 30 caracteres",

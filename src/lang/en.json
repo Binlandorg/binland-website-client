@@ -54,6 +54,10 @@
   "contact.us.hero.title": "Contact Us",
   "contact.us.hero.description": "Were here for you. Reach out using the form belowa",
   "contact.us.calendly.button": "Schedule a meeting",
+  "contact.us.information.title": "Do you have a project in mind? We can help you!",
+  "contact.us.information.description": "If you have any question? Just send us a message or book an appointment to resolve your doubts and be able to launch your project and make it a reality.",
+  "contact.us.information.schedule.an.appointment.title": "Do you want to schedule an appointment?",
+  "contact.us.information.schedule.an.appointment.button": "Schedule",
 
   "contact.us.form.input.firstname.validation": "Must be less than or equal to 30 characters",
   "contact.us.form.input.lastname.validation": "must be less than or equal to 30 characters",

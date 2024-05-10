@@ -23,10 +23,8 @@ export const ContactUsWrapper = styled(Container)`
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 1rem;
-  border-radius: 1rem;
-  gap: 1.5rem;
+  margin-top: 2rem;
+  gap: 0.875rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     width: 100%;
