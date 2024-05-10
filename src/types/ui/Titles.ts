@@ -9,7 +9,6 @@ export interface IH2Props extends PropsWithChildren {
 }
 
 export interface IH3Props extends PropsWithChildren {
-  $weight: 'medium' | 'semibold' | 'bold'
   $color?: string
   $weight: 'medium' | 'semibold' | 'bold'
 }
@@ -17,7 +16,6 @@ export interface IH3Props extends PropsWithChildren {
 export interface IH4Props extends PropsWithChildren {
   $weight: 'regular' | 'medium' | 'bold'
   $color?: string
-  $weight: 'regular' | 'medium' | 'bold'
 }
 
 export interface IH5Props extends IH4Props {}
