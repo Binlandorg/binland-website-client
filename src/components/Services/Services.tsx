@@ -6,12 +6,12 @@ import VerticalTabs from 'components/Tabs/VerticalTabs/VerticalTabs'
 import useIntlMessages from 'hooks/useIntlMessages'
 import Container from 'ui/Container/Container'
 import {
-  ServicesSection,
   CustomSingleWord,
   ServicesTitle,
-  ServicesWrapper,
+  ServicesWrapper
 } from './Services.styles'
 import MobileServices from './MobileServices/MobileServices'
+import Section from 'ui/Section/Section'
 
 interface ITabProperties {
   key: string
@@ -162,25 +162,27 @@ const Services: React.FC = () => {
   ]
 
   return (
-    <ServicesSection id="clients-section" size="lg" type="margin">
-      <ServicesWrapper size="xl" isfullwidth>
-        <Container size="sm">
-          <ServicesTitle>
-            <FormattedMessage
-              defaultMessage=""
-              id="home.services.title"
-              values={{
-                service: intl('home.services.title.only.services'),
-                b: (str) => <CustomSingleWord>{str}</CustomSingleWord>,
-              }}
-            />
-            <span className="span-point">.</span>
-          </ServicesTitle>
-        </Container>
-        <HorizontalTabs items={items} />
-        <MobileServices items={items} />
-      </ServicesWrapper>
-    </ServicesSection>
+    <Section id="services" size="lg" type="margin">
+      <Container size="xl" isfullwidth>
+        <ServicesWrapper size='xl' isfullwidth>
+          <Container size="sm">
+            <ServicesTitle>
+              <FormattedMessage
+                defaultMessage=""
+                id="home.services.title"
+                values={{
+                  service: intl('home.services.title.only.services'),
+                  b: (str) => <CustomSingleWord>{str}</CustomSingleWord>,
+                }}
+              />
+              <span className="span-point">.</span>
+            </ServicesTitle>
+          </Container>
+          <HorizontalTabs items={items} />
+          <MobileServices items={items} />
+        </ServicesWrapper>
+      </Container>
+    </Section>
   )
 }
 

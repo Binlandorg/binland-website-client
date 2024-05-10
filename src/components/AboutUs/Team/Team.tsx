@@ -1,12 +1,11 @@
 import useIntlMessages from 'hooks/useIntlMessages'
 import ProfileCard from 'components/Cards/ProfileCard/ProfileCard'
-import teamData from './TeamData'
-import { IProfileCard } from 'types/components/aboutus'
+import teamData from './Team.data'
+import { ITeamData } from 'types/components/aboutus'
 import {
   StyledTeamSection,
   TeamItem,
   TeamContent,
-  TeamContainer,
   TeamList,
 } from './Team.styles'
 import Reveal from 'components/Reveal/Reveal'
@@ -20,28 +19,26 @@ const Team: React.FC = () => {
       titlePosition="right"
     >
       <TeamContent>
-        <TeamContainer size="xl">
-          <TeamList>
-            {
-              teamData?.map((collaborator) => {
-                const { id, image, fullName, position, quote, networks } = collaborator as IProfileCard
-                return (
-                  <Reveal key={id}>
-                    <TeamItem>
-                      <ProfileCard
-                        image={image}
-                        fullName={fullName}
-                        position={position}
-                        quote={quote}
-                        networks={networks}
-                      />
-                    </TeamItem>
+        <TeamList>
+          {
+            teamData?.map((collaborator) => {
+              const { id, image, fullName, position, quote, networks }: ITeamData = collaborator
+              return (
+                <TeamItem key={id}>
+                  <Reveal>
+                    <ProfileCard
+                      image={image}
+                      fullName={fullName}
+                      position={position}
+                      quote={quote}
+                      networks={networks}
+                    />
                   </Reveal>
-                )
-              })
-            }
-          </TeamList>
-        </TeamContainer>
+                </TeamItem>
+              )
+            })
+          }
+        </TeamList>
       </TeamContent>
     </StyledTeamSection>
   )

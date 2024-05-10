@@ -28,7 +28,7 @@
   "home.clients.section.title": "Who trust on us",
   "home.clients.section.button": "See more",
 
-  "about.us.quote.description": "Desarrollamos sus sueños no humedos",
+  "about.us.quote.description": "Everything is posible!",
   "about.us.binland.information.sub.title": "Something to mention",
   "about.us.binland.information.title": "about us",
   "about.us.binland.information.description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam reprehenderit quas fugiat pariatur in vero mollitia voluptates, expedita impedit modi! Temporibus alias voluptatum at iusto porro ea modi officia facere facilis commodi minus labore inventore ex saepe recusandae tenetur, itaque in nam. Possimus molestiae ea assumenda maiores fugit.",
@@ -36,6 +36,16 @@
   "about.us.binland.information.details.collaborators": "Collaborators",
   "about.us.binland.information.details.services": "Services",
   "about.us.founders.title": "Founders",
+  "about.us.position.ceo": "CEO",
+  "about.us.position.full.stack.developer": "Full Stack Developer",
+  "about.us.position.frontend.developer": "Frontend Developer",
+  "about.us.position.trainee": "Trainee",
+  "about.us.quote.christian.turpo.apaza": "Whoever has patience will get what he wants.",
+  "about.us.quote.jonathan.cervantes.alarcon": "Always program your code as if the guy who is going to have to maintain it in the future is a violent psychopath who knows where you live.",
+  "about.us.quote.gustavo.ugarte": "Failure is only a step towards success.",
+  "about.us.quote.ricardo.mamani.calcina": "You have to create the opportunity, not wait for it to arrive.",
+  "about.us.quote.paty.apaestegui.rodriguez": "Don't waste your time, because that's what life is made of.",
+  "about.us.quote.diego.lopez.vega": "Passwords are like underwear. You can't let anyone see it, you should change it regularly, and you shouldn't share it with strangers.",
   "about.us.team.title": "Team",
   "about.us.offices.title": "Offices",
   "about.us.offices.sub.title.collage": "Our team supports us",
@@ -82,5 +92,12 @@
   "footer.projects": "Projects",
   "footer.FAQ": "FAQ",
 
-  "validation.input.required.message": "This field is required"
+  "validation.input.required.message": "This field is required",
+
+  "image.profile.alt.crhistian.turpo.apaza": "Image of the company's CEO, Crhistian Turpo",
+  "image.profile.alt.jonathan.cervantes.alarcon": "Image of one of the founders, Jonathan Cervantes",
+  "image.profile.alt.gustavo.ugarte": "Image of one of the founders, Gustavo Ugarte",
+  "image.profile.alt.ricardo.mamani.calcina": "Image of one of the founders, Ricardo Mamani",
+  "image.profile.alt.paty.apaestegui.rodriguez": "Collaborator Paty Apaestegui",
+  "image.profile.alt.diego.lopez.vega": "Collaborator Diego López"
 }

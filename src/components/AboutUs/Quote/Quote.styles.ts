@@ -2,76 +2,88 @@ import styled from 'styled-components'
 
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
-import Section from 'ui/Section/Section'
+import { FontWeight } from 'styles/typography'
+import sloganBGImageURL from '../../../assets/images/mockup-ui-chat.webp'
 
-export const StyledQuote = styled(Section)`
-  background: ${colors.secondary.main};
+export const StyledQuote = styled.div`
   color: ${colors.white.main};
-  margin: 1rem 0;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
   border-radius: 1rem;
-  font-size: 1.25rem;
   font-style: italic;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 
-  .left-quotation-mark {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-
-    img {
-      height: 1.25rem;
-    }
-  }
-
-  .quote {
-    padding: 0 1.75rem;
-    text-align: center;
-  }
-
-  .right-quotation-mark {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-
-    img {
-      height: 1.25rem;
-    }
-  }
-
-  @media only screen and (min-width: ${breakpoints.sm}) {
-    padding: 2rem 6.5rem;
+  &::after{
+    content: "";
+    width: 110%;
+    height: 110%;
+    background-image: url(${sloganBGImageURL});
+    background-size: cover;
+    background-position-y: 22%;
+    position: absolute;
+    z-index: -1;
+    filter: blur(15px);
   }
 
   @media only screen and (min-width: ${breakpoints.md}) {
-    font-size: 2.25rem;
-    padding: 3rem 6.5rem;
+    padding: 5rem;
+  }
 
-    .left-quotation-mark {
+  @media only screen and (min-width: ${breakpoints.xxl}) {
+    padding: 5rem 12.5rem;
+  }
+`
+export const QuoteWrapper = styled.div`
+  --size-icon: 2rem;
+  display: grid;
+  grid-template-columns: var(--size-icon) auto var(--size-icon);
+  grid-template-rows: var(--size-icon) auto var(--size-icon);
+  width: 100%;
+  max-width: 885px;
+
+  & > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & > div:nth-child(2){
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding: 0.625rem;
+  }
+  
+  & > div:nth-child(3){
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+
+  & .quote{
+    font-weight: ${FontWeight.regular};
+    text-align: center;
+  }
+
+  & .icon-open-quote, & .icon-close-quote{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & svg{
       width: 100%;
-      display: flex;
-      justify-content: flex-start;
-
-      img {
-        height: 2.5rem;
-      }
-    }
-
-    .quote {
-      padding: 0 3.75rem;
-    }
-
-    .right-quotation-mark {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-
-      img {
-        height: 2.5rem;
-      }
+      fill: ${colors.white.main}
     }
   }
 
-  @media only screen and (min-width: ${breakpoints.lg}) {
-    padding: 4rem 9.5rem;
+  @media only screen and (min-width: ${breakpoints.lg}){
+    --size-icon: 4rem;
+    grid-template-columns: var(--size-icon) auto var(--size-icon);
+    grid-template-rows: var(--size-icon) auto var(--size-icon);
   }
+
 `
