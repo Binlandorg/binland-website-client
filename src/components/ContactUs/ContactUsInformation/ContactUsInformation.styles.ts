@@ -9,7 +9,7 @@ export const WrapperContactUsInformation = styled.div`
   flex-direction: column;
   background-color: ${colors.black.main};
   border-radius: 0.5rem;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 1.5rem;
   width: 100%;
 
