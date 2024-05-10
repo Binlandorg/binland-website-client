@@ -70,20 +70,29 @@ export const ContentButton = styled.div`
     background-color: ${colors.tertiary.normal[50]};
     font-size: clamp(0.875rem, 0.832rem + 0.192vw, 1rem);
     border-radius: 0.5rem;
-    line-height: 100%;
+    line-height: 1;
     cursor: pointer;
     gap: 0.625rem;
+    border: 0.125rem solid ${colors.tertiary.normal[300]};
 
     &:hover {
-      background-color: ${colors.secondary.hover[300]};
-      color: ${colors.secondary.hover[900]};
-      outline: none;
+      background-color: ${colors.tertiary.hover[300]};
+      color: ${colors.tertiary.hover[600]};
     }
   }
 
   .popup-button-custom::after {
-    content: url(${calendlyIcon});
-    color: ${colors.secondary.main};
+    content: "";
+    mask-image: url(${calendlyIcon});
+    background-color: ${colors.secondary.normal[800]};
+    width: 2rem;
+    height: 2rem;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  .popup-button-custom:hover::after {
+    background-color: ${colors.tertiary.hover[600]};;
   }
 
   @media only screen and (min-width: ${breakpoints.xxl}){
