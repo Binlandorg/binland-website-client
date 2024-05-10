@@ -8,7 +8,7 @@ const StyledH1 = styled.h1`
   font-size: clamp(2rem, -1rem + 9.6vw, 5rem);
   line-height: 1.5;
 
-  .span-point {
+  .dot {
     color: ${colors.primary.main};
   }
 `
@@ -17,7 +17,7 @@ const H1: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <StyledH1>
       {children}
-      <span className="span-point">.</span>
+      <span className="dot">.</span>
     </StyledH1>
   )
 }
