@@ -71,7 +71,7 @@ export const ContentButton = styled.div`
     line-height: 1;
     cursor: pointer;
     gap: 0.625rem;
-    border: 2px solid ${colors.tertiary.normal[300]};
+    border: 0.125rem solid ${colors.tertiary.normal[300]};
 
     &:hover {
       background-color: ${colors.tertiary.hover[300]};
@@ -80,7 +80,17 @@ export const ContentButton = styled.div`
   }
 
   .popup-button-custom::after {
-    content: url(${calendlyIcon});
+    content: "";
+    mask-image: url(${calendlyIcon});
+    background-color: ${colors.secondary.normal[800]};
+    width: 2rem;
+    height: 2rem;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  .popup-button-custom:hover::after {
+    background-color: ${colors.tertiary.hover[600]};;
   }
 `
 export const QuestionButton = styled.p`
