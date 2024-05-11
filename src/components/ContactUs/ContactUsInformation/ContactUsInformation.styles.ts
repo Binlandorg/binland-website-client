@@ -19,6 +19,7 @@ export const WrapperContactUsInformation = styled.div`
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     width: 40%;
+    min-width: min-content;
     padding: 3rem;
   }
 

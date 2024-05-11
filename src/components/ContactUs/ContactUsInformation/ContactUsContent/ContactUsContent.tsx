@@ -12,6 +12,7 @@ import {
 import H4 from 'ui/Titles/H4'
 import useIntlMessages from 'hooks/useIntlMessages'
 import Paragraph from 'ui/Paragraph/Paragraph'
+import { colors } from 'styles/colors'
 
 interface IContactInformation {
   id: number
@@ -41,7 +42,9 @@ const ContactUsContent: React.FC = () => {
   return (
     <>
       <ContentQuestions>
-        <H4 $weight="medium">{intl('contact.us.information.title')}</H4>
+        <H4 color={colors.primary.main} $weight="medium">
+          {intl('contact.us.information.title')}
+        </H4>
         <Paragraph $weight="regular" $style="normal">
           {intl('contact.us.information.description')}
         </Paragraph>

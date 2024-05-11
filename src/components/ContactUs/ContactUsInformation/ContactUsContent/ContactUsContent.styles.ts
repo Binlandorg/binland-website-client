@@ -10,10 +10,6 @@ export const ContentQuestions = styled.div`
   flex-direction: column;
   gap: 0.5rem;
 
-  & h4{
-    color: ${colors.primary.main};
-  }
-
   & p{
     color: ${colors.gray[150]};
   }
@@ -44,7 +40,7 @@ export const IconContactUs = styled.div`
 
   @media only screen and (min-width: ${breakpoints.sm}) {
     align-items: center;
-    width: fit-content;
+    width: max-content;
   }
 `
 
