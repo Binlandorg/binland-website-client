@@ -42,7 +42,7 @@ export const TitleForm = styled.h2`
 export const ContainerForm = styled.div`
   padding: 1.5rem 1rem;
   background-color: ${colors.white.main};
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   width: 100%;
 
   @media only screen and (min-width: ${breakpoints.sm}) {
@@ -52,6 +52,10 @@ export const ContainerForm = styled.div`
   @media only screen and (min-width: ${breakpoints.lg}) {
     width: 56%;
     padding: 3rem;
+  }
+
+  @media only screen and (min-width: ${breakpoints.xxl}){
+    border-radius: 1rem;
   }
 `
 

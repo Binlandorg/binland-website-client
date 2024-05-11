@@ -1,3 +1,4 @@
+import { breakpoints } from 'shared/breakpoints'
 import styled from 'styled-components'
 
 import { colors } from 'styles/colors'
@@ -21,5 +22,9 @@ export const SocialMediaWrapper = styled.div`
     &:hover {
       background-color: ${colors.secondary.normal[400]};
     }
+  }
+
+  @media only screen and (min-width: ${breakpoints.xxl}){
+    justify-content: flex-start;
   }
 `

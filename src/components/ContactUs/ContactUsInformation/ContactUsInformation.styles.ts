@@ -8,8 +8,8 @@ export const WrapperContactUsInformation = styled.div`
   gap: 2rem;
   flex-direction: column;
   background-color: ${colors.black.main};
-  border-radius: 1rem;
-  justify-content: space-evenly;
+  border-radius: 0.5rem;
+  justify-content: space-between;
   padding: 1.5rem;
   width: 100%;
 
@@ -19,6 +19,11 @@ export const WrapperContactUsInformation = styled.div`
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     width: 40%;
+    min-width: min-content;
     padding: 3rem;
+  }
+
+  @media only screen and (min-width: ${breakpoints.xxl}){
+    border-radius: 1rem;
   }
 `
