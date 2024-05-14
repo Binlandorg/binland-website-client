@@ -15,11 +15,12 @@ import {
 import InputSearch from '../SearchMultiSelect/SearchMultiSelect'
 import useOutsideClick from 'hooks/useClickOutside'
 import { IServiceOptions, MultiSelectProps } from 'types/ui/Multiselect'
+import useIntlMessages from 'hooks/useIntlMessages'
 
 const MultiSelect: React.FC<MultiSelectProps> = ({
   options,
   onChange,
-  placeholder,
+  searchPlaceholder,
   label,
 }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -31,6 +32,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
   const [selectedServicesSet, setSelectedServicesSet] = useState(new Set())
   const refOptions = useOutsideClick(() => setIsOpen(false))
   const inputRef = useRef<HTMLInputElement>(null)
+  const intl = useIntlMessages()
 
   useEffect(() => {
     if (searchTerm.trim() === '') {
@@ -87,7 +89,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
           <TagsWrapper onClick={(e) => e.stopPropagation()}>
             {selectedServices?.map((service) => (
               <Tag key={service.key}>
-                <span>{service.name}</span>
+                <span>{intl(service.name)}</span>
                 <div className="icon-close-wrapper">
                   <IoClose
                     className="icon-close"
@@ -106,7 +108,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
             ref={inputRef}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder={placeholder}
+            placeholder={searchPlaceholder}
             icon={<MirroredIcon className="icon-search" size={24} />}
           />
           <OptionsWrapper>
@@ -116,7 +118,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                   key={service.key}
                   onClick={() => handleAddService(service)}
                 >
-                  {service.name}
+                  {intl(service.name)}
                 </StyledOption>
               ) : null
             })}

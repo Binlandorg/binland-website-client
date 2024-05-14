@@ -10,6 +10,6 @@ export interface IServiceOptions {
 export interface MultiSelectProps {
   options: IServiceOptions[]
   onChange: (selectedServices: IServiceOptions[]) => void
-  placeholder: string
+  searchPlaceholder: string
   label: string
 }
