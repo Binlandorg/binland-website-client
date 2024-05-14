@@ -4,22 +4,25 @@ import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
 import Section from 'ui/Section/Section'
 
+interface IHeroContent {
+  $scrollbarwidth: number;
+}
+
 export const HeroSection = styled(Section)`
   height: calc(100vh - var(--header-height));
 `
 
-export const HeroContent = styled.div`
+export const HeroContent = styled.div<IHeroContent>`
+  --scrollbar-width: ${({$scrollbarwidth}) => $scrollbarwidth + 'px'};
+  --fix-100vw: calc(100vw - var(--scrollbar-width));
+  --spacing-x: calc((var(--fix-100vw) - 100%) / 2);
+  
   position: relative;
-  left: -0.75rem;
-  width: calc(100vw - 1.5rem);
+  width: calc(100% + var(--spacing-x));
+  left: calc(-1 * var(--spacing-x) / 2);
   display: flex;
   flex-direction: column;
   gap: 0.875rem;
-
-  @media only screen and (min-width: ${ breakpoints.lg }) {
-    width: calc(100vw - 5rem);
-    left: -2.5rem;
-  }
 
   @media only screen and (min-width: ${ breakpoints.full }) {
     position: static;
@@ -43,11 +46,14 @@ export const HeroContentWrapper = styled.div`
   padding: 3.8rem 2rem 3.8rem 1.5rem;
   border-radius: 0rem 1rem 1rem 0rem;
 
-  @media only screen and (min-width: ${ breakpoints.lg }) {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 0rem;
-    padding: 5rem 5rem 5rem 0rem;
+  @media only screen and (min-width: ${ breakpoints.md }) {
+    display: grid;
+    padding: 5rem 5rem 5rem 1.5rem;
+    grid-template-columns: min-content auto minmax(auto, 50rem);
+  }
+  
+  @media only screen and (min-width: ${ breakpoints.xxl }) {
+    grid-template-columns: min-content auto minmax(auto, 37rem);
   }
 
   @media only screen and (min-width: ${ breakpoints.full }) {
@@ -65,8 +71,8 @@ export const Content = styled.div`
   gap: 2rem;
   z-index: 1;
 
-  @media only screen and (min-width: ${ breakpoints.lg }) {
-    max-width: 37rem;
+  @media only screen and (min-width: ${ breakpoints.md }) {
+    grid-column: 3/4;
   }
 
   @media only screen and (min-width: ${ breakpoints["2k"] }) {
@@ -99,7 +105,7 @@ export const Content = styled.div`
 export const ContentText = styled.div`
   color: ${colors.white.main};
 
-  & h4 {
+  & h5 {
     margin-bottom: 1rem;
     word-break: break-all;
   }
@@ -113,7 +119,7 @@ export const ContentText = styled.div`
   }
 
   @media only screen and (min-width: ${ breakpoints.lg }) {
-    & h4,
+    & h5,
     & > span {
       word-break: normal;
     }
@@ -126,7 +132,7 @@ export const NetworkWrapper = styled.div`
     width: fit-content;
   }
 
-  @media only screen and (min-width: ${ breakpoints.lg }) {
+  @media only screen and (min-width: ${ breakpoints.md }) {
     display: none;
   }
 `
@@ -135,9 +141,11 @@ export const NetworkWrapperInside = styled.div`
   display: none;
   align-items: center;
 
-  @media only screen and (min-width: ${ breakpoints.lg }) {
+  @media only screen and (min-width: ${ breakpoints.md }) {
     display: flex;
     z-index: 2;
+    position: relative;
+    left: -1.5rem;
 
     & div[direction='column'] {
       height: fit-content;
@@ -146,48 +154,38 @@ export const NetworkWrapperInside = styled.div`
   }
 `
 
+export const Image = styled.div`
+  position: relative;
+`
+
 export const ImageWrapper = styled.div`
   display: none;
+  position: absolute;
+  width: 37.5rem;
+  max-height: 100%;
+  aspect-ratio: 1 / 1.07;
+  top: 2rem;
+  right: 4rem;
 
-  @media only screen and (min-width: ${ breakpoints.lg }) {
-    --vhTablet: 44vh;
-    position: absolute;
-    display: flex;
-    justify-content: flex-end;
-    width: var(--vhTablet); //600px
-    height: var(--vhTablet); //600px
-    bottom: 0;
-    left: 0;
+  & img{
+    -webkit-mask-image: linear-gradient(to top, transparent 1%, black 17%);
+    mask-image: linear-gradient(to top, transparent 1%, black 17%);
   }
 
   @media only screen and (min-width: ${ breakpoints.xxl }) {
-    --vhLaptop: 68.4vh;
-    justify-content: flex-start;
-    width: var(--vhLaptop); //700px
-    height: var(--vhLaptop); //700px
-    left: -4%;
-    right: inherit;
+    display: inherit;
 
     & img {
+      width: 100%;
       filter: drop-shadow(0.75rem 0 0.25rem rgba(0, 0, 0, 0.1));
     }
   }
 
-  @media only screen and (min-width: ${ breakpoints.full }) {
-    left: -5%;
-  }
-
   @media only screen and (min-width: ${ breakpoints["2k"] }) {
-    --vh2K: 66vh;
-    width: var(--vh2K); //950px
-    height: var(--vh2K); //950px
-    left: -20%;
+    width: 58.375rem;
   }
 
   @media only screen and (min-width: ${ breakpoints["4k"] }) {
-    --vh4K: 68.5vh;
-    width: var(--vh4K); //1480px
-    height: var(--vh4K); //1480px
-    left: -39%;
+    width: 92.75rem;
   }
 `

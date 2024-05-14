@@ -12,12 +12,15 @@ import {
   NetworkWrapper,
   NetworkWrapperInside,
   HeroSection,
-  HeroContent
+  HeroContent,
+  Image
 } from './Hero.styles'
 import H5 from 'ui/Titles/H5'
 import Display from 'ui/Display/Display'
 import heroImgURL from './../../assets/images/girl-using-virtual-reality-glasses-cropped-v2.webp'
 import Container from 'ui/Container/Container'
+import { colors } from 'styles/colors'
+import useScrollbarWidth from 'hooks/useScrollbarWidth'
 
 interface IHeroImgData {
   src: string
@@ -31,18 +34,30 @@ const heroImgData: IHeroImgData = {
 
 const Hero = () => {
   const intl = useIntlMessages()
+  const scrollbarWidth = useScrollbarWidth()
 
   return (
-    <HeroSection id='hero' type='padding' size='sm'>
-      <Container size='xl' isfullwidth>
-        <HeroContent>
+    <HeroSection id="hero" type="padding" size="sm">
+      <Container size="xl" isfullwidth>
+        <HeroContent $scrollbarwidth={scrollbarWidth}>
           <HeroContentWrapper>
             <NetworkWrapperInside>
               <SocialMediaBar type="secondary" direction="column" />
             </NetworkWrapperInside>
+            <Image>
+              <ImageWrapper>
+                <LazyLoadImage
+                  src={heroImgData.src}
+                  alt={heroImgData.alt}
+                  threshold={100}
+                />
+              </ImageWrapper>
+            </Image>
             <Content>
               <ContentText>
-                <H5 $weight="bold">{intl('home.hero.subslogan')}</H5>
+                <H5 $weight="bold" color={colors.white.main}>
+                  {intl('home.hero.subslogan')}
+                </H5>
                 <Display size="lg">
                   <FormattedMessage
                     id="hero-slogan"
@@ -53,6 +68,7 @@ const Hero = () => {
                   />
                 </Display>
               </ContentText>
+
               <a href="#home-contact-us">
                 <IconArrowLeft size={20} />
                 <span>{intl('home.hero.contact.us.button.title')}</span>
@@ -62,13 +78,13 @@ const Hero = () => {
           <NetworkWrapper>
             <SocialMediaBar type="secondary" direction="row" />
           </NetworkWrapper>
-          <ImageWrapper>
+          {/* <ImageWrapper>
             <LazyLoadImage
               src={heroImgData.src}
               alt={heroImgData.alt}
               threshold={100}
             />
-          </ImageWrapper>
+          </ImageWrapper> */}
         </HeroContent>
       </Container>
     </HeroSection>
