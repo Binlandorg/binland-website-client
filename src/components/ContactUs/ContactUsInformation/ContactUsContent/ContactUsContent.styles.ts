@@ -49,7 +49,6 @@ export const ContentButton = styled.div`
   flex-direction: column;
   gap: 0.875rem;
   justify-content: center;
-  margin: 0.875rem 0;
 
   & > p{
     color: ${colors.gray[50]};

@@ -9,9 +9,9 @@ export const WrapperContactUsInformation = styled.div`
   flex-direction: column;
   background-color: ${colors.black.main};
   border-radius: 0.5rem;
-  justify-content: space-between;
   padding: 1.5rem;
   width: 100%;
+  height: min-content;
 
   @media only screen and (min-width: ${breakpoints.sm}) {
     padding: 2rem;
