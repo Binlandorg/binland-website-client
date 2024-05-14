@@ -52,6 +52,10 @@ export const HeroContentWrapper = styled.div`
     grid-template-columns: min-content auto minmax(auto, 50rem);
   }
 
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    grid-template-columns: min-content auto minmax(min-content, 45%);
+  }
+
   @media only screen and (min-width: ${breakpoints.xxl}) {
     grid-template-columns: min-content auto minmax(auto, 37rem);
   }
@@ -161,23 +165,35 @@ export const Image = styled.div`
 export const ImageWrapper = styled.div`
   display: none;
   position: absolute;
-  width: 37.5rem;
-  max-height: 100%;
+  width: 10px;
   aspect-ratio: 1 / 1.07;
-  top: 2rem;
-  right: 4rem;
 
-  & img {
-    -webkit-mask-image: linear-gradient(to top, transparent 1%, black 17%);
-    mask-image: linear-gradient(to top, transparent 1%, black 17%);
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    display: inherit;
+    width: 140%;
+    bottom: -5rem;
+    /* right: -1rem; */
+    left: -6rem;
+  }
+
+  @media only screen and (min-width: ${breakpoints.xl}) {
+    width: 100%;
+    left: inherit;
+    right: 0;
   }
 
   @media only screen and (min-width: ${breakpoints.xxl}) {
-    display: inherit;
+    width: 37.5rem;
+    top: 2rem;
+    bottom: inherit;
+    right: 4rem;
+    max-height: 100%;
 
     & img {
       width: 100%;
       filter: drop-shadow(0.75rem 0 0.25rem rgba(0, 0, 0, 0.1));
+      -webkit-mask-image: linear-gradient(to top, transparent 1%, black 7%);
+      mask-image: linear-gradient(to top, transparent 1%, black 7%);
     }
   }
 
