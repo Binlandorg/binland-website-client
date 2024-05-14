@@ -32,7 +32,7 @@ const heroImgData: IHeroImgData = {
   alt: 'Girl using virtual reality glasses',
 }
 
-const Hero = () => {
+const Hero: React.FC = () => {
   const intl = useIntlMessages()
   const scrollbarWidth = useScrollbarWidth()
 
@@ -68,7 +68,6 @@ const Hero = () => {
                   />
                 </Display>
               </ContentText>
-
               <a href="#home-contact-us">
                 <IconArrowLeft size={20} />
                 <span>{intl('home.hero.contact.us.button.title')}</span>
@@ -78,13 +77,6 @@ const Hero = () => {
           <NetworkWrapper>
             <SocialMediaBar type="secondary" direction="row" />
           </NetworkWrapper>
-          {/* <ImageWrapper>
-            <LazyLoadImage
-              src={heroImgData.src}
-              alt={heroImgData.alt}
-              threshold={100}
-            />
-          </ImageWrapper> */}
         </HeroContent>
       </Container>
     </HeroSection>

@@ -5,7 +5,7 @@ import { colors } from 'styles/colors'
 import Section from 'ui/Section/Section'
 
 interface IHeroContent {
-  $scrollbarwidth: number;
+  $scrollbarwidth: number
 }
 
 export const HeroSection = styled(Section)`
@@ -13,10 +13,10 @@ export const HeroSection = styled(Section)`
 `
 
 export const HeroContent = styled.div<IHeroContent>`
-  --scrollbar-width: ${({$scrollbarwidth}) => $scrollbarwidth + 'px'};
+  --scrollbar-width: ${({ $scrollbarwidth }) => $scrollbarwidth + 'px'};
   --fix-100vw: calc(100vw - var(--scrollbar-width));
   --spacing-x: calc((var(--fix-100vw) - 100%) / 2);
-  
+
   position: relative;
   width: calc(100% + var(--spacing-x));
   left: calc(-1 * var(--spacing-x) / 2);
@@ -24,17 +24,17 @@ export const HeroContent = styled.div<IHeroContent>`
   flex-direction: column;
   gap: 0.875rem;
 
-  @media only screen and (min-width: ${ breakpoints.full }) {
+  @media only screen and (min-width: ${breakpoints.full}) {
     position: static;
     width: 100%;
   }
 
-  @media only screen and (min-width: ${ breakpoints["2k"] }) {
+  @media only screen and (min-width: ${breakpoints['2k']}) {
     width: 90rem;
     height: 51.625rem;
   }
 
-  @media only screen and (min-width: ${ breakpoints["4k"] }) {
+  @media only screen and (min-width: ${breakpoints['4k']}) {
     width: 126.75rem;
     height: 78.5625rem;
   }
@@ -46,21 +46,21 @@ export const HeroContentWrapper = styled.div`
   padding: 3.8rem 2rem 3.8rem 1.5rem;
   border-radius: 0rem 1rem 1rem 0rem;
 
-  @media only screen and (min-width: ${ breakpoints.md }) {
+  @media only screen and (min-width: ${breakpoints.md}) {
     display: grid;
     padding: 5rem 5rem 5rem 1.5rem;
     grid-template-columns: min-content auto minmax(auto, 50rem);
   }
-  
-  @media only screen and (min-width: ${ breakpoints.xxl }) {
+
+  @media only screen and (min-width: ${breakpoints.xxl}) {
     grid-template-columns: min-content auto minmax(auto, 37rem);
   }
 
-  @media only screen and (min-width: ${ breakpoints.full }) {
+  @media only screen and (min-width: ${breakpoints.full}) {
     border-radius: 1rem;
   }
 
-  @media only screen and (min-width: ${ breakpoints["2k"] }) {
+  @media only screen and (min-width: ${breakpoints['2k']}) {
     height: 100%;
   }
 `
@@ -71,11 +71,11 @@ export const Content = styled.div`
   gap: 2rem;
   z-index: 1;
 
-  @media only screen and (min-width: ${ breakpoints.md }) {
+  @media only screen and (min-width: ${breakpoints.md}) {
     grid-column: 3/4;
   }
 
-  @media only screen and (min-width: ${ breakpoints["2k"] }) {
+  @media only screen and (min-width: ${breakpoints['2k']}) {
     justify-content: center;
   }
 
@@ -118,7 +118,7 @@ export const ContentText = styled.div`
     color: ${colors.black.main};
   }
 
-  @media only screen and (min-width: ${ breakpoints.lg }) {
+  @media only screen and (min-width: ${breakpoints.lg}) {
     & h5,
     & > span {
       word-break: normal;
@@ -132,7 +132,7 @@ export const NetworkWrapper = styled.div`
     width: fit-content;
   }
 
-  @media only screen and (min-width: ${ breakpoints.md }) {
+  @media only screen and (min-width: ${breakpoints.md}) {
     display: none;
   }
 `
@@ -141,7 +141,7 @@ export const NetworkWrapperInside = styled.div`
   display: none;
   align-items: center;
 
-  @media only screen and (min-width: ${ breakpoints.md }) {
+  @media only screen and (min-width: ${breakpoints.md}) {
     display: flex;
     z-index: 2;
     position: relative;
@@ -167,12 +167,12 @@ export const ImageWrapper = styled.div`
   top: 2rem;
   right: 4rem;
 
-  & img{
+  & img {
     -webkit-mask-image: linear-gradient(to top, transparent 1%, black 17%);
     mask-image: linear-gradient(to top, transparent 1%, black 17%);
   }
 
-  @media only screen and (min-width: ${ breakpoints.xxl }) {
+  @media only screen and (min-width: ${breakpoints.xxl}) {
     display: inherit;
 
     & img {
@@ -181,11 +181,11 @@ export const ImageWrapper = styled.div`
     }
   }
 
-  @media only screen and (min-width: ${ breakpoints["2k"] }) {
+  @media only screen and (min-width: ${breakpoints['2k']}) {
     width: 58.375rem;
   }
 
-  @media only screen and (min-width: ${ breakpoints["4k"] }) {
+  @media only screen and (min-width: ${breakpoints['4k']}) {
     width: 92.75rem;
   }
 `
