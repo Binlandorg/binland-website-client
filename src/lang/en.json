@@ -76,6 +76,8 @@
   "contact.us.form.title": "Contact us",
   "contact.us.form.button": "Send",
 
+  "contact.us.form.error.recapcha": "Please complete the verification captcha. Thank you",
+
   "form.servicios.data.option.grafic.pieces": "Development of graphic pieces",
   "form.servicios.data.option.branding": "Branding",
   "form.servicios.data.option.ux.ui.design": "UX/UI Design",

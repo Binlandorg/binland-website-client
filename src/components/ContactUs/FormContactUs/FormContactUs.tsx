@@ -8,16 +8,13 @@ import { validationSchema } from './FormContactUs.yup'
 import useIntlMessages from 'hooks/useIntlMessages'
 import Input from 'ui/input/Input'
 import Textarea from 'ui/Textarea/Textarea'
-import {
-  Error,
-  FormWrapper,
-  ContainerForm,
-  ButtonForm,
-} from './FormContactUs.styles'
+import { FormWrapper, ContainerForm, ButtonForm } from './FormContactUs.styles'
 import MultiSelect from 'ui/MultiSelect/MultiSelect'
 import { servicesOptions } from './FormData'
 import { IValues } from 'types/ui/Form'
 import { IServiceOptions } from 'types/ui/Multiselect'
+import { MdError } from 'react-icons/md'
+import { ErrorMessage } from 'ui/input/Input.styles'
 
 const FormContacUs: React.FC = () => {
   const [selectedServices, setSelectedServices] = useState<IServiceOptions[]>(
@@ -140,7 +137,12 @@ const FormContacUs: React.FC = () => {
               className="g-recaptcha"
             />
           )}
-          {errorCaptcha && <Error>Por favor, acepta el captcha.</Error>}
+          {errorCaptcha && (
+            <ErrorMessage>
+              <MdError />
+              {intl('contact.us.form.error.recapcha')}
+            </ErrorMessage>
+          )}
         </div>
         <ButtonForm type="primary" rightIcon={<TbSend />}>
           {intl('contact.us.form.button')}
