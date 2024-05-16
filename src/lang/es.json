@@ -115,6 +115,10 @@
 
   "validation.input.required.message": "Este campo es requerido",
 
+  "page.not.found.title": "Ups!",
+  "page.not.found.sub.title": "Creo que te extraviaste...",
+  "page.not.found.button.to.home": "Regresa al Inicio",
+
   "image.profile.alt.crhistian.turpo.apaza": "Imagen del CEO de la compañia, Crhistian Turpo",
   "image.profile.alt.jonathan.cervantes.alarcon": "Imagen de uno de los fundadores, Jonathan Cervantes",
   "image.profile.alt.gustavo.ugarte": "Imagen de uno de los fundadores, Gustavo Ugarte",
