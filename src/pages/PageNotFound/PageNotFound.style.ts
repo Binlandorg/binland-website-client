@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { colors } from 'styles/colors'
 import { breakpoints } from 'shared/breakpoints'
 import Container from 'ui/Container/Container'
+import { FontWeight } from 'styles/typography'
 
 export const StyledPageNotFound = styled(Container)`
   flex-grow: 1;
@@ -19,33 +20,28 @@ export const StyledPageNotFound = styled(Container)`
     line-height: 1.5rem;
     font-weight: 600;
   }
+
+  & button[type='secondary']:hover {
+    background-color: ${colors.secondary.hover[300]};
+  }
+
+  & button[type='secondary'] > p {
+    font-weight: ${FontWeight.semibold};
+  }
 `
 export const MessageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: .5rem;
+  gap: 0.5rem;
 
   .error-page-title {
-    font-weight: 800;
-    font-size: 2.25rem;
-    line-height: 3rem;
     text-transform: uppercase;
     color: ${colors.black.main};
-
-    @media only screen and (min-width: ${breakpoints.lg}) {
-      font-size: 3rem;
-    }
   }
 
-  .error-page-sub-title {
-    color: ${colors.secondary.main};
-    font-size: 1rem;
-    font-weight: 600;
-
-    @media only screen and (min-width: ${breakpoints.lg}) {
-      font-size: 1.5rem;
-    }
+  & > h4 {
+    color: ${colors.black.main};
   }
 `
 export const ImageWrapper = styled.div`
