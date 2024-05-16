@@ -1,12 +1,15 @@
-import SectionTitle from 'components/SectionTitle/SectionTitle'
+import useIntlMessages from 'hooks/useIntlMessages'
 import { HeroBackground, SectionHero } from './ServicesHero.styles'
+import H1 from 'ui/Titles/H1'
 
 const ServicesHero = () => {
+  const intl = useIntlMessages()
+
   return (
     <SectionHero size="sm" type="margin">
       <HeroBackground>
         <div className="hero__content__wrapper">
-          <SectionTitle className="hero__title" text="Servicios" />
+          <H1>{intl("services.hero.title")}</H1>
           <div>
             <h4 className="hero__subtitle">
               Seguridad apoplejia mas sonadores alarmante dia dio consentir mal
