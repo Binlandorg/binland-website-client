@@ -8,6 +8,7 @@ import useIntlMessages from 'hooks/useIntlMessages'
 import H4 from 'ui/Titles/H4'
 import Display from 'ui/Display/Display'
 import Paragraph from 'ui/Paragraph/Paragraph'
+import { colors } from 'styles/colors'
 
 const PageNotFound = () => {
   const intl = useIntlMessages()
@@ -18,7 +19,9 @@ const PageNotFound = () => {
         <Display size="md" className="error-page-title">
             {intl('page.not.found.title')}
         </Display>
-        <H4 $weight="medium">{intl('page.not.found.sub.title')}</H4>
+        <H4 $weight="medium" color={colors.black.main}>
+          {intl('page.not.found.sub.title')}
+        </H4>
       </MessageWrapper>
       <ImageWrapper>
         <img src={NotFoundImg} alt="Page-Not-Found" className="not-found-img" />

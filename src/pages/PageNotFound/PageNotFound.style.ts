@@ -39,10 +39,6 @@ export const MessageWrapper = styled.div`
     text-transform: uppercase;
     color: ${colors.black.main};
   }
-
-  & > h4 {
-    color: ${colors.black.main};
-  }
 `
 export const ImageWrapper = styled.div`
   max-width: 43.5rem;
