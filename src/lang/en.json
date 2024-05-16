@@ -66,17 +66,31 @@
   "contact.us.form.input.phone.validation": "Please enter a valid phone number (only numbers, +, -, (, ), and spaces are allowed)",
   "contact.us.form.input.message.validation": "Please enter at least 30 characters",
 
-  "contact.us.form.label.firstname": "First Name",
-  "contact.us.form.label.lastname": "Last Name",
-  "contact.us.form.label.email": "E-mail",
-  "contact.us.form.label.company": "Company",
-  "contact.us.form.label.phone": "Phone",
+  "contact.us.form.label.fullname": "Full name",
+  "contact.us.form.label.email": "Email",
+  "contact.us.form.label.country": "Country",
+  "contact.us.form.label.what.service": "What services do you require?",
+  "contact.us.form.multiselect.search.service": "Search services",
   "contact.us.form.label.message": "Message",
-
-  "contact.us.form.input.message.placeholder": "Write a message here...",
 
   "contact.us.form.title": "Contact us",
   "contact.us.form.button": "Send",
+
+  "contact.us.form.error.recapcha": "Please complete the verification captcha. Thank you",
+
+  "form.servicios.data.option.grafic.pieces": "Development of graphic pieces",
+  "form.servicios.data.option.branding": "Branding",
+  "form.servicios.data.option.ux.ui.design": "UX/UI Design",
+  "form.servicios.data.option.ux.writing": "UX Writing",
+  "form.servicios.data.option.wep.development": "Web development",
+  "form.servicios.data.option.full.stack.applications": "Full stack applications",
+  "form.servicios.data.option.multi.applications": "Multiplatform applications",
+  "form.servicios.data.option.mobile.applications": "Mobile Development - iOS, Android, Flutter",
+  "form.servicios.data.option.ecommerce": "E-commerce",
+  "form.servicios.data.option.cloud.migrations": "Cloud migrations and infrastructure",
+  "form.servicios.data.option.digital.staff": "Digital staff",
+  "form.servicios.data.option.seo": "SEO Optimization/SEM",
+  "form.servicios.data.option.marketing.digital": "Digital Marketing",
 
   "clients.outstanding.title": "Our works",
 

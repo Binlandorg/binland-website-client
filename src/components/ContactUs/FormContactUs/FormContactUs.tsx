@@ -2,54 +2,19 @@ import { useFormik } from 'formik'
 import { useRef, useState } from 'react'
 import { TbSend } from 'react-icons/tb'
 import ReCAPTCHA from 'react-google-recaptcha'
+import { MdError } from 'react-icons/md'
 
 import { sendEmail } from 'services/SendEmail'
 import { validationSchema } from './FormContactUs.yup'
 import useIntlMessages from 'hooks/useIntlMessages'
 import Input from 'ui/input/Input'
 import Textarea from 'ui/Textarea/Textarea'
-import {
-  Error,
-  FormWrapper,
-  ContainerForm,
-  ButtonForm,
-} from './FormContactUs.styles'
+import { FormWrapper, ContainerForm, ButtonForm } from './FormContactUs.styles'
 import MultiSelect from 'ui/MultiSelect/MultiSelect'
-
-interface IValues {
-  fullName: string
-  country: string
-  email: string
-  message: string
-}
-
-const initialValues: IValues = {
-  fullName: '',
-  country: '',
-  email: '',
-  message: '',
-}
-
-interface IServiceOptions {
-  key: string
-  name: string
-}
-
-const servicesOptions: IServiceOptions[] = [
-  { key: '1', name: 'Development of graphic pieces' },
-  { key: '2', name: 'Branding' },
-  { key: '3', name: 'UX/UI Design' },
-  { key: '4', name: 'UX Writing' },
-  { key: '5', name: 'Web development' },
-  { key: '6', name: 'Full stack applications' },
-  { key: '7', name: 'Multiplatform applications' },
-  { key: '8', name: 'Mobile Development - iOS, Android, Flutter' },
-  { key: '9', name: 'E-commerce' },
-  { key: '10', name: 'Cloud migrations and infrastructure' },
-  { key: '11', name: 'Digital staff' },
-  { key: '12', name: 'SEO Optimization/ SEM' },
-  { key: '13', name: 'Digital Marketing' },
-]
+import { servicesOptions } from './FormData'
+import { IValues } from 'types/ui/Form'
+import { IServiceOptions } from 'types/ui/Multiselect'
+import { ErrorMessage } from 'ui/input/Input.styles'
 
 const FormContacUs: React.FC = () => {
   const [selectedServices, setSelectedServices] = useState<IServiceOptions[]>(
@@ -70,7 +35,12 @@ const FormContacUs: React.FC = () => {
 
   const intl = useIntlMessages()
   const formik = useFormik({
-    initialValues,
+    initialValues: {
+      fullName: '',
+      country: '',
+      email: '',
+      message: '',
+    } as IValues,
     validationSchema,
     onSubmit: (values) => {
       if (!verified) {
@@ -96,7 +66,7 @@ const FormContacUs: React.FC = () => {
     <ContainerForm>
       <FormWrapper onSubmit={formik.handleSubmit}>
         <Input
-          label="Nombre completo *"
+          label={`${intl('contact.us.form.label.fullname')} *`}
           type="text"
           id="fullName"
           name="fullName"
@@ -111,7 +81,7 @@ const FormContacUs: React.FC = () => {
         />
 
         <Input
-          label="Email *"
+          label={`${intl('contact.us.form.label.email')} *`}
           type="email"
           id="email"
           name="email"
@@ -125,7 +95,7 @@ const FormContacUs: React.FC = () => {
           }
         />
         <Input
-          label="País"
+          label={intl('contact.us.form.label.country')}
           type="text"
           id="country"
           name="country"
@@ -141,11 +111,11 @@ const FormContacUs: React.FC = () => {
         <MultiSelect
           options={servicesOptions}
           onChange={setSelectedServices}
-          placeholder="Buscar servicios"
-          label="¿Qué servicio se requiere?"
+          searchPlaceholder={intl('contact.us.form.multiselect.search.service')}
+          label={intl('contact.us.form.label.what.service')}
         />
         <Textarea
-          label="Mensaje *"
+          label={`${intl('contact.us.form.label.message')} *`}
           name="message"
           id="message"
           onChange={formik.handleChange}
@@ -167,7 +137,12 @@ const FormContacUs: React.FC = () => {
               className="g-recaptcha"
             />
           )}
-          {errorCaptcha && <Error>Por favor, acepta el captcha.</Error>}
+          {errorCaptcha && (
+            <ErrorMessage>
+              <MdError />
+              {intl('contact.us.form.error.recapcha')}
+            </ErrorMessage>
+          )}
         </div>
         <ButtonForm type="primary" rightIcon={<TbSend />}>
           {intl('contact.us.form.button')}
