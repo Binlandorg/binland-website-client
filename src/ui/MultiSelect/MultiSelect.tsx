@@ -14,10 +14,10 @@ import {
 } from './MultiSelect.styles'
 import InputSearch from '../SearchMultiSelect/SearchMultiSelect'
 import useOutsideClick from 'hooks/useClickOutside'
-import { IServiceOptions, MultiSelectProps } from 'types/ui/Multiselect'
+import { IServiceOptions, IMultiSelectProps } from 'types/ui/Multiselect'
 import useIntlMessages from 'hooks/useIntlMessages'
 
-const MultiSelect: React.FC<MultiSelectProps> = ({
+const MultiSelect: React.FC<IMultiSelectProps> = ({
   options,
   onChange,
   searchPlaceholder,

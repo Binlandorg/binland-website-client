@@ -9,7 +9,7 @@ export const servicesOptions: IServiceOptions[] = [
   { key: '6', name: 'form.servicios.data.option.full.stack.applications' },
   { key: '7', name: 'form.servicios.data.option.multi.applications' },
   { key: '8', name: 'form.servicios.data.option.mobile.applications' },
-  { key: '9', name: 'form.servicios.data.option.e-commerce' },
+  { key: '9', name: 'form.servicios.data.option.ecommerce' },
   { key: '10', name: 'form.servicios.data.option.cloud.migrations' },
   { key: '11', name: 'form.servicios.data.option.digital.staff' },
   { key: '12', name: 'form.servicios.data.option.seo' },
