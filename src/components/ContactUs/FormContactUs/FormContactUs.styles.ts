@@ -11,7 +11,6 @@ export const FormWrapper = styled.form`
 
   .recaptcha-container {
     width: 100%;
-    max-width: 12.5rem;
   }
 
   .g-recaptcha {
@@ -54,7 +53,7 @@ export const ContainerForm = styled.div`
     padding: 3rem;
   }
 
-  @media only screen and (min-width: ${breakpoints.xxl}){
+  @media only screen and (min-width: ${breakpoints.xxl}) {
     border-radius: 1rem;
   }
 `
