@@ -6,7 +6,7 @@ import {
 } from './SearchMultiSelect.styles'
 import { ISearch } from 'types/ui/SearchMultiSelect'
 
-const InputSearch = forwardRef<HTMLInputElement, ISearch>(
+const SearchMultiSelect = forwardRef<HTMLInputElement, ISearch>(
   ({ value, onChange, placeholder, icon }, ref) => {
     return (
       <InputSearchWrapper>
@@ -23,4 +23,4 @@ const InputSearch = forwardRef<HTMLInputElement, ISearch>(
   }
 )
 
-export default InputSearch
+export default SearchMultiSelect

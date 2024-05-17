@@ -5,10 +5,10 @@ import { colors } from 'styles/colors'
 export const InputSearchWrapper = styled.div`
   display: flex;
   align-items: center;
-  background-color: ${colors.gray[150]};
+  background-color: ${colors.tertiary.normal[200]};
   padding: 0.5rem 1rem;
-  border-top: 0.125rem solid ${colors.secondary.normal[300]};
-  border-bottom: 0.125rem solid ${colors.secondary.normal[300]};
+  border-top: 0.0625rem solid ${colors.secondary.normal[200]};
+  border-bottom: 0.0625rem solid ${colors.secondary.normal[200]};
 
   ::placeholder {
     font-size: 1rem;
@@ -32,5 +32,9 @@ export const StyledInputSearch = styled.input`
   &:active,
   &:focus {
     outline: none;
+  }
+
+  &::-webkit-search-cancel-button {
+    appearance: none;
   }
 `

@@ -1,31 +1,80 @@
-import styled from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 import { FiSearch } from 'react-icons/fi'
 
 import { colors } from 'styles/colors'
-import { InputBoxProps } from 'types/ui/Multiselect'
+import { IInputBoxProps } from 'types/ui/Multiselect'
 
 export const MirroredIcon = styled(FiSearch)`
   transform: scaleX(-1);
 `
 
-export const MultiSelectWrapper = styled.div<InputBoxProps>`
-  position: relative;
+const textAnimation = keyframes`
+  from {
+    color: ${colors.secondary.normal[800]};
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    color: ${colors.secondary.normal[300]};
+    transform: translate(-10%, -50%) scale(0.8)
+  }
 `
 
-export const InputBox = styled.div<InputBoxProps>`
+export const MultiSelectWrapper = styled.div<IInputBoxProps>`
+  position: relative;
+
+  &:focus-within {
+    outline: none;
+    border-radius: 0.375rem;
+  }
+
+  ${(props) =>
+    props.$isOpen &&
+    `
+    outline: none;
+    border: none;
+  `};
+`
+
+export const InputBox = styled.div<IInputBoxProps>`
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: ${colors.gray[150]};
+  background-color: ${colors.tertiary.normal[50]};
   padding: 1.5rem 1.75rem;
-  border: ${({ $isOpen }) =>
-    $isOpen &&
-    `0.1rem solid ${colors.primary.main}`}; /* change de color with the correct palette */
   border-bottom: none;
   border-radius: ${({ $isOpen }) =>
     $isOpen ? '0.375rem 0.375rem 0 0' : '0.375rem'};
   gap: 0.6rem;
   cursor: pointer;
+  outline: 0.125rem solid ${colors.tertiary.focus[500]};
+  transition: padding, gap 0.3s ease;
+
+  ${(props) =>
+    props.$isOpen &&
+    `
+    &::after {
+      content: '';
+      width: 100%;
+      height: 0.125rem;
+      background-color: ${colors.tertiary.normal[50]};
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 3;
+    }
+  `}
+
+  ${(props) =>
+    (props.$isOpen || props.$servicesLength! > 0) &&
+    css`
+      & {
+        padding: 1.5rem 1.75rem;
+        gap: 0;
+      }
+      .span-question {
+        animation: ${textAnimation} 0.3s ease forwards;
+      }
+    `};
 
   .span-question {
     font-weight: 400;
@@ -58,11 +107,10 @@ export const Tag = styled.div`
   flex-direction: row;
   align-items: center;
   padding: 0.5rem 1rem;
-  gap: 0.5rem;
+  gap: 0.75rem;
   background-color: ${colors.black.main};
   color: ${colors.white.main};
   border-radius: 0.5rem;
-  border: 0.0625rem solid ${colors.white.main};
   cursor: auto;
 
   .icon-close-wrapper {
@@ -77,50 +125,50 @@ export const Tag = styled.div`
     cursor: pointer;
 
     &:hover {
-      background-color: ${colors.secondary.normal[300]};
+      background-color: ${colors.white.main};
       color: ${colors.black.main};
     }
   }
 `
 
-export const DisplayOptions = styled.div<InputBoxProps>`
+export const DisplayOptions = styled.div<IInputBoxProps>`
   position: absolute;
   top: 100%;
   z-index: 2;
   width: 100%;
-  border: ${({ $isOpen }) =>
-    $isOpen &&
-    `0.1rem solid ${colors.primary.main}`}; /* change de color with the correct palette */
-  border-top: none;
+  outline: 0.125rem solid ${colors.tertiary.focus[500]};
   border-radius: 0 0 0.375rem 0.375rem;
+  overflow: hidden;
 `
 
 export const OptionsWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  max-height: 12.2rem;
+  max-height: 13.5rem;
   overflow-y: scroll;
   border-radius: 0 0 0.375rem 0.375rem;
 
   &::-webkit-scrollbar {
-    width: 0.5rem;
+    width: 0.3rem;
+    border-radius: 0.375rem;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: ${colors.secondary.normal[300]};
-    border-radius: 0.2rem;
+    background-color: ${colors.tertiary.focus[500]};
+    border-radius: 1rem;
   }
 
   &::-webkit-scrollbar-track {
-    background-color: ${colors.secondary.hover[200]};
+    background-color: ${colors.tertiary.normal[200]};
+    border-radius: 0 0 0.2rem 0;
   }
 `
 
 export const StyledOption = styled.span`
-  padding: 1.25rem 1.5rem;
-  background-color: ${colors.gray[150]};
-  border-bottom: 0.0625rem solid ${colors.secondary.normal[300]};
-  color: ${colors.secondary.main};
+  padding: 1.5rem 1.75rem;
+  background-color: ${colors.tertiary.normal[50]};
+  border-bottom: 0.0625rem solid ${colors.secondary.normal[200]};
+  color: ${colors.secondary.normal[800]};
   cursor: pointer;
 
   &:last-child {
@@ -128,7 +176,12 @@ export const StyledOption = styled.span`
   }
 
   &:hover {
-    background-color: ${colors.secondary.hover[200]};
-    color: ${colors.white.main};
+    background-color: ${colors.tertiary.hover[300]};
+    color: ${colors.tertiary.hover[600]};
+  }
+
+  &:active {
+    background-color: ${colors.tertiary.active[400]};
+    color: ${colors.tertiary.active[700]};
   }
 `
