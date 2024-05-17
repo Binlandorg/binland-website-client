@@ -14,6 +14,7 @@ import Reveal from 'components/Reveal/Reveal'
 import Display from 'ui/Display/Display'
 import { detailsData } from './Information.data'
 import { IDetailData } from 'types/components/aboutus'
+import { colors } from 'styles/colors'
 
 const Information: React.FC = () => {
   const intl = useIntlMessages()
@@ -24,7 +25,7 @@ const Information: React.FC = () => {
         <StyledInformation>
           <InformationDescription>
             <div>
-              <H4 $weight="regular">
+              <H4 $weight="regular" color={colors.primary.main}>
                 {intl('about.us.binland.information.sub.title')}
               </H4>
               <H3 $weight="bold">
@@ -43,7 +44,7 @@ const Information: React.FC = () => {
                 return (
                   <div key={id}>
                     <Reveal>
-                      <Display size="md">{amount}</Display>
+                      <Display size="md" className="detail-amount">{amount}</Display>
                       <H5 $weight="regular">{intl(name)}</H5>
                     </Reveal>
                   </div>

@@ -21,6 +21,7 @@ import Paragraph from 'ui/Paragraph/Paragraph'
 import { IName, IProfileCard } from 'types/components/aboutus'
 import defaultImgURL from '../../../assets/images/default-image-profile.webp'
 import useIntlMessages from 'hooks/useIntlMessages'
+import { colors } from 'styles/colors'
 
 const GetIcon: React.FC<IName> = ({ name } : IName) => {
   switch (name.toLocaleLowerCase()) {
@@ -58,7 +59,9 @@ const ProfileCard: React.FC<IProfileCard> = ({
               <H4 $weight="bold">{fullName}</H4>
             </ProfileName>
             <ProfilePosition>
-              <H4 $weight="medium">{intl(position)}</H4>
+              <H4 $weight="medium" color={colors.primary.main}>
+                {intl(position)}
+              </H4>
             </ProfilePosition>
           </ProfileData>
           <ProfileQuote>

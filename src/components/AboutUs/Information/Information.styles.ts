@@ -23,16 +23,8 @@ export const InformationDescription = styled.div`
     margin-bottom: 1rem;
   }
 
-  & h4 {
+  & h3 .dot {
     color: ${colors.primary.main};
-  }
-
-  & h3 {
-    color: ${colors.secondary.normal[800]};
-
-    & .dot {
-      color: ${colors.primary.main};
-    }
   }
 
   & h3,
@@ -56,7 +48,6 @@ export const InformationDetails = styled.div`
     height: 100%;
 
     & h5 {
-      color: ${colors.secondary.normal[800]};
       opacity: 0.5;
       margin: 0;
     }
@@ -64,6 +55,10 @@ export const InformationDetails = styled.div`
     & h5::first-letter {
       text-transform: capitalize;
     }
+  }
+
+  & .detail-amount{
+    color: ${colors.secondary.normal[800]};
   }
 
   & .detail-image {
