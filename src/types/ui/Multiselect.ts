@@ -1,5 +1,6 @@
 export interface InputBoxProps {
   $isOpen: boolean
+  $servicesLength?: number
 }
 
 export interface IServiceOptions {

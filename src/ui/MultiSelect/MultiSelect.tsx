@@ -12,9 +12,9 @@ import {
   DisplayOptions,
   MultiSelectWrapper,
 } from './MultiSelect.styles'
-import InputSearch from '../SearchMultiSelect/SearchMultiSelect'
 import useOutsideClick from 'hooks/useClickOutside'
 import { IServiceOptions, MultiSelectProps } from 'types/ui/Multiselect'
+import SearchMultiSelect from '../SearchMultiSelect/SearchMultiSelect'
 
 const MultiSelect: React.FC<MultiSelectProps> = ({
   options,
@@ -73,8 +73,12 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
   }
 
   return (
-    <MultiSelectWrapper ref={refOptions} $isOpen={isOpen}>
-      <InputBox onClick={() => setIsOpen((prev) => !prev)} $isOpen={isOpen}>
+    <MultiSelectWrapper ref={refOptions} $isOpen={isOpen} tabIndex={0}>
+      <InputBox
+        onClick={() => setIsOpen((prev) => !prev)}
+        $isOpen={isOpen}
+        $servicesLength={selectedServices.length}
+      >
         <div className="input-box-wrapper">
           <span className="span-question">{label}</span>
           {isOpen ? (
@@ -102,7 +106,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
       </InputBox>
       {isOpen && (
         <DisplayOptions $isOpen={isOpen}>
-          <InputSearch
+          <SearchMultiSelect
             ref={inputRef}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
