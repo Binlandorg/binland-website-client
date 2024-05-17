@@ -66,17 +66,35 @@
   "contact.us.form.input.phone.validation": "Por favor, ingrese un número de teléfono válido (solo se permiten números, +, -, (, ), y espacios)",
   "contact.us.form.input.message.validation": "Por favor, ingrese al menos 30 caracteres",
 
-  "contact.us.form.label.firstname": "Nombre",
-  "contact.us.form.label.lastname": "Apellido",
-  "contact.us.form.label.email": "Correo Electrónico",
-  "contact.us.form.label.company": "Empresa",
-  "contact.us.form.label.phone": "Teléfono",
+  "contact.us.form.label.fullname": "Nombre completo",
+  "contact.us.form.label.email": "Email",
+  "contact.us.form.label.country": "País",
+  "contact.us.form.label.what.service": "¿Qué servicios requiere?",
+  "contact.us.form.multiselect.search.service": "Buscar servicios",
   "contact.us.form.label.message": "Mensaje",
-
-  "contact.us.form.input.message.placeholder": "Escribe tu mensaje aquí...",
 
   "contact.us.form.title": "Contáctanos",
   "contact.us.form.button": "Enviar",
+
+  "contact.us.form.error.recapcha": "Por favor, completa el captcha de verificación. Gracias.",
+
+  "form.servicios.data.option.grafic.pieces": "Desarrollo de piezas gráficas",
+  "form.servicios.data.option.branding": "Branding",
+  "form.servicios.data.option.ux.ui.design": "Diseño UX/UI",
+  "form.servicios.data.option.ux.writing": "Redacción UX",
+  "form.servicios.data.option.wep.development": "Desarrollo web",
+  "form.servicios.data.option.full.stack.applications": "Aplicaciones full stack",
+  "form.servicios.data.option.multi.applications": "Aplicaciones multiplataforma",
+  "form.servicios.data.option.mobile.applications": "Desarrollo móvil - iOS, Android, Flutter",
+  "form.servicios.data.option.ecommerce": "Comercio electrónico",
+  "form.servicios.data.option.cloud.migrations": "Migraciones e infraestructura en la nube",
+  "form.servicios.data.option.digital.staff": "Staff digital",
+  "form.servicios.data.option.seo": "Optimización SEO/SEM",
+  "form.servicios.data.option.marketing.digital": "Marketing digital",
+
+  "clients.outstanding.title": "Nuestros trabajos",
+
+  "services.hero.title": "Servicios",
 
   "frequently.asked.questions.title": "Preguntas frecuentes",
   "frequently.asked.questions.still.have.questions": "¿Todavía tienes preguntas?",
@@ -96,6 +114,10 @@
   "footer.FAQ": "Preguntas frecuentes",
 
   "validation.input.required.message": "Este campo es requerido",
+
+  "page.not.found.title": "Ups!",
+  "page.not.found.sub.title": "Creo que te extraviaste...",
+  "page.not.found.button.to.home": "Regresa al Inicio",
 
   "image.profile.alt.crhistian.turpo.apaza": "Imagen del CEO de la compañia, Crhistian Turpo",
   "image.profile.alt.jonathan.cervantes.alarcon": "Imagen de uno de los fundadores, Jonathan Cervantes",

@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react'
 import Container from 'ui/Container/Container'
 import Section from 'ui/Section/Section'
 import ButtonLink from 'ui/ButtonLink/ButtonLink'
-import SectionTitle from 'components/SectionTitle/SectionTitle'
 import Pagination from 'components/Pagination/Pagination'
 import ClientItems from './ClientCards/ClientCards'
 import { ExternalLink } from './ClientCards/ClientCards.styles'
@@ -20,11 +19,14 @@ import {
 } from './Clients.styles'
 import { IClientCard } from 'types/components/clients'
 import { IData } from 'types/components/pagination'
+import H2 from 'ui/Titles/H2'
+import useIntlMessages from 'hooks/useIntlMessages'
 
 const Clients: React.FC = () => {
   const [items, setItems] = useState<IClientCard[]>([])
   const [currentPage, setCurrentPage] = useState(1)
   const pageCount = clientsData.length
+  const intl = useIntlMessages()
 
   useEffect(() => {
     const initialItem = clientsData[currentPage - 1]
@@ -66,7 +68,7 @@ const Clients: React.FC = () => {
           <OurWorkWrapper>
             <div className="our-works-content">
               <div>
-                <SectionTitle text="our works" className="our-works-title" />
+                <H2>{intl("clients.outstanding.title")}</H2>
                 <p className="our-works-description">
                   Si disputa al la interes miradas ya decirte. Ch el capital
                   casaron gozaban plateas se. Armino fulano fulgor van era.

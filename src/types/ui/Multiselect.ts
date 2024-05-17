@@ -8,9 +8,9 @@ export interface IServiceOptions {
   name: string
 }
 
-export interface MultiSelectProps {
+export interface IMultiSelectProps {
   options: IServiceOptions[]
   onChange: (selectedServices: IServiceOptions[]) => void
-  placeholder: string
+  searchPlaceholder: string
   label: string
 }
