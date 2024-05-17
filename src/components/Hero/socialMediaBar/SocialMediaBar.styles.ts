@@ -51,20 +51,31 @@ export const SocialMediaBarWrapper = styled.div<IProps>`
 `
 
 export const WrapperIcon = styled.div`
-  height: 2.25rem;
-  width: 2.25rem;
   display: grid;
   place-content: center;
+`
+
+export const LinkIcon = styled(Link)`
+  height: 2.25rem;
+  width: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${colors.white.main};
   border-radius: 100%;
+  cursor: pointer;
 
   &:hover {
     background-color: ${colors.secondary.hover[400]};
   }
-`
 
-export const LinkIcon = styled(Link)`
-  display: flex;
-  align-items: center;
-  color: ${colors.white.main};
-  cursor: pointer;
+  &:active {
+    background-color: ${colors.white.main};
+    color: ${colors.black.main};
+  }
+
+  &:focus {
+    background-color: ${colors.white.main};
+    color: ${colors.black.main};
+  }
 `
