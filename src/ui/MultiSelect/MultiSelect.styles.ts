@@ -2,8 +2,7 @@ import styled, { css, keyframes } from 'styled-components'
 import { FiSearch } from 'react-icons/fi'
 
 import { colors } from 'styles/colors'
-import { InputBoxProps } from 'types/ui/Multiselect'
-import { breakpoints } from 'shared/breakpoints'
+import { IInputBoxProps } from 'types/ui/Multiselect'
 
 export const MirroredIcon = styled(FiSearch)`
   transform: scaleX(-1);
@@ -20,22 +19,11 @@ const textAnimation = keyframes`
   }
 `
 
-const dropAnimation = keyframes`
-  from {
-    transform: translate(0, 0);
-  }
-  to {
-    transform: translate(-10%, -50%) 
-  }
-`
-
-export const MultiSelectWrapper = styled.div<InputBoxProps>`
+export const MultiSelectWrapper = styled.div<IInputBoxProps>`
   position: relative;
 
   &:focus-within {
     outline: none;
-    ${({ $isOpen }) =>
-      !$isOpen && `border: 0.125rem solid ${colors.tertiary.focus[500]};`}
     border-radius: 0.375rem;
   }
 
@@ -47,20 +35,34 @@ export const MultiSelectWrapper = styled.div<InputBoxProps>`
   `};
 `
 
-export const InputBox = styled.div<InputBoxProps>`
+export const InputBox = styled.div<IInputBoxProps>`
   display: flex;
   flex-direction: column;
   width: 100%;
   background-color: ${colors.tertiary.normal[50]};
   padding: 1.5rem 1.75rem;
-  border: ${({ $isOpen }) =>
-    $isOpen && `0.1rem solid ${colors.tertiary.focus[500]}`};
   border-bottom: none;
   border-radius: ${({ $isOpen }) =>
     $isOpen ? '0.375rem 0.375rem 0 0' : '0.375rem'};
   gap: 0.6rem;
   cursor: pointer;
+  outline: 0.125rem solid ${colors.tertiary.focus[500]};
   transition: padding, gap 0.3s ease;
+
+  ${(props) =>
+    props.$isOpen &&
+    `
+    &::after {
+      content: '';
+      width: 100%;
+      height: 0.125rem;
+      background-color: ${colors.tertiary.normal[50]};
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 3;
+    }
+  `}
 
   ${(props) =>
     (props.$isOpen || props.$servicesLength! > 0) &&
@@ -71,10 +73,6 @@ export const InputBox = styled.div<InputBoxProps>`
       }
       .span-question {
         animation: ${textAnimation} 0.3s ease forwards;
-      }
-
-      .arrow-button {
-        animation: ${dropAnimation} 0.3s ease forwards;
       }
     `};
 
@@ -133,15 +131,14 @@ export const Tag = styled.div`
   }
 `
 
-export const DisplayOptions = styled.div<InputBoxProps>`
+export const DisplayOptions = styled.div<IInputBoxProps>`
   position: absolute;
   top: 100%;
   z-index: 2;
   width: 100%;
-  border: ${({ $isOpen }) =>
-    $isOpen && `0.1rem solid ${colors.tertiary.focus[500]}`};
-  border-top: none;
+  outline: 0.125rem solid ${colors.tertiary.focus[500]};
   border-radius: 0 0 0.375rem 0.375rem;
+  overflow: hidden;
 `
 
 export const OptionsWrapper = styled.div`
@@ -151,21 +148,19 @@ export const OptionsWrapper = styled.div`
   overflow-y: scroll;
   border-radius: 0 0 0.375rem 0.375rem;
 
-  @media only screen and (min-width: ${breakpoints.lg}) {
-    &::-webkit-scrollbar {
-      width: 0.5rem;
-      border-radius: 0.375rem;
-    }
+  &::-webkit-scrollbar {
+    width: 0.3rem;
+    border-radius: 0.375rem;
+  }
 
-    &::-webkit-scrollbar-thumb {
-      background-color: ${colors.secondary.normal[300]};
-      border-radius: 1rem;
-    }
+  &::-webkit-scrollbar-thumb {
+    background-color: ${colors.tertiary.focus[500]};
+    border-radius: 1rem;
+  }
 
-    &::-webkit-scrollbar-track {
-      background-color: ${colors.secondary.hover[200]};
-      border-radius: 0 0 0.2rem 0;
-    }
+  &::-webkit-scrollbar-track {
+    background-color: ${colors.tertiary.normal[200]};
+    border-radius: 0 0 0.2rem 0;
   }
 `
 
