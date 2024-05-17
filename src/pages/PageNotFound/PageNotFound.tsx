@@ -26,7 +26,7 @@ const PageNotFound = () => {
       <ImageWrapper>
         <img src={NotFoundImg} alt="Page-Not-Found" className="not-found-img" />
       </ImageWrapper>
-      <ButtonLink to={'/'} type={'secondary'}>
+      <ButtonLink to={'/'} type={'secondary'} >
         <Paragraph $weight="regular" $style="normal">
           {intl('page.not.found.button.to.home')}
         </Paragraph>
