@@ -50,11 +50,9 @@ export const ProfileData = styled.div`
 
 export const ProfileName = styled.div`
   text-align: center;
-  color: ${colors.secondary.main};
 `
 export const ProfilePosition = styled.div`
   text-align: center;
-  color: ${colors.primary.normal[500]};
 `
 export const ProfileQuote = styled.div`
   text-align: center;
@@ -73,6 +71,7 @@ export const ProfileNetworks = styled.ul`
 export const ProfileNetwork = styled.li``
 export const AnchorIcon = styled.a`
   color: ${colors.secondary.main};
+  position: relative;
 
   & svg{
     width: 1.5rem;
