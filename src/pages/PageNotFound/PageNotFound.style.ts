@@ -25,6 +25,20 @@ export const StyledPageNotFound = styled(Container)`
     background-color: ${colors.secondary.hover[300]};
   }
 
+  & button[type='secondary']:active {
+    background-color: ${colors.secondary.active[900]};
+    color: ${colors.white.main};
+  }
+
+  & a:focus {
+    outline-color: ${colors.secondary.normal[800]};
+    border-radius: 0.65rem;
+  }
+
+  & a:focus-visible {
+    outline-offset: inherit;
+  }
+
   & button[type='secondary'] > p {
     font-weight: ${FontWeight.semibold};
   }
