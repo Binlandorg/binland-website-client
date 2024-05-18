@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
                 </H5>
                 <Display size="lg">
                   <FormattedMessage
-                    id="hero-slogan"
+                    id="home.hero.slogan"
                     defaultMessage={intl('home.hero.slogan')}
                     values={{
                       b: (chunks) => <b>{chunks}</b>,
