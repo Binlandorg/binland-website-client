@@ -83,11 +83,11 @@ export const Content = styled.div`
     justify-content: center;
   }
 
-  & a[href='#home-contact-us'] {
+  & a[href='#contact-us'] {
     display: flex;
     align-items: center;
     max-width: fit-content;
-    background-color: ${colors.black.main};
+    background-color: ${colors.secondary.normal[950]};
     color: ${colors.white.main};
     border: none;
     outline: none;
@@ -102,6 +102,14 @@ export const Content = styled.div`
 
     &:active {
       background-color: ${colors.secondary.active[800]};
+    }
+
+    &:focus {
+      outline: 2px solid ${colors.secondary.active[950]};
+    }
+
+    &:active:focus {
+      outline: inherit;
     }
   }
 `
