@@ -6,15 +6,14 @@ import {
 } from './SingleMobileService.styles'
 
 interface ITabProperties {
-  key: string
   label: string
   children: React.ReactNode
 }
 
-const SingleMobileService: React.FC<ITabProperties> = ({ key, label, children }) => {
+const SingleMobileService: React.FC<ITabProperties> = ({ label, children }) => {
   const intl = useIntlMessages()
   return (
-    <ContentWrapper key={key}>
+    <ContentWrapper >
       <MacroService>{intl(label)}</MacroService>
       <MacroServiceContent>{children}</MacroServiceContent>
     </ContentWrapper>
