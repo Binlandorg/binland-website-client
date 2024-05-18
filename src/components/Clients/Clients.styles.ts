@@ -24,12 +24,8 @@ export const ClientsSection = styled(Section)`
 
 export const ClientsSectionWrapper = styled.div`
   width: 100%;
-  padding-top: 4rem;
-  padding-bottom: 3rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
-    padding-top: 7rem;
-    padding-bottom: 6rem;
     padding-inline: 1rem;
   }
 `
