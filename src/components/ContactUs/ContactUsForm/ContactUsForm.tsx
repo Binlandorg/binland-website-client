@@ -1,37 +1,38 @@
 import { useFormik } from 'formik'
-import { useRef, useState } from 'react'
+// import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { TbSend } from 'react-icons/tb'
-import ReCAPTCHA from 'react-google-recaptcha'
-import { MdError } from 'react-icons/md'
+// import ReCAPTCHA from 'react-google-recaptcha'
+// import { MdError } from 'react-icons/md'
 
 import { sendEmail } from 'services/SendEmail'
-import { validationSchema } from './FormContactUs.yup'
+import { validationSchema } from './ContactUsForm.yup'
 import useIntlMessages from 'hooks/useIntlMessages'
 import Input from 'ui/input/Input'
 import Textarea from 'ui/Textarea/Textarea'
-import { FormWrapper, ContainerForm, ButtonForm } from './FormContactUs.styles'
+import { FormWrapper, ContainerForm, ButtonForm } from './ContactUsForm.styles'
 import MultiSelect from 'ui/MultiSelect/MultiSelect'
 import { servicesOptions } from './FormData'
 import { IValues } from 'types/ui/Form'
 import { IServiceOptions } from 'types/ui/Multiselect'
-import { ErrorMessage } from 'ui/input/Input.styles'
+// import { ErrorMessage } from 'ui/input/Input.styles'
 
-const FormContacUs: React.FC = () => {
+const ContactUsForm: React.FC = () => {
   const [selectedServices, setSelectedServices] = useState<IServiceOptions[]>(
     []
   )
-  const [verified, setVerified] = useState<boolean | null>(null)
-  const [errorCaptcha, setErrorCaptcha] = useState<string>('')
-  const captcha = useRef(null)
+  // const [verified, setVerified] = useState<boolean | null>(null)
+  // const [errorCaptcha, setErrorCaptcha] = useState<string>('')
+  // const captcha = useRef(null)
 
-  let siteKey
+  // let siteKey
 
-  try {
-    siteKey = import.meta.env.VITE_REACT_APP_RECAPTCHA_SITE_KEY
-  } catch (error) {
-    console.error('Error con la clave del sitio de reCAPTCHA:', error)
-    siteKey = null
-  }
+  // try {
+  //   siteKey = import.meta.env.VITE_REACT_APP_RECAPTCHA_SITE_KEY
+  // } catch (error) {
+  //   console.error('Error con la clave del sitio de reCAPTCHA:', error)
+  //   siteKey = null
+  // }
 
   const intl = useIntlMessages()
   const formik = useFormik({
@@ -43,10 +44,10 @@ const FormContacUs: React.FC = () => {
     } as IValues,
     validationSchema,
     onSubmit: (values) => {
-      if (!verified) {
-        setErrorCaptcha('Por favor acepte el captcha')
-      } else {
-        setErrorCaptcha('')
+      // if (!verified) {
+      //   setErrorCaptcha('Por favor acepte el captcha')
+      // } else {
+        // setErrorCaptcha('')
         sendEmail({
           fullName: values.fullName,
           email: values.email,
@@ -54,13 +55,13 @@ const FormContacUs: React.FC = () => {
           message: values.message,
           services: selectedServices.map((service) => service.name).join(', '),
         })
-      }
+      // }
     },
   })
 
-  const handleCaptchaChange = () => {
-    setVerified(true)
-  }
+  // const handleCaptchaChange = () => {
+  //   setVerified(true)
+  // }
 
   return (
     <ContainerForm>
@@ -127,7 +128,7 @@ const FormContacUs: React.FC = () => {
               : null
           }
         />
-        <div className="recaptcha-container">
+        {/* <div className="recaptcha-container">
           {siteKey && (
             <ReCAPTCHA
               ref={captcha}
@@ -143,7 +144,7 @@ const FormContacUs: React.FC = () => {
               {intl('contact.us.form.error.recapcha')}
             </ErrorMessage>
           )}
-        </div>
+        </div> */}
         <ButtonForm type="primary" rightIcon={<TbSend />}>
           {intl('contact.us.form.button')}
         </ButtonForm>
@@ -152,4 +153,4 @@ const FormContacUs: React.FC = () => {
   )
 }
 
-export default FormContacUs
+export default ContactUsForm

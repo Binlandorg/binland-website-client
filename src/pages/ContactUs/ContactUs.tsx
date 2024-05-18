@@ -5,7 +5,7 @@ import {
   SectionContactUs,
 } from 'components/ContactUs/ContactUs.styles'
 import ContactUsInformation from 'components/ContactUs/ContactUsInformation/ContactUsInformation'
-import FormContacUs from 'components/ContactUs/FormContactUs/FormContactUs'
+import FormContacUs from 'components/ContactUs/ContactUsForm/ContactUsForm'
 import useIntlMessages from 'hooks/useIntlMessages'
 import H1 from 'ui/Titles/H1'
 
