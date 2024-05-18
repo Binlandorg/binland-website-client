@@ -42,6 +42,7 @@ const Input: React.FC<IStyledInput> = ({
             onBlur={onBlur}
             className="input"
             placeholder={placeholder}
+            autoComplete='false'
           />
           <span>{label}</span>
         </InputLabel>

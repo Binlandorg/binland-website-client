@@ -13,7 +13,7 @@ interface ITabProperties {
 const SingleMobileService: React.FC<ITabProperties> = ({ label, children }) => {
   const intl = useIntlMessages()
   return (
-    <ContentWrapper>
+    <ContentWrapper >
       <MacroService>{intl(label)}</MacroService>
       <MacroServiceContent>{children}</MacroServiceContent>
     </ContentWrapper>
