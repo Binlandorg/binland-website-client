@@ -37,10 +37,14 @@ const SocialLinksIconsBar: ILinkIcon[] = [
     to: 'www.instagram.com/binland.dev',
     icon: <RiInstagramFill size={ICON_SIZE} />,
   },
-  { id: '3', to: 'www.linkedin.com', icon: <FaLinkedinIn size={ICON_SIZE} /> },
+  {
+    id: '3',
+    to: 'www.linkedin.com/company/binland',
+    icon: <FaLinkedinIn size={ICON_SIZE} />,
+  },
   {
     id: '4',
-    to: 'www.youtube.com/@Binland-dev',
+    to: 'www.youtube.com/@BinlandDev',
     icon: <FaYoutube size={ICON_SIZE} />,
   },
   {
@@ -50,7 +54,7 @@ const SocialLinksIconsBar: ILinkIcon[] = [
   },
   {
     id: '6',
-    to: 'twitter.com/binland_dev',
+    to: 'x.com/binlandDev',
     icon: <FaTwitter size={ICON_SIZE} />,
   },
 ]
@@ -60,7 +64,9 @@ const SocialMediaBar: React.FC<ISocialMediaBar> = ({ type, direction }) => {
     <SocialMediaBarWrapper type={type} direction={direction}>
       {SocialLinksIconsBar.map((element) => (
         <WrapperIcon key={element.id}>
-          <LinkIcon to={`https://${element.to}`} target="_BLANK">
+          <LinkIcon to={`https://${element.to}`}
+            target="_BLANK"
+            rel="noopener noreferrer">
             {element.icon}
           </LinkIcon>
         </WrapperIcon>

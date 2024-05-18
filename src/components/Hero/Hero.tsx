@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
                   />
                 </Display>
               </ContentText>
-              <a href="#home-contact-us">
+              <a href="#contact-us">
                 <IconArrowLeft size={20} />
                 <span>{intl('home.hero.contact.us.button.title')}</span>
               </a>

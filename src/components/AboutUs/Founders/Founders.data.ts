@@ -1,7 +1,6 @@
 import crhisImageURL from '../../../assets/images/chris-profile.webp'
 import jonathanImageURL from '../../../assets/images/jonathan-profile.webp'
 import gustavoImageURL from '../../../assets/images/gustavo-profile.webp'
-import ricardoImageURL from '../../../assets/images/ricardo-profile.webp'
 import { IFoundersData } from 'types/components/aboutus'
 
 const founderData: IFoundersData[] = [
@@ -70,26 +69,6 @@ const founderData: IFoundersData[] = [
       {
         name: 'LinkedIn',
         url: 'https://www.linkedin.com/in/gustavougartetorres/',
-      },
-    ],
-  },
-  {
-    id: '4',
-    image: {
-      url: ricardoImageURL,
-      alt: 'image.profile.alt.ricardo.mamani.calcina',
-    },
-    fullName: 'Ricardo Mamani Calcina',
-    position: 'about.us.position.frontend.developer',
-    quote: 'about.us.quote.ricardo.mamani.calcina',
-    networks: [
-      {
-        name: 'github',
-        url: 'https://github.com/RicardoC23',
-      },
-      {
-        name: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/ricardoc23-developer/',
       },
     ],
   },
