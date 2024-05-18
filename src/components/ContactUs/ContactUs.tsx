@@ -1,10 +1,10 @@
 import ContactUsInformation from './ContactUsInformation/ContactUsInformation'
-import FormContacUs from './FormContactUs/FormContactUs'
 import { ContentWrapper } from './ContactUs.styles'
 import Section from 'ui/Section/Section'
 import Container from 'ui/Container/Container'
 import H2 from 'ui/Titles/H2'
 import useIntlMessages from 'hooks/useIntlMessages'
+import ContactUsForm from './ContactUsForm/ContactUsForm'
 
 const ContactUs: React.FC = () => {
   const intl = useIntlMessages()
@@ -15,7 +15,7 @@ const ContactUs: React.FC = () => {
         <H2 withDot>{intl("contact.us.hero.title")}</H2>
         <ContentWrapper>
           <ContactUsInformation />
-          <FormContacUs />
+          <ContactUsForm />
         </ContentWrapper>
       </Container>
     </Section>

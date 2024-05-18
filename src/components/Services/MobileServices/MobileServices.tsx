@@ -15,7 +15,13 @@ const MobileServices: React.FC<ITabs> = ({ items }) => {
   return (
     <MobileServicesWrapper>
       {items.map((item) => {
-        return <SingleMobileService {...item} />
+        return (
+          <SingleMobileService
+            key={item.key}
+            label={item.label}
+            children={item.children}
+          />
+        )
       })}
     </MobileServicesWrapper>
   )
