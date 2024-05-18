@@ -25,6 +25,7 @@ export const MultiSelectWrapper = styled.div<IInputBoxProps>`
   &:focus-within {
     outline: none;
     border-radius: 0.375rem;
+    outline: 0.125rem solid ${colors.tertiary.focus[500]};
   }
 
   ${(props) =>
@@ -41,21 +42,22 @@ export const InputBox = styled.div<IInputBoxProps>`
   width: 100%;
   background-color: ${colors.tertiary.normal[50]};
   padding: 1.5rem 1.75rem;
-  border-bottom: none;
   border-radius: ${({ $isOpen }) =>
     $isOpen ? '0.375rem 0.375rem 0 0' : '0.375rem'};
   gap: 0.6rem;
   cursor: pointer;
-  outline: 0.125rem solid ${colors.tertiary.focus[500]};
+
   transition: padding, gap 0.3s ease;
 
   ${(props) =>
     props.$isOpen &&
     `
+    outline: 0.125rem solid ${colors.tertiary.focus[500]};
+    
     &::after {
       content: '';
       width: 100%;
-      height: 0.125rem;
+      height: 0.5rem;
       background-color: ${colors.tertiary.normal[50]};
       position: absolute;
       bottom: 0;
