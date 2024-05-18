@@ -47,14 +47,14 @@ const ContactUsForm: React.FC = () => {
       // if (!verified) {
       //   setErrorCaptcha('Por favor acepte el captcha')
       // } else {
-        // setErrorCaptcha('')
-        sendEmail({
-          fullName: values.fullName,
-          email: values.email,
-          country: values.country,
-          message: values.message,
-          services: selectedServices.map((service) => service.name).join(', '),
-        })
+      // setErrorCaptcha('')
+      sendEmail({
+        fullName: values.fullName,
+        email: values.email,
+        country: values.country,
+        message: values.message,
+        services: selectedServices.map((service) => service.name).join(', '),
+      })
       // }
     },
   })
@@ -96,7 +96,7 @@ const ContactUsForm: React.FC = () => {
           }
         />
         <Input
-          label={intl('contact.us.form.label.country')}
+          label={`${intl('contact.us.form.label.country')} *`}
           type="text"
           id="country"
           name="country"
