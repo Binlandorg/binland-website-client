@@ -11,7 +11,7 @@ export const StyledFooter = styled.footer`
   color: ${colors.white.main};
   padding-inline: 1.5rem;
 
-  @media only screen and (min-width: ${breakpoints.lg}){
+  @media only screen and (min-width: ${breakpoints.lg}) {
     padding-inline: 5rem;
   }
 `
@@ -83,10 +83,22 @@ export const FooterLinks = styled.div`
     list-style: none;
     text-decoration: none;
     cursor: pointer;
-  }
+    width: fit-content;
+    padding: 0.25rem 0.75rem;
 
-  .link-item:hover {
-    color: ${colors.primary.main};
+    &:hover {
+      color: ${colors.primary.main};
+    }
+
+    &:active {
+      color: ${colors.primary.active[700]};
+    }
+
+    &:focus-visible {
+      outline: 0.125rem solid ${colors.primary.focus[500]};
+      border-radius: 0.5rem;
+      color: ${colors.primary.focus[500]};
+    }
   }
 
   .container-links {
