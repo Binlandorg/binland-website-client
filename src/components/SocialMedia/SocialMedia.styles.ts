@@ -18,13 +18,21 @@ export const SocialMediaWrapper = styled.div`
     border-radius: 100%;
     color: ${colors.white.main};
     background-color: ${colors.secondary.main};
+    border: none;
 
     &:hover {
       background-color: ${colors.secondary.normal[400]};
     }
+
+    &:focus {
+      background-color: ${colors.white.main};
+      color: ${colors.secondary.main};
+      outline: 0.125rem solid ${colors.secondary.disabled[200]};
+      outline-offset: 0.1875rem;
+    }
   }
 
-  @media only screen and (min-width: ${breakpoints.xxl}){
+  @media only screen and (min-width: ${breakpoints.xxl}) {
     justify-content: flex-start;
   }
 `

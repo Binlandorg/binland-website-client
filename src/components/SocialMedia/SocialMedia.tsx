@@ -5,19 +5,15 @@ import {
   FaTiktok,
   FaYoutube,
 } from 'react-icons/fa'
+import { RiTwitterXFill } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
-import { SocialMediaWrapper } from './SocialMedia.styles'
-import { TbBrandTwitter } from 'react-icons/tb'
 
-interface SocialLinks {
-  id: string
-  to: string
-  icon: React.ReactNode
-}
+import { SocialMediaWrapper } from './SocialMedia.styles'
+import { ILinks } from 'types/ui/Link'
 
 const ICON_SIZE = 24
 
-const socialLinksIcons: SocialLinks[] = [
+const socialLinksIcons: ILinks[] = [
   { id: '1', to: 'github.com/Binlandorg', icon: <FaGithub size={ICON_SIZE} /> },
   {
     id: '2',
@@ -41,8 +37,8 @@ const socialLinksIcons: SocialLinks[] = [
   },
   {
     id: '6',
-    to: 'twitter.com/BinlandDev',
-    icon: <TbBrandTwitter size={ICON_SIZE} />,
+    to: 'twitter.com/binland_dev',
+    icon: <RiTwitterXFill size={ICON_SIZE} />,
   },
 ]
 
