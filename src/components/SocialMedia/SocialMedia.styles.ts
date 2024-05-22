@@ -24,7 +24,12 @@ export const SocialMediaWrapper = styled.div`
       background-color: ${colors.secondary.normal[400]};
     }
 
-    &:focus {
+    &:active {
+      background-color: ${colors.white.main};
+      color: ${colors.black.main};
+    }
+
+    &:focus-visible {
       background-color: ${colors.white.main};
       color: ${colors.secondary.main};
       outline: 0.125rem solid ${colors.secondary.disabled[200]};

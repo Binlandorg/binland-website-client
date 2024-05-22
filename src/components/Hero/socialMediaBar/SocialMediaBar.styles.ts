@@ -74,7 +74,7 @@ export const LinkIcon = styled(Link)`
     color: ${colors.black.main};
   }
 
-  &:focus {
+  &:focus-visible {
     background-color: ${colors.white.main};
     color: ${colors.black.main};
   }
