@@ -9,11 +9,11 @@ import { RiTwitterXFill } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 
 import { SocialMediaWrapper } from './SocialMedia.styles'
-import { ILinks } from 'types/ui/Link'
+import { ILink } from 'types/ui/Link'
 
 const ICON_SIZE = 24
 
-const socialLinksIcons: ILinks[] = [
+const socialLinksIcons: ILink[] = [
   { id: '1', to: 'github.com/Binlandorg', icon: <FaGithub size={ICON_SIZE} /> },
   {
     id: '2',
@@ -37,7 +37,7 @@ const socialLinksIcons: ILinks[] = [
   },
   {
     id: '6',
-    to: 'twitter.com/binland_dev',
+    to: 'twitter.com/@BinlandDev',
     icon: <RiTwitterXFill size={ICON_SIZE} />,
   },
 ]
