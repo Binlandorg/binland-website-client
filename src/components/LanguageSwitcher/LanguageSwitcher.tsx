@@ -1,5 +1,5 @@
 import { useLanguageContext } from 'context/Language/useLanguageContext'
-import { languageOptions } from 'context/Language/langConfig'
+import { languageOptions } from 'context/Language/language.data'
 import Select from 'ui/Select/Select'
 
 const LanguageSwitcher: React.FC = () => {

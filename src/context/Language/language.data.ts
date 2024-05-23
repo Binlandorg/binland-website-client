@@ -1,12 +1,7 @@
 import { ENGLISH, ESPANOL } from './constants'
+import { ILanguage } from 'types/context/languageContext'
 
-export interface ILanguagaConfiguration {
-  id: string
-  value: string
-  name: string
-}
-
-export const languageOptions: ILanguagaConfiguration[] = [
+export const languageOptions: ILanguage[] = [
   {
     id: 'en',
     value: ENGLISH,
