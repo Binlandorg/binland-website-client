@@ -1,11 +1,5 @@
-import { RiInstagramFill } from 'react-icons/ri'
-import {
-  FaGithub,
-  FaLinkedinIn,
-  FaYoutube,
-  FaTiktok,
-  FaTwitter,
-} from 'react-icons/fa'
+import { RiInstagramFill, RiTwitterXFill } from 'react-icons/ri'
+import { FaGithub, FaLinkedinIn, FaYoutube, FaTiktok } from 'react-icons/fa'
 
 import {
   LinkIcon,
@@ -55,7 +49,7 @@ const SocialLinksIconsBar: ILinkIcon[] = [
   {
     id: '6',
     to: 'x.com/binlandDev',
-    icon: <FaTwitter size={ICON_SIZE} />,
+    icon: <RiTwitterXFill size={ICON_SIZE} />,
   },
 ]
 
@@ -64,9 +58,11 @@ const SocialMediaBar: React.FC<ISocialMediaBar> = ({ type, direction }) => {
     <SocialMediaBarWrapper type={type} direction={direction}>
       {SocialLinksIconsBar.map((element) => (
         <WrapperIcon key={element.id}>
-          <LinkIcon to={`https://${element.to}`}
+          <LinkIcon
+            to={`https://${element.to}`}
             target="_BLANK"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             {element.icon}
           </LinkIcon>
         </WrapperIcon>
