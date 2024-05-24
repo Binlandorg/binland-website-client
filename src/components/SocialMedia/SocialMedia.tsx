@@ -5,29 +5,29 @@ import {
   FaTiktok,
   FaYoutube,
 } from 'react-icons/fa'
+import { RiTwitterXFill } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
-import { SocialMediaWrapper } from './SocialMedia.styles'
-import { TbBrandTwitter } from 'react-icons/tb'
 
-interface SocialLinks {
-  id: string
-  to: string
-  icon: React.ReactNode
-}
+import { SocialMediaWrapper } from './SocialMedia.styles'
+import { ILink } from 'types/ui/Link'
 
 const ICON_SIZE = 24
 
-const socialLinksIcons: SocialLinks[] = [
+const socialLinksIcons: ILink[] = [
   { id: '1', to: 'github.com/Binlandorg', icon: <FaGithub size={ICON_SIZE} /> },
   {
     id: '2',
     to: 'www.instagram.com/binland.dev',
     icon: <FaInstagram size={ICON_SIZE} />,
   },
-  { id: '3', to: 'www.linkedin.com', icon: <FaLinkedinIn size={ICON_SIZE} /> },
+  {
+    id: '3',
+    to: 'www.linkedin.com/company/binland',
+    icon: <FaLinkedinIn size={ICON_SIZE} />,
+  },
   {
     id: '4',
-    to: 'www.youtube.com/@Binland-dev',
+    to: 'www.youtube.com/@BinlandDev',
     icon: <FaYoutube size={ICON_SIZE} />,
   },
   {
@@ -37,8 +37,8 @@ const socialLinksIcons: SocialLinks[] = [
   },
   {
     id: '6',
-    to: 'twitter.com/binland_dev',
-    icon: <TbBrandTwitter size={ICON_SIZE} />,
+    to: 'twitter.com/@BinlandDev',
+    icon: <RiTwitterXFill size={ICON_SIZE} />,
   },
 ]
 
