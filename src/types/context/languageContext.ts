@@ -11,7 +11,7 @@ export interface ILanguageDefinition {
   messages: { [key: string]: string }
 }
 
-export interface ILangaugeContextProps {
+export interface ILanguageContextProps {
   language: ILanguageDefinition
   handleLanguage: (value: string) => void
 }

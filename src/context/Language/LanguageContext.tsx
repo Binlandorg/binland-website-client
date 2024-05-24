@@ -8,7 +8,7 @@ import es from 'lang/es.json'
 import { LANGUAGE_LOCAL_STORAGE_KEY } from './constants'
 import {
   ILanguageDefinition,
-  ILangaugeContextProps,
+  ILanguageContextProps,
   ILanguageProviderProps,
 } from 'types/context/languageContext'
 
@@ -23,8 +23,8 @@ const getLanguageData = (key: string): ILanguageDefinition => {
   }
 }
 
-const LanguageContext = createContext<ILangaugeContextProps>(
-  {} as ILangaugeContextProps
+const LanguageContext = createContext<ILanguageContextProps>(
+  {} as ILanguageContextProps
 )
 
 const LanguageProvider: React.FC<ILanguageProviderProps> = ({ children }) => {
