@@ -32,11 +32,9 @@ const LanguageProvider: React.FC<ILanguageProviderProps> = ({ children }) => {
     LANGUAGE_LOCAL_STORAGE_KEY,
     'en'
   )
-
-  const [language, setLanguage] = useState<ILanguageDefinition>(
+  const [language, setLanguage] = useState<ILanguageDefinition>(() =>
     getLanguageData(storageValue)
   )
-
   const handleLanguage = (value: string) => {
     const lang = value.toLowerCase()
     setStorageValue(lang)
