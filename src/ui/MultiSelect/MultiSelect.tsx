@@ -22,15 +22,17 @@ const MultiSelect: React.FC<IMultiSelectProps> = ({
   onChange,
   searchPlaceholder,
   label,
+  value,
 }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [searchTerm, setSearchTerm] = useState<string>('')
   const [suggestions, setSuggestions] = useState<IServiceOptions[]>(options)
-  const [selectedServices, setSelectedServices] = useState<IServiceOptions[]>(
-    []
-  )
   const [selectedServicesSet, setSelectedServicesSet] = useState(new Set())
-  const refOptions = useOutsideClick(() => setIsOpen(false))
+
+  const refOptions = useOutsideClick(() => {
+    setIsOpen(false)
+    setSearchTerm('')
+  })
   const inputRef = useRef<HTMLInputElement>(null)
   const intl = useIntlMessages()
 
@@ -41,7 +43,7 @@ const MultiSelect: React.FC<IMultiSelectProps> = ({
     }
 
     const filteredOptions = options.filter((element) =>
-      element.name.toLowerCase().includes(searchTerm.toLowerCase())
+      intl(element.name).toLowerCase().includes(searchTerm.toLowerCase())
     )
 
     setSuggestions(filteredOptions)
@@ -50,10 +52,10 @@ const MultiSelect: React.FC<IMultiSelectProps> = ({
   }, [searchTerm])
 
   const handleAddService = (service: IServiceOptions) => {
-    const updatedSelectedServices = [...selectedServices, service]
-    setSelectedServices(updatedSelectedServices)
-    setSelectedServicesSet(new Set([...selectedServicesSet, service.key]))
+    const updatedSelectedServices = [...value, service]
     onChange(updatedSelectedServices)
+    setSelectedServicesSet(new Set([...selectedServicesSet, service.key]))
+
     if (inputRef.current !== null) {
       inputRef.current.focus()
     }
@@ -64,14 +66,11 @@ const MultiSelect: React.FC<IMultiSelectProps> = ({
   }
 
   const handleRemoveService = (service: IServiceOptions) => {
-    const filteredArray = selectedServices.filter(
-      (ele) => ele.key !== service.key
-    )
-    setSelectedServices(filteredArray)
+    const filteredArray = value.filter((ele) => ele.key !== service.key)
+    onChange(filteredArray)
     const updatedServices = new Set(selectedServicesSet)
     updatedServices.delete(service.key)
     setSelectedServicesSet(updatedServices)
-    onChange(filteredArray)
   }
 
   return (
@@ -79,7 +78,7 @@ const MultiSelect: React.FC<IMultiSelectProps> = ({
       <InputBox
         onClick={() => setIsOpen((prev) => !prev)}
         $isOpen={isOpen}
-        $servicesLength={selectedServices.length}
+        $servicesLength={value.length}
       >
         <div className="input-box-wrapper">
           <span className="span-question">{label}</span>
@@ -89,9 +88,9 @@ const MultiSelect: React.FC<IMultiSelectProps> = ({
             <CgChevronDown className="arrow-button" size={20} />
           )}
         </div>
-        {selectedServices.length > 0 && (
+        {value.length > 0 && (
           <TagsWrapper onClick={(e) => e.stopPropagation()}>
-            {selectedServices?.map((service) => (
+            {value?.map((service) => (
               <Tag key={service.key}>
                 <span>{intl(service.name)}</span>
                 <div className="icon-close-wrapper">
