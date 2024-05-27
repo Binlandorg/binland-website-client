@@ -15,13 +15,36 @@ export const StyledSelect = styled.div<{ $type: string }>`
   flex-direction: column;
   position: relative;
   cursor: pointer;
-  background: ${({ $type }) =>
+  background-color: ${({ $type }) =>
     $type == 'primary' ? `${colors.primary.main}` : `${colors.white.main}`};
   border: none;
   border-radius: 0.6rem;
   padding: 0.5rem 0.75rem;
   color: ${({ $type }) =>
     $type == 'primary' ? `${colors.white.main}` : `${colors.black.main}`};
+
+  &:hover {
+    background-color: ${({ $type }) =>
+      $type == 'primary'
+        ? `${colors.primary.active[400]}`
+        : `${colors.secondary.active[950]}`};
+  }
+
+  &:active {
+    background-color: ${({ $type }) =>
+      $type == 'primary'
+        ? `${colors.primary.active[600]}`
+        : `${colors.secondary.active[800]}`};
+  }
+
+  &:focus-visible {
+    outline-offset: 0.125rem;
+    outline: 0.125rem solid
+      ${({ $type }) =>
+        $type == 'primary'
+          ? `${colors.primary.main}`
+          : `${colors.secondary.main}`};
+  }
 `
 
 export const StyledSelectedValue = styled.div`
@@ -36,20 +59,19 @@ export const StyledSelectOptions = styled.div<IPosition>`
   ${(props) => (props.$position == 'left' ? 'left: 0;' : 'right: 0;')}
   min-width: 12.5rem;
   max-width: 21.875rem;
-  border: none;
   color: ${colors.black.main};
   border: 1px solid ${colors.tertiary.normal[200]};
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  background-color: ${colors.white.main};
+  overflow: hidden;
 
-  li:first-child {
-    border-top-right-radius: 1rem;
-    border-top-left-radius: 1rem;
+  & li:not(:last-child) {
+    border-bottom: 1px solid ${colors.tertiary.normal[200]};
   }
 
-  li:last-child {
-    border: none;
-    border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+  &:active {
+    border-color: ${colors.tertiary.active[300]};
   }
 `
 
@@ -60,34 +82,37 @@ export const StyledSelectOption = styled.li<ISelectOption>`
   list-style-type: none;
   cursor: pointer;
   padding: 1.25rem 1.5rem;
-  background-color: ${colors.white.main};
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
-  border-bottom: 1px solid ${colors.tertiary.normal[200]};
   gap: 1rem;
 
   &:hover {
-    background: ${colors.tertiary.hover[200]};
+    background-color: ${colors.tertiary.hover[200]};
+  }
 
-    & .point-selected {
-      ${({ selected }) =>
-        selected
-          ? `border: 0.25rem solid ${colors.tertiary.hover[300]}`
-          : `background-color: ${colors.tertiary.hover[300]}`};
-    }
+  &:hover .point-selected {
+    border-color: ${colors.tertiary.hover[300]};
+    background-color: ${({ selected }) =>
+      !selected && colors.tertiary.hover[300]};
+  }
+
+  &:active {
+    background-color: ${colors.tertiary.active[300]};
+  }
+
+  &:active .point-selected {
+    border-color: ${colors.tertiary.active[400]};
+    background-color: ${({ selected }) =>
+      !selected && colors.tertiary.active[400]};
   }
 
   .point-selected {
-    background-color: ${colors.gray[100]};
+    border: 0.25rem solid ${colors.tertiary.normal[200]};
     height: 1rem;
     width: 1rem;
     border-radius: 100%;
-    ${(props) =>
-      props.selected &&
-      `
-        background: ${colors.primary.main};
-        border: 0.25rem solid ${colors.gray[100]}
-      `}
+    background-color: ${({ selected }) =>
+      selected ? colors.primary.main : colors.tertiary.normal[200]};
   }
 `
