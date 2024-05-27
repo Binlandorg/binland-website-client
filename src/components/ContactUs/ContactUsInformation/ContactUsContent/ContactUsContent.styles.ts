@@ -80,7 +80,7 @@ export const ContentButton = styled.div`
       color: ${colors.tertiary.active[700]};
     }
 
-    &:focus {
+    &:focus-visible {
       outline: 0.125rem solid ${colors.tertiary.normal[50]};
       outline-offset: 0.125rem;
     }
