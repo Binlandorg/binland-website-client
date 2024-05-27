@@ -10,11 +10,11 @@ export const ContentQuestions = styled.div`
   flex-direction: column;
   gap: 0.5rem;
 
-  & p{
+  & p {
     color: ${colors.gray[150]};
   }
 
-  @media only screen and (min-width: ${breakpoints.xxl}){
+  @media only screen and (min-width: ${breakpoints.xxl}) {
     gap: 2rem;
   }
 `
@@ -50,7 +50,7 @@ export const ContentButton = styled.div`
   gap: 0.875rem;
   justify-content: center;
 
-  & > p{
+  & > p {
     color: ${colors.gray[50]};
   }
 
@@ -60,7 +60,7 @@ export const ContentButton = styled.div`
     justify-content: center;
     width: fit-content;
     padding: 1rem 1.5rem;
-    font-weight: ${FontWeight["semibold"]};
+    font-weight: ${FontWeight['semibold']};
     color: ${colors.secondary.normal[800]};
     background-color: ${colors.tertiary.normal[50]};
     font-size: clamp(0.875rem, 0.832rem + 0.192vw, 1rem);
@@ -74,10 +74,20 @@ export const ContentButton = styled.div`
       background-color: ${colors.tertiary.hover[300]};
       color: ${colors.tertiary.hover[600]};
     }
+
+    &:active {
+      background-color: ${colors.tertiary.active[400]};
+      color: ${colors.tertiary.active[700]};
+    }
+
+    &:focus {
+      outline: 0.125rem solid ${colors.tertiary.normal[50]};
+      outline-offset: 0.125rem;
+    }
   }
 
   .popup-button-custom::after {
-    content: "";
+    content: '';
     mask-image: url(${calendlyIcon});
     background-color: ${colors.secondary.normal[800]};
     width: 2rem;
@@ -87,10 +97,10 @@ export const ContentButton = styled.div`
   }
 
   .popup-button-custom:hover::after {
-    background-color: ${colors.tertiary.hover[600]};;
+    background-color: ${colors.tertiary.hover[600]};
   }
 
-  @media only screen and (min-width: ${breakpoints.xxl}){
+  @media only screen and (min-width: ${breakpoints.xxl}) {
     gap: 1rem;
   }
 `
