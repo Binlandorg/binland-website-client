@@ -19,8 +19,22 @@ export const StyledHeader = styled.header`
   top: 0;
   z-index: 20;
 
-  @media only screen and (min-width: ${ breakpoints.lg }){
+  @media only screen and (min-width: ${breakpoints.lg}) {
     padding-inline: 5rem;
+  }
+
+  & .temporary-anchor:active button {
+    background-color: ${colors.secondary.active[900]};
+    color: ${colors.white.main};
+  }
+
+  & .temporary-anchor:focus-visible {
+    outline: 0.125rem solid ${colors.secondary.active[950]};
+    border-radius: 0.6875rem;
+  }
+
+  & .temporary-anchor:-webkit-any-link:focus-visible {
+    outline-offset: 0px;
   }
 `
 
@@ -38,28 +52,17 @@ export const HamburgerIcon = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
-  
-  & > div > div + div{
-    border-radius: 18px !important;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  }
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     display: none;
   }
-
-  `
+`
 
 export const DesktopNavigation = styled.nav`
   display: none;
-  
+
   .temporary-anchor {
     text-decoration: none;
-  }
-
-  & .temporary-anchor + div > div + div{
-    border-radius: 18px;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   }
 
   @media only screen and (min-width: ${breakpoints.lg}) {

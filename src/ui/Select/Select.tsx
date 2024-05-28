@@ -64,7 +64,12 @@ const Select: React.FC<ISelect> = ({
   }, [selectedId, options])
 
   return (
-    <StyledSelect ref={refOptions} onClick={showOptions} $type={type}>
+    <StyledSelect
+      ref={refOptions}
+      onClick={showOptions}
+      $type={type}
+      tabIndex={0}
+    >
       <StyledSelectedValue>
         {icon}
         {Object.keys(selectedOption).length
