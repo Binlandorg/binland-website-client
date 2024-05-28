@@ -60,14 +60,14 @@ export const StyledSelectOptions = styled.div<IPosition>`
   min-width: 12.5rem;
   max-width: 21.875rem;
   color: ${colors.black.main};
-  border: 1px solid ${colors.tertiary.normal[200]};
+  border: 0.0625rem solid ${colors.tertiary.normal[200]};
   border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0rem 0.25rem 0.75rem;
   background-color: ${colors.white.main};
   overflow: hidden;
 
   & li:not(:last-child) {
-    border-bottom: 1px solid ${colors.tertiary.normal[200]};
+    border-bottom: 0.0625rem solid ${colors.tertiary.normal[200]};
   }
 
   &:active {
