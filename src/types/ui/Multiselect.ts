@@ -13,4 +13,5 @@ export interface IMultiSelectProps {
   onChange: (selectedServices: IServiceOptions[]) => void
   searchPlaceholder: string
   label: string
+  value: IServiceOptions[]
 }

@@ -39,7 +39,7 @@ export const InputLabel = styled.label`
     transform-origin: left;
     transition: transform 0.3s, color 0.3s;
     display: inline-block;
-    color: ${colors.black.main};
+    color: ${colors.secondary.normal[800]};
   }
 
   input {
@@ -50,11 +50,12 @@ export const InputLabel = styled.label`
     outline: none;
     font: inherit;
     background: none;
+    color: ${colors.secondary.normal[800]};
   }
 
   input:focus + span,
   input:not(:placeholder-shown) + span {
-    color: ${colors.secondary.normal[300]};
+    opacity: 0.5;
     transform: translate(0, -50%) scale(0.8);
   }
 `

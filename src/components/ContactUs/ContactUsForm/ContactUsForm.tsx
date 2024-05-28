@@ -43,7 +43,7 @@ const ContactUsForm: React.FC = () => {
       message: '',
     } as IValues,
     validationSchema,
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       // if (!verified) {
       //   setErrorCaptcha('Por favor acepte el captcha')
       // } else {
@@ -53,7 +53,12 @@ const ContactUsForm: React.FC = () => {
         email: values.email,
         country: values.country,
         message: values.message,
-        services: selectedServices.map((service) => service.name).join(', '),
+        services: selectedServices
+          .map((service) => intl(service.name))
+          .join(', '),
+      }).then(() => {
+        resetForm()
+        setSelectedServices([])
       })
       // }
     },
@@ -114,6 +119,7 @@ const ContactUsForm: React.FC = () => {
           onChange={setSelectedServices}
           searchPlaceholder={intl('contact.us.form.multiselect.search.service')}
           label={intl('contact.us.form.label.what.service')}
+          value={selectedServices}
         />
         <Textarea
           label={`${intl('contact.us.form.label.message')} *`}
@@ -129,22 +135,22 @@ const ContactUsForm: React.FC = () => {
           }
         />
         {/* <div className="recaptcha-container">
-          {siteKey && (
-            <ReCAPTCHA
-              ref={captcha}
-              id="captcha"
-              onChange={handleCaptchaChange}
-              sitekey={siteKey}
-              className="g-recaptcha"
-            />
-          )}
-          {errorCaptcha && (
-            <ErrorMessage>
-              <MdError />
-              {intl('contact.us.form.error.recapcha')}
-            </ErrorMessage>
-          )}
-        </div> */}
+            {siteKey && (
+              <ReCAPTCHA
+                ref={captcha}
+                id="captcha"
+                onChange={handleCaptchaChange}
+                sitekey={siteKey}
+                className="g-recaptcha"
+              />
+            )}
+            {errorCaptcha && (
+              <ErrorMessage>
+                <MdError />
+                {intl('contact.us.form.error.recapcha')}
+              </ErrorMessage>
+            )}
+          </div> */}
         <ButtonForm type="primary" rightIcon={<TbSend />}>
           {intl('contact.us.form.button')}
         </ButtonForm>

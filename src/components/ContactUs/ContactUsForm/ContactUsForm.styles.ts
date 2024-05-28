@@ -61,6 +61,16 @@ export const ContainerForm = styled.div`
 export const ButtonForm = styled(Button)`
   height: 3rem;
   width: 100%;
+  padding: 1rem 1.5rem;
+
+  &:focus-visible {
+    outline: 0.125rem solid ${colors.primary.focus[500]};
+    outline-offset: 0.125rem;
+  }
+
+  &:active {
+    background-color: ${colors.primary.active[600]};
+  }
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     width: fit-content;
