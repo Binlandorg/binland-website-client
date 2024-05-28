@@ -63,7 +63,7 @@ export const ButtonForm = styled(Button)`
   width: 100%;
   padding: 1rem 1.5rem;
 
-  &:focus {
+  &:focus-visible {
     outline: 0.125rem solid ${colors.primary.focus[500]};
     outline-offset: 0.125rem;
   }

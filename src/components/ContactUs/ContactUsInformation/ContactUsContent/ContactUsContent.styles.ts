@@ -100,6 +100,10 @@ export const ContentButton = styled.div`
     background-color: ${colors.tertiary.hover[600]};
   }
 
+  .popup-button-custom:active::after {
+    background-color: ${colors.tertiary.active[700]};
+  }
+
   @media only screen and (min-width: ${breakpoints.xxl}) {
     gap: 1rem;
   }
