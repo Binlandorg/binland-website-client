@@ -12,6 +12,6 @@ export const validationSchema = Yup.object({
     .max(30, 'contact.us.form.input.company.validation')
     .required('validation.input.required.message'),
   message: Yup.string()
-    .min(30, 'contact.us.form.input.message.validation')
+    .min(10, 'contact.us.form.input.message.validation')
     .required('validation.input.required.message'),
 })
