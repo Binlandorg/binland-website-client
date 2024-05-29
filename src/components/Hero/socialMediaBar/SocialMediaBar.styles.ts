@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom'
-import { breakpoints } from 'shared/breakpoints'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
+import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
 
 interface IProps {
