@@ -4,6 +4,7 @@ import {
   FaLinkedinIn,
   FaTiktok,
   FaYoutube,
+  FaTwitch,
 } from 'react-icons/fa'
 import { RiTwitterXFill } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
@@ -39,6 +40,11 @@ const socialLinksIcons: ILink[] = [
     id: '6',
     to: 'twitter.com/@BinlandDev',
     icon: <RiTwitterXFill size={ICON_SIZE} />,
+  },
+  {
+    id: '7',
+    to: 'www.twitch.tv/binlandtv',
+    icon: <FaTwitch size={ICON_SIZE} />,
   },
 ]
 

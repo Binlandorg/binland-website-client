@@ -180,7 +180,6 @@ export const ImageWrapper = styled.div`
     display: inherit;
     width: 140%;
     bottom: -5rem;
-    /* right: -1rem; */
     left: -6rem;
   }
 

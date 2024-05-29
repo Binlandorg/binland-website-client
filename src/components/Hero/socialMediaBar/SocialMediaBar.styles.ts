@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
+import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
 
 interface IProps {
@@ -14,11 +15,18 @@ const typeDirection = (direction: string) => {
       return `
         flex-direction: row;
         padding: 0.75rem 1rem;
+        justify-content: space-between;
+        gap: 0.5rem;
+
+        @media only screen and (max-width: ${breakpoints.xs}) {
+          gap: 0;
+        }
       `
     case 'column':
       return `
         flex-direction: column;
         padding: 1rem 0.75rem;
+        gap: 0.75rem;
       `
     default:
       break
@@ -44,7 +52,6 @@ export const SocialMediaBarWrapper = styled.div<IProps>`
   display: flex;
   align-items: center;
   border-radius: 0 1rem 1rem 0;
-  gap: 0.75rem;
   margin-right: auto;
   ${(props) => typeDirection(props.direction)}
   ${(props) => TypeStyles(props.type)}
