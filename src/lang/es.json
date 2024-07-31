@@ -115,6 +115,10 @@
 
   "validation.input.required.message": "Este campo es requerido",
 
+  "contact.us.form.toast.loading": "Enviando",
+  "contact.us.form.toast.success": "Enviado con éxito",
+  "contact.us.form.toast.error": "Error, intenta otra vez",
+
   "page.not.found.title": "Ups!",
   "page.not.found.sub.title": "Creo que te extraviaste...",
   "page.not.found.button.to.home": "Regresa al Inicio",

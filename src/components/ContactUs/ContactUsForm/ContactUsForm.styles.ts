@@ -72,6 +72,12 @@ export const ButtonForm = styled(Button)`
     background-color: ${colors.primary.active[600]};
   }
 
+  &:disabled {
+    background-color: ${colors.primary.disabled[100]};
+    color: ${colors.primary.disabled[400]};
+    cursor: not-allowed;
+  }
+
   @media only screen and (min-width: ${breakpoints.lg}) {
     width: fit-content;
   }

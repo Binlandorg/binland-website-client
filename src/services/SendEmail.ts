@@ -31,7 +31,9 @@ export const sendEmail = async (data: IEmailData) => {
       emailServiceConfig
     )
     console.log('Successful', response.data)
+    return { success: true }
   } catch (error) {
     console.log('Error', error)
+    return { success: false }
   }
 }
