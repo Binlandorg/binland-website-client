@@ -84,7 +84,7 @@ export const FooterLinks = styled.div`
     text-decoration: none;
     cursor: pointer;
     width: fit-content;
-    padding: 0.25rem 0.75rem;
+    padding: 0.25rem 0;
 
     &:hover {
       color: ${colors.primary.main};
