@@ -20,20 +20,18 @@ export const sendEmail = async (data: IEmailData) => {
 
   const emailServiceConfig = {
     service_id: import.meta.env.VITE_REACT_EMAIL_JS_APP_SERVICE_ID,
-    template_id: import.meta.env.VITE_REACT_EMAIL_JS_APP_TEMPLATE_ID,
+    template_id: import.meta.env.VITE_REACT_EMAIL_JS_APP_TEMPLATE_IID,
     user_id: import.meta.env.VITE_REACT_EMAIL_JS_APP_PUBLIC_KEY,
     template_params: parsedData,
   }
 
   try {
-    const response = await axios.post(
+    await axios.post(
       'https://api.emailjs.com/api/v1.0/email/send',
       emailServiceConfig
     )
-    console.log('Successful', response.data)
-    return { success: true }
   } catch (error) {
-    console.log('Error', error)
-    return { success: false }
+    console.log(error)
+    throw new Error('Error del servidor')
   }
 }

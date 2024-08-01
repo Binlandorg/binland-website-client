@@ -4,7 +4,6 @@ import { FaCheckCircle, FaExclamationCircle } from 'react-icons/fa'
 import { useState } from 'react'
 import { TbSend } from 'react-icons/tb'
 
-import './toaster.css'
 import { sendEmail } from 'services/SendEmail'
 import { validationSchema } from './ContactUsForm.yup'
 import useIntlMessages from 'hooks/useIntlMessages'
@@ -42,20 +41,16 @@ const ContactUsForm: React.FC = () => {
           .map((service) => intl(service.name))
           .join(', '),
       })
-        .then((result) => {
-          if (result.success) {
-            resetForm()
-            setSelectedServices([])
-            toast.success(intl('contact.us.form.toast.success'), {
-              id: toastId,
-              duration: 2000,
-              icon: <FaCheckCircle size={20} />,
-              position: 'top-center',
-              className: 'toast-custom toast-success',
-            })
-          } else {
-            throw new Error('Error al enviar')
-          }
+        .then(() => {
+          resetForm()
+          setSelectedServices([])
+          toast.success(intl('contact.us.form.toast.success'), {
+            id: toastId,
+            duration: 2000,
+            icon: <FaCheckCircle size={20} />,
+            position: 'top-center',
+            className: 'toast-custom toast-success',
+          })
         })
         .catch(() => {
           toast.error(intl('contact.us.form.toast.error'), {
@@ -69,7 +64,6 @@ const ContactUsForm: React.FC = () => {
         .finally(() => {
           setSubmitting(false)
         })
-      // }
     },
   })
 
@@ -143,7 +137,7 @@ const ContactUsForm: React.FC = () => {
           type="primary"
           rightIcon={<TbSend />}
           onClick={formik.handleSubmit}
-          // disabled={formik.isSubmitting || !formik.isValid}
+          disabled={formik.isSubmitting}
         >
           {intl('contact.us.form.button')}
         </ButtonForm>

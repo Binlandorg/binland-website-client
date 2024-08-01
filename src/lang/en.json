@@ -64,7 +64,7 @@
   "contact.us.form.input.email.validation": "Email must be formatted correctly",
   "contact.us.form.input.company.validation": "Must be 30 characters or less",
   "contact.us.form.input.phone.validation": "Please enter a valid phone number (only numbers, +, -, (, ), and spaces are allowed)",
-  "contact.us.form.input.message.validation": "Please enter at least 30 characters",
+  "contact.us.form.input.message.validation": "Please enter at least 10 characters",
 
   "contact.us.form.label.fullname": "Full name",
   "contact.us.form.label.email": "Email",

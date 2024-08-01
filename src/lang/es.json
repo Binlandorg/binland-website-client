@@ -64,7 +64,7 @@
   "contact.us.form.input.email.validation": "El correo electrónico debe estar formateado correctamente",
   "contact.us.form.input.company.validation": "Debe tener 30 caracteres o menos",
   "contact.us.form.input.phone.validation": "Por favor, ingrese un número de teléfono válido (solo se permiten números, +, -, (, ), y espacios)",
-  "contact.us.form.input.message.validation": "Por favor, ingrese al menos 30 caracteres",
+  "contact.us.form.input.message.validation": "Por favor, ingrese al menos 10 caracteres",
 
   "contact.us.form.label.fullname": "Nombre completo",
   "contact.us.form.label.email": "Email",

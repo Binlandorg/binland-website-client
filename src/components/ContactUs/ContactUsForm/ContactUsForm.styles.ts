@@ -8,23 +8,6 @@ export const FormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-
-  .recaptcha-container {
-    width: 100%;
-  }
-
-  .g-recaptcha {
-    transform-origin: 0 0;
-    scale: 0.625;
-
-    @media only screen and (min-width: 360px) {
-      scale: 0.85;
-    }
-
-    @media only screen and (min-width: 420px) {
-      scale: 1;
-    }
-  }
 `
 
 export const Error = styled.span`
@@ -43,6 +26,22 @@ export const ContainerForm = styled.div`
   background-color: ${colors.white.main};
   border-radius: 0.5rem;
   width: 100%;
+
+  & .toast-custom {
+    padding: 1rem 1.75rem;
+    border-radius: 0.3125rem;
+    font-size: 0.875rem;
+  }
+
+  & .toast-success {
+    background-color: ${colors.success.background};
+    color: ${colors.success.color};
+  }
+
+  & .toast-error {
+    background-color: ${colors.error.background};
+    color: ${colors.error.color};
+  }
 
   @media only screen and (min-width: ${breakpoints.sm}) {
     padding: 2rem;
