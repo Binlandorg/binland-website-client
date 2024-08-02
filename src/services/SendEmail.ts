@@ -20,7 +20,7 @@ export const sendEmail = async (data: IEmailData) => {
 
   const emailServiceConfig = {
     service_id: import.meta.env.VITE_REACT_EMAIL_JS_APP_SERVICE_ID,
-    template_id: import.meta.env.VITE_REACT_EMAIL_JS_APP_TEMPLATE_IID,
+    template_id: import.meta.env.VITE_REACT_EMAIL_JS_APP_TEMPLATE_ID,
     user_id: import.meta.env.VITE_REACT_EMAIL_JS_APP_PUBLIC_KEY,
     template_params: parsedData,
   }
@@ -31,7 +31,6 @@ export const sendEmail = async (data: IEmailData) => {
       emailServiceConfig
     )
   } catch (error) {
-    console.log(error)
-    throw new Error('Error del servidor')
+    throw new Error('We encountered a problem with the server')
   }
 }
