@@ -1,5 +1,11 @@
 import { RiInstagramFill, RiTwitterXFill } from 'react-icons/ri'
-import { FaGithub, FaLinkedinIn, FaYoutube, FaTiktok } from 'react-icons/fa'
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaYoutube,
+  FaTiktok,
+  FaTwitch,
+} from 'react-icons/fa'
 
 import {
   LinkIcon,
@@ -18,7 +24,7 @@ interface ILinkIcon {
   icon: React.ReactNode
 }
 
-const ICON_SIZE = 22
+const ICON_SIZE = 20
 
 const SocialLinksIconsBar: ILinkIcon[] = [
   {
@@ -50,6 +56,11 @@ const SocialLinksIconsBar: ILinkIcon[] = [
     id: '6',
     to: 'x.com/binlandDev',
     icon: <RiTwitterXFill size={ICON_SIZE} />,
+  },
+  {
+    id: '7',
+    to: 'www.twitch.tv/binlandtv',
+    icon: <FaTwitch size={ICON_SIZE} />,
   },
 ]
 
