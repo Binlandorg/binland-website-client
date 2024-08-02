@@ -68,7 +68,7 @@ export const ContentButton = styled.div`
     line-height: 1;
     cursor: pointer;
     gap: 0.625rem;
-    border: 0.125rem solid ${colors.tertiary.normal[300]};
+    border: none;
 
     &:hover {
       background-color: ${colors.tertiary.hover[300]};
