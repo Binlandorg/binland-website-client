@@ -100,6 +100,19 @@ export const colors = {
       700: '#6D4DA3',
     },
   },
+  success: {
+    background: '#CCFFD7',
+    color: '#14BC39',
+  },
+  error: {
+    background: '#FFE1E3',
+    color: '#F83D48',
+  },
+  alert: {
+    background: '#FFB800',
+    color: '#A15916',
+  },
+
   red: {
     50: '#FFF1F2',
     100: '#FFE1E3',

@@ -62,9 +62,10 @@
   "contact.us.form.input.firstname.validation": "Must be less than or equal to 30 characters",
   "contact.us.form.input.lastname.validation": "must be less than or equal to 30 characters",
   "contact.us.form.input.email.validation": "Email must be formatted correctly",
-  "contact.us.form.input.company.validation": "Must be 30 characters or less",
+  "contact.us.form.input.country.validation.min": "Please enter at least 3 characters",
+  "contact.us.form.input.country.validation.max": "Must be 20 characters or less",
   "contact.us.form.input.phone.validation": "Please enter a valid phone number (only numbers, +, -, (, ), and spaces are allowed)",
-  "contact.us.form.input.message.validation": "Please enter at least 30 characters",
+  "contact.us.form.input.message.validation": "Please enter at least 10 characters",
 
   "contact.us.form.label.fullname": "Full name",
   "contact.us.form.label.email": "Email",
@@ -115,6 +116,10 @@
   "footer.FAQ": "FAQ",
 
   "validation.input.required.message": "This field is required",
+
+  "contact.us.form.toast.loading": "Sending",
+  "contact.us.form.toast.success": "Sent successfully",
+  "contact.us.form.toast.error": "Error, try again",
 
   "page.not.found.title": "Oops!",
   "page.not.found.sub.title": "I think you got lost...",
