@@ -100,6 +100,16 @@
   "frequently.asked.questions.still.have.questions": "¿Todavía tienes preguntas?",
   "frequently.asked.questions.still.have.questions.description": "¿No encuentras la respuesta que buscas? Por favor comunicate con nuestro equipo amigable",
   "frequently.asked.questions.still.have.questions.button": "Reunámonos!",
+
+  "faq.question.development.services": "¿Qué servicios de desarrollo ofrece su empresa?",
+  "faq.answer.development.services": "Nuestra empresa ofrece una amplia gama de servicios de desarrollo, incluyendo desarrollo de software a medida, aplicaciones móviles, desarrollo web, consultoría tecnológica y más.",
+  "faq.question.software.development.process": "¿Cuál es el proceso de trabajo de su empresa en el desarrollo de software?",
+  "faq.answer.software.development.process": "Nuestro proceso de desarrollo de software sigue una metodología colaborativa y transparente. Comenzamos con un análisis detallado de los requisitos, seguido de la planificación, diseño, desarrollo, pruebas y finalmente, la implementación.",
+  "faq.question.project.duration": "¿Cuánto tiempo lleva desarrollar un proyecto típico?",
+  "faq.answer.project.duration": "La duración de un proyecto varía según su complejidad y alcance. Proyectos más simples pueden completarse en semanas, mientras que proyectos más grandes pueden llevar varios meses.",
+  "faq.question.data.security": "¿Cómo garantizan la seguridad y la confidencialidad de los datos del cliente durante el desarrollo?",
+  "faq.answer.data.security": "La seguridad y confidencialidad de los datos de nuestros clientes son nuestras prioridades. Implementamos prácticas de seguridad de última generación, como encriptación de datos, acceso restringido y auditorías regulares.",
+
   "terms.of.services.title": "Terminos de servicio",
 
   "footer.all.rights.reserved": "Todos los derechos reservados",

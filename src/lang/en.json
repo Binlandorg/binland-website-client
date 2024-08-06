@@ -101,6 +101,15 @@
   "frequently.asked.questions.still.have.questions.description": "Can't find the answer you're looking for? Please contact our friendly team",
   "frequently.asked.questions.still.have.questions.button": "Let's meet!",
 
+  "faq.question.development.services": "What development services does your company offer?",
+  "faq.answer.development.services": "Our company offers a wide range of development services, including custom software development, mobile applications, web development, technology consulting, and more.",
+  "faq.question.software.development.process": "What is your company's process for software development?",
+  "faq.answer.software.development.process": "Our software development process follows a collaborative and transparent methodology. We start with a detailed analysis of requirements, followed by planning, design, development, testing, and finally, implementation.",
+  "faq.question.project.duration": "How long does it typically take to develop a project?",
+  "faq.answer.project.duration": "The duration of a project varies depending on its complexity and scope. Simpler projects can be completed in weeks, while larger projects may take several months.",
+  "faq.question.data.security": "How do you ensure the security and confidentiality of client data during development?",
+  "faq.answer.data.security": "The security and confidentiality of our clients' data are our top priorities. We implement state-of-the-art security practices, such as data encryption, restricted access, and regular audits.",
+
   "terms.of.services.title": "Terms of service",
 
   "footer.all.rights.reserved": "All rights reserved",
