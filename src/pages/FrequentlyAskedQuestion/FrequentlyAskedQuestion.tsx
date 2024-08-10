@@ -8,31 +8,34 @@ import {
   SectionFAQ,
   TitleWrapper,
 } from './FrequentlyAskedQuestion.style'
+import BodyContainer from 'ui/BodyContainer/BodyContainer'
 import { questions } from './FrequentlyAskedQuestion.data'
 
 const FrequenltyAskedQuestion = () => {
   const intl = useIntlMessages()
 
   return (
-    <SectionFAQ id="frequently-asked-questions" size="lg" type="margin">
-      <ContainerFaq size="xl">
-        <TitleWrapper>
-          <FaqTitle>{intl('frequently.asked.questions.title')}</FaqTitle>
-        </TitleWrapper>
-        <FaqQuestionsWrapper size="sm">
-          {questions.map((question) => {
-            return (
-              <FaqCard
-                key={question.id}
-                question={intl(question.question)}
-                answer={intl(question.answer)}
-              />
-            )
-          })}
-          <StillHaveQuestion />
-        </FaqQuestionsWrapper>
-      </ContainerFaq>
-    </SectionFAQ>
+    <BodyContainer>
+      <SectionFAQ id="frequently-asked-questions" size="lg" type="margin">
+        <ContainerFaq size="xl">
+          <TitleWrapper>
+            <FaqTitle>{intl('frequently.asked.questions.title')}</FaqTitle>
+          </TitleWrapper>
+          <FaqQuestionsWrapper size="sm">
+            {questions.map((question) => {
+              return (
+                <FaqCard
+                  key={question.id}
+                  question={intl(question.question)}
+                  answer={intl(question.answer)}
+                />
+              )
+            })}
+            <StillHaveQuestion />
+          </FaqQuestionsWrapper>
+        </ContainerFaq>
+      </SectionFAQ>
+    </BodyContainer>
   )
 }
 
