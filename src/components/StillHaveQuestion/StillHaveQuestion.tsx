@@ -23,7 +23,7 @@ const StillHaveQuestion: React.FC = () => {
         to="/#contact-us"
         className="faq-button-contact-us"
       >
-        Contactanos <TbSend />
+        {intl('home.navbar.button.contact.us')} <TbSend />
       </ButtonLink>
     </ContainerHaveQuestion>
   )
