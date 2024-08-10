@@ -18,7 +18,11 @@ const StillHaveQuestion: React.FC = () => {
           {intl('frequently.asked.questions.still.have.questions.description')}
         </SupportChat>
       </HaveQuestion>
-      <ButtonLink type="primary" to="/#contact-us">
+      <ButtonLink
+        type="primary"
+        to="/#contact-us"
+        className="faq-button-contact-us"
+      >
         Contactanos <TbSend />
       </ButtonLink>
     </ContainerHaveQuestion>

@@ -16,6 +16,13 @@ export const ContainerHaveQuestion = styled.div`
   @media only screen and (min-width: ${breakpoints.lg}) {
     padding: 2rem;
   }
+
+  .faq-button-contact-us {
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    line-height: 1.5;
+    gap: 1rem;
+  }
 `
 export const HaveQuestion = styled.div`
   text-align: center;
