@@ -72,6 +72,19 @@ const MultiSelect: React.FC<IMultiSelectProps> = ({
     setSelectedServicesSet(updatedServices)
   }
 
+  const handleTagService = (e: React.MouseEvent) => {
+    const target = e.target as HTMLElement
+    const closestElement = target.closest('[data-id]')
+
+    if (closestElement) {
+      const id = closestElement.getAttribute('data-id')
+      if (id) {
+        const service = options.find((option) => option.key === id)
+        service && handleRemoveService(service)
+      }
+    }
+  }
+
   return (
     <MultiSelectWrapper ref={refOptions} $isOpen={isOpen} tabIndex={0}>
       <InputBox
@@ -88,12 +101,12 @@ const MultiSelect: React.FC<IMultiSelectProps> = ({
           )}
         </div>
         {value.length > 0 && (
-          <TagsWrapper onClick={(e) => e.stopPropagation()}>
+          <TagsWrapper onClick={handleTagService}>
             {value?.map((service) => (
               <Tag
                 key={service.key}
                 name={intl(service.name)}
-                onRemove={() => handleRemoveService(service)}
+                id={service.key}
               />
             ))}
           </TagsWrapper>

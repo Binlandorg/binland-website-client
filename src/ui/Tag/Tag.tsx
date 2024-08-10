@@ -4,15 +4,15 @@ import { TagStyled } from './Tag.styles'
 
 interface TagProps {
   name: string
-  onRemove: () => void
+  id: string
 }
 
-const Tag: React.FC<TagProps> = ({ name, onRemove }) => {
+const Tag: React.FC<TagProps> = ({ name, id }) => {
   return (
     <TagStyled>
       <span>{name}</span>
-      <div className="icon-close-wrapper">
-        <IoClose className="icon-close" size={20} onClick={onRemove} />
+      <div className="icon-close-wrapper" data-id={id}>
+        <IoClose className="icon-close" size={20} />
       </div>
     </TagStyled>
   )
