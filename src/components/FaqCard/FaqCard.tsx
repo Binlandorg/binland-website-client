@@ -23,8 +23,8 @@ const FaqCard: React.FC<IFaqCardProps> = ({ question, answer }) => {
         onClick={() => setShowAnswer(!showAnswer)}
         className={showAnswer ? 'selected' : ''}
       >
-        <span>{question}</span>
-        <div>
+        <span className="faq-question" >{question}</span>
+        <div className="expand-collapse-toggle">
           {!showAnswer && <IoMdAdd size={22} />}
           {showAnswer && <IoIosRemove size={22} />}
         </div>

@@ -21,8 +21,19 @@ export const Question = styled.div`
   }
 
   &:hover {
-    background: gray;
+    background: ${colors.tertiary.hover[300]};
     cursor: pointer;
+  }
+
+  .faq-question {
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+
+  .expand-collapse-toggle {
+    display: grid;
+    place-content: center;
   }
 `
 
@@ -34,7 +45,7 @@ export const QuestionWrapper = styled.div`
   background-color: ${colors.gray[50]};
 
   .selected {
-    background-color: #ede9f6;
+    background-color: ${colors.tertiary.disabled[50]};
     color: ${colors.black.main};
     font-weight: 700;
     font-size: clamp(0.8rem, 4vw, 1.125rem);
