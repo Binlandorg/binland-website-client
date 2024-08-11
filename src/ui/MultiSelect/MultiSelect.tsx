@@ -74,13 +74,16 @@ const MultiSelect: React.FC<IMultiSelectProps> = ({
 
   const handleTagService = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement
-    const closestElement = target.closest('[data-id]')
+    const iconCloseWrapper = target.closest('.icon-close-wrapper')
 
-    if (closestElement) {
-      const id = closestElement.getAttribute('data-id')
-      if (id) {
-        const service = options.find((option) => option.key === id)
-        service && handleRemoveService(service)
+    if (iconCloseWrapper) {
+      const tagElement = iconCloseWrapper.closest('[data-id]')
+      if (tagElement) {
+        const id = tagElement.getAttribute('data-id')
+        if (id) {
+          const service = options.find((option) => option.key === id)
+          service && handleRemoveService(service)
+        }
       }
     }
   }

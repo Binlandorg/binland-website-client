@@ -9,9 +9,9 @@ interface TagProps {
 
 const Tag: React.FC<TagProps> = ({ name, id }) => {
   return (
-    <TagStyled>
+    <TagStyled data-id={id}>
       <span>{name}</span>
-      <div className="icon-close-wrapper" data-id={id}>
+      <div className="icon-close-wrapper">
         <IoClose className="icon-close" size={20} />
       </div>
     </TagStyled>
