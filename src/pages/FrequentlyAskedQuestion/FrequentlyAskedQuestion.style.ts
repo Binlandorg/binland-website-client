@@ -37,10 +37,5 @@ export const FaqQuestionsWrapper = styled(Container)`
 `
 
 export const SectionFAQ = styled(Section)`
-  padding-inline: 1.5rem;
   max-width: 100%;
-
-  @media only screen and (min-width: ${breakpoints.lg}) {
-    padding-inline: 5rem;
-  }
 `
