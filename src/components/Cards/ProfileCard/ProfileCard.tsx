@@ -20,7 +20,6 @@ import H4 from 'ui/Titles/H4'
 import Paragraph from 'ui/Paragraph/Paragraph'
 import { IName, IProfileCard } from 'types/components/aboutus'
 import defaultImgURL from '../../../assets/images/default-image-profile.webp'
-import useIntlMessages from 'hooks/useIntlMessages'
 import { colors } from 'styles/colors'
 
 const GetIcon: React.FC<IName> = ({ name } : IName) => {
@@ -35,20 +34,21 @@ const GetIcon: React.FC<IName> = ({ name } : IName) => {
 }
 
 const ProfileCard: React.FC<IProfileCard> = ({
+  id,
   image,
   fullName,
   position,
   quote,
   networks,
 }: IProfileCard) => {
-  const intl = useIntlMessages()
 
   return (
-    <StyledProfileCard>
+    <StyledProfileCard key={id}>
       <CardImageContainer>
         <CardImage
-          src={image.url ?? defaultImgURL}
-          alt={intl(image.alt)}
+          src={image?.url ?? defaultImgURL}
+          // alt={intl(image?.alt ?? '')}
+          alt={"algun lado"}
           threshold={200}
         />
       </CardImageContainer>
@@ -60,13 +60,13 @@ const ProfileCard: React.FC<IProfileCard> = ({
             </ProfileName>
             <ProfilePosition>
               <H4 $weight="medium" color={colors.primary.main}>
-                {intl(position)}
+                {position}
               </H4>
             </ProfilePosition>
           </ProfileData>
           <ProfileQuote>
             <Paragraph $style="italic" $weight="regular">
-              "{intl(quote)}"
+              "{quote}"
             </Paragraph>
           </ProfileQuote>
           <ProfileNetworks>

@@ -27,6 +27,7 @@ const Team: React.FC = () => {
                 <TeamItem key={id}>
                   <Reveal>
                     <ProfileCard
+                      id={id}
                       image={image}
                       fullName={fullName}
                       position={position}
