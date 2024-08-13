@@ -20,7 +20,7 @@ const StillHaveQuestion: React.FC = () => {
       </HaveQuestion>
       <ButtonLink
         type="primary"
-        to="/#contact-us"
+        to="/contact-us"
         className="faq-button-contact-us"
       >
         {intl('home.navbar.button.contact.us')} <TbSend />
