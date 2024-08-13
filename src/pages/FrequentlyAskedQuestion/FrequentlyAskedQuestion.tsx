@@ -4,12 +4,12 @@ import StillHaveQuestion from 'components/StillHaveQuestion/StillHaveQuestion'
 import {
   ContainerFaq,
   FaqQuestionsWrapper,
-  FaqTitle,
   SectionFAQ,
   TitleWrapper,
 } from './FrequentlyAskedQuestion.style'
 import BodyContainer from 'ui/BodyContainer/BodyContainer'
 import { questions } from './FrequentlyAskedQuestion.data'
+import H1 from 'ui/Titles/H1'
 
 const FrequenltyAskedQuestion = () => {
   const intl = useIntlMessages()
@@ -19,7 +19,7 @@ const FrequenltyAskedQuestion = () => {
       <SectionFAQ id="frequently-asked-questions" size="lg" type="margin">
         <ContainerFaq size="xl">
           <TitleWrapper>
-            <FaqTitle>{intl('frequently.asked.questions.title')}</FaqTitle>
+            <H1>{intl('frequently.asked.questions.title')}</H1>
           </TitleWrapper>
           <FaqQuestionsWrapper size="sm">
             {questions.map((question) => {

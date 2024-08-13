@@ -10,23 +10,22 @@ export const ContainerFaq = styled(Container)`
   gap: 3rem;
 `
 
-export const FaqTitle = styled.h1`
-  color: ${colors.white.main};
-  font-size: clamp(2rem, 1.667rem + 3.481vw, 4rem);
-  text-align: center;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1.5;
-`
-
 export const TitleWrapper = styled.div`
   background: ${colors.black.main};
   width: 100%;
   border-radius: 1rem;
   padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     padding: 3.5rem 0.5rem;
+  }
+
+  & > h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(2rem, 1.667rem + 3.481vw, 4rem);
   }
 `
 
