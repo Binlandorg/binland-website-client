@@ -32,6 +32,10 @@ export const Question = styled.div`
     border-radius: 0.5rem 0.5rem 0 0;
   }
 
+  &:active {
+    background-color: ${colors.tertiary.active[400]};
+    color: ${colors.tertiary.active[700]};
+  }
   .faq-question {
     font-weight: 500;
     font-size: 1.125rem;
