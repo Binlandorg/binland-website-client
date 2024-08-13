@@ -8,11 +8,13 @@ const Button: React.FC<IButton> = ({
   rightIcon,
   $isfullwidth,
   className,
+  disabled,
   ...props
 }) => {
   return (
     <StyledButton
       {...props}
+      disabled={disabled}
       size={size}
       $isfullwidth={$isfullwidth}
       className={className}

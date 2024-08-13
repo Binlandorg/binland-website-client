@@ -26,12 +26,11 @@ export const sendEmail = async (data: IEmailData) => {
   }
 
   try {
-    const response = await axios.post(
+    await axios.post(
       'https://api.emailjs.com/api/v1.0/email/send',
       emailServiceConfig
     )
-    console.log('Successful', response.data)
   } catch (error) {
-    console.log('Error', error)
+    throw new Error('We encountered a problem with the server')
   }
 }

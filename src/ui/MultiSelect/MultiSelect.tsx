@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
-import { IoClose } from 'react-icons/io5'
 import { CgChevronDown, CgChevronUp } from 'react-icons/cg'
 
 import {
   InputBox,
-  Tag,
   TagsWrapper,
   MirroredIcon,
   StyledOption,
@@ -16,6 +14,7 @@ import useOutsideClick from 'hooks/useClickOutside'
 import { IServiceOptions, IMultiSelectProps } from 'types/ui/Multiselect'
 import useIntlMessages from 'hooks/useIntlMessages'
 import SearchMultiSelect from '../SearchMultiSelect/SearchMultiSelect'
+import Tag from 'ui/Tag/Tag'
 
 const MultiSelect: React.FC<IMultiSelectProps> = ({
   options,
@@ -73,6 +72,22 @@ const MultiSelect: React.FC<IMultiSelectProps> = ({
     setSelectedServicesSet(updatedServices)
   }
 
+  const handleTagService = (e: React.MouseEvent) => {
+    const target = e.target as HTMLElement
+    const iconCloseWrapper = target.closest('.icon-close-wrapper')
+
+    if (iconCloseWrapper) {
+      const tagElement = iconCloseWrapper.closest('[data-id]')
+      if (tagElement) {
+        const id = tagElement.getAttribute('data-id')
+        if (id) {
+          const service = options.find((option) => option.key === id)
+          service && handleRemoveService(service)
+        }
+      }
+    }
+  }
+
   return (
     <MultiSelectWrapper ref={refOptions} $isOpen={isOpen} tabIndex={0}>
       <InputBox
@@ -89,18 +104,13 @@ const MultiSelect: React.FC<IMultiSelectProps> = ({
           )}
         </div>
         {value.length > 0 && (
-          <TagsWrapper onClick={(e) => e.stopPropagation()}>
+          <TagsWrapper onClick={handleTagService}>
             {value?.map((service) => (
-              <Tag key={service.key}>
-                <span>{intl(service.name)}</span>
-                <div className="icon-close-wrapper">
-                  <IoClose
-                    className="icon-close"
-                    size={20}
-                    onClick={() => handleRemoveService(service)}
-                  />
-                </div>
-              </Tag>
+              <Tag
+                key={service.key}
+                name={intl(service.name)}
+                id={service.key}
+              />
             ))}
           </TagsWrapper>
         )}
