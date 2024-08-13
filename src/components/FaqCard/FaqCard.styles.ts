@@ -7,9 +7,9 @@ export const Question = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
   border-radius: 0.5rem;
   color: ${colors.black.main};
+  background-color: ${colors.tertiary.normal[50]};
   font-size: clamp(0.8rem, 4vw, 1.125rem);
   line-height: 1.75rem;
   font-weight: 400;
@@ -21,8 +21,15 @@ export const Question = styled.div`
   }
 
   &:hover {
-    background: ${colors.tertiary.hover[300]};
+    background-color: ${colors.tertiary.normal[300]};
+    color: ${colors.tertiary.hover[600]};
     cursor: pointer;
+  }
+
+  &.selected {
+    background-color: ${colors.tertiary.normal[200]};
+    color: ${colors.black.main};
+    border-radius: 0.5rem 0.5rem 0 0;
   }
 
   .faq-question {
@@ -39,27 +46,13 @@ export const Question = styled.div`
 
 export const QuestionWrapper = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 0.5rem;
-  background-color: ${colors.gray[50]};
-
-  .selected {
-    background-color: ${colors.tertiary.disabled[50]};
-    color: ${colors.black.main};
-    font-weight: 700;
-    font-size: clamp(0.8rem, 4vw, 1.125rem);
-    line-height: 1.687rem;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
 `
 
 export const AnswerFAQ = styled.div`
-  padding: 0.5rem;
-  margin-top: 0.125rem;
-  border-radius: 0.4375rem;
+  border-radius: 0 0 0.5rem 0.5rem;
   padding: 2rem;
+  background-color: ${colors.tertiary.normal[50]};
+  color: ${colors.black.main};
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     padding: 3rem;
