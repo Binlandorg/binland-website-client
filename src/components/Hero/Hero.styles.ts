@@ -83,7 +83,7 @@ export const Content = styled.div`
     justify-content: center;
   }
 
-  & a[href='#contact-us'] {
+  & a[href='/contact-us'] {
     display: flex;
     align-items: center;
     max-width: fit-content;
