@@ -3,13 +3,17 @@ import styled from 'styled-components'
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
 
+export const QuestionWrapper = styled.div`
+  width: 100%;
+`
+
 export const Question = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
   border-radius: 0.5rem;
   color: ${colors.black.main};
+  background-color: ${colors.tertiary.normal[50]};
   font-size: clamp(0.8rem, 4vw, 1.125rem);
   line-height: 1.75rem;
   font-weight: 400;
@@ -20,42 +24,47 @@ export const Question = styled.div`
     padding: 1.5rem 3rem;
   }
 
-  &:hover {
-    background: gray;
+  &.selected {
+    background-color: ${colors.tertiary.normal[200]};
+    color: ${colors.black.main};
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  &:hover,
+  &.selected:hover {
+    background-color: ${colors.tertiary.normal[300]};
+    color: ${colors.tertiary.hover[600]};
     cursor: pointer;
   }
-`
 
-export const QuestionWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 0.5rem;
-  background-color: ${colors.gray[50]};
+  &:active {
+    background-color: ${colors.tertiary.active[400]};
+    color: ${colors.tertiary.active[700]};
+  }
 
-  .selected {
-    background-color: #ede9f6;
-    color: ${colors.black.main};
-    font-weight: 700;
-    font-size: clamp(0.8rem, 4vw, 1.125rem);
-    line-height: 1.687rem;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+  .faq-question {
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+
+  .expand-collapse-toggle {
+    display: grid;
+    place-content: center;
   }
 `
 
-export const AnswerFAQ = styled.div`
-  padding: 0.5rem;
-  margin-top: 0.125rem;
-  border-radius: 0.4375rem;
+export const FAQAnswer = styled.div`
+  border-radius: 0 0 0.5rem 0.5rem;
   padding: 2rem;
+  background-color: ${colors.tertiary.normal[50]};
+
+  & .faq-answer {
+    color: ${colors.black.main};
+    font-size: clamp(0.8rem, 4vw, 1rem);
+  }
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     padding: 3rem;
   }
-`
-
-export const Response = styled.div`
-  color: ${colors.black.main};
-  font-size: clamp(0.8rem, 4vw, 1rem);
 `

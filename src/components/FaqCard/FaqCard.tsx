@@ -2,12 +2,7 @@ import { useState } from 'react'
 import { IoMdAdd } from 'react-icons/io'
 import { IoIosRemove } from 'react-icons/io'
 
-import {
-  AnswerFAQ,
-  Question,
-  QuestionWrapper,
-  Response,
-} from './FaqCard.styles'
+import { FAQAnswer, Question, QuestionWrapper } from './FaqCard.styles'
 
 interface IFaqCardProps {
   question: string
@@ -23,16 +18,16 @@ const FaqCard: React.FC<IFaqCardProps> = ({ question, answer }) => {
         onClick={() => setShowAnswer(!showAnswer)}
         className={showAnswer ? 'selected' : ''}
       >
-        <span>{question}</span>
-        <div>
+        <span className="faq-question">{question}</span>
+        <div className="expand-collapse-toggle">
           {!showAnswer && <IoMdAdd size={22} />}
           {showAnswer && <IoIosRemove size={22} />}
         </div>
       </Question>
       {showAnswer && (
-        <AnswerFAQ>
-          <Response>{answer}</Response>
-        </AnswerFAQ>
+        <FAQAnswer>
+          <p className="faq-answer">{answer}</p>
+        </FAQAnswer>
       )}
     </QuestionWrapper>
   )
