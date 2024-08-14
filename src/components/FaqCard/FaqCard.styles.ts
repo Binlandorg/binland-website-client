@@ -3,6 +3,10 @@ import styled from 'styled-components'
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
 
+export const QuestionWrapper = styled.div`
+  width: 100%;
+`
+
 export const Question = styled.div`
   display: flex;
   align-items: center;
@@ -20,22 +24,24 @@ export const Question = styled.div`
     padding: 1.5rem 3rem;
   }
 
-  &:hover {
-    background-color: ${colors.tertiary.normal[300]};
-    color: ${colors.tertiary.hover[600]};
-    cursor: pointer;
-  }
-
   &.selected {
     background-color: ${colors.tertiary.normal[200]};
     color: ${colors.black.main};
     border-radius: 0.5rem 0.5rem 0 0;
   }
 
+  &:hover,
+  &.selected:hover {
+    background-color: ${colors.tertiary.normal[300]};
+    color: ${colors.tertiary.hover[600]};
+    cursor: pointer;
+  }
+
   &:active {
     background-color: ${colors.tertiary.active[400]};
     color: ${colors.tertiary.active[700]};
   }
+
   .faq-question {
     font-weight: 500;
     font-size: 1.125rem;
@@ -48,22 +54,17 @@ export const Question = styled.div`
   }
 `
 
-export const QuestionWrapper = styled.div`
-  width: 100%;
-`
-
-export const AnswerFAQ = styled.div`
+export const FAQAnswer = styled.div`
   border-radius: 0 0 0.5rem 0.5rem;
   padding: 2rem;
   background-color: ${colors.tertiary.normal[50]};
-  color: ${colors.black.main};
+
+  & .faq-answer {
+    color: ${colors.black.main};
+    font-size: clamp(0.8rem, 4vw, 1rem);
+  }
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     padding: 3rem;
   }
-`
-
-export const Response = styled.div`
-  color: ${colors.black.main};
-  font-size: clamp(0.8rem, 4vw, 1rem);
 `
