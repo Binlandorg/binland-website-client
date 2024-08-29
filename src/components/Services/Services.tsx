@@ -8,10 +8,11 @@ import Container from 'ui/Container/Container'
 import {
   CustomSingleWord,
   ServicesTitle,
-  ServicesWrapper
+  ServicesWrapper,
 } from './Services.styles'
 import MobileServices from './MobileServices/MobileServices'
 import Section from 'ui/Section/Section'
+import ServiceContent from './ServicesContent/ServicesContent'
 
 interface ITabProperties {
   key: string
@@ -121,7 +122,13 @@ const Services: React.FC = () => {
       label: 'home.services.digital.management.seo.optimization',
       children: (
         <ContentLayout>
-          <div>SEO Optimization</div>
+          <ServiceContent
+            title="Holi"
+            description="La vida de un crítico es mas sencilla en muchos aspectos, mas contenido de prueba y mas y mas y mas bla bla bla"
+            backlinks={[{ id: '1', href: '#' }]}
+            image="#"
+            link="#"
+          />
         </ContentLayout>
       ),
     },
@@ -164,7 +171,7 @@ const Services: React.FC = () => {
   return (
     <Section id="services" size="lg" type="margin">
       <Container size="xl" isfullwidth>
-        <ServicesWrapper size='xl' isfullwidth>
+        <ServicesWrapper size="xl" isfullwidth>
           <Container size="sm">
             <ServicesTitle>
               <FormattedMessage
