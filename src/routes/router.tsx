@@ -1,27 +1,34 @@
+/* eslint-disable react-refresh/only-export-components */
 import {
   Route,
   createRoutesFromElements,
   createBrowserRouter,
 } from 'react-router-dom'
+import { lazy } from 'react'
 
 /** TODO: Uncomment code when page is ready to be production */
 
 import Layout from 'components/Layout/Layout'
-import Home from 'pages/Home/Home'
-import AboutUs from 'pages/AboutUs/AboutUs'
-import PageNotFound from 'pages/PageNotFound/PageNotFound'
-import PrivacyPolicy from 'pages/PrivacyPolicy/PrivacyPolicy'
-import TermsOfService from 'pages/TermsOfService/TermsOfService'
-import FrequenltyAskedQuestion from 'pages/FrequentlyAskedQuestion/FrequentlyAskedQuestion'
-import ContactUs from 'pages/ContactUs/ContactUs'
-// import Portafolio from 'pages/Portafolio/Portafolio'
-// import LetsLearn from 'pages/LetsLearn/LetsLearn'
-// import Services from 'pages/Services/Services'
-// import Clients from 'pages/Clients/Clients'
-// import Blog from 'pages/Blog/Blog'
-// import Seo from 'pages/Services/Seo/Seo'
-// import Saas from 'pages/Saas/Saas'
-// import Article from 'pages/Article/Article'
+
+const Home = lazy(() => import('pages/Home/Home'))
+const AboutUs = lazy(() => import('pages/AboutUs/AboutUs'))
+const ContactUs = lazy(() => import('pages/ContactUs/ContactUs'))
+const PageNotFound = lazy(() => import('pages/PageNotFound/PageNotFound'))
+const PrivacyPolicy = lazy(() => import('pages/PrivacyPolicy/PrivacyPolicy'))
+const FrequentlyAskedQuestion = lazy(
+  () => import('pages/FrequentlyAskedQuestion/FrequentlyAskedQuestion')
+)
+const TermsOfService = lazy(() => import('pages/TermsOfService/TermsOfService'))
+
+// Uncomment the following when pages are ready
+// const Clients = lazy(() => import('pages/Clients/Clients'))
+// const Saas = lazy(() => import('pages/Saas/Saas'))
+// const Portafolio = lazy(() => import('pages/Portafolio/Portafolio'))
+// const LetsLearn = lazy(() => import('pages/LetsLearn/LetsLearn'))
+// const Services = lazy(() => import('pages/Services/Services'))
+// const Seo = lazy(() => import('pages/Services/Seo/Seo'))
+// const Blog = lazy(() => import('pages/Blog/Blog'))
+// const Article = lazy(() => import('pages/Article/Article'))
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -41,7 +48,7 @@ const router = createBrowserRouter(
       {/* <Route path="/blog/:article-name" element={<Article />} /> */}
       <Route
         path="/frequently-asked-question"
-        element={<FrequenltyAskedQuestion />}
+        element={<FrequentlyAskedQuestion />}
       />
       <Route path="*" element={<PageNotFound />} />
     </Route>
