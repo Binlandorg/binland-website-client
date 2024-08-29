@@ -13,7 +13,7 @@ import {
   NetworkWrapperInside,
   HeroSection,
   HeroContent,
-  Image
+  Image,
 } from './Hero.styles'
 import H5 from 'ui/Titles/H5'
 import Display from 'ui/Display/Display'
@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
                   />
                 </Display>
               </ContentText>
-              <a href="#contact-us">
+              <a href="/contact-us">
                 <IconArrowLeft size={20} />
                 <span>{intl('home.hero.contact.us.button.title')}</span>
               </a>
