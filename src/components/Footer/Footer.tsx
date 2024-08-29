@@ -15,6 +15,7 @@ import SocialMedia from 'components/SocialMedia/SocialMedia'
 import { enterpriseLinks, legalLinks } from './Footer.data'
 import H5 from 'ui/Titles/H5'
 import { colors } from 'styles/colors'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const Footer: React.FC = () => {
   const intl = useIntlMessages()
@@ -25,7 +26,11 @@ const Footer: React.FC = () => {
       <FooterWrapper size="xl" isfullwidth>
         <FooterLogoWrapper>
           <Link to="/" rel="noopener noreferrer">
-            <img className="footer-logo" src={logo} alt="Binland logo" />
+            <LazyLoadImage
+              className="footer-logo"
+              src={logo}
+              alt="Binland logo"
+            />
           </Link>
           <p>
             &copy; Binland {currentYear}. {intl('footer.all.rights.reserved')}.

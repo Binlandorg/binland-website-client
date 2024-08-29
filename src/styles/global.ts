@@ -25,8 +25,7 @@ export const GlobalStyle = createGlobalStyle`
   dd {
     padding: 0;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   }
 
   /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */

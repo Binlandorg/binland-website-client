@@ -4,7 +4,10 @@ import Section from 'ui/Section/Section'
 import Container from 'ui/Container/Container'
 import H2 from 'ui/Titles/H2'
 import useIntlMessages from 'hooks/useIntlMessages'
-import ContactUsForm from './ContactUsForm/ContactUsForm'
+// import ContactUsForm from './ContactUsForm/ContactUsForm';
+import { lazy, Suspense } from 'react'
+
+const ContactUsForm = lazy(() => import('./ContactUsForm/ContactUsForm'))
 
 const ContactUs: React.FC = () => {
   const intl = useIntlMessages()
@@ -12,10 +15,12 @@ const ContactUs: React.FC = () => {
   return (
     <Section id="contact-us" size="lg" type="margin">
       <Container size="xl" isfullwidth>
-        <H2 withDot>{intl("contact.us.hero.title")}</H2>
+        <H2 withDot>{intl('contact.us.hero.title')}</H2>
         <ContentWrapper>
           <ContactUsInformation />
-          <ContactUsForm />
+          <Suspense>
+            <ContactUsForm />
+          </Suspense>
         </ContentWrapper>
       </Container>
     </Section>

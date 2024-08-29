@@ -18,6 +18,7 @@ import NavLink from 'ui/NavLink/NavLink'
 // import ButtonLink from 'ui/ButtonLink/ButtonLink'
 import { NavbarItems } from './Header.data'
 import Button from 'ui/Button/Button'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -53,7 +54,7 @@ const Header: React.FC = () => {
       <StyledHeader>
         <HeaderWrapper size="xl">
           <ReactRouterNavLink to={'/'}>
-            <img src={logo} alt="Binland logo" />
+            <LazyLoadImage src={logo} alt="Binland logo" />
           </ReactRouterNavLink>
           <HamburgerIcon>
             <LanguageSwitcher />

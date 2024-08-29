@@ -5,6 +5,7 @@ import nodejs from '../../../assets/images/imgTechnologies/NodeJs.svg'
 import python from '../../../assets/images/imgTechnologies/Python.svg'
 
 import Container from 'ui/Container/Container'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import {
   SectionTechnologies,
   Tech,
@@ -16,7 +17,7 @@ import {
 
 interface ITechnologies {
   name: string
-  image: any
+  image: string
 }
 
 const DevelopingTechnologies: ITechnologies[] = [
@@ -44,7 +45,7 @@ const Technologies = () => {
         <WrapperTechnologies>
           {DevelopingTechnologies.map((Element) => (
             <Tech key={Element.name}>
-              <img src={Element.image} alt="Technologies" />
+              <LazyLoadImage src={Element.image} alt="Technologies" />
             </Tech>
           ))}
         </WrapperTechnologies>

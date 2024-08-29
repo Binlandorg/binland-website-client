@@ -13,7 +13,7 @@ import {
   NetworkWrapperInside,
   HeroSection,
   HeroContent,
-  Image
+  Image,
 } from './Hero.styles'
 import H5 from 'ui/Titles/H5'
 import Display from 'ui/Display/Display'

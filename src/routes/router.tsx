@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import {
   Route,
   createRoutesFromElements,
@@ -6,13 +7,24 @@ import {
 
 /** TODO: Uncomment code when page is ready to be production */
 
-import Layout from 'components/Layout/Layout'
-import Home from 'pages/Home/Home'
-import AboutUs from 'pages/AboutUs/AboutUs'
-import PageNotFound from 'pages/PageNotFound/PageNotFound'
-import PrivacyPolicy from 'pages/PrivacyPolicy/PrivacyPolicy'
-import TermsOfService from 'pages/TermsOfService/TermsOfService'
-import FrequenltyAskedQuestion from 'pages/FrequentlyAskedQuestion/FrequentlyAskedQuestion'
+const Layout = lazy(() => import('../components/Layout/Layout'))
+const Home = lazy(() => import('pages/Home/Home'))
+const AboutUs = lazy(() => import('pages/AboutUs/AboutUs'))
+const PageNotFound = lazy(() => import('pages/PageNotFound/PageNotFound'))
+const PrivacyPolicy = lazy(() => import('pages/PrivacyPolicy/PrivacyPolicy'))
+const TermsOfService = lazy(() => import('pages/TermsOfService/TermsOfService'))
+const FrequenltyAskedQuestion = lazy(
+  () => import('pages/FrequentlyAskedQuestion/FrequentlyAskedQuestion')
+)
+
+// import Layout from 'components/Layout/Layout'
+// import Home from 'pages/Home/Home'
+// import AboutUs from 'pages/AboutUs/AboutUs'
+// import PageNotFound from 'pages/PageNotFound/PageNotFound'
+// import PrivacyPolicy from 'pages/PrivacyPolicy/PrivacyPolicy'
+// import TermsOfService from 'pages/TermsOfService/TermsOfService'
+// import FrequenltyAskedQuestion from 'pages/FrequentlyAskedQuestion/FrequentlyAskedQuestion'
+
 // import ContactUs from 'pages/ContactUs/ContactUs'
 // import Portafolio from 'pages/Portafolio/Portafolio'
 // import LetsLearn from 'pages/LetsLearn/LetsLearn'
@@ -25,7 +37,14 @@ import FrequenltyAskedQuestion from 'pages/FrequentlyAskedQuestion/FrequentlyAsk
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route
+      path="/"
+      element={
+        <Suspense fallback={<div>Loadingroot...</div>}>
+          <Layout />
+        </Suspense>
+      }
+    >
       <Route index element={<Home />} />
       {/* <Route path="/clients" element={<Clients />} /> */}
       {/* <Route path="/saas" element={<Saas />} /> */}

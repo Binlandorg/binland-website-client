@@ -21,6 +21,7 @@ import { IClientCard } from 'types/components/clients'
 import { IData } from 'types/components/pagination'
 import H2 from 'ui/Titles/H2'
 import useIntlMessages from 'hooks/useIntlMessages'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const Clients: React.FC = () => {
   const [items, setItems] = useState<IClientCard[]>([])
@@ -54,7 +55,7 @@ const Clients: React.FC = () => {
             </div>
             <IconsWrapper>
               {clientBrands.map((brand) => (
-                <img
+                <LazyLoadImage
                   key={brand.id}
                   src={brand.src}
                   alt={brand.name}
@@ -68,7 +69,7 @@ const Clients: React.FC = () => {
           <OurWorkWrapper>
             <div className="our-works-content">
               <div>
-                <H2>{intl("clients.outstanding.title")}</H2>
+                <H2>{intl('clients.outstanding.title')}</H2>
                 <p className="our-works-description">
                   Si disputa al la interes miradas ya decirte. Ch el capital
                   casaron gozaban plateas se. Armino fulano fulgor van era.

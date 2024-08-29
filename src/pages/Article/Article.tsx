@@ -1,3 +1,4 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 const Article: React.FC = () => {
   return (
     <>
@@ -54,7 +55,7 @@ const Article: React.FC = () => {
               numquam expedita repudiandae inventore?
             </p>
             <figure>
-              <img src="" alt="" />
+              <LazyLoadImage src="" alt="" />
               <figcaption>fiaba dicho bueno no conta id ciego un</figcaption>
             </figure>
 
