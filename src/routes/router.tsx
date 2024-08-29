@@ -13,7 +13,7 @@ import PageNotFound from 'pages/PageNotFound/PageNotFound'
 import PrivacyPolicy from 'pages/PrivacyPolicy/PrivacyPolicy'
 import TermsOfService from 'pages/TermsOfService/TermsOfService'
 import FrequenltyAskedQuestion from 'pages/FrequentlyAskedQuestion/FrequentlyAskedQuestion'
-// import ContactUs from 'pages/ContactUs/ContactUs'
+import ContactUs from 'pages/ContactUs/ContactUs'
 // import Portafolio from 'pages/Portafolio/Portafolio'
 // import LetsLearn from 'pages/LetsLearn/LetsLearn'
 // import Services from 'pages/Services/Services'
@@ -36,7 +36,7 @@ const router = createBrowserRouter(
       {/* <Route path="/services/seo" element={<Seo />} /> */}
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms-of-service" element={<TermsOfService />} />
-      {/* <Route path="/contact-us" element={<ContactUs />} /> */}
+      <Route path="/contact-us" element={<ContactUs />} />
       {/* <Route path="/blog" element={<Blog />} /> */}
       {/* <Route path="/blog/:article-name" element={<Article />} /> */}
       <Route
