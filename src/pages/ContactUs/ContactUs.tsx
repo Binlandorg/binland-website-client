@@ -1,6 +1,5 @@
 import { ContactUsHero, SectionTitleHero } from './ContactUs.styles'
 import {
-  ContactUsWrapper,
   ContentWrapper,
   SectionContactUs,
 } from 'components/ContactUs/ContactUs.styles'
@@ -8,6 +7,7 @@ import ContactUsInformation from 'components/ContactUs/ContactUsInformation/Cont
 import ContactUsForm from 'components/ContactUs/ContactUsForm/ContactUsForm'
 import useIntlMessages from 'hooks/useIntlMessages'
 import H1 from 'ui/Titles/H1'
+import BodyContainer from 'ui/BodyContainer/BodyContainer'
 
 const ContactUs: React.FC = () => {
   const intl = useIntlMessages()
@@ -16,17 +16,17 @@ const ContactUs: React.FC = () => {
     <>
       <ContactUsHero>
         <SectionTitleHero type="padding" size="lg">
-          <H1>{intl("contact.us.hero.title")}</H1>
+          <H1>{intl('contact.us.hero.title')}</H1>
         </SectionTitleHero>
       </ContactUsHero>
-      <SectionContactUs size="md" type="padding">
-        <ContactUsWrapper size="xl">
+      <BodyContainer>
+        <SectionContactUs size="lg" type="padding">
           <ContentWrapper>
             <ContactUsInformation />
             <ContactUsForm />
           </ContentWrapper>
-        </ContactUsWrapper>
-      </SectionContactUs>
+        </SectionContactUs>
+      </BodyContainer>
     </>
   )
 }
