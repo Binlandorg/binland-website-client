@@ -28,10 +28,10 @@ export const StyledQuote = styled.div`
     position: absolute;
     z-index: -1;
     filter: blur(15px);
-  }
 
-  @media only screen and (min-width: ${breakpoints.lg}) {
-    background-image: url(${sloganBGImageURL});
+    @media only screen and (min-width: ${breakpoints.lg}) {
+      background-image: url(${sloganBGImageURL});
+    }
   }
 
   @media only screen and (min-width: ${breakpoints.md}) {

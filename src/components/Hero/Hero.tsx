@@ -48,10 +48,6 @@ const Hero: React.FC = () => {
               <ImageWrapper>
                 <picture>
                   <source srcSet="" media="(max-width: 1024px)" />
-                  {/* <source
-                    srcSet={heroImgData.src}
-                    media="(min-width: 1025px)"
-                  /> */}
                   <LazyLoadImage
                     src={heroImgData.src}
                     alt={heroImgData.alt}
