@@ -6,12 +6,14 @@ export interface IName {
 
 export interface INetwork extends IName{
   url: string
+  ariaLabel: string
 }
 
 export interface IFoundersData{
   id?: string
   image: {
     url: string
+    urlMobile: string
     alt: string
   }
   fullName: string
@@ -37,6 +39,7 @@ export interface ITitle extends PropsWithChildren{
 export interface ICollage {
   id: number
   url: string
+  urlMobile: string
   alt: string
   name: string
 }

@@ -3,8 +3,8 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 import checker from 'vite-plugin-checker'
 import react from '@vitejs/plugin-react'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
+import { FontaineTransform } from 'fontaine'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     tsconfigPaths(),
@@ -29,11 +29,6 @@ export default defineConfig({
                 cleanupNumericValues: false,
                 removeViewBox: false, // https://github.com/svg/svgo/issues/1128
               },
-              cleanupIDs: {
-                minify: false,
-                remove: false,
-              },
-              convertPathData: false,
             },
           },
           'sortAttrs',
@@ -46,34 +41,37 @@ export default defineConfig({
         ],
       },
       png: {
-        // https://sharp.pixelplumbing.com/api-output#png
         quality: 100,
       },
       jpeg: {
-        // https://sharp.pixelplumbing.com/api-output#jpeg
         quality: 100,
       },
       jpg: {
-        // https://sharp.pixelplumbing.com/api-output#jpeg
         quality: 100,
       },
       tiff: {
-        // https://sharp.pixelplumbing.com/api-output#tiff
         quality: 100,
       },
-      // gif does not support lossless compression
-      // https://sharp.pixelplumbing.com/api-output#gif
       gif: {},
       webp: {
-        // https://sharp.pixelplumbing.com/api-output#webp
         lossless: true,
       },
       avif: {
-        // https://sharp.pixelplumbing.com/api-output#avif
         lossless: true,
       },
       cache: false,
       cacheLocation: undefined,
+    }),
+    FontaineTransform.vite({
+      fallbacks: [
+        'BlinkMacSystemFont',
+        'Segoe UI',
+        'Helvetica Neue',
+        'Arial',
+        'Noto Sans',
+      ],
+      resolvePath: (id) => `file:///path/to/public/dir${id}`,
+      sourcemap: true,
     }),
   ],
 })

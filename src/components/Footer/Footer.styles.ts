@@ -78,6 +78,13 @@ export const FooterLinks = styled.div`
   flex-direction: column;
   gap: 1rem;
 
+  .links-title {
+    font-weight: bold;
+    font-size: clamp(1rem, 0.875rem + 0.4vw, 1.125rem);
+    line-height: 1.5;
+    color: ${colors.white.main};
+  }
+
   .link-item {
     color: ${colors.white.main};
     list-style: none;
@@ -116,6 +123,13 @@ export const FooterSocialMedia = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  .links-title {
+    font-weight: bold;
+    font-size: clamp(1rem, 0.875rem + 0.4vw, 1.125rem);
+    line-height: 1.5;
+    color: ${colors.white.main};
+  }
 
   .social-media__content {
     display: flex;

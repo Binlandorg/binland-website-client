@@ -1,6 +1,9 @@
 import patyImageURL from '../../../assets/images/paty-profile.webp'
 import diegoImageURL from '../../../assets/images/diego-profile.webp'
 import ricardoImageURL from '../../../assets/images/ricardo-profile.webp'
+import patyImageURLMobile from '../../../assets/images/mobile/paty-profile.webp'
+import diegoImageURLMobile from '../../../assets/images/mobile/diego-profile.webp'
+import ricardoImageURLMobile from '../../../assets/images/mobile/ricardo-profile.webp'
 import { ITeamData } from 'types/components/aboutus'
 
 const teamData: ITeamData[] = [
@@ -8,6 +11,7 @@ const teamData: ITeamData[] = [
     id: '1',
     image: {
       url: patyImageURL,
+      urlMobile: patyImageURLMobile,
       alt: 'image.profile.alt.paty.apaestegui.rodriguez',
     },
     fullName: 'Paty Apaestegui Rodríguez',
@@ -17,10 +21,14 @@ const teamData: ITeamData[] = [
       {
         name: 'GitHub',
         url: 'https://github.com/patyapaestegui',
+        ariaLabel:
+          'about.us.paty.apaestegui.rodriguez.social.media.github.aria.label',
       },
       {
         name: 'LinkedIn',
         url: 'https://www.linkedin.com/in/patyapaestegui/',
+        ariaLabel:
+          'about.us.paty.apaestegui.rodriguez.social.media.linkedin.aria.label',
       },
     ],
   },
@@ -28,6 +36,7 @@ const teamData: ITeamData[] = [
     id: '2',
     image: {
       url: diegoImageURL,
+      urlMobile: diegoImageURLMobile,
       alt: 'image.profile.alt.diego.lopez.vega',
     },
     fullName: 'Diego López Vega',
@@ -37,10 +46,12 @@ const teamData: ITeamData[] = [
       {
         name: 'GitHub',
         url: 'https://github.com/diegolopex',
+        ariaLabel: 'about.us.diego.lopez.vega.social.media.github.aria.label',
       },
       {
         name: 'LinkedIn',
         url: 'https://www.linkedin.com/in/diegolopex/',
+        ariaLabel: 'about.us.diego.lopez.vega.social.media.linkedin.aria.label',
       },
     ],
   },
@@ -48,6 +59,7 @@ const teamData: ITeamData[] = [
     id: '3',
     image: {
       url: ricardoImageURL,
+      urlMobile: ricardoImageURLMobile,
       alt: 'image.profile.alt.ricardo.mamani.calcina',
     },
     fullName: 'Ricardo Mamani Calcina',
@@ -57,10 +69,14 @@ const teamData: ITeamData[] = [
       {
         name: 'github',
         url: 'https://github.com/RicardoC23',
+        ariaLabel:
+          'about.us.ricardo.mamani.calcina.social.media.github.aria.label',
       },
       {
         name: 'LinkedIn',
         url: 'https://www.linkedin.com/in/ricardoc23-developer/',
+        ariaLabel:
+          'about.us.ricardo.mamani.calcina.social.media.linkedin.aria.label',
       },
     ],
   },

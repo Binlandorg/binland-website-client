@@ -21,7 +21,7 @@ export const CollageContainer = styled.div<IContainerSize>`
   object-fit: cover;
   margin-top: 1rem;
 
-  @media only screen and (min-width: ${breakpoints.xxl}){
+  @media only screen and (min-width: ${breakpoints.xxl}) {
     margin-top: 3rem;
   }
 
@@ -73,12 +73,17 @@ export const CollageContainer = styled.div<IContainerSize>`
     grid-row: 4/5;
   }
 
+  & picture {
+    display: contents;
+  }
+
   & img {
     display: block;
     border-radius: 0.375rem;
     width: 100%;
     height: 100%;
     object-fit: cover;
+
     @media only screen and (min-width: ${breakpoints.xl}) {
       object-position: center;
     }

@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import { colors } from './colors'
+import './fontaine.css'
 
 export const GlobalStyle = createGlobalStyle`
   /* CSS Reset by Andy Bell (https://piccalil.li/blog/a-modern-css-reset/) */
@@ -25,7 +26,6 @@ export const GlobalStyle = createGlobalStyle`
   dd {
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   }
 
   /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -38,10 +38,6 @@ export const GlobalStyle = createGlobalStyle`
   ul {
     padding: 0;
     margin: 0;
-  }
-
-  html {
-    font-size: 16px;
   }
   
   /* Set core root defaults */

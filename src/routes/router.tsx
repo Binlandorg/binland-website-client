@@ -32,12 +32,7 @@ const TermsOfService = lazy(() => import('pages/TermsOfService/TermsOfService'))
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route
-      path="/"
-      element={
-          <Layout />
-      }
-    >
+    <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       {/* <Route path="/clients" element={<Clients />} /> */}
       {/* <Route path="/saas" element={<Saas />} /> */}

@@ -46,11 +46,20 @@ const Hero: React.FC = () => {
             </NetworkWrapperInside>
             <Image>
               <ImageWrapper>
-                <LazyLoadImage
-                  src={heroImgData.src}
-                  alt={heroImgData.alt}
-                  threshold={100}
-                />
+                <picture>
+                  <source srcSet="" media="(max-width: 1024px)" />
+                  {/* <source
+                    srcSet={heroImgData.src}
+                    media="(min-width: 1025px)"
+                  /> */}
+                  <LazyLoadImage
+                    src={heroImgData.src}
+                    alt={heroImgData.alt}
+                    threshold={100}
+                    width={600}
+                    height={646}
+                  />
+                </picture>
               </ImageWrapper>
             </Image>
             <Content>

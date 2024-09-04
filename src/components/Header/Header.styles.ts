@@ -46,6 +46,10 @@ export const HeaderWrapper = styled(Container)`
   position: relative;
   padding: 1rem 0rem;
   height: 4.5rem;
+
+  .logo-picture {
+    aspect-ratio: 130/26;
+  }
 `
 
 export const HamburgerIcon = styled.div`
