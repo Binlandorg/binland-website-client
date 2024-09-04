@@ -33,7 +33,7 @@ const Subscribe: React.FC = () => {
               type="primary"
               size="lg"
               className="subscribe-button"
-              onClick={() => console.log(email)}
+              onClick={() => {}}
             >
               Suscríbete
             </Button>

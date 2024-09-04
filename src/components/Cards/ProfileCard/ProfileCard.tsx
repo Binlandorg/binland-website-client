@@ -48,15 +48,11 @@ const ProfileCard: React.FC<IProfileCard> = ({
       <CardImageContainer>
         <picture>
           <source
-            srcSet={image.url ?? defaultImgURL}
-            media="(min-width: 1025px)"
-          />
-          <source
             srcSet={image.urlMobile ?? defaultImgURL}
             media="(max-width: 1024px)"
           />
           <CardImage
-            src=""
+            src={image.url ?? defaultImgURL}
             alt={intl(image.alt)}
             threshold={200}
             width={200}
