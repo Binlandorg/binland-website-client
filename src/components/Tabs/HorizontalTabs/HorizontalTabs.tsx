@@ -34,6 +34,7 @@ const HorizontalTabs: React.FC<ITabs> = ({ items }) => {
     setCurrentContent(
       items.filter((item) => item.key === currentItemIndex)[0].children
     )
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentItemIndex, currentContent])
 
   return (

@@ -1,8 +1,15 @@
 import styled from 'styled-components'
 
+import { breakpoints } from 'shared/breakpoints'
+
 export const ContentWrapper = styled.div`
-  /* flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center; */
+  padding: 1rem;
+
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    padding: 2rem;
+  }
+
+  @media only screen and (min-width: ${breakpoints.xl}) {
+    padding: 3rem;
+  }
 `

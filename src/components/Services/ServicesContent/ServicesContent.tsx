@@ -1,57 +1,65 @@
-// import useIntlMessages from 'hooks/useIntlMessages'
+import { FaArrowUpRightFromSquare } from 'react-icons/fa6'
 
+import useIntlMessages from 'hooks/useIntlMessages'
 import H4 from 'ui/Titles/H4'
 import { ServiceContentWrapper } from './ServicesContent.styles'
 
-interface IBacklink {
+export interface IBacklink {
   id: string
-  href: string
+  text: string
 }
 
-interface IServiceContent {
-  title?: string
+export interface IServiceContent {
+  id: string
+  title: string
   description: string
   backlinks: IBacklink[]
   image: string
   link: string
+  category: string
 }
 
-const ServiceContent: React.FC<IServiceContent> = ({
-  description,
-  backlinks,
-  image,
-  link,
-  title,
-}) => {
-  // const intl = useIntlMessages()
+const ServiceContent: React.FC<IServiceContent> = (props) => {
+  const intl = useIntlMessages()
 
   return (
     <ServiceContentWrapper>
-      <div className="right-content">
-        <div>
-          <H4 $weight="bold">¿Qué es?</H4>
-          <p>{description}</p>
+      <div className="left-content">
+        <div className="what-is">
+          <H4 $weight="bold">{intl('home.services.content.title.what.is')}</H4>
+          <p>{intl(props.description)}</p>
         </div>
-        <div>
-          <H4 $weight="bold">¿Qué incluye?</H4>
-          <ul>
-            {backlinks.map((backlink) => (
-              <li key={backlink.id}>
-                <a href={backlink.href}>{backlink.href}</a>
+        <div className="what-includes">
+          <H4 $weight="bold">
+            {intl('home.services.content.title.what.includes')}
+          </H4>
+          <ul className="backlinks-wrapper">
+            {props.backlinks.map((backlink) => (
+              <li key={intl(backlink.id)}>
+                <span>📌</span>
+                <p>{intl(backlink.text)}</p>
               </li>
             ))}
           </ul>
         </div>
       </div>
-      <div className="left-content">
-        {title && <h1>{title}</h1>}
-        <img src={image} alt="Service image" />
-        <a href={link} className="see-more-link">
-          See more
+      <div className="right-content">
+        <img
+          width="280"
+          height="178"
+          className="service__img"
+          src={props.image}
+          alt={props.title}
+          loading="lazy"
+        />
+        <a
+          href={props.link}
+          className="see-more__link"
+          aria-label={intl('home.services.content.link.aria.label')}
+        >
+          <span> {intl('home.services.content.button.see.more')}</span>
+          <FaArrowUpRightFromSquare size={24} />
         </a>
-        {/* <SeeMoreButton type="primary" rightIcon={<FaArrowUpRightFromSquare />}>
-          {intl('home.services.content.button.see.more')}
-        </SeeMoreButton> */}
       </div>
     </ServiceContentWrapper>
   )

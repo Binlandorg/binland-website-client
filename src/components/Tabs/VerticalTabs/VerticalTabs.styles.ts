@@ -46,8 +46,8 @@ export const SingleTab = styled.li`
 
 export const ContentWrapper = styled.div`
   width: 100%;
-  height: 21.875rem;
   display: flex;
+  height: auto;
   flex-direction: column;
   background: ${colors.gray[150]};
   border-radius: 1rem;
