@@ -1,6 +1,6 @@
 # Title
 
-## Description
+## Summary
 
 Please include a summary, motivation and or context of the change and which issue is fixed.
 
@@ -23,7 +23,10 @@ Remove if not necessary
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
 - [ ] This change requires a documentation update
 - [ ] Refactor
+- [ ] Styling
+- [ ] Testing
 - [ ] Chore
+- [ ] Other: ...
 
 ## Checklist:
 
