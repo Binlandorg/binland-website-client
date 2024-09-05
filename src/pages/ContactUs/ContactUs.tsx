@@ -2,7 +2,6 @@ import { Helmet } from 'react-helmet-async'
 
 import { ContactUsHero, SectionTitleHero } from './ContactUs.styles'
 import {
-  ContactUsWrapper,
   ContentWrapper,
   SectionContactUs,
 } from 'components/ContactUs/ContactUs.styles'
@@ -17,6 +16,7 @@ const Info = lazy(
 const Form = lazy(
   () => import('components/ContactUs/ContactUsForm/ContactUsForm')
 )
+import BodyContainer from 'ui/BodyContainer/BodyContainer'
 
 const ContactUs: React.FC = () => {
   const intl = useIntlMessages()
@@ -42,8 +42,8 @@ const ContactUs: React.FC = () => {
           <H1>{intl('contact.us.hero.title')}</H1>
         </SectionTitleHero>
       </ContactUsHero>
-      <SectionContactUs size="md" type="padding">
-        <ContactUsWrapper size="xl">
+      <BodyContainer>
+        <SectionContactUs size="lg" type="padding">
           <ContentWrapper>
             <Suspense>
               <Info />
@@ -52,8 +52,8 @@ const ContactUs: React.FC = () => {
               <Form />
             </Suspense>
           </ContentWrapper>
-        </ContactUsWrapper>
-      </SectionContactUs>
+        </SectionContactUs>
+      </BodyContainer>
     </>
   )
 }
