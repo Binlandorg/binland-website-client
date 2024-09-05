@@ -1,9 +1,5 @@
-import { IServiceContent } from './ServicesContent/ServicesContent'
+import { ServicesContentProps } from 'types/components/serviceSection'
 import serviceImg from './../../assets/images/service-img.png'
-
-type ServicesContentProps = {
-  [key: string]: IServiceContent
-}
 
 export const serviceContentData: ServicesContentProps = {
   'grafic-pieces': {

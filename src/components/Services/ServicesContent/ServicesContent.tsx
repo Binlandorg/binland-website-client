@@ -3,21 +3,7 @@ import { FaArrowUpRightFromSquare } from 'react-icons/fa6'
 import useIntlMessages from 'hooks/useIntlMessages'
 import H4 from 'ui/Titles/H4'
 import { ServiceContentWrapper } from './ServicesContent.styles'
-
-export interface IBacklink {
-  id: string
-  text: string
-}
-
-export interface IServiceContent {
-  id: string
-  title: string
-  description: string
-  backlinks: IBacklink[]
-  image: string
-  link: string
-  category: string
-}
+import { IServiceContent } from 'types/components/serviceSection'
 
 const ServiceContent: React.FC<IServiceContent> = (props) => {
   const intl = useIntlMessages()

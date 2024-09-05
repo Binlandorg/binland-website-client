@@ -14,18 +14,7 @@ import MobileServices from './MobileServices/MobileServices'
 import Section from 'ui/Section/Section'
 import ServiceContent from './ServicesContent/ServicesContent'
 import { serviceContentData } from './Services.data'
-
-interface ITabProperties {
-  key: string
-  label: string
-  children: React.ReactNode
-}
-
-interface IVerticalTabs {
-  key: string
-  label: string
-  children: React.ReactNode
-}
+import { ITabProperties, IVerticalTabs } from 'types/ui/tabs'
 
 const Services: React.FC = () => {
   const intl = useIntlMessages()
