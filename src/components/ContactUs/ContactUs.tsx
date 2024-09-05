@@ -12,7 +12,7 @@ const ContactUs: React.FC = () => {
   return (
     <Section id="contact-us" size="lg" type="margin">
       <Container size="xl" isfullwidth>
-        <H2 withDot>{intl("contact.us.hero.title")}</H2>
+        <H2 withDot>{intl('contact.us.hero.title')}</H2>
         <ContentWrapper>
           <ContactUsInformation />
           <ContactUsForm />
