@@ -18,6 +18,7 @@ import {
 import H5 from 'ui/Titles/H5'
 import Display from 'ui/Display/Display'
 import heroImgURL from './../../assets/images/girl-using-virtual-reality-glasses-cropped-v2.webp'
+import noImageURL from '../../assets/images/no-image.png'
 import Container from 'ui/Container/Container'
 import { colors } from 'styles/colors'
 import useScrollbarWidth from 'hooks/useScrollbarWidth'
@@ -47,7 +48,7 @@ const Hero: React.FC = () => {
             <Image>
               <ImageWrapper>
                 <picture>
-                  <source srcSet="" media="(max-width: 1024px)" />
+                  <source srcSet={noImageURL} media="(max-width: 1024px)" />
                   <LazyLoadImage
                     src={heroImgData.src}
                     alt={heroImgData.alt}
