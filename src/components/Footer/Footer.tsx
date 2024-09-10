@@ -14,8 +14,6 @@ import {
 } from './Footer.styles'
 import SocialMedia from 'components/SocialMedia/SocialMedia'
 import { enterpriseLinks, legalLinks } from './Footer.data'
-import H5 from 'ui/Titles/H5'
-import { colors } from 'styles/colors'
 import { COMPANY_CONTACT_EMAIL } from 'context/constants/constans'
 
 const Footer: React.FC = () => {
