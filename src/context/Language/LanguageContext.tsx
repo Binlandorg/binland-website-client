@@ -11,6 +11,7 @@ import {
   ILanguageContextProps,
   ILanguageProviderProps,
 } from 'types/context/languageContext'
+import useNavigatorLanguage from 'hooks/useNavigatorLanguage'
 
 const getLanguageData = (key: string): ILanguageDefinition => {
   switch (key) {
@@ -28,9 +29,10 @@ const LanguageContext = createContext<ILanguageContextProps>(
 )
 
 const LanguageProvider: React.FC<ILanguageProviderProps> = ({ children }) => {
+  const navLanguage = useNavigatorLanguage()
   const [storageValue, setStorageValue] = useLocalStorage<string>(
     LANGUAGE_LOCAL_STORAGE_KEY,
-    'en'
+    navLanguage
   )
   const [language, setLanguage] = useState<ILanguageDefinition>(() =>
     getLanguageData(storageValue)

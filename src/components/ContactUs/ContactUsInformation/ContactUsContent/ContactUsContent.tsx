@@ -13,6 +13,8 @@ import H4 from 'ui/Titles/H4'
 import useIntlMessages from 'hooks/useIntlMessages'
 import Paragraph from 'ui/Paragraph/Paragraph'
 import { colors } from 'styles/colors'
+import { COMPANY_CONTACT_EMAIL, COMPANY_PHONE_NUMBER, PERU_PHONE_CODE } from 'context/constants/constans'
+import { phoneNumberFormatter } from 'utils/formatters/formatters'
 
 interface IContactInformation {
   id: number
@@ -26,12 +28,12 @@ const ContactInformation: IContactInformation[] = [
   {
     id: 1,
     icon: <MdOutlineMail size={ICON_SIZE} />,
-    info: 'binland.contacto@gmail.com',
+    info: COMPANY_CONTACT_EMAIL,
   },
   {
     id: 2,
     icon: <IoIosPhonePortrait size={ICON_SIZE} />,
-    info: '+51 956 897 345',
+    info: phoneNumberFormatter(PERU_PHONE_CODE, COMPANY_PHONE_NUMBER),
   },
   { id: 3, icon: <CiLocationOn size={ICON_SIZE} />, info: 'Arequipa, Perú' },
 ]

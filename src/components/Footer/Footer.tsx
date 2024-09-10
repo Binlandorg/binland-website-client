@@ -14,6 +14,9 @@ import {
 } from './Footer.styles'
 import SocialMedia from 'components/SocialMedia/SocialMedia'
 import { enterpriseLinks, legalLinks } from './Footer.data'
+import H5 from 'ui/Titles/H5'
+import { colors } from 'styles/colors'
+import { COMPANY_CONTACT_EMAIL } from 'context/constants/constans'
 
 const Footer: React.FC = () => {
   const intl = useIntlMessages()
@@ -67,7 +70,7 @@ const Footer: React.FC = () => {
               <SocialMedia />
               <div className="container-email">
                 <HiOutlineMail size={20} style={{ color: 'white' }} />
-                <span className="text-footer">binland.contacto@gmail.com</span>
+                <span className="text-footer">{COMPANY_CONTACT_EMAIL}</span>
               </div>
             </div>
           </FooterSocialMedia>

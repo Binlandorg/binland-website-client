@@ -8,60 +8,51 @@ import Container from 'ui/Container/Container'
 import {
   CustomSingleWord,
   ServicesTitle,
-  ServicesWrapper
+  ServicesWrapper,
 } from './Services.styles'
 import MobileServices from './MobileServices/MobileServices'
 import Section from 'ui/Section/Section'
-
-interface ITabProperties {
-  key: string
-  label: string
-  children: React.ReactNode
-}
-
-interface IVerticalTabs {
-  key: string
-  label: string
-  children: React.ReactNode
-}
+import ServiceContent from './ServicesContent/ServicesContent'
+import { serviceContentData } from './Services.data'
+import { ITabProperties, IVerticalTabs } from 'types/ui/tabs'
 
 const Services: React.FC = () => {
   const intl = useIntlMessages()
 
   const subitemsDesign: Array<IVerticalTabs> = [
     {
-      key: 'asd',
-      label: 'home.services.design.development.of.graphic.pieces',
+      key: serviceContentData['grafic-pieces'].id,
+      label: serviceContentData['grafic-pieces'].title,
       children: (
         <ContentLayout>
-          <div>Development of graphic pieces</div>
+          <ServiceContent {...serviceContentData['grafic-pieces']} />
         </ContentLayout>
       ),
     },
     {
-      key: '2',
-      label: 'home.services.design.branding',
+      key: serviceContentData['brand-development'].id,
+      label: serviceContentData['brand-development'].title,
       children: (
         <ContentLayout>
-          <div>Branding</div>
+          <ServiceContent {...serviceContentData['brand-development']} />
         </ContentLayout>
       ),
     },
     {
-      key: '3',
-      label: 'home.services.design.ux.ui.design',
+      key: serviceContentData['ux-ui-design'].id,
+      label: serviceContentData['ux-ui-design'].title,
       children: (
         <ContentLayout>
-          <div>UX/UI Design</div>
+          <ServiceContent {...serviceContentData['ux-ui-design']} />
         </ContentLayout>
       ),
     },
     {
-      key: '4',
-      label: 'home.services.design.ux.writing',
+      key: serviceContentData['ux-writer'].id,
+      label: serviceContentData['ux-writer'].title,
       children: (
         <ContentLayout>
-          <div>UX Writing</div>
+          <ServiceContent {...serviceContentData['ux-writer']} />
         </ContentLayout>
       ),
     },
@@ -69,47 +60,47 @@ const Services: React.FC = () => {
 
   const subItemsSoftwareDevelopment: Array<IVerticalTabs> = [
     {
-      key: '1',
-      label: 'home.services.software.development.full.stack.applications',
+      key: serviceContentData['web-development'].id,
+      label: serviceContentData['web-development'].title,
       children: (
         <ContentLayout>
-          <div>Full stack applications (the name needs review)</div>
+          <ServiceContent {...serviceContentData['web-development']} />
         </ContentLayout>
       ),
     },
     {
-      key: '2',
-      label: 'home.services.software.development.cross.platform.applications',
+      key: serviceContentData['multiplatform-apps'].id,
+      label: serviceContentData['multiplatform-apps'].title,
       children: (
         <ContentLayout>
-          <div>Cross-platform applications</div>
+          <ServiceContent {...serviceContentData['multiplatform-apps']} />
         </ContentLayout>
       ),
     },
     {
-      key: '3',
-      label: 'home.services.software.development.mobile.development',
+      key: serviceContentData['mobile-development'].id,
+      label: serviceContentData['mobile-development'].title,
       children: (
         <ContentLayout>
-          <div>Mobile Development - iOS, Android, Flutter</div>
+          <ServiceContent {...serviceContentData['mobile-development']} />
         </ContentLayout>
       ),
     },
     {
-      key: '4',
-      label: 'home.services.software.development.ecommerce',
+      key: serviceContentData['e-commerce'].id,
+      label: serviceContentData['e-commerce'].title,
       children: (
         <ContentLayout>
-          <div>E-commerce</div>
+          <ServiceContent {...serviceContentData['e-commerce']} />
         </ContentLayout>
       ),
     },
     {
-      key: '5',
-      label: 'home.services.software.development.cloud.migrations',
+      key: serviceContentData['cloud-migration'].id,
+      label: serviceContentData['cloud-migration'].title,
       children: (
         <ContentLayout>
-          <div>Cloud migrations and infraestructure</div>
+          <ServiceContent {...serviceContentData['cloud-migration']} />
         </ContentLayout>
       ),
     },
@@ -117,20 +108,20 @@ const Services: React.FC = () => {
 
   const subItemsDigitalManagement: Array<IVerticalTabs> = [
     {
-      key: 'sidm1',
+      key: serviceContentData['seo-optimization'].id,
       label: 'home.services.digital.management.seo.optimization',
       children: (
         <ContentLayout>
-          <div>SEO Optimization</div>
+          <ServiceContent {...serviceContentData['seo-optimization']} />
         </ContentLayout>
       ),
     },
     {
-      key: 'sidm2',
+      key: serviceContentData['digital-marketing'].id,
       label: 'home.services.digital.management.digital.marketing',
       children: (
         <ContentLayout>
-          <div>Digital Marketing</div>
+          <ServiceContent {...serviceContentData['digital-marketing']} />
         </ContentLayout>
       ),
     },
@@ -164,7 +155,7 @@ const Services: React.FC = () => {
   return (
     <Section id="services" size="lg" type="margin">
       <Container size="xl" isfullwidth>
-        <ServicesWrapper size='xl' isfullwidth>
+        <ServicesWrapper size="xl" isfullwidth>
           <Container size="sm">
             <ServicesTitle>
               <FormattedMessage
