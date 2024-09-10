@@ -33,7 +33,7 @@ export const ServiceContentWrapper = styled.div`
       flex-direction: column;
       gap: 1rem;
 
-      & .backlinks-wrapper {
+      & .includes-wrapper {
         display: flex;
         flex-wrap: wrap;
         list-style: none;

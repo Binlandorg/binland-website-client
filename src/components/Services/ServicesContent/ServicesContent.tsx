@@ -19,11 +19,11 @@ const ServiceContent: React.FC<IServiceContent> = (props) => {
           <H4 $weight="bold">
             {intl('home.services.content.title.what.includes')}
           </H4>
-          <ul className="backlinks-wrapper">
-            {props.backlinks.map((backlink) => (
-              <li key={intl(backlink.id)}>
+          <ul className="includes-wrapper">
+            {props.includes.map((item) => (
+              <li key={intl(item.id)}>
                 <span>📌</span>
-                <p>{intl(backlink.text)}</p>
+                <p>{intl(item.text)}</p>
               </li>
             ))}
           </ul>

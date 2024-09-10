@@ -1,4 +1,4 @@
-export interface IBacklink {
+export interface IIncludes {
   id: string
   text: string
 }
@@ -7,7 +7,7 @@ export interface IServiceContent {
   id: string
   title: string
   description: string
-  backlinks: IBacklink[]
+  includes: IIncludes[]
   image: string
   link: string
   category: string
