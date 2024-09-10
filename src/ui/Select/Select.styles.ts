@@ -111,6 +111,7 @@ export const StyledSelectOption = styled.li<ISelectOption>`
     border: 0.25rem solid ${colors.tertiary.normal[200]};
     height: 1rem;
     width: 1rem;
+    min-width: 1rem;
     border-radius: 100%;
     background-color: ${({ selected }) =>
       selected ? colors.primary.main : colors.tertiary.normal[200]};
