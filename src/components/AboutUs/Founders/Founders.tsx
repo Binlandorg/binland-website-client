@@ -1,7 +1,7 @@
 import useIntlMessages from 'hooks/useIntlMessages'
 import ProfileCard from 'components/Cards/ProfileCard/ProfileCard'
-import foundersData from './Founders.data'
-import { IFoundersData } from 'types/components/aboutus'
+// import foundersData from './Founders.data'
+// import { IFoundersData } from 'types/components/aboutus'
 import {
   FoundersContent,
   FoundersItem,
@@ -10,7 +10,18 @@ import {
 } from './Founders.styles'
 import Reveal from 'components/Reveal/Reveal'
 
-const Founders : React.FC = () => {
+interface IFounderData {
+  id: string
+  fullName: string
+  position: string
+  quote: string
+}
+
+interface IFoundersProps {
+  founders: IFounderData[]
+}
+
+const Founders : React.FC<IFoundersProps> = ({founders}) => {
   const intl = useIntlMessages()
 
   return (
@@ -21,17 +32,17 @@ const Founders : React.FC = () => {
       <FoundersContent>
         <FoundersList>
           {
-            foundersData?.map((founder) => {
-              const { id, image, fullName, position, quote, networks }: IFoundersData = founder
+            founders?.map((founder) => {
+              //const { id, image, fullName, position, quote, networks }: IFoundersData = founder
+              const { id, fullName, position, quote }: IFounderData = founder
               return (
                 <FoundersItem key={id}>
                   <Reveal>
                     <ProfileCard
-                      image={image}
+                      id={id}
                       fullName={fullName}
                       position={position}
                       quote={quote}
-                      networks={networks}
                     />
                   </Reveal>
                 </FoundersItem>

@@ -9,8 +9,8 @@ export interface INetwork extends IName{
 }
 
 export interface IFoundersData{
-  id?: string
-  image: {
+  id: string
+  image?: {
     url: string
     alt: string
   }
@@ -19,6 +19,7 @@ export interface IFoundersData{
   quote: string
   networks?: INetwork[]
 }
+
 export interface ITeamData extends IFoundersData{}
 
 export interface IProfileCard extends IFoundersData{}

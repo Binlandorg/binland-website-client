@@ -1,4 +1,3 @@
-import useIntlMessages from 'hooks/useIntlMessages'
 import { QuoteWrapper, StyledQuote } from './Quote.styles'
 import Container from 'ui/Container/Container'
 import Section from 'ui/Section/Section'
@@ -6,9 +5,11 @@ import OpenQuote from 'ui/Icons/OpenQuote'
 import CloseQuote from 'ui/Icons/CloseQuote'
 import Display from 'ui/Display/Display'
 
-export const Quote: React.FC = () => {
-  const intl = useIntlMessages()
+interface QuoteProps {
+  text: string
+}
 
+export const Quote: React.FC<QuoteProps> = ({ text }) => {
   return (
     <Section size="sm" type="margin">
       <Container size="xl" isfullwidth>
@@ -21,7 +22,7 @@ export const Quote: React.FC = () => {
             </div>
             <div>
               <Display size="sm" className="quote">
-                {intl('about.us.quote.description')}
+                {text}
               </Display>
             </div>
             <div>
