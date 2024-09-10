@@ -2,6 +2,7 @@ import { FiGithub } from 'react-icons/fi'
 import { AiOutlineGlobal } from 'react-icons/ai'
 import { FaLinkedin } from 'react-icons/fa'
 
+import useIntlMessages from 'hooks/useIntlMessages'
 import {
   CardData,
   CardDataContainer,
@@ -20,10 +21,9 @@ import H4 from 'ui/Titles/H4'
 import Paragraph from 'ui/Paragraph/Paragraph'
 import { IName, IProfileCard } from 'types/components/aboutus'
 import defaultImgURL from '../../../assets/images/default-image-profile.webp'
-import useIntlMessages from 'hooks/useIntlMessages'
 import { colors } from 'styles/colors'
 
-const GetIcon: React.FC<IName> = ({ name } : IName) => {
+const GetIcon: React.FC<IName> = ({ name }: IName) => {
   switch (name.toLocaleLowerCase()) {
     case 'github':
       return <FiGithub />
@@ -46,11 +46,19 @@ const ProfileCard: React.FC<IProfileCard> = ({
   return (
     <StyledProfileCard>
       <CardImageContainer>
-        <CardImage
-          src={image.url ?? defaultImgURL}
-          alt={intl(image.alt)}
-          threshold={200}
-        />
+        <picture>
+          <source
+            srcSet={image.urlMobile ?? defaultImgURL}
+            media="(max-width: 1024px)"
+          />
+          <CardImage
+            src={image.url ?? defaultImgURL}
+            alt={intl(image.alt)}
+            threshold={200}
+            width={200}
+            height={200}
+          />
+        </picture>
       </CardImageContainer>
       <CardData>
         <CardDataContainer>
@@ -76,6 +84,7 @@ const ProfileCard: React.FC<IProfileCard> = ({
                   href={network.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={intl(network.ariaLabel)}
                 >
                   <GetIcon name={network.name} />
                 </AnchorIcon>

@@ -1,3 +1,4 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { useState } from 'react'
 
 import Button from 'ui/Button/Button'
@@ -32,13 +33,13 @@ const Subscribe: React.FC = () => {
               type="primary"
               size="lg"
               className="subscribe-button"
-              onClick={() => console.log(email)}
+              onClick={() => {}}
             >
               Suscríbete
             </Button>
           </div>
         </div>
-        <img src={subscribeImg} className="subscribe-img" />
+        <LazyLoadImage src={subscribeImg} className="subscribe-img" />
       </SubscribeWrapper>
     </Section>
   )

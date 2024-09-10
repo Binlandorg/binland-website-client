@@ -1,3 +1,5 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+
 import freenlance from '../../../assets/images/imgSeo/freenlance.svg'
 import {
   TitleQuestion,
@@ -21,7 +23,7 @@ export const Question = () => {
           pretension despertado.
         </TitleResponse>
       </WrapperQuestionSeo>
-      <img
+      <LazyLoadImage
         src={freenlance}
         alt="person-freelance"
         className="img-question-seo"

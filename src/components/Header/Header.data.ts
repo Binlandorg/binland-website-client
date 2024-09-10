@@ -20,6 +20,7 @@ export const NavbarItems = [
   {
     name: 'Nosotros',
     href: '/about-us',
+    ariaLabel: 'home.navbar.link.about.us.aria.label',
   },
   // {
   //   name: 'Blog',

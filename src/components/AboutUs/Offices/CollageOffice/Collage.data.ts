@@ -7,62 +7,80 @@ import redgirldownImageURL from '../../../../assets/images/aboutus-oficinas-06.w
 import programmergirlImageURL from '../../../../assets/images/aboutus-oficinas-07.webp'
 import officesImageURL from '../../../../assets/images/aboutus-oficinas-08.webp'
 import team2ImageURL from '../../../../assets/images/aboutus-oficinas-03.webp'
+import fachadaImageURLMobile from '../../../../assets/images/mobile/aboutus-oficinas-01.webp'
+import streetImageURLMobile from '../../../../assets/images/mobile/aboutus-oficinas-02.webp'
+import teamImageURLMobile from '../../../../assets/images/mobile/aboutus-oficinas-09.webp'
+import vrImageURLMobile from '../../../../assets/images/mobile/aboutus-oficinas-04.webp'
+import redgirlImageURLMobile from '../../../../assets/images/mobile/aboutus-oficinas-05.webp'
+import redgirldownImageURLMobile from '../../../../assets/images/mobile/aboutus-oficinas-06.webp'
+import programmergirlImageURLMobile from '../../../../assets/images/mobile/aboutus-oficinas-07.webp'
+import officesImageURLMobile from '../../../../assets/images/mobile/aboutus-oficinas-08.webp'
+import team2ImageURLMobile from '../../../../assets/images/mobile/aboutus-oficinas-03.webp'
 import { ICollage } from 'types/components/aboutus'
 
 const collageData: ICollage[] = [
   {
     id: 1,
     url: fachadaImageURL,
+    urlMobile: fachadaImageURLMobile,
     alt: 'Fachada de Binland',
-    name: "fachada"
+    name: 'fachada',
   },
   {
     id: 2,
     url: streetImageURL,
+    urlMobile: streetImageURLMobile,
     alt: 'Calle circundante a Binland',
-    name: "street"
+    name: 'street',
   },
   {
     id: 3,
     url: team2ImageURL,
+    urlMobile: team2ImageURLMobile,
     alt: 'Un gran ambiente de trabajo y desarrollo',
-    name: "team"
+    name: 'team',
   },
   {
     id: 4,
     url: vrImageURL,
+    urlMobile: vrImageURLMobile,
     alt: 'Probando Realidad Virtual',
-    name: "realidad-virtual"
+    name: 'realidad-virtual',
   },
   {
     id: 5,
     url: redgirlImageURL,
+    urlMobile: redgirlImageURLMobile,
     alt: 'Cansancio',
-    name: "andrea"
+    name: 'andrea',
   },
   {
     id: 6,
     url: redgirldownImageURL,
+    urlMobile: redgirldownImageURLMobile,
     alt: 'Mucho cansancio',
-    name: "andrea2"
+    name: 'andrea2',
   },
   {
     id: 7,
     url: programmergirlImageURL,
+    urlMobile: programmergirlImageURLMobile,
     alt: 'El trabajo no termina',
-    name: "programing"
+    name: 'programing',
   },
   {
     id: 8,
     url: officesImageURL,
+    urlMobile: officesImageURLMobile,
     alt: 'Nuestras oficinas',
-    name: "offices"
+    name: 'offices',
   },
   {
     id: 9,
     url: teamImageURL,
+    urlMobile: teamImageURLMobile,
     alt: 'Reunion de lluvia de ideas',
-    name: "team2"
+    name: 'team2',
   },
 ]
 
