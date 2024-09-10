@@ -1,4 +1,5 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+
 const Article: React.FC = () => {
   return (
     <>

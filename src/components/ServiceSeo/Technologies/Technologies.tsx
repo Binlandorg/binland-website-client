@@ -1,11 +1,11 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+
 import javascript from '../../../assets/images/imgTechnologies/Javascript.svg'
 import figma from '../../../assets/images/imgTechnologies/Figma.svg'
 import react from '../../../assets/images/imgTechnologies/Reactjs.svg'
 import nodejs from '../../../assets/images/imgTechnologies/NodeJs.svg'
 import python from '../../../assets/images/imgTechnologies/Python.svg'
-
 import Container from 'ui/Container/Container'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 import {
   SectionTechnologies,
   Tech,

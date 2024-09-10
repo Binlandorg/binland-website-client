@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { FaStar } from 'react-icons/fa'
 import { TbExternalLink } from 'react-icons/tb'
 import { useEffect, useState } from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 import Container from 'ui/Container/Container'
 import Section from 'ui/Section/Section'
@@ -21,7 +22,6 @@ import { IClientCard } from 'types/components/clients'
 import { IData } from 'types/components/pagination'
 import H2 from 'ui/Titles/H2'
 import useIntlMessages from 'hooks/useIntlMessages'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const Clients: React.FC = () => {
   const [items, setItems] = useState<IClientCard[]>([])

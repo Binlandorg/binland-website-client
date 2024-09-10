@@ -1,5 +1,6 @@
-import freenlance from '../../../assets/images/imgSeo/freenlance.svg'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+
+import freenlance from '../../../assets/images/imgSeo/freenlance.svg'
 import {
   TitleQuestion,
   TitleResponse,

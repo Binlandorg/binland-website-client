@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { Helmet } from 'react-helmet-async'
 
 import { ContactUsHero, SectionTitleHero } from './ContactUs.styles'
@@ -8,7 +9,6 @@ import {
 import useIntlMessages from 'hooks/useIntlMessages'
 import H1 from 'ui/Titles/H1'
 import imageLinkPreview from '../../assets/images/image-link-preview.png'
-import { lazy, Suspense } from 'react'
 
 const Info = lazy(
   () => import('components/ContactUs/ContactUsInformation/ContactUsInformation')

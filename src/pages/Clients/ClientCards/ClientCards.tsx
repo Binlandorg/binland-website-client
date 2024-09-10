@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 import { CardsWrapper } from './ClientCards.styles'
 import { IClientCard } from 'types/components/clients'
 import { CardWrapper, ExternalLink } from './ClientCards.styles'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const ClientItems: React.FC<{ currentItems: IClientCard[] }> = ({
   currentItems,

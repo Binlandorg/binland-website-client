@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 import naturalEcoFriendly from './../../assets/images/naturaleza-ecoamigable.svg'
 import oasisRestaurant from './../../assets/images/logo-oasis-op.webp'
 import { BrandingsWrapper } from './Clients.styles'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 interface Brand {
   id: number
