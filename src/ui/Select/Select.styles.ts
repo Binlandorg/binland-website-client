@@ -27,14 +27,18 @@ export const StyledSelect = styled.div<{ $type: string }>`
     background-color: ${({ $type }) =>
       $type == 'primary'
         ? `${colors.primary.active[400]}`
-        : `${colors.secondary.active[950]}`};
+        : `${colors.tertiary.hover[300]}`};
+    color: ${({ $type }) =>
+      $type == 'primary' ? `` : `${colors.tertiary.hover[600]}`};
   }
 
   &:active {
     background-color: ${({ $type }) =>
       $type == 'primary'
         ? `${colors.primary.active[600]}`
-        : `${colors.secondary.active[800]}`};
+        : `${colors.tertiary.active[400]}`};
+    color: ${({ $type }) =>
+      $type == 'primary' ? `` : `${colors.tertiary.active[700]}`};
   }
 
   &:focus-visible {
