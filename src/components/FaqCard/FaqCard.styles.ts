@@ -65,7 +65,7 @@ export const FAQAnswer = styled(motion.div)`
   & .faq-answer {
     color: ${colors.black.main};
     font-size: clamp(0.8rem, 4vw, 1rem);
-    padding: 32px;
+    padding: 2rem;
 
     @media only screen and (min-width: ${breakpoints.lg}) {
       padding: 3rem;
