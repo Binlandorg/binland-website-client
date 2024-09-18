@@ -46,7 +46,7 @@ export const colors = {
     100: '#e7e7e7',
     500: '#6d6d6d',
     600: '#5d5d5d',
-    700: '#c1141e',
+    700: '#4f4f4f',
     main: '#424242',
     normal: {
       200: '#D1D1D1',
