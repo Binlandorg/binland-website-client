@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { IoMdAdd } from 'react-icons/io'
-import { IoIosRemove } from 'react-icons/io'
+import { IoMdAdd, IoIosRemove } from 'react-icons/io'
+import { AnimatePresence } from 'framer-motion'
 
 import { FAQAnswer, Question, QuestionWrapper } from './FaqCard.styles'
 
@@ -24,11 +24,18 @@ const FaqCard: React.FC<IFaqCardProps> = ({ question, answer }) => {
           {showAnswer && <IoIosRemove size={22} />}
         </div>
       </Question>
-      {showAnswer && (
-        <FAQAnswer>
-          <p className="faq-answer">{answer}</p>
-        </FAQAnswer>
-      )}
+      <AnimatePresence>
+        {showAnswer && (
+          <FAQAnswer
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: .5 }}
+          >
+            <p className="faq-answer">{answer}</p>
+          </FAQAnswer>
+        )}
+      </AnimatePresence>
     </QuestionWrapper>
   )
 }
