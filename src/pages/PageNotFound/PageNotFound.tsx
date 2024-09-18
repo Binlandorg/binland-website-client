@@ -14,8 +14,8 @@ import H4 from 'ui/Titles/H4'
 import Display from 'ui/Display/Display'
 import Paragraph from 'ui/Paragraph/Paragraph'
 import { colors } from 'styles/colors'
-import NotFoundImg from '../../assets/images/imgPageNotFound/PageNotFound.svg'
-import imageLinkPreview from '../../assets/images/image-link-preview.png'
+import NotFoundImg from '../../assets/images/illustrations/not-found.svg'
+import imageLinkPreview from '../../assets/images/image-link-preview.webp'
 
 const PageNotFound = () => {
   const intl = useIntlMessages()

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import imgSeo from '../../../assets/images/imgSeo/img-seo.svg'
+import imgSeo from '../../../assets/images/mockups/mockup-ui-chat.webp'
 import { breakpoints } from 'shared/breakpoints'
 import Section from 'ui/Section/Section'
 import Container from 'ui/Container/Container'

@@ -8,7 +8,7 @@ import {
 } from 'components/ContactUs/ContactUs.styles'
 import useIntlMessages from 'hooks/useIntlMessages'
 import H1 from 'ui/Titles/H1'
-import imageLinkPreview from '../../assets/images/image-link-preview.png'
+import imageLinkPreview from '../../assets/images/image-link-preview.webp'
 
 const Info = lazy(
   () => import('components/ContactUs/ContactUsInformation/ContactUsInformation')

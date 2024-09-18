@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import heroImg from './../../assets/images/ClientsPage/mockup-ui-chat.webp'
+import heroImg from './../../assets/images/mockups/mockup-ui-chat.webp'
 import { colors } from 'styles/colors'
 import { breakpoints } from 'shared/breakpoints'
 import Container from 'ui/Container/Container'

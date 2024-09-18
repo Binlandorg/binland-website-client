@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.1 25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: url(#Degradado_sin_nombre_2);
+      }
+
+      .cls-3 {
+        fill: url(#Degradado_sin_nombre);
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" width="25.1" height="25"/>
+    </clipPath>
+    <linearGradient id="Degradado_sin_nombre" data-name="Degradado sin nombre" x1="233.53" y1="-203.2" x2="1474.31" y2="-1431.6" gradientTransform="translate(0 28) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#387eb8"/>
+      <stop offset="1" stop-color="#366994"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_2" data-name="Degradado sin nombre 2" x1="384.89" y1="-336.64" x2="1717.35" y2="-1596.25" gradientTransform="translate(0 28) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffe052"/>
+      <stop offset="1" stop-color="#ffc331"/>
+    </linearGradient>
+  </defs>
+  <g id="Capa_1-2" data-name="Capa_1">
+    <g class="cls-4">
+      <g>
+        <path class="cls-3" d="M12.44,0C6.09,0,6.48,2.76,6.48,2.76v2.86h6.07v.86H4.08S.02,6.02.02,12.43s3.55,6.19,3.55,6.19h2.12v-2.98s-.11-3.55,3.49-3.55h6.02s3.38.05,3.38-3.27V3.33S19.09,0,12.44,0ZM9.1,1.93c.14,0,.29.03.42.08.13.05.25.14.35.24.1.1.18.22.24.35.05.13.08.27.08.42,0,.14-.03.29-.08.42-.05.13-.14.25-.24.35-.1.1-.22.18-.35.24-.13.05-.27.08-.42.08-.14,0-.29-.03-.42-.08-.13-.05-.25-.14-.35-.24-.1-.1-.18-.22-.24-.35-.05-.13-.08-.27-.08-.42,0-.14.03-.29.08-.42.05-.13.14-.25.24-.35.1-.1.22-.18.35-.24.13-.05.27-.08.42-.08Z"/>
+        <path class="cls-2" d="M12.62,24.91c6.36,0,5.96-2.76,5.96-2.76v-2.86h-6.07v-.86h8.47s4.07.46,4.07-5.95-3.55-6.19-3.55-6.19h-2.12v2.98s.11,3.55-3.49,3.55h-6.02s-3.38-.05-3.38,3.27v5.49s-.51,3.32,6.13,3.32M15.97,22.99c-.14,0-.29-.03-.42-.08-.13-.05-.25-.14-.35-.24s-.18-.22-.24-.35c-.05-.13-.08-.27-.08-.42,0-.14.03-.29.08-.42.05-.13.14-.25.24-.35.1-.1.22-.18.35-.24.13-.05.27-.08.42-.08.14,0,.29.03.42.08.13.05.25.14.35.24.1.1.18.22.24.35.05.13.08.27.08.42,0,.14-.03.29-.08.42-.05.13-.14.25-.24.35s-.22.18-.35.24c-.13.05-.27.08-.42.08Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
