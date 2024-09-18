@@ -14,6 +14,11 @@ export const colors = {
   },
 
   primary: {
+    50: '#fff1f2',
+    200: '#ffc7ca',
+    800: '#a0141c',
+    900: '#84181e',
+    950: '#48070b',
     main: '#f83d48',
     normal: {
       500: '#F83D48',
@@ -38,6 +43,10 @@ export const colors = {
     },
   },
   secondary: {
+    100: '#e7e7e7',
+    500: '#6d6d6d',
+    600: '#5d5d5d',
+    700: '#c1141e',
     main: '#424242',
     normal: {
       200: '#D1D1D1',
@@ -69,6 +78,9 @@ export const colors = {
     },
   },
   tertiary: {
+    100: '#f1eef9',
+    800: '#5d4386',
+    950: '#301e4d',
     main: '#F8F6FC',
     normal: {
       50: '#F8F6FC',
