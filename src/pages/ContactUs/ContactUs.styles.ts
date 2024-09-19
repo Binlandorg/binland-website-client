@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { breakpoints } from 'shared/breakpoints'
-import backgroundContact from './../../assets/images/mockup-ui-chat.webp'
+import backgroundContact from './../../assets/images/mockups/mockup-ui-chat.webp'
 import Container from 'ui/Container/Container'
 import Section from 'ui/Section/Section'
 

@@ -1,8 +1,8 @@
-import heroImg from './../../assets/images/ClientsPage/mockup-ui-chat.webp'
-import avatarImg from './../../assets/images/ClientsPage/3d-rendering-avatar-concept.webp'
-import codeImg from './../../assets/images/ClientsPage/mockup-code.webp'
-import githubBrand from './../../assets/images/ClientsPage/github-brand.svg'
-import dribleBrand from './../../assets/images/ClientsPage/drible-brand.svg'
+import heroImg from './../../assets/images/mockups/mockup-ui-chat.webp'
+import avatarImg from './../../assets/images/mockups/3d-rendering-avatar-concept.webp'
+import codeImg from './../../assets/images/mockups/mockup-code.webp'
+import githubBrand from './../../assets/images/icons/github.svg'
+import dribleBrand from './../../assets/images/icons/dribbble.svg'
 import { IBrand, IClientsData } from 'types/components/clients'
 
 export const clientBrands: IBrand[] = [

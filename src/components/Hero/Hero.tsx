@@ -17,7 +17,7 @@ import {
 } from './Hero.styles'
 import H5 from 'ui/Titles/H5'
 import Display from 'ui/Display/Display'
-import heroImgURL from './../../assets/images/girl-using-virtual-reality-glasses-cropped-v2.webp'
+import heroImgURL from './../../assets/images/people/girl-using-virtual-reality-glasses-cropped-v2.webp'
 import noImageURL from '../../assets/images/no-image.png'
 import Container from 'ui/Container/Container'
 import { colors } from 'styles/colors'

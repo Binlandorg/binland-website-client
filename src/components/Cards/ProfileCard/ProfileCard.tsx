@@ -20,7 +20,7 @@ import {
 import H4 from 'ui/Titles/H4'
 import Paragraph from 'ui/Paragraph/Paragraph'
 import { IName, IProfileCard } from 'types/components/aboutus'
-import defaultImgURL from '../../../assets/images/default-image-profile.webp'
+import defaultImgURL from '../../../assets/images/default-profile.webp'
 import { colors } from 'styles/colors'
 
 const GetIcon: React.FC<IName> = ({ name }: IName) => {

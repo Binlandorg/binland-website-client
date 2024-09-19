@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
 import { FontWeight } from 'styles/typography'
-import sloganBGImageURL from '../../../assets/images/mockup-ui-chat.webp'
-import sloganBGImageURLMobile from '../../../assets/images/mobile/mockup-ui-chat.webp'
+import sloganBGImageURL from '../../../assets/images/mockups/mockup-ui-chat.webp'
+import sloganBGImageURLMobile from '../../../assets/images/mockups/mobile/mockup-ui-chat.webp'
 
 export const StyledQuote = styled.div`
   color: ${colors.white.main};

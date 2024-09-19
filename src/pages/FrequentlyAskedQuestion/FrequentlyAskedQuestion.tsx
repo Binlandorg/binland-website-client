@@ -12,7 +12,7 @@ import {
 import BodyContainer from 'ui/BodyContainer/BodyContainer'
 import H1 from 'ui/Titles/H1'
 import { questions } from './FrequentlyAskedQuestion.data'
-import imageLinkPreview from '../../assets/images/image-link-preview.png'
+import imageLinkPreview from '../../assets/images/image-link-preview.webp'
 
 const FrequenltyAskedQuestion = () => {
   const intl = useIntlMessages()

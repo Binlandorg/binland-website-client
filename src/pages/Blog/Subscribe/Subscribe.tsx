@@ -5,7 +5,7 @@ import Button from 'ui/Button/Button'
 import Section from 'ui/Section/Section'
 import Input from 'ui/input/Input'
 import { SubscribeWrapper } from './Subscribe.styles'
-import subscribeImg from './../../../assets/images/imgBlog/subscribe.svg'
+import subscribeImg from './../../../assets/images/illustrations/subscribe.svg'
 
 const Subscribe: React.FC = () => {
   const [email, setEmail] = useState('')
