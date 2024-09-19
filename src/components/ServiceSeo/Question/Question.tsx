@@ -1,6 +1,6 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
-import freenlance from '../../../assets/images/imgSeo/freenlance.svg'
+import freenlance from '../../../assets/images/people/man-using-laptop.webp'
 import {
   TitleQuestion,
   TitleResponse,

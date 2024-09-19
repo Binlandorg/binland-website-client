@@ -2,7 +2,7 @@ import { HiOutlineMail } from 'react-icons/hi'
 import { Link } from 'react-router-dom'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
-import logo from '../../assets/images/logo/Isologo[H-Primario].svg'
+import logo from '../../assets/images/binland/isologo-primary.svg'
 import useIntlMessages from 'hooks/useIntlMessages'
 import {
   StyledFooter,

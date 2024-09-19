@@ -12,7 +12,7 @@ import {
   MobileNavigation,
   StyledHeader,
 } from './Header.styles'
-import logo from '../../assets/images/logo/binland-logo.svg'
+import logo from '../../assets/images/binland/logo.svg'
 import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher'
 import NavLink from 'ui/NavLink/NavLink'
 import Button from 'ui/Button/Button'

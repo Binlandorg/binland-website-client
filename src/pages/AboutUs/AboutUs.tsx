@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react'
 import { Helmet } from 'react-helmet-async'
 
 import BodyContainer from 'ui/BodyContainer/BodyContainer'
-import imageLinkPreview from '../../assets/images/image-link-preview.png'
+import imageLinkPreview from '../../assets/images/image-link-preview.webp'
 import useIntlMessages from 'hooks/useIntlMessages'
 
 const Quote = lazy(() => import('components/AboutUs/Quote/Quote'))

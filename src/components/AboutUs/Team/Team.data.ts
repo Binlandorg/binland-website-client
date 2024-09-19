@@ -1,9 +1,9 @@
-import patyImageURL from '../../../assets/images/paty-profile.webp'
-import diegoImageURL from '../../../assets/images/diego-profile.webp'
-import ricardoImageURL from '../../../assets/images/ricardo-profile.webp'
-import patyImageURLMobile from '../../../assets/images/mobile/paty-profile.webp'
-import diegoImageURLMobile from '../../../assets/images/mobile/diego-profile.webp'
-import ricardoImageURLMobile from '../../../assets/images/mobile/ricardo-profile.webp'
+import patyImageURL from '../../../assets/images/binland/team/paty-profile.webp'
+import diegoImageURL from '../../../assets/images/binland/team/diego-profile.webp'
+import ricardoImageURL from '../../../assets/images/binland/team/ricardo-profile.webp'
+import patyImageURLMobile from '../../../assets/images/binland/team/mobile/paty-profile.webp'
+import diegoImageURLMobile from '../../../assets/images/binland/team/mobile/diego-profile.webp'
+import ricardoImageURLMobile from '../../../assets/images/binland/team/mobile/ricardo-profile.webp'
 import { ITeamData } from 'types/components/aboutus'
 
 const teamData: ITeamData[] = [

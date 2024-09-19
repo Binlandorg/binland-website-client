@@ -37,15 +37,15 @@ const SocialLinksIconsBar: ILinkIcon[] = [
   },
   {
     id: '2',
-    to: 'www.instagram.com/binland.dev',
-    icon: <RiInstagramFill size={ICON_SIZE} />,
-    ariaLabel: 'home.hero.social.media.instagram.aria.label',
-  },
-  {
-    id: '3',
     to: 'www.linkedin.com/company/binland',
     icon: <FaLinkedinIn size={ICON_SIZE} />,
     ariaLabel: 'home.hero.social.media.linkedin.aria.label',
+  },
+  {
+    id: '3',
+    to: 'www.instagram.com/binland.dev',
+    icon: <RiInstagramFill size={ICON_SIZE} />,
+    ariaLabel: 'home.hero.social.media.instagram.aria.label',
   },
   {
     id: '4',

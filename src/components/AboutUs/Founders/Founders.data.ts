@@ -1,9 +1,9 @@
-import crhisImageURL from '../../../assets/images/chris-profile.webp'
-import jonathanImageURL from '../../../assets/images/jonathan-profile.webp'
-import gustavoImageURL from '../../../assets/images/gustavo-profile.webp'
-import crhisImageURLMobile from '../../../assets/images/mobile/chris-profile.webp'
-import jonathanImageURLMobile from '../../../assets/images/mobile/jonathan-profile.webp'
-import gustavoImageURLMobile from '../../../assets/images/mobile/gustavo-profile.webp'
+import crhisImageURL from '../../../assets/images/binland/team/chris-profile.webp'
+import jonathanImageURL from '../../../assets/images/binland/team/jonathan-profile.webp'
+import gustavoImageURL from '../../../assets/images/binland/team/gustavo-profile.webp'
+import crhisImageURLMobile from '../../../assets/images/binland/team/mobile/chris-profile.webp'
+import jonathanImageURLMobile from '../../../assets/images/binland/team/mobile/jonathan-profile.webp'
+import gustavoImageURLMobile from '../../../assets/images/binland/team/mobile/gustavo-profile.webp'
 import { IFoundersData } from 'types/components/aboutus'
 
 const founderData: IFoundersData[] = [

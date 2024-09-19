@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react'
 import { Helmet } from 'react-helmet-async'
 
 import BodyContainer from 'ui/BodyContainer/BodyContainer'
-import imageLinkPreview from '../../assets/images/image-link-preview.png'
+import imageLinkPreview from '../../assets/images/image-link-preview.webp'
 
 const Hero = lazy(() => import('components/Hero/Hero'))
 const Services = lazy(() => import('components/Services/Services'))

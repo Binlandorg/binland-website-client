@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
-import calendlyIcon from '../../../../assets/images/imgContactUs/calendly-icon.svg'
+import calendlyIcon from '../../../../assets/images/icons/calendly.svg'
 import { FontWeight } from 'styles/typography'
 
 export const ContentQuestions = styled.div`
