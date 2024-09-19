@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
-import naturalEcoFriendly from './../../assets/images/naturaleza-ecoamigable.svg'
-import oasisRestaurant from './../../assets/images/logo-oasis-op.webp'
+import naturalEcoFriendly from './../../assets/images/brandings/naturaleza-ecoamigable-logo.svg'
+import oasisRestaurant from './../../assets/images/brandings/oasis-logo.webp'
 import { BrandingsWrapper } from './Clients.styles'
 
 interface Brand {
@@ -25,7 +26,11 @@ const Brandings: React.FC = () => {
     <BrandingsWrapper>
       {brands.map((brand) => (
         <div className="container-img" key={brand.id}>
-          <img className="branding-img" src={brand.src} alt={brand.name} />
+          <LazyLoadImage
+            className="branding-img"
+            src={brand.src}
+            alt={brand.name}
+          />
         </div>
       ))}
     </BrandingsWrapper>

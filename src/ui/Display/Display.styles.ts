@@ -23,7 +23,7 @@ const sizeStyles = (size: string) => {
 
 export const StyledDisplay = styled.span<IDisplayProps>`
   ${(props) => sizeStyles(props.size)}
-  font-weight: bold;
-  ${(props) => (props.fontStyle ? `font-style: ${props.fontStyle}` : '')};
+  font-weight: 700;
+  ${(props) => (props.fontStyle ? `font-style: ${props.fontStyle}` : 'normal')};
   line-height: 1.5;
 `

@@ -3,8 +3,8 @@ import { NavLink as ReactRouterNavLink } from 'react-router-dom'
 import { CgClose } from 'react-icons/cg'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { motion, AnimatePresence } from 'framer-motion'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
-import useIntlMessages from 'hooks/useIntlMessages'
 import {
   DesktopNavigation,
   HamburgerIcon,
@@ -12,12 +12,12 @@ import {
   MobileNavigation,
   StyledHeader,
 } from './Header.styles'
-import logo from '../../assets/images/logo/binland-logo.svg'
+import logo from '../../assets/images/binland/logo.svg'
 import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher'
 import NavLink from 'ui/NavLink/NavLink'
-// import ButtonLink from 'ui/ButtonLink/ButtonLink'
-import { NavbarItems } from './Header.data'
 import Button from 'ui/Button/Button'
+import { NavbarItems } from './Header.data'
+import useIntlMessages from 'hooks/useIntlMessages'
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -53,7 +53,13 @@ const Header: React.FC = () => {
       <StyledHeader>
         <HeaderWrapper size="xl">
           <ReactRouterNavLink to={'/'}>
-            <img src={logo} alt="Binland logo" />
+            <LazyLoadImage
+              src={logo}
+              alt="Binland logo"
+              width={130}
+              height={26}
+              className="logo-picture"
+            />
           </ReactRouterNavLink>
           <HamburgerIcon>
             <LanguageSwitcher />
@@ -68,7 +74,11 @@ const Header: React.FC = () => {
           <DesktopNavigation>
             <ul className="nav-items">
               {navbarItems.map((navItem) => (
-                <NavLink key={navItem.name} item={navItem} />
+                <NavLink
+                  key={navItem.name}
+                  item={navItem}
+                  ariaLabel={navItem.ariaLabel}
+                />
               ))}
             </ul>
             <div className="nav-buttons">
@@ -101,6 +111,7 @@ const Header: React.FC = () => {
                     key={navItem.name}
                     item={navItem}
                     onClick={handleIsOpen}
+                    ariaLabel={navItem.ariaLabel}
                   />
                 ))}
               </ul>

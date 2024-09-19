@@ -9,10 +9,12 @@ export const StyledPageNotFound = styled(Container)`
   flex-grow: 1;
   align-items: center;
   gap: 3rem;
-  height: calc(100vh - 4.5rem);
+  min-height: calc(100dvh - var(--header-height));
 
   .not-found-img {
+    aspect-ratio: 348 / 209;
     width: 100%;
+    height: 100%;
   }
 
   .button-not-found {

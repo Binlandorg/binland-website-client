@@ -10,13 +10,14 @@ const CollageOffice: React.FC = () => {
 
   return (
     <CollageContainer ref={setRef} size={size}>
-      {
-        collageData?.map((image) => (
-          <Reveal key={image.id} classname="framer-motion-item">
+      {collageData?.map((image) => (
+        <Reveal key={image.id} classname="framer-motion-item">
+          <picture>
+            <source srcSet={image.urlMobile} media="(max-width: 1024px)" />
             <LazyLoadImage src={image.url} alt={image.alt} threshold={200} />
-          </Reveal>
-        ))
-      }
+          </picture>
+        </Reveal>
+      ))}
     </CollageContainer>
   )
 }

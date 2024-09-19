@@ -1,3 +1,5 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+
 const LetsLearn: React.FC = () => {
   return (
     <>
@@ -15,7 +17,7 @@ const LetsLearn: React.FC = () => {
             <button>Ver agenda</button>
           </div>
           <div>
-            <img src="" alt="hero-img" />
+            <LazyLoadImage src="" alt="hero-img" />
             <div>
               <div>
                 <h3>18 k</h3>
@@ -59,7 +61,7 @@ const LetsLearn: React.FC = () => {
           </h5>
           <div className="flex-wrap-and-center">
             <div>
-              <img src="" alt="should-be-title-of-card-img" />
+              <LazyLoadImage src="" alt="should-be-title-of-card-img" />
               <h4>conferencias</h4>
               <p>
                 Relativo cominero sociedad en me su. Su gacetilla emperador.

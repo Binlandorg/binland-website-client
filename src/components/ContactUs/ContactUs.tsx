@@ -1,10 +1,13 @@
-import ContactUsInformation from './ContactUsInformation/ContactUsInformation'
+import { lazy, Suspense } from 'react'
+
+import useIntlMessages from 'hooks/useIntlMessages'
 import { ContentWrapper } from './ContactUs.styles'
+import H2 from 'ui/Titles/H2'
 import Section from 'ui/Section/Section'
 import Container from 'ui/Container/Container'
-import H2 from 'ui/Titles/H2'
-import useIntlMessages from 'hooks/useIntlMessages'
-import ContactUsForm from './ContactUsForm/ContactUsForm'
+
+const Info = lazy(() => import('./ContactUsInformation/ContactUsInformation'))
+const Form = lazy(() => import('./ContactUsForm/ContactUsForm'))
 
 const ContactUs: React.FC = () => {
   const intl = useIntlMessages()
@@ -14,8 +17,12 @@ const ContactUs: React.FC = () => {
       <Container size="xl" isfullwidth>
         <H2 withDot>{intl('contact.us.hero.title')}</H2>
         <ContentWrapper>
-          <ContactUsInformation />
-          <ContactUsForm />
+          <Suspense>
+            <Info />
+          </Suspense>
+          <Suspense>
+            <Form />
+          </Suspense>
         </ContentWrapper>
       </Container>
     </Section>

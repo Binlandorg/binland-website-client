@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
-import girlImgURL from '../../../assets/images/business-woman-black-talking.webp'
+import girlImgURL from '../../../assets/images/people/business-woman-black-talking.webp'
+import girlImgURLMobile from '../../../assets/images/people/mobile/business-woman-black-talking.webp'
 
 export const StyledInformation = styled.div`
   display: flex;
@@ -57,18 +58,22 @@ export const InformationDetails = styled.div`
     }
   }
 
-  & .detail-amount{
+  & .detail-amount {
     color: ${colors.secondary.normal[800]};
   }
 
   & .detail-image {
     display: none;
-    background-image: url(${girlImgURL});
+    background-image: url(${girlImgURLMobile});
     background-size: cover;
     background-position-y: 65%;
+
+    @media only screen and (min-width: ${breakpoints.lg}) {
+      background-image: url(${girlImgURL});
+    }
   }
 
-  @media only screen and (min-width: ${breakpoints.xs}){
+  @media only screen and (min-width: ${breakpoints.xs}) {
     grid-template-columns: repeat(2, minmax(150px, 1fr));
     grid-template-rows: auto auto;
 
@@ -79,7 +84,7 @@ export const InformationDetails = styled.div`
     }
   }
 
-  @media only screen and (min-width: ${breakpoints.xxl}){
+  @media only screen and (min-width: ${breakpoints.xxl}) {
     gap: 2rem;
 
     & > div {

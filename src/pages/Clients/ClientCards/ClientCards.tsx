@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 import { CardsWrapper } from './ClientCards.styles'
 import { IClientCard } from 'types/components/clients'
@@ -13,7 +14,7 @@ const ClientItems: React.FC<{ currentItems: IClientCard[] }> = ({
         currentItems.map((item) => (
           <CardWrapper key={item.id}>
             <div className="img-wrapper">
-              <img src={item.image} className="img-card" />
+              <LazyLoadImage src={item.image} className="img-card" />
               <Link to={`${item.to}`} className="external-link" target="_BLANK">
                 <ExternalLink size={40} />
               </Link>

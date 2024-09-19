@@ -1,5 +1,5 @@
 import { ServicesContentProps } from 'types/components/serviceSection'
-import serviceImg from './../../assets/images/service-img.png'
+import serviceImg from './../../assets/images/illustrations/service-img.webp'
 
 export const serviceContentData: ServicesContentProps = {
   'grafic-pieces': {
