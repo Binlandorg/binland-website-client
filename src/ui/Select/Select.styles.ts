@@ -29,7 +29,7 @@ export const StyledSelect = styled.div<{ $type: string }>`
         ? `${colors.primary.active[400]}`
         : `${colors.tertiary.hover[300]}`};
     color: ${({ $type }) =>
-      $type == 'primary' ? `` : `${colors.tertiary.hover[600]}`};
+      $type == 'secondary' ? `${colors.tertiary.hover[600]}` : ``};
   }
 
   &:active {
@@ -38,7 +38,7 @@ export const StyledSelect = styled.div<{ $type: string }>`
         ? `${colors.primary.active[600]}`
         : `${colors.tertiary.active[400]}`};
     color: ${({ $type }) =>
-      $type == 'primary' ? `` : `${colors.tertiary.active[700]}`};
+      $type == 'secondary' ? `${colors.tertiary.active[700]}` : ``};
   }
 
   &:focus-visible {
@@ -59,7 +59,7 @@ export const StyledSelectedValue = styled.div`
 
 export const StyledSelectOptions = styled.div<IPosition>`
   position: absolute;
-  top: 3rem;
+  top: calc(100% + 0.5rem);
   ${(props) => (props.$position == 'left' ? 'left: 0;' : 'right: 0;')}
   min-width: 12.5rem;
   max-width: 21.875rem;
