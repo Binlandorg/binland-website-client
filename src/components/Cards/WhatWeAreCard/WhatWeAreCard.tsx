@@ -12,6 +12,7 @@ const WhatWeAreCard: React.FC<IWhatWeAre> = (props) => {
         <p className="mision__description">{intl(props.description)}</p>
       </div>
       <WhatWeAreImg
+        loading='lazy'
         width={props.img.width}
         height={props.img.height}
         src={props.img.src}
