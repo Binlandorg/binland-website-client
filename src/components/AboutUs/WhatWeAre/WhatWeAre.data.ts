@@ -1,6 +1,6 @@
-import visionImg from './../../../assets/images/aboutus-vision.svg'
-import missionImg from './../../../assets/images/aboutus-mission.svg'
-import valuesImg from './../../../assets/images/aboutus-values.svg'
+import visionImg from './../../../assets/images/illustrations/aboutus-vision.svg'
+import missionImg from './../../../assets/images/illustrations/aboutus-mission.svg'
+import valuesImg from './../../../assets/images/illustrations/aboutus-values.svg'
 import { IWhatWeAre } from 'types/ui/cards'
 
 export const whatWeAreData: Array<IWhatWeAre> = [
