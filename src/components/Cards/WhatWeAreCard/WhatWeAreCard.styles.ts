@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
@@ -39,6 +40,6 @@ export const CardWrapper = styled.div`
   }
 `
 
-export const WhatWeAreImg = styled.img<ICardImgProps>`
+export const WhatWeAreImg = styled(LazyLoadImage)<ICardImgProps>`
   aspect-ratio: ${({ width, height }) => `${width} / ${height}`};
 `
