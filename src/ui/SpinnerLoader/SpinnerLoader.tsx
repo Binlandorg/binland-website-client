@@ -1,6 +1,6 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes } from "styled-components"
 
-import { colors } from 'styles/colors'
+import { colors } from "styles/colors"
 
 const spin = keyframes`
   from {  
@@ -44,13 +44,13 @@ const InnerCircle = styled.div`
 `
 
 function SpinnerLoader() {
-  return (
-    <LoaderContainer>
-      <Loader>
-        <InnerCircle />
-      </Loader>
-    </LoaderContainer>
-  )
+	return (
+		<LoaderContainer>
+			<Loader>
+				<InnerCircle />
+			</Loader>
+		</LoaderContainer>
+	)
 }
 
 export default SpinnerLoader

@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
+import { LazyLoadImage } from "react-lazy-load-image-component"
 import { breakpoints } from "shared/breakpoints"
 import { colors } from "styles/colors"
-import { LazyLoadImage } from "react-lazy-load-image-component"
 
 export const StyledProfileCard = styled.div`
   display: flex;

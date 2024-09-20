@@ -1,9 +1,9 @@
-import { useIntl } from "react-intl";
+import { useIntl } from "react-intl"
 
 const useIntlMessages = () => {
-  const intl = useIntl();
-  const formatMessage = (id: string) => intl.formatMessage({ id });
-  return formatMessage;
-};
+	const intl = useIntl()
+	const formatMessage = (id: string) => intl.formatMessage({ id })
+	return formatMessage
+}
 
-export default useIntlMessages;
+export default useIntlMessages

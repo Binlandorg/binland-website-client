@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { colors } from 'styles/colors'
-import { breakpoints } from 'shared/breakpoints'
-import Container from 'ui/Container/Container'
-import { FontWeight } from 'styles/typography'
+import { breakpoints } from "shared/breakpoints"
+import { colors } from "styles/colors"
+import { FontWeight } from "styles/typography"
+import Container from "ui/Container/Container"
 
 export const StyledPageNotFound = styled(Container)`
   flex-grow: 1;

@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { breakpoints } from 'shared/breakpoints'
-import { colors } from 'styles/colors'
-import Button from 'ui/Button/Button'
+import { breakpoints } from "shared/breakpoints"
+import { colors } from "styles/colors"
+import Button from "ui/Button/Button"
 
 export const FormWrapper = styled.form`
   display: flex;
@@ -10,7 +10,7 @@ export const FormWrapper = styled.form`
   gap: 1.5rem;
 `
 
-export const Error = styled.span`
+export const ErrorSpan = styled.span`
   font-size: 0.75rem;
   color: ${colors.red[500]};
   margin-bottom: 0.25rem;

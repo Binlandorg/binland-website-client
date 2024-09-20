@@ -1,7 +1,7 @@
-import { breakpoints } from 'shared/breakpoints'
-import styled from 'styled-components'
-import { colors } from 'styles/colors'
-import Container from 'ui/Container/Container'
+import { breakpoints } from "shared/breakpoints"
+import styled from "styled-components"
+import { colors } from "styles/colors"
+import Container from "ui/Container/Container"
 
 export const SubscribeWrapper = styled(Container)`
   background-color: ${colors.secondary.main};

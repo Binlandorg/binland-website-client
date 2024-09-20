@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { breakpoints } from 'shared/breakpoints'
+import { breakpoints } from "shared/breakpoints"
 
 export const ContentWrapper = styled.div`
   padding: 1rem;

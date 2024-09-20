@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import heroImg from './../../assets/images/mockups/mockup-ui-chat.webp'
-import { colors } from 'styles/colors'
-import { breakpoints } from 'shared/breakpoints'
-import Container from 'ui/Container/Container'
+import { breakpoints } from "shared/breakpoints"
+import { colors } from "styles/colors"
+import Container from "ui/Container/Container"
+import heroImg from "./../../assets/images/mockups/mockup-ui-chat.webp"
 
 export const BlogWrapper = styled(Container)`
   margin: 0 auto;

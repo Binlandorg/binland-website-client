@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { breakpoints } from 'shared/breakpoints'
-import { colors } from 'styles/colors'
-import calendlyIcon from '../../../../assets/images/icons/calendly.svg'
-import { FontWeight } from 'styles/typography'
+import { breakpoints } from "shared/breakpoints"
+import { colors } from "styles/colors"
+import { FontWeight } from "styles/typography"
+import calendlyIcon from "../../../../assets/images/icons/calendly.svg"
 
 export const ContentQuestions = styled.div`
   display: flex;
@@ -60,7 +60,7 @@ export const ContentButton = styled.div`
     justify-content: center;
     width: fit-content;
     padding: 1rem 1.5rem;
-    font-weight: ${FontWeight['semibold']};
+    font-weight: ${FontWeight.semibold};
     color: ${colors.secondary.normal[800]};
     background-color: ${colors.tertiary.normal[50]};
     font-size: clamp(0.875rem, 0.832rem + 0.192vw, 1rem);

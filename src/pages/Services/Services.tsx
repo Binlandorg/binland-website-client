@@ -1,11 +1,11 @@
-import ServicesHero from './ServicesHero/ServicesHero'
+import ServicesHero from "./ServicesHero/ServicesHero"
 
 const Services: React.FC = () => {
-  return (
-    <>
-      <ServicesHero />
-    </>
-  )
+	return (
+		<>
+			<ServicesHero />
+		</>
+	)
 }
 
 export default Services

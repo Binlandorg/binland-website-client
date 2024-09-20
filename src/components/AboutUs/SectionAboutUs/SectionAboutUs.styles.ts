@@ -1,16 +1,16 @@
-import { breakpoints } from 'shared/breakpoints'
-import styled from 'styled-components'
+import { breakpoints } from "shared/breakpoints"
+import styled from "styled-components"
 
-import { colors } from 'styles/colors'
-import Container from 'ui/Container/Container'
+import { colors } from "styles/colors"
+import Container from "ui/Container/Container"
 
 interface IProps {
-  $position: 'left' | 'right'
+	$position: "left" | "right"
 }
 
 interface ILine extends IProps {
-  $sectionWidth: number
-  $scrollbarWidth: number
+	$sectionWidth: number
+	$scrollbarWidth: number
 }
 
 export const SectionTitle = styled.div<IProps>`
@@ -25,7 +25,7 @@ export const SectionTitle = styled.div<IProps>`
   & h2 {
     position: relative;
     min-width: fit-content;
-    order: ${({ $position }) => ($position === 'left' ? '0' : '1')};
+    order: ${({ $position }) => ($position === "left" ? "0" : "1")};
   }
 `
 

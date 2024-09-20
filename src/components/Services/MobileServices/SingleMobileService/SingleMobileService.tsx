@@ -1,23 +1,23 @@
-import useIntlMessages from 'hooks/useIntlMessages'
+import useIntlMessages from "hooks/useIntlMessages"
 import {
-  ContentWrapper,
-  MacroService,
-  MacroServiceContent,
-} from './SingleMobileService.styles'
+	ContentWrapper,
+	MacroService,
+	MacroServiceContent,
+} from "./SingleMobileService.styles"
 
 interface ITabProperties {
-  label: string
-  children: React.ReactNode
+	label: string
+	children: React.ReactNode
 }
 
 const SingleMobileService: React.FC<ITabProperties> = ({ label, children }) => {
-  const intl = useIntlMessages()
-  return (
-    <ContentWrapper >
-      <MacroService>{intl(label)}</MacroService>
-      <MacroServiceContent>{children}</MacroServiceContent>
-    </ContentWrapper>
-  )
+	const intl = useIntlMessages()
+	return (
+		<ContentWrapper>
+			<MacroService>{intl(label)}</MacroService>
+			<MacroServiceContent>{children}</MacroServiceContent>
+		</ContentWrapper>
+	)
 }
 
 export default SingleMobileService

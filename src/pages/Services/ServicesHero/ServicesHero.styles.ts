@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import HeroImg from './../../../assets/images/mockups/mockup-ui-chat.webp'
-import { colors } from 'styles/colors'
-import { breakpoints } from 'shared/breakpoints'
-import Section from 'ui/Section/Section'
+import { breakpoints } from "shared/breakpoints"
+import { colors } from "styles/colors"
+import Section from "ui/Section/Section"
+import HeroImg from "./../../../assets/images/mockups/mockup-ui-chat.webp"
 
 export const SectionHero = styled(Section)`
   height: auto;

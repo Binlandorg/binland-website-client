@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import { LanguageContext } from "./LanguageContext";
+import { useContext } from "react"
+import { LanguageContext } from "./LanguageContext"
 
 export const useLanguageContext = () => {
-  return useContext(LanguageContext);
+	return useContext(LanguageContext)
 }

@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { colors } from '../../styles/colors'
-import { IInputWrapper } from 'types/ui/Input'
+import type { IInputWrapper } from "types/ui/Input"
+import { colors } from "../../styles/colors"
 
 export const InputWrapper = styled.div<IInputWrapper>`
   background-color: ${colors.tertiary.normal[50]};
@@ -16,8 +16,8 @@ export const InputWrapper = styled.div<IInputWrapper>`
   }
 
   ${(props) =>
-    props.$isError &&
-    `
+		props.$isError &&
+		`
     outline: 0.125rem solid ${colors.primary.normal[500]};
     &:focus-within,
     &:active {

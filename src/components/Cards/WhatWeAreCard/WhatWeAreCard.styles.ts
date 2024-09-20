@@ -1,12 +1,12 @@
-import styled from 'styled-components'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import styled from "styled-components"
 
-import { breakpoints } from 'shared/breakpoints'
-import { colors } from 'styles/colors'
+import { breakpoints } from "shared/breakpoints"
+import { colors } from "styles/colors"
 
 interface ICardImgProps {
-  width: number
-  height: number
+	width: number
+	height: number
 }
 
 export const CardWrapper = styled.div`

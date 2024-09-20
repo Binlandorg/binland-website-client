@@ -1,13 +1,13 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { breakpoints } from 'shared/breakpoints'
+import { breakpoints } from "shared/breakpoints"
 
 interface ISize {
-  width: number
-  height: number
+	width: number
+	height: number
 }
 interface IContainerSize {
-  size: ISize
+	size: ISize
 }
 
 export const CollageContainer = styled.div<IContainerSize>`

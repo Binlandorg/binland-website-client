@@ -1,18 +1,18 @@
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom"
+import styled from "styled-components"
 
-import { breakpoints } from 'shared/breakpoints'
-import { colors } from 'styles/colors'
+import { breakpoints } from "shared/breakpoints"
+import { colors } from "styles/colors"
 
 interface IProps {
-  type: string
-  direction: string
+	type: string
+	direction: string
 }
 
 const typeDirection = (direction: string) => {
-  switch (direction) {
-    case 'row':
-      return `
+	switch (direction) {
+		case "row":
+			return `
         flex-direction: row;
         padding: 0.75rem 1rem;
         justify-content: space-between;
@@ -22,30 +22,30 @@ const typeDirection = (direction: string) => {
           gap: 0;
         }
       `
-    case 'column':
-      return `
+		case "column":
+			return `
         flex-direction: column;
         padding: 1rem 0.75rem;
         gap: 0.75rem;
       `
-    default:
-      break
-  }
+		default:
+			break
+	}
 }
 
 const TypeStyles = (type: string) => {
-  switch (type) {
-    case 'primary':
-      return `
+	switch (type) {
+		case "primary":
+			return `
         background-color: ${colors.secondary.main};
       `
-    case 'secondary':
-      return `
+		case "secondary":
+			return `
         background-color: ${colors.secondary.normal[300]};
       `
-    default:
-      break
-  }
+		default:
+			break
+	}
 }
 
 export const SocialMediaBarWrapper = styled.div<IProps>`

@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { colors } from 'styles/colors'
-import { breakpoints } from 'shared/breakpoints'
+import { breakpoints } from "shared/breakpoints"
+import { colors } from "styles/colors"
 
 export const WrapperContactUsInformation = styled.div`
   display: flex;

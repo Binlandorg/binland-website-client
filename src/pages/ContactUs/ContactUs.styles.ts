@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { breakpoints } from 'shared/breakpoints'
-import backgroundContact from './../../assets/images/mockups/mockup-ui-chat.webp'
-import Container from 'ui/Container/Container'
-import Section from 'ui/Section/Section'
+import { breakpoints } from "shared/breakpoints"
+import Container from "ui/Container/Container"
+import Section from "ui/Section/Section"
+import backgroundContact from "./../../assets/images/mockups/mockup-ui-chat.webp"
 
 export const ContactUsHero = styled.div`
   width: 100%;

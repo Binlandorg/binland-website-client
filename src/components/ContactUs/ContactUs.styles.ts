@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { breakpoints } from 'shared/breakpoints'
-import Container from 'ui/Container/Container'
-import Section from 'ui/Section/Section'
+import { breakpoints } from "shared/breakpoints"
+import Container from "ui/Container/Container"
+import Section from "ui/Section/Section"
 
 export const SectionContactUs = styled(Section)`
   margin: auto;

@@ -1,0 +1,11 @@
+pre-commit:
+  parallel: true
+  commands:
+    check:
+      run: npx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true ./src
+
+pre-push:
+  parallel: true
+  commands:
+    test:
+      run: npx jest -b ./src

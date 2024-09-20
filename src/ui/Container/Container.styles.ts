@@ -1,28 +1,28 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { IStyledContainer } from 'types/ui/Container'
+import type { IStyledContainer } from "types/ui/Container"
 
 const sizeStyles = (size: string) => {
-  switch (size) {
-    case 'sm':
-      return `
+	switch (size) {
+		case "sm":
+			return `
         max-width: 640px;
       `
-    case 'md':
-      return `
+		case "md":
+			return `
           max-width: 768px;
         `
-    case 'lg':
-      return `
+		case "lg":
+			return `
         max-width: 1024px;
       `
-    case 'xl':
-      return `
+		case "xl":
+			return `
         max-width: 1280px;
       `
-    default:
-      break
-  }
+		default:
+			break
+	}
 }
 
 export const StyledContainer = styled.div<IStyledContainer>`
@@ -32,7 +32,7 @@ export const StyledContainer = styled.div<IStyledContainer>`
   padding: 0;
   margin: auto;
   flex-direction: column;
-  width: ${({ $isfullwidth }) => ($isfullwidth ? '100%' : '')};
+  width: ${({ $isfullwidth }) => ($isfullwidth ? "100%" : "")};
   max-width: 80rem; /* 1280px */
 
   ${(props) => sizeStyles(props.size)}

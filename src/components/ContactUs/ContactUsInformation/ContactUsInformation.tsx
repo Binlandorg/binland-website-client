@@ -1,12 +1,12 @@
-import { WrapperContactUsInformation } from './ContactUsInformation.styles'
-import ContactUsContent from './ContactUsContent/ContactUsContent'
+import ContactUsContent from "./ContactUsContent/ContactUsContent"
+import { WrapperContactUsInformation } from "./ContactUsInformation.styles"
 
 const ContactUsInformation: React.FC = () => {
-  return (
-    <WrapperContactUsInformation>
-      <ContactUsContent />
-    </WrapperContactUsInformation>
-  )
+	return (
+		<WrapperContactUsInformation>
+			<ContactUsContent />
+		</WrapperContactUsInformation>
+	)
 }
 
 export default ContactUsInformation
