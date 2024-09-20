@@ -7,6 +7,7 @@ import useIntlMessages from 'hooks/useIntlMessages'
 
 const Quote = lazy(() => import('components/AboutUs/Quote/Quote'))
 const Info = lazy(() => import('components/AboutUs/Information/Information'))
+const WhatWeAre = lazy(() => import('components/AboutUs/WhatWeAre/WhatWeAre'))
 const Founders = lazy(() => import('components/AboutUs/Founders/Founders'))
 const Team = lazy(() => import('components/AboutUs/Team/Team'))
 const Office = lazy(() => import('components/AboutUs/Offices/Office'))
@@ -35,6 +36,7 @@ const AboutUs = () => {
       </Suspense>
       <Suspense>
         <Info />
+        <WhatWeAre />
         <Founders />
         <Team />
         <Office />

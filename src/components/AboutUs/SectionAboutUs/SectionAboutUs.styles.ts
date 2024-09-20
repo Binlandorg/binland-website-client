@@ -24,6 +24,7 @@ export const SectionTitle = styled.div<IProps>`
 
   & h2 {
     position: relative;
+    min-width: fit-content;
     order: ${({ $position }) => ($position === 'left' ? '0' : '1')};
   }
 `
@@ -40,10 +41,10 @@ export const Line = styled.div<ILine>`
   height: 0.125rem;
   background-color: ${colors.secondary.main};
   position: relative;
-  
+
   &::after {
-    --section-width: ${({$sectionWidth}) => `${$sectionWidth}px`};
-    --scrollbar-width: ${({$scrollbarWidth}) => `${$scrollbarWidth}px`};
+    --section-width: ${({ $sectionWidth }) => `${$sectionWidth}px`};
+    --scrollbar-width: ${({ $scrollbarWidth }) => `${$scrollbarWidth}px`};
     --fix-100vw: calc(100vw - var(--scrollbar-width));
     --line-width: calc((var(--fix-100vw) - var(--section-width)) / 2);
     content: '';
@@ -53,7 +54,7 @@ export const Line = styled.div<ILine>`
     border-radius: 1rem;
     background-color: ${colors.secondary.main};
     ${({ $position }) => `${$position}: 100%;`}
-  }  
+  }
 `
 export const SectionDescription = styled(Container)`
   padding: 0;
@@ -63,20 +64,20 @@ export const SectionDescription = styled(Container)`
   width: 100%;
   margin-top: 3rem;
 
-  @media only screen and (min-width: ${breakpoints.xxl}){
+  @media only screen and (min-width: ${breakpoints.xxl}) {
     margin-top: 7rem;
   }
 `
 export const DescriptionSubTitle = styled.div`
-  & h4{
+  & h4 {
     text-transform: uppercase;
-    color: ${ colors.primary.main }
+    color: ${colors.primary.main};
   }
 `
 export const DescriptionTitle = styled.div`
-  & h3{
+  & h3 {
     text-transform: uppercase;
-    color: ${ colors.secondary.main }
+    color: ${colors.secondary.main};
   }
 `
 export const SectionContent = styled.div``
