@@ -51,11 +51,14 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   background: ${colors.gray[150]};
   border-radius: 1rem;
-  border-top-left-radius: 0;
   padding: 0.75rem;
 
   &:not(.top-left-rounded) {
     border-top-left-radius: 1rem;
+  }
+
+  @media only screen and (min-width: ${breakpoints.md}) {
+    border-top-left-radius: 0;
   }
 `
 
