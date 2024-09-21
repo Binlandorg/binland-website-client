@@ -31,14 +31,14 @@ export const StyledSection = styled.section<IStyledSection>`
   width: 100%;
 
   ${(props) =>
-		props.type === "margin"
-			? `margin: calc(${sizeStyles(props.size)} / 2) auto`
-			: `padding: calc(${sizeStyles(props.size)} / 2) 0`};
+			props.type === "margin"
+				? `margin: calc(${sizeStyles(props.size)} / 2) auto`
+				: `padding: calc(${sizeStyles(props.size)} / 2) 0`};
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     ${(props) =>
-			props.type === "margin"
-				? `margin: ${sizeStyles(props.size)} auto`
-				: `padding: ${sizeStyles(props.size)} 0`};
+					props.type === "margin"
+						? `margin: ${sizeStyles(props.size)} auto`
+						: `padding: ${sizeStyles(props.size)} 0`};
   }
 `

@@ -11,8 +11,7 @@ import imageLinkPreview from "../../assets/images/image-link-preview.webp"
 import { ContactUsHero, SectionTitleHero } from "./ContactUs.styles"
 
 const Info = lazy(
-	() =>
-		import("components/ContactUs/ContactUsInformation/ContactUsInformation"),
+	() => import("components/ContactUs/ContactUsInformation/ContactUsInformation"),
 )
 const Form = lazy(
 	() => import("components/ContactUs/ContactUsForm/ContactUsForm"),

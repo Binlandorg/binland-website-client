@@ -32,8 +32,8 @@ export const MultiSelectWrapper = styled.div<IMultiSelectWrapperProps>`
   }
 
   ${(props) =>
-		props.$isOpen &&
-		`
+			props.$isOpen &&
+			`
     outline: none;
     border: none;
   `};
@@ -46,15 +46,15 @@ export const InputBox = styled.div<IInputBoxProps>`
   background-color: ${colors.tertiary.normal[50]};
   padding: 1.5rem 1.75rem;
   border-radius: ${({ $isOpen }) =>
-		$isOpen ? "0.375rem 0.375rem 0 0" : "0.375rem"};
+			$isOpen ? "0.375rem 0.375rem 0 0" : "0.375rem"};
   gap: 0.6rem;
   cursor: pointer;
 
   transition: padding, gap 0.3s ease;
 
   ${(props) =>
-		props.$isOpen &&
-		`
+			props.$isOpen &&
+			`
     outline: 0.125rem solid ${colors.tertiary.focus[500]};
     
     &::after {
@@ -70,8 +70,8 @@ export const InputBox = styled.div<IInputBoxProps>`
   `}
 
   ${(props) =>
-		(props.$isOpen || props.$servicesLength > 0) &&
-		css`
+			(props.$isOpen || props.$servicesLength > 0) &&
+			css`
       & {
         padding: 1.5rem 1.75rem;
         gap: 0;

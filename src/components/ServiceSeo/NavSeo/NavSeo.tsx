@@ -21,22 +21,26 @@ const tabsData: TabInfo[] = [
 	{
 		id: 0,
 		label: "Diseño de wireframes 1",
-		info: "awdadawadwad van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron.",
+		info:
+			"awdadawadwad van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron.",
 	},
 	{
 		id: 1,
 		label: "Diseño de wireframes 2",
-		info: "Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron.",
+		info:
+			"Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron.",
 	},
 	{
 		id: 2,
 		label: "Diseño de wireframes 3",
-		info: "Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron.",
+		info:
+			"Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron.",
 	},
 	{
 		id: 3,
 		label: "Diseño de wireframes 4",
-		info: "Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron.",
+		info:
+			"Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron.",
 	},
 ]
 
@@ -52,12 +56,11 @@ const NavSeo: React.FC = () => {
 			<ContainerProcess size="xl">
 				<WrapperTitleProcess>
 					<p className="title-process">
-						¿Cuál es nuestro <span className="red-word">proceso</span> de
-						desarrollo?
+						¿Cuál es nuestro <span className="red-word">proceso</span> de desarrollo?
 					</p>
 					<p className="description-process">
-						Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni
-						caridad ya ceguera.
+						Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya
+						ceguera.
 					</p>
 				</WrapperTitleProcess>
 				<WrapperTabs>

@@ -8,7 +8,7 @@ const StyledH2 = styled.h2<IH2Props>`
   font-size: clamp(2rem, 0.625rem + 4.4vw, 3.375rem);
   line-height: 1.5;
   color: ${(props) =>
-		props.color ? `${props.color}` : `${colors.secondary.main}`};
+			props.color ? `${props.color}` : `${colors.secondary.main}`};
 
   .dot {
     color: ${colors.primary.main};

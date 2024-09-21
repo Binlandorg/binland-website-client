@@ -16,9 +16,7 @@ const ServiceContent: React.FC<IServiceContent> = (props) => {
 					<p>{intl(props.description)}</p>
 				</div>
 				<div className="what-includes">
-					<H4 $weight="bold">
-						{intl("home.services.content.title.what.includes")}
-					</H4>
+					<H4 $weight="bold">{intl("home.services.content.title.what.includes")}</H4>
 					<ul className="includes-wrapper">
 						{props.includes.map((item) => (
 							<li key={intl(item.id)}>

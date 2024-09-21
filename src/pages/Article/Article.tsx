@@ -10,8 +10,8 @@ const Article: React.FC = () => {
 						<button type="button">boton con icono dentro</button>
 					</div>
 					<span>
-						Intervalos consistido id existencia superiores victorioso la
-						chabacanos lo.
+						Intervalos consistido id existencia superiores victorioso la chabacanos
+						lo.
 					</span>
 					<div>icons here</div>
 				</div>
@@ -38,22 +38,22 @@ const Article: React.FC = () => {
 				<main>
 					<div>
 						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
-							facilis accusantium assumenda itaque aspernatur, aut harum nemo
-							quasi omnis, debitis dolore tempore quibusdam porro! Eos aliquid
-							numquam expedita repudiandae inventore?
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non facilis
+							accusantium assumenda itaque aspernatur, aut harum nemo quasi omnis,
+							debitis dolore tempore quibusdam porro! Eos aliquid numquam expedita
+							repudiandae inventore?
 						</p>
 						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
-							facilis accusantium assumenda itaque aspernatur, aut harum nemo
-							quasi omnis, debitis dolore tempore quibusdam porro! Eos aliquid
-							numquam expedita repudiandae inventore?
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non facilis
+							accusantium assumenda itaque aspernatur, aut harum nemo quasi omnis,
+							debitis dolore tempore quibusdam porro! Eos aliquid numquam expedita
+							repudiandae inventore?
 						</p>
 						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
-							facilis accusantium assumenda itaque aspernatur, aut harum nemo
-							quasi omnis, debitis dolore tempore quibusdam porro! Eos aliquid
-							numquam expedita repudiandae inventore?
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non facilis
+							accusantium assumenda itaque aspernatur, aut harum nemo quasi omnis,
+							debitis dolore tempore quibusdam porro! Eos aliquid numquam expedita
+							repudiandae inventore?
 						</p>
 						<figure>
 							<LazyLoadImage src="" alt="" />
@@ -61,10 +61,9 @@ const Article: React.FC = () => {
 						</figure>
 
 						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem,
-							ducimus soluta et est repellat esse dolore? Animi laborum,
-							expedita officiis porro quod rem minima quibusdam repellendus. Hic
-							consequatur sit quis?
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, ducimus
+							soluta et est repellat esse dolore? Animi laborum, expedita officiis
+							porro quod rem minima quibusdam repellendus. Hic consequatur sit quis?
 						</p>
 						<div>
 							{/**aqui se pondran las tags */}
@@ -96,9 +95,9 @@ const Article: React.FC = () => {
 						</div>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-							asperiores sunt aperiam alias, placeat in nam repellendus
-							assumenda architecto mollitia perspiciatis laudantium suscipit
-							tempora nisi magnam temporibus numquam, atque ullam?
+							asperiores sunt aperiam alias, placeat in nam repellendus assumenda
+							architecto mollitia perspiciatis laudantium suscipit tempora nisi magnam
+							temporibus numquam, atque ullam?
 						</p>
 						<button type="button">Responder</button>
 					</div>
@@ -106,14 +105,13 @@ const Article: React.FC = () => {
 						{/** si en caso hubieran respuestas */}
 						<div>
 							<div>
-								<span>Mariano Sevallos S. </span>- Publicado el 7 de febrero del
-								2024
+								<span>Mariano Sevallos S. </span>- Publicado el 7 de febrero del 2024
 							</div>
 							<p>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-								asperiores sunt aperiam alias, placeat in nam repellendus
-								assumenda architecto mollitia perspiciatis laudantium suscipit
-								tempora nisi magnam temporibus numquam, atque ullam?
+								asperiores sunt aperiam alias, placeat in nam repellendus assumenda
+								architecto mollitia perspiciatis laudantium suscipit tempora nisi magnam
+								temporibus numquam, atque ullam?
 							</p>
 							<button type="button">Responder</button>
 						</div>

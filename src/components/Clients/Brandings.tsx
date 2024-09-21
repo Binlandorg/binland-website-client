@@ -26,11 +26,7 @@ const Brandings: React.FC = () => {
 		<BrandingsWrapper>
 			{brands.map((brand) => (
 				<div className="container-img" key={brand.id}>
-					<LazyLoadImage
-						className="branding-img"
-						src={brand.src}
-						alt={brand.name}
-					/>
+					<LazyLoadImage className="branding-img" src={brand.src} alt={brand.name} />
 				</div>
 			))}
 		</BrandingsWrapper>

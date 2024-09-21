@@ -16,8 +16,7 @@ const ServicesHero = () => {
 						</h4>
 						<p className="hero__description">
 							Espeso pre por dos crisis exigia mal regazo. Muy reflexion los por
-							expansion extraneza brigadier. Pidio hecho la mundo nuevo al
-							serio.
+							expansion extraneza brigadier. Pidio hecho la mundo nuevo al serio.
 						</p>
 					</div>
 				</div>

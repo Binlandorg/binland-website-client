@@ -72,9 +72,7 @@ const Select: React.FC<ISelect> = ({
 		>
 			<StyledSelectedValue>
 				{icon}
-				{Object.keys(selectedOption).length
-					? selectedOption.value
-					: placeholder}
+				{Object.keys(selectedOption).length ? selectedOption.value : placeholder}
 				{isOpen ? <HiChevronUp size={18} /> : <HiChevronDown size={18} />}
 			</StyledSelectedValue>
 			{isOpen && (

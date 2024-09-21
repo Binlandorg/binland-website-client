@@ -137,10 +137,7 @@ const Services: React.FC = () => {
 			key: "2",
 			label: "home.services.software.development.title",
 			children: (
-				<VerticalTabs
-					key={"softwaredev1"}
-					items={subItemsSoftwareDevelopment}
-				/>
+				<VerticalTabs key={"softwaredev1"} items={subItemsSoftwareDevelopment} />
 			),
 		},
 		{

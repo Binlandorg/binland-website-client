@@ -16,11 +16,10 @@ export const Question = () => {
 					¿Por qué <span className="title-question-seo">seo</span>?
 				</TitleQuestion>
 				<TitleResponse>
-					Pueblo lengua mar franca con bronce tienes una. La sala al el mano
-					eran sr unos. Juzgado picante te aureola lo dificil oh holgada. La
-					tentandole la excelentes mamarracho confidente. Tierno ahi piedra
-					formas molino tan pan tio. Aun clasicismo habilitado sin hoy tan
-					pretension despertado.
+					Pueblo lengua mar franca con bronce tienes una. La sala al el mano eran sr
+					unos. Juzgado picante te aureola lo dificil oh holgada. La tentandole la
+					excelentes mamarracho confidente. Tierno ahi piedra formas molino tan pan
+					tio. Aun clasicismo habilitado sin hoy tan pretension despertado.
 				</TitleResponse>
 			</WrapperQuestionSeo>
 			<LazyLoadImage

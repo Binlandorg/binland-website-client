@@ -16,9 +16,7 @@ import { validationSchema } from "./ContactUsForm.yup"
 import { servicesOptions } from "./FormData"
 
 const ContactUsForm: React.FC = () => {
-	const [selectedServices, setSelectedServices] = useState<IServiceOptions[]>(
-		[],
-	)
+	const [selectedServices, setSelectedServices] = useState<IServiceOptions[]>([])
 
 	const intl = useIntlMessages()
 	const formik = useFormik({
@@ -37,9 +35,7 @@ const ContactUsForm: React.FC = () => {
 				email: values.email,
 				country: values.country,
 				message: values.message,
-				services: selectedServices
-					.map((service) => intl(service.name))
-					.join(", "),
+				services: selectedServices.map((service) => intl(service.name)).join(", "),
 			})
 				.then(() => {
 					resetForm()

@@ -69,8 +69,7 @@ const teamData: ITeamData[] = [
 			{
 				name: "github",
 				url: "https://github.com/RicardoC23",
-				ariaLabel:
-					"about.us.ricardo.mamani.calcina.social.media.github.aria.label",
+				ariaLabel: "about.us.ricardo.mamani.calcina.social.media.github.aria.label",
 			},
 			{
 				name: "LinkedIn",

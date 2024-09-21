@@ -23,7 +23,7 @@
 		"ignore": [],
 		"attributePosition": "auto",
 		"indentStyle": "tab",
-		"indentWidth": 2,
+		"indentWidth": 1,
 		"lineWidth": 80,
 		"lineEnding": "crlf"
 	},

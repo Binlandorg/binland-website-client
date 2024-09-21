@@ -47,9 +47,9 @@ const Clients: React.FC = () => {
 						<div className="hero-text-wrapper">
 							<h1 className="title-hero">our clients</h1>
 							<p className="description-hero">
-								Si disputa al la interes miradas ya decirte. Ch el capital
-								casaron gozaban plateas se. Armino fulano fulgor van era.
-								Distraigo verdadera oia del que simpatias soy reintegra.
+								Si disputa al la interes miradas ya decirte. Ch el capital casaron
+								gozaban plateas se. Armino fulano fulgor van era. Distraigo verdadera
+								oia del que simpatias soy reintegra.
 							</p>
 						</div>
 						<IconsWrapper>
@@ -70,9 +70,9 @@ const Clients: React.FC = () => {
 							<div>
 								<H2>{intl("clients.outstanding.title")}</H2>
 								<p className="our-works-description">
-									Si disputa al la interes miradas ya decirte. Ch el capital
-									casaron gozaban plateas se. Armino fulano fulgor van era.
-									Distraigo verdadera oia del que simpatias soy reintegra.
+									Si disputa al la interes miradas ya decirte. Ch el capital casaron
+									gozaban plateas se. Armino fulano fulgor van era. Distraigo verdadera
+									oia del que simpatias soy reintegra.
 								</p>
 							</div>
 							<ButtonLink to="/" type="primary" className="button-see-all">
@@ -90,8 +90,8 @@ const Clients: React.FC = () => {
 							<div>
 								<h3 className="our-works-client-name">Nombre de cliente</h3>
 								<p className="our-works-client-description">
-									Si disputa al la interes miradas ya decirte. Ch el capital
-									casaron gozaban plateas se.
+									Si disputa al la interes miradas ya decirte. Ch el capital casaron
+									gozaban plateas se.
 								</p>
 							</div>
 						</div>

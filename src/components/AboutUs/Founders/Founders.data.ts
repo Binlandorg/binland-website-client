@@ -21,8 +21,7 @@ const founderData: IFoundersData[] = [
 			{
 				name: "github",
 				url: "https://github.com/CrhistianT7",
-				ariaLabel:
-					"about.us.christian.turpo.apaza.social.media.github.aria.label",
+				ariaLabel: "about.us.christian.turpo.apaza.social.media.github.aria.label",
 			},
 			{
 				name: "LinkedIn",

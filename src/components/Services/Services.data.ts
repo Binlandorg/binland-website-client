@@ -5,8 +5,7 @@ export const serviceContentData: ServicesContentProps = {
 	"grafic-pieces": {
 		id: "grafic-pieces",
 		title: "home.services.design.development.of.graphic.pieces",
-		description:
-			"home.services.design.development.of.graphic.pieces.description",
+		description: "home.services.design.development.of.graphic.pieces.description",
 		includes: [
 			{ id: "1", text: "includes.grafic-pieces.1" },
 			{ id: "2", text: "includes.grafic-pieces.2" },
@@ -154,8 +153,7 @@ export const serviceContentData: ServicesContentProps = {
 	"seo-optimization": {
 		id: "seo-optimization",
 		title: "home.services.digital.management.seo.optimization",
-		description:
-			"home.services.digital.management.seo.optimization.description",
+		description: "home.services.digital.management.seo.optimization.description",
 		includes: [
 			{ id: "1", text: "includes.seo-optimization.1" },
 			{ id: "2", text: "includes.seo-optimization.2" },
@@ -171,8 +169,7 @@ export const serviceContentData: ServicesContentProps = {
 	"digital-marketing": {
 		id: "digital-marketing",
 		title: "home.services.digital.management.digital.marketing",
-		description:
-			"home.services.digital.management.digital.marketing.description",
+		description: "home.services.digital.management.digital.marketing.description",
 		includes: [
 			{ id: "1", text: "includes.digital-marketing.1" },
 			{ id: "2", text: "includes.digital-marketing.2" },

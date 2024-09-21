@@ -64,11 +64,7 @@ const Header: React.FC = () => {
 					<HamburgerIcon>
 						<LanguageSwitcher />
 						{!isOpen && (
-							<GiHamburgerMenu
-								onClick={handleIsOpen}
-								cursor={"pointer"}
-								size={20}
-							/>
+							<GiHamburgerMenu onClick={handleIsOpen} cursor={"pointer"} size={20} />
 						)}
 					</HamburgerIcon>
 					<DesktopNavigation>
@@ -125,11 +121,7 @@ const Header: React.FC = () => {
                 {intl('home.navbar.button.contact.us')}
               </ButtonLink> */}
 							<a className="temporary-anchor" href="/contact-us">
-								<Button
-									type="secondary"
-									onClick={handleIsOpen}
-									$isfullwidth={true}
-								>
+								<Button type="secondary" onClick={handleIsOpen} $isfullwidth={true}>
 									{intl("home.navbar.button.contact.us")}
 								</Button>
 							</a>

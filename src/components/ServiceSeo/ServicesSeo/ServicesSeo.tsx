@@ -52,8 +52,8 @@ const ServicesSeo = () => {
 			<WrapperTitle>
 				<h2 className="seo-title-question">¿Qué incluye?</h2>
 				<p className="seo-title-response">
-					Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad
-					ya ceguera.
+					Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya
+					ceguera.
 				</p>
 			</WrapperTitle>
 			<WrapperDescription>

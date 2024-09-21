@@ -20,11 +20,7 @@ const NavLink: React.FC<NavLinkProps> = ({
 	const intl = useIntlMessages()
 	return (
 		<StyledListItem>
-			<StyledAnchor
-				to={item.href}
-				onClick={onClick}
-				aria-label={intl(ariaLabel)}
-			>
+			<StyledAnchor to={item.href} onClick={onClick} aria-label={intl(ariaLabel)}>
 				{item.name}
 			</StyledAnchor>
 		</StyledListItem>

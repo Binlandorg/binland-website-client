@@ -42,11 +42,10 @@ const LetsLearn: React.FC = () => {
 						<h4>hablaba encerro modales</h4>
 						<h3>fue doscientos cigarillo ton</h3>
 						<p>
-							Mi en cola reia toda al ma tuvo. Relativo cominero sociedad en me
-							su. Su gacetilla emperador de es despierta amenazaba discursos.
-							Idea se loco flor ma ah eh ella boga. Mi en cola reia toda al ma
-							tuvo. Relativo cominero sociedad en me su. Su gacetilla emperador
-							de es despierta.
+							Mi en cola reia toda al ma tuvo. Relativo cominero sociedad en me su. Su
+							gacetilla emperador de es despierta amenazaba discursos. Idea se loco
+							flor ma ah eh ella boga. Mi en cola reia toda al ma tuvo. Relativo
+							cominero sociedad en me su. Su gacetilla emperador de es despierta.
 						</p>
 					</div>
 					<video muted />
@@ -63,9 +62,7 @@ const LetsLearn: React.FC = () => {
 						<div>
 							<LazyLoadImage src="" alt="should-be-title-of-card-img" />
 							<h4>conferencias</h4>
-							<p>
-								Relativo cominero sociedad en me su. Su gacetilla emperador.
-							</p>
+							<p>Relativo cominero sociedad en me su. Su gacetilla emperador.</p>
 							<button type="button">Saber más</button>
 						</div>
 					</div>

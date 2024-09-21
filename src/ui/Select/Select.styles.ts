@@ -16,38 +16,38 @@ export const StyledSelect = styled.div<{ $type: string }>`
   position: relative;
   cursor: pointer;
   background-color: ${({ $type }) =>
-		$type === "primary" ? `${colors.primary.main}` : `${colors.white.main}`};
+			$type === "primary" ? `${colors.primary.main}` : `${colors.white.main}`};
   border: none;
   border-radius: 0.6rem;
   padding: 0.5rem 0.75rem;
   color: ${({ $type }) =>
-		$type === "primary" ? `${colors.white.main}` : `${colors.black.main}`};
+			$type === "primary" ? `${colors.white.main}` : `${colors.black.main}`};
 
   &:hover {
     background-color: ${({ $type }) =>
-			$type === "primary"
-				? `${colors.primary.active[400]}`
-				: `${colors.tertiary.hover[300]}`};
+					$type === "primary"
+						? `${colors.primary.active[400]}`
+						: `${colors.tertiary.hover[300]}`};
     color: ${({ $type }) =>
-			$type === "secondary" ? `${colors.tertiary.hover[600]}` : ""};
+					$type === "secondary" ? `${colors.tertiary.hover[600]}` : ""};
   }
 
   &:active {
     background-color: ${({ $type }) =>
-			$type === "primary"
-				? `${colors.primary.active[600]}`
-				: `${colors.tertiary.active[400]}`};
+					$type === "primary"
+						? `${colors.primary.active[600]}`
+						: `${colors.tertiary.active[400]}`};
     color: ${({ $type }) =>
-			$type === "secondary" ? `${colors.tertiary.active[700]}` : ""};
+					$type === "secondary" ? `${colors.tertiary.active[700]}` : ""};
   }
 
   &:focus-visible {
     outline-offset: 0.125rem;
     outline: 0.125rem solid
       ${({ $type }) =>
-				$type === "primary"
-					? `${colors.primary.main}`
-					: `${colors.secondary.main}`};
+							$type === "primary"
+								? `${colors.primary.main}`
+								: `${colors.secondary.main}`};
   }
 `
 
@@ -98,7 +98,7 @@ export const StyledSelectOption = styled.li<ISelectOption>`
   &:hover .point-selected {
     border-color: ${colors.tertiary.hover[300]};
     background-color: ${({ selected }) =>
-			!selected && colors.tertiary.hover[300]};
+					!selected && colors.tertiary.hover[300]};
   }
 
   &:active {
@@ -108,7 +108,7 @@ export const StyledSelectOption = styled.li<ISelectOption>`
   &:active .point-selected {
     border-color: ${colors.tertiary.active[400]};
     background-color: ${({ selected }) =>
-			!selected && colors.tertiary.active[400]};
+					!selected && colors.tertiary.active[400]};
   }
 
   .point-selected {
@@ -118,6 +118,6 @@ export const StyledSelectOption = styled.li<ISelectOption>`
     min-width: 1rem;
     border-radius: 100%;
     background-color: ${({ selected }) =>
-			selected ? colors.primary.main : colors.tertiary.normal[200]};
+					selected ? colors.primary.main : colors.tertiary.normal[200]};
   }
 `

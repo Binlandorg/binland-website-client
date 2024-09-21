@@ -21,14 +21,8 @@ const Founders: React.FC = () => {
 			<FoundersContent>
 				<FoundersList>
 					{foundersData?.map((founder) => {
-						const {
-							id,
-							image,
-							fullName,
-							position,
-							quote,
-							networks,
-						}: IFoundersData = founder
+						const { id, image, fullName, position, quote, networks }: IFoundersData =
+							founder
 						return (
 							<FoundersItem key={id}>
 								<Reveal>

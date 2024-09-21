@@ -38,8 +38,8 @@ const Technologies = () => {
 						<span className="text-red">.</span>
 					</TechnologiesTitle>
 					<TechnologiesDescription>
-						Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni
-						caridad ya ceguera.
+						Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya
+						ceguera.
 					</TechnologiesDescription>
 				</WrapperTechnologiesTitle>
 				<WrapperTechnologies>

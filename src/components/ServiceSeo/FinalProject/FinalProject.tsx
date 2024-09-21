@@ -36,8 +36,8 @@ const FinalProject = () => {
 							proyecto?
 						</ContentTitle>
 						<ContentDescription>
-							Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni
-							caridad ya ceguera.
+							Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya
+							ceguera.
 						</ContentDescription>
 					</QuestionWrapperSeo>
 					<WrapperProjectDeliverables>

@@ -9,7 +9,7 @@ const StyledH5 = styled.h5<IH5Props>`
   font-size: clamp(1rem, 0.875rem + 0.4vw, 1.125rem);
   line-height: 1.5;
   color: ${(props) =>
-		props.color ? `${props.color}` : `${colors.secondary.main}`};
+			props.color ? `${props.color}` : `${colors.secondary.main}`};
 `
 
 const H5: React.FC<IH5Props> = (props) => {

@@ -19,9 +19,8 @@ const Hero: React.FC = () => {
 							<p className="hero-sub-title">El posicionamiento es importante</p>
 							<TitleHero>seo</TitleHero>
 							<span className="hero-description">
-								Un texto bien cool para describir el servicio de manera clara y
-								corta para que el cliente entienda, quizás 2 lineas o 3 son
-								duficientes.
+								Un texto bien cool para describir el servicio de manera clara y corta
+								para que el cliente entienda, quizás 2 lineas o 3 son duficientes.
 							</span>
 						</div>
 						<div>

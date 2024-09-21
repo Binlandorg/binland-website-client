@@ -104,11 +104,7 @@ const MultiSelect: React.FC<IMultiSelectProps> = ({
 				{value.length > 0 && (
 					<TagsWrapper onClick={handleTagService}>
 						{value?.map((service) => (
-							<Tag
-								key={service.key}
-								name={intl(service.name)}
-								id={service.key}
-							/>
+							<Tag key={service.key} name={intl(service.name)} id={service.key} />
 						))}
 					</TagsWrapper>
 				)}

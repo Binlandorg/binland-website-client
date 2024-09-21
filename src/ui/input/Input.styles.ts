@@ -16,8 +16,8 @@ export const InputWrapper = styled.div<IInputWrapper>`
   }
 
   ${(props) =>
-		props.$isError &&
-		`
+			props.$isError &&
+			`
     outline: 0.125rem solid ${colors.primary.normal[500]};
     &:focus-within,
     &:active {

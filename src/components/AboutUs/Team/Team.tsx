@@ -14,21 +14,12 @@ const Team: React.FC = () => {
 	const intl = useIntlMessages()
 
 	return (
-		<StyledTeamSection
-			title={intl("about.us.team.title")}
-			titlePosition="right"
-		>
+		<StyledTeamSection title={intl("about.us.team.title")} titlePosition="right">
 			<TeamContent>
 				<TeamList>
 					{teamData?.map((collaborator) => {
-						const {
-							id,
-							image,
-							fullName,
-							position,
-							quote,
-							networks,
-						}: ITeamData = collaborator
+						const { id, image, fullName, position, quote, networks }: ITeamData =
+							collaborator
 						return (
 							<TeamItem key={id}>
 								<Reveal>
