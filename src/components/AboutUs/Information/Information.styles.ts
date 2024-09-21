@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { breakpoints } from 'shared/breakpoints'
-import { colors } from 'styles/colors'
-import girlImgURL from '../../../assets/images/people/business-woman-black-talking.webp'
-import girlImgURLMobile from '../../../assets/images/people/mobile/business-woman-black-talking.webp'
+import { breakpoints } from "shared/breakpoints"
+import { colors } from "styles/colors"
+import girlImgURL from "../../../assets/images/people/business-woman-black-talking.webp"
+import girlImgURLMobile from "../../../assets/images/people/mobile/business-woman-black-talking.webp"
 
 export const StyledInformation = styled.div`
   display: flex;

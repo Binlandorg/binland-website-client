@@ -1,9 +1,9 @@
-import styled from 'styled-components'
-import { TbExternalLink } from 'react-icons/tb'
+import { TbExternalLink } from "react-icons/tb"
+import styled from "styled-components"
 
-import Container from 'ui/Container/Container'
-import { breakpoints } from 'shared/breakpoints'
-import { colors } from 'styles/colors'
+import { breakpoints } from "shared/breakpoints"
+import { colors } from "styles/colors"
+import Container from "ui/Container/Container"
 
 export const CardsWrapper = styled(Container)`
   flex-direction: row;

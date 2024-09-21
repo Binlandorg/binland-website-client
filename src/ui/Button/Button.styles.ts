@@ -1,12 +1,12 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { colors } from '../../styles/colors'
-import { IStyledButton } from 'types/ui/Button'
+import type { IStyledButton } from "types/ui/Button"
+import { colors } from "../../styles/colors"
 
 const typeStyles = (type: string) => {
-  switch (type) {
-    case 'primary':
-      return `
+	switch (type) {
+		case "primary":
+			return `
         color: ${colors.white.main};
         background-color: ${colors.primary.main};
 
@@ -22,8 +22,8 @@ const typeStyles = (type: string) => {
           background-color: ${colors.primary.active[400]};
         }
       `
-    case 'secondary':
-      return `
+		case "secondary":
+			return `
         color: ${colors.secondary.normal[800]};
         background: none;
         border: 0.125rem solid ${colors.secondary.normal[800]};
@@ -41,26 +41,26 @@ const typeStyles = (type: string) => {
           color: ${colors.secondary.hover[800]};
         }
       `
-    default:
-      break
-  }
+		default:
+			break
+	}
 }
 
 const sizeStyles = (size: string) => {
-  switch (size) {
-    case 'sm':
-      return `
+	switch (size) {
+		case "sm":
+			return `
         padding: 0.5rem 0.75rem;
         font-size: 0.875rem;
       `
-    case 'lg':
-      return `
+		case "lg":
+			return `
         padding: 0.5rem 0.75rem;
         font-size: 1.125rem;
       `
-    default:
-      break
-  }
+		default:
+			break
+	}
 }
 
 export const StyledButton = styled.button<IStyledButton>`
@@ -76,10 +76,10 @@ export const StyledButton = styled.button<IStyledButton>`
   cursor: pointer;
   height: fit-content;
   gap: 0.5rem;
-  width: ${({ $isfullwidth }) => ($isfullwidth ? '100%' : 'fit-content')};
+  width: ${({ $isfullwidth }) => ($isfullwidth ? "100%" : "fit-content")};
 
   ${(props) => typeStyles(props.type)}
-  ${(props) => sizeStyles(props.size!)}
+  ${(props) => sizeStyles(props.size || "md")}
 
   &:hover {
     outline: none;

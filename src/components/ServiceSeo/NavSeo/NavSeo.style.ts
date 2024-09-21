@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { breakpoints } from 'shared/breakpoints'
-import { colors } from 'styles/colors'
-import Container from 'ui/Container/Container'
+import { breakpoints } from "shared/breakpoints"
+import { colors } from "styles/colors"
+import Container from "ui/Container/Container"
 
 export const ContainerProcess = styled(Container)`
   margin: 0;

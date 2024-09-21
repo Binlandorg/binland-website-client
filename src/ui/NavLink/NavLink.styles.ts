@@ -1,9 +1,9 @@
-import { NavLink } from 'react-router-dom'
-import { breakpoints } from 'shared/breakpoints'
-import styled from 'styled-components'
+import { NavLink } from "react-router-dom"
+import { breakpoints } from "shared/breakpoints"
+import styled from "styled-components"
 
-import { colors } from 'styles/colors'
-import { FontWeight } from 'styles/typography'
+import { colors } from "styles/colors"
+import { FontWeight } from "styles/typography"
 
 export const StyledListItem = styled.li`
   list-style-type: none;
@@ -13,7 +13,7 @@ export const StyledAnchor = styled(NavLink)`
   color: ${colors.primary.main};
   text-decoration: none;
   font-size: 1rem;
-  font-weight: ${FontWeight['semibold']};
+  font-weight: ${FontWeight.semibold};
   display: flex;
   flex-direction: column;
   position: relative;

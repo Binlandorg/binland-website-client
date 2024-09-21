@@ -1,7 +1,7 @@
-import { breakpoints } from 'shared/breakpoints'
-import styled from 'styled-components'
+import { breakpoints } from "shared/breakpoints"
+import styled from "styled-components"
 
-import { colors } from 'styles/colors'
+import { colors } from "styles/colors"
 
 export const SocialMediaWrapper = styled.div`
   display: flex;

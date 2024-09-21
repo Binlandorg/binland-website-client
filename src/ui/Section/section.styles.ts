@@ -1,25 +1,25 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { breakpoints } from 'shared/breakpoints'
+import { breakpoints } from "shared/breakpoints"
 
 interface IStyledSection {
-  type: 'margin' | 'padding'
-  size: 'sm' | 'md' | 'lg' | 'xl'
+	type: "margin" | "padding"
+	size: "sm" | "md" | "lg" | "xl"
 }
 
 const sizeStyles = (size: string) => {
-  switch (size) {
-    case 'sm':
-      return `32px`
-    case 'md':
-      return `48px`
-    case 'lg':
-      return `96px`
-    case 'xl':
-      return `144px`
-    default:
-      break
-  }
+	switch (size) {
+		case "sm":
+			return "32px"
+		case "md":
+			return "48px"
+		case "lg":
+			return "96px"
+		case "xl":
+			return "144px"
+		default:
+			break
+	}
 }
 
 export const StyledSection = styled.section<IStyledSection>`
@@ -31,14 +31,14 @@ export const StyledSection = styled.section<IStyledSection>`
   width: 100%;
 
   ${(props) =>
-    props.type === 'margin'
-      ? `margin: calc(${sizeStyles(props.size)} / 2) auto`
-      : `padding: calc(${sizeStyles(props.size)} / 2) 0`};
+			props.type === "margin"
+				? `margin: calc(${sizeStyles(props.size)} / 2) auto`
+				: `padding: calc(${sizeStyles(props.size)} / 2) 0`};
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     ${(props) =>
-      props.type === 'margin'
-        ? `margin: ${sizeStyles(props.size)} auto`
-        : `padding: ${sizeStyles(props.size)} 0`};
+					props.type === "margin"
+						? `margin: ${sizeStyles(props.size)} auto`
+						: `padding: ${sizeStyles(props.size)} 0`};
   }
 `

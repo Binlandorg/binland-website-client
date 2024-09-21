@@ -1,8 +1,8 @@
-import styled from 'styled-components'
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion"
+import styled from "styled-components"
 
-import { breakpoints } from 'shared/breakpoints'
-import { colors } from 'styles/colors'
+import { breakpoints } from "shared/breakpoints"
+import { colors } from "styles/colors"
 
 export const QuestionWrapper = styled.div`
   width: 100%;

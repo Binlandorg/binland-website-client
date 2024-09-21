@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { colors } from 'styles/colors'
-import Container from 'ui/Container/Container'
-import Section from 'ui/Section/Section'
-import { breakpoints } from 'shared/breakpoints'
+import { breakpoints } from "shared/breakpoints"
+import { colors } from "styles/colors"
+import Container from "ui/Container/Container"
+import Section from "ui/Section/Section"
 
 export const ContainerFaq = styled(Container)`
   width: 100%;

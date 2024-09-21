@@ -1,6 +1,6 @@
-import { breakpoints } from 'shared/breakpoints'
+import { breakpoints } from "shared/breakpoints"
 
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const StyledBodyContainer = styled.div`
   display: flex;

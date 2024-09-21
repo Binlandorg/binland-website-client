@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { FontWeight } from "styles/typography"
 
-import { IParagraph } from "types/ui/Paragraph"
+import type { IParagraph } from "types/ui/Paragraph"
 
 export const StyledParagraph = styled.p<IParagraph>`
   font-weight: ${({ $weight }) => FontWeight[$weight]};

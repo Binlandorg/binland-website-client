@@ -1,19 +1,19 @@
 export interface IData {
-  selected: number
+	selected: number
 }
 
 export interface IBrand {
-  id: string
-  src: string
-  name: string
+	id: string
+	src: string
+	name: string
 }
 
 export interface IClientCard {
-  id: string
-  image: string
-  name: string
-  description: string
-  to: string
+	id: string
+	image: string
+	name: string
+	description: string
+	to: string
 }
 
 type Page = IClientCard[]

@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components'
-import { colors } from './colors'
-import './fontaine.css'
+import { createGlobalStyle } from "styled-components"
+import { colors } from "./colors"
+import "./fontaine.css"
 
 export const GlobalStyle = createGlobalStyle`
   /* CSS Reset by Andy Bell (https://piccalil.li/blog/a-modern-css-reset/) */

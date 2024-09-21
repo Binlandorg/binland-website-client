@@ -1,4 +1,4 @@
 html {
-  font-size: 16px;
-  font-family: 'Poppins', 'Poppins fallback', 'Poppins override';
+	font-size: 16px;
+	font-family: "Poppins", "Poppins fallback", "Poppins override", system-ui;
 }

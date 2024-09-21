@@ -1,6 +1,6 @@
-import { NavLink } from "react-router-dom";
-import styled from "styled-components";
-import { colors } from "styles/colors";
+import { NavLink } from "react-router-dom"
+import styled from "styled-components"
+import { colors } from "styles/colors"
 
 export const CustonNavLink = styled(NavLink)`
   text-decoration: none;

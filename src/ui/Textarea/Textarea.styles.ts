@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { colors } from '../../styles/colors'
-import { breakpoints } from 'shared/breakpoints'
-import { ITextareaWrapper } from 'types/ui/Textarea'
+import { breakpoints } from "shared/breakpoints"
+import type { ITextareaWrapper } from "types/ui/Textarea"
+import { colors } from "../../styles/colors"
 
 export const TextareaWrapper = styled.div<ITextareaWrapper>`
   background-color: ${colors.tertiary.normal[50]};
@@ -18,8 +18,8 @@ export const TextareaWrapper = styled.div<ITextareaWrapper>`
     outline: 0.125rem solid ${colors.tertiary.focus[500]};
   }
   ${(props) =>
-    props.$isError &&
-    `
+			props.$isError &&
+			`
     outline: 0.125rem solid ${colors.primary.normal[500]};
     &:focus-within,
     &:active {

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
-import SectionAboutUs from "../SectionAboutUs/SectionAboutUs"
 import { breakpoints } from "shared/breakpoints"
+import SectionAboutUs from "../SectionAboutUs/SectionAboutUs"
 
 export const StyledTeamSection = styled(SectionAboutUs)``
 export const TeamContent = styled.div`

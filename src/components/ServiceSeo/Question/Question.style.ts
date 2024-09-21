@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { breakpoints } from 'shared/breakpoints'
-import Section from 'ui/Section/Section'
-import { colors } from 'styles/colors'
+import { breakpoints } from "shared/breakpoints"
+import { colors } from "styles/colors"
+import Section from "ui/Section/Section"
 
 export const WrapperQuestion = styled(Section)`
   width: 19.5rem;

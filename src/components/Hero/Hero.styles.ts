@@ -1,11 +1,11 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { breakpoints } from 'shared/breakpoints'
-import { colors } from 'styles/colors'
-import Section from 'ui/Section/Section'
+import { breakpoints } from "shared/breakpoints"
+import { colors } from "styles/colors"
+import Section from "ui/Section/Section"
 
 interface IHeroContent {
-  $scrollbarwidth: number
+	$scrollbarwidth: number
 }
 
 export const HeroSection = styled(Section)`
@@ -13,7 +13,7 @@ export const HeroSection = styled(Section)`
 `
 
 export const HeroContent = styled.div<IHeroContent>`
-  --scrollbar-width: ${({ $scrollbarwidth }) => $scrollbarwidth + 'px'};
+  --scrollbar-width: ${({ $scrollbarwidth }) => `${$scrollbarwidth}px`};
   --fix-100vw: calc(100vw - var(--scrollbar-width));
   --spacing-x: calc((var(--fix-100vw) - 100%) / 2);
 
@@ -29,12 +29,12 @@ export const HeroContent = styled.div<IHeroContent>`
     width: 100%;
   }
 
-  @media only screen and (min-width: ${breakpoints['2k']}) {
+  @media only screen and (min-width: ${breakpoints["2k"]}) {
     width: 90rem;
     height: 51.625rem;
   }
 
-  @media only screen and (min-width: ${breakpoints['4k']}) {
+  @media only screen and (min-width: ${breakpoints["4k"]}) {
     width: 126.75rem;
     height: 78.5625rem;
   }
@@ -64,7 +64,7 @@ export const HeroContentWrapper = styled.div`
     border-radius: 1rem;
   }
 
-  @media only screen and (min-width: ${breakpoints['2k']}) {
+  @media only screen and (min-width: ${breakpoints["2k"]}) {
     height: 100%;
   }
 `
@@ -79,7 +79,7 @@ export const Content = styled.div`
     grid-column: 3/4;
   }
 
-  @media only screen and (min-width: ${breakpoints['2k']}) {
+  @media only screen and (min-width: ${breakpoints["2k"]}) {
     justify-content: center;
   }
 
@@ -204,11 +204,11 @@ export const ImageWrapper = styled.div`
     }
   }
 
-  @media only screen and (min-width: ${breakpoints['2k']}) {
+  @media only screen and (min-width: ${breakpoints["2k"]}) {
     width: 58.375rem;
   }
 
-  @media only screen and (min-width: ${breakpoints['4k']}) {
+  @media only screen and (min-width: ${breakpoints["4k"]}) {
     width: 92.75rem;
   }
 `

@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { breakpoints } from 'shared/breakpoints'
-import { colors } from 'styles/colors'
-import Section from 'ui/Section/Section'
+import { breakpoints } from "shared/breakpoints"
+import { colors } from "styles/colors"
+import Section from "ui/Section/Section"
 
 export const ClientsSection = styled(Section)`
   --padding-section-x: calc(1.5rem * 2);

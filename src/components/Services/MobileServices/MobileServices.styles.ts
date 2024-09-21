@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
-import { breakpoints } from "shared/breakpoints";
+import { breakpoints } from "shared/breakpoints"
 
 export const MobileServicesWrapper = styled.div`
   display: flex;
