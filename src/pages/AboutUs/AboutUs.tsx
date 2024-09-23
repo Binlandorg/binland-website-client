@@ -21,15 +21,15 @@ const AboutUs = () => {
 				<meta
 					name="description"
 					lang="en"
-					content="Meet our team of software development experts at Binland. We turn ideas into innovative solutions, providing high-quality, personalized services to drive your business forward. Learn about our mission and vision."
+					content="Meet about our software development team."
 				/>
 				<meta
 					name="description"
 					lang="es"
-					content="Conoce a nuestro equipo de expertos en desarrollo de software. En Binland, transformamos ideas en soluciones innovadoras, ofreciendo servicios personalizados de alta calidad para impulsar tu negocio. Descubre nuestra misión y visión."
+					content="Conoce a nuestro equipo de desarrollo de software."
 				/>
 				<meta property="og:image" content={imageLinkPreview} />
-				<title>Binland - {intl("about.us.title")}</title>
+				<title>{intl("about.us.title.tag")}</title>
 			</Helmet>
 			<Suspense>
 				<Quote />

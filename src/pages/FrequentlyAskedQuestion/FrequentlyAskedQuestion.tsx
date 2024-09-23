@@ -23,15 +23,15 @@ const FrequenltyAskedQuestion = () => {
 				<meta
 					name="description"
 					lang="en"
-					content="Find answers to frequently asked questions about our software development services. At Binland, we address your queries and provide the information you need to make informed decisions. Explore our FAQ section."
+					content="Clarify your most frequently asked questions."
 				/>
 				<meta
 					name="description"
 					lang="es"
-					content="Encuentra respuestas a las preguntas más frecuentes sobre nuestros servicios de desarrollo de software. En Binland, resolvemos tus dudas y te ofrecemos la información que necesitas para tomar decisiones informadas. Explora nuestra sección de preguntas frecuentes."
+					content="Aclara tus dudas mas frecuentes."
 				/>
 				<meta property="og:image" content={imageLinkPreview} />
-				<title>Binland - {intl("frequently.asked.questions.title")}</title>
+				<title>{intl("frequently.asked.questions.title.tag")}</title>
 			</Helmet>
 			<SectionFAQ id="frequently-asked-questions" size="lg" type="margin">
 				<ContainerFaq size="xl">

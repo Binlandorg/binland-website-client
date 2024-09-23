@@ -128,7 +128,7 @@
 	"home.clients.section.title": "Who trust on us",
 	"home.clients.section.button": "See more",
 
-	"about.us.title": "About us",
+	"about.us.title.tag": "About us",
 	"about.us.quote.description": "Everything is posible!",
 	"about.us.binland.information.sub.title": "Something to mention",
 	"about.us.binland.information.title": "about us",
@@ -173,7 +173,7 @@
 	"about.us.offices.sub.title.collage": "Our team supports us",
 	"about.us.offices.title.collage": "The foundations of good projects are here",
 
-	"contact.us.tab.title": "Contact Us",
+	"contact.us.title.tag": "Contact Us",
 	"contact.us.hero.title": "Contact Us",
 	"contact.us.hero.description": "Were here for you. Reach out using the form belowa",
 	"contact.us.calendly.button": "Schedule a meeting",
@@ -220,6 +220,7 @@
 
 	"services.hero.title": "Services",
 
+	"frequently.asked.questions.title.tag": "Frequently asked questions",
 	"frequently.asked.questions.title": "Frequently asked questions",
 	"frequently.asked.questions.still.have.questions": "Still have questions?",
 	"frequently.asked.questions.still.have.questions.description": "Can't find the answer you're looking for? Please contact our friendly team",
@@ -234,7 +235,8 @@
 	"faq.question.data.security": "How do you ensure the security and confidentiality of client data during development?",
 	"faq.answer.data.security": "The security and confidentiality of our clients' data are our top priorities. We implement state-of-the-art security practices, such as data encryption, restricted access, and regular audits.",
 
-	"terms.of.services.title": "Terms of service",
+	"terms.of.service.title.tag": "Terms of service",
+	"terms.of.service.title": "Terms of service",
 
 	"footer.logotipo.aria.label": "Go to the home page Binland",
 	"footer.all.rights.reserved": "All rights reserved",
@@ -261,10 +263,13 @@
 	"contact.us.form.toast.success": "Sent successfully",
 	"contact.us.form.toast.error": "Error, try again",
 
+	"page.not.found..title.tag": "Page not found",
 	"page.not.found.tab.title": "Page not found",
 	"page.not.found.title": "Oops!",
 	"page.not.found.sub.title": "I think you got lost...",
 	"page.not.found.button.to.home": "Return to Home",
+
+	"privacy.policy.title.tag": "Privacy policy",
 
 	"image.profile.alt.crhistian.turpo.apaza": "Image of the company's CEO, Crhistian Turpo",
 	"image.profile.alt.jonathan.cervantes.alarcon": "Image of one of the founders, Jonathan Cervantes",

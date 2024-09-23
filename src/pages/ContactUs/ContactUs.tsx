@@ -27,15 +27,15 @@ const ContactUs: React.FC = () => {
 				<meta
 					name="description"
 					lang="en"
-					content="Have a question or a project in mind? At Binland, we’re ready to help. Contact us to discuss your software development needs and explore how we can work together."
+					content="Have a question or a project in mind?"
 				/>
 				<meta
 					name="description"
 					lang="es"
-					content="¿Tienes alguna pregunta o proyecto en mente? En Binland, estamos listos para ayudarte. Contáctanos para discutir tus necesidades de desarrollo de software y descubrir cómo podemos colaborar."
+					content="¿Tienes alguna pregunta o proyecto en mente?"
 				/>
 				<meta property="og:image" content={imageLinkPreview} />
-				<title>Binland - {intl("contact.us.tab.title")}</title>
+				<title>{intl("contact.us.title.tag")}</title>
 			</Helmet>
 			<ContactUsHero>
 				<SectionTitleHero type="padding" size="lg">
