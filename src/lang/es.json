@@ -128,7 +128,7 @@
 	"home.clients.section.title": "Quienes confían en nosotros",
 	"home.clients.section.button": "Ver más",
 
-	"about.us.title": "Nosotros",
+	"about.us.title.tag": "Nosotros",
 	"about.us.quote.description": "¡Todo es posible!",
 	"about.us.binland.information.sub.title": "Algo que mencionar",
 	"about.us.binland.information.title": "sobre nosotros",
@@ -173,7 +173,7 @@
 	"about.us.offices.sub.title.collage": "Nuestro equipo nos respalda",
 	"about.us.offices.title.collage": "Los cimientos de buenos proyectos estan aqui",
 
-	"contact.us.tab.title": "Contáctanos",
+	"contact.us.title.tag": "Contáctanos",
 	"contact.us.hero.title": "Contáctanos",
 	"contact.us.hero.description": "Estamos aquí por tí. Comuníquese usando el siguiente formulario",
 	"contact.us.calendly.button": "Agenda tu reunión",
@@ -220,6 +220,7 @@
 
 	"services.hero.title": "Servicios",
 
+	"frequently.asked.questions.title.tag": "Preguntas frecuentes",
 	"frequently.asked.questions.title": "Preguntas frecuentes",
 	"frequently.asked.questions.still.have.questions": "¿Todavía tienes preguntas?",
 	"frequently.asked.questions.still.have.questions.description": "¿No encuentras la respuesta que buscas? Por favor comunicate con nuestro equipo amigable",
@@ -234,7 +235,8 @@
 	"faq.question.data.security": "¿Cómo garantizan la seguridad y la confidencialidad de los datos del cliente durante el desarrollo?",
 	"faq.answer.data.security": "La seguridad y confidencialidad de los datos de nuestros clientes son nuestras prioridades. Implementamos prácticas de seguridad de última generación, como encriptación de datos, acceso restringido y auditorías regulares.",
 
-	"terms.of.services.title": "Terminos de servicio",
+	"terms.of.service.title.tag": "Términos de servicio",
+	"terms.of.service.title": "Terminos de servicio",
 
 	"footer.logotipo.aria.label": "Ir a la pagina Inicio de Binland",
 	"footer.all.rights.reserved": "Todos los derechos reservados",
@@ -261,10 +263,13 @@
 	"contact.us.form.toast.success": "Enviado con éxito",
 	"contact.us.form.toast.error": "Error, intenta otra vez",
 
+	"page.not.found.title.tag": "Página no encontrada",
 	"page.not.found.tab.title": "Página no encontrada",
 	"page.not.found.title": "Ups!",
 	"page.not.found.sub.title": "Creo que te extraviaste...",
 	"page.not.found.button.to.home": "Regresa al Inicio",
+
+	"privacy.policy.title.tag": "Políticas de privacidad",
 
 	"image.profile.alt.crhistian.turpo.apaza": "Imagen del CEO de la compañia, Crhistian Turpo",
 	"image.profile.alt.jonathan.cervantes.alarcon": "Imagen de uno de los fundadores, Jonathan Cervantes",

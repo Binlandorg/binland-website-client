@@ -26,15 +26,15 @@ const PageNotFound = () => {
 				<meta
 					name="description"
 					lang="en"
-					content="Sorry, the page you’re looking for is not available. At Binland, we’re here to help. You can return to the homepage or explore other sections of our site to find the information you need."
+					content="Sorry, the page you're looking for is not available."
 				/>
 				<meta
 					name="description"
 					lang="es"
-					content="Lo sentimos, la página que buscas no está disponible. En Binland, estamos aquí para ayudarte. Puedes volver a la página de inicio o explorar otras secciones de nuestro sitio para encontrar la información que necesitas."
+					content="Lo sentimos, la página que buscas no está disponible."
 				/>
 				<meta property="og:image" content={imageLinkPreview} />
-				<title>Binland - {intl("page.not.found.tab.title")}</title>
+				<title>{intl("page.not.found.title.tag")}</title>
 			</Helmet>
 			<StyledPageNotFound size="xl">
 				<MessageWrapper>

@@ -1,12 +1,29 @@
+import { Helmet } from "react-helmet-async"
+
 import useIntlMessages from "hooks/useIntlMessages"
 import Container from "ui/Container/Container"
+import imageLinkPreview from "../../assets/images/image-link-preview.webp"
 
 const TermsOfService: React.FC = () => {
 	const intl = useIntlMessages()
 
 	return (
 		<Container size="sm">
-			<h2>{intl("terms.of.services.title")}</h2>
+			<Helmet prioritizeSeoTags>
+				<meta
+					name="description"
+					lang="en"
+					content="Details on the use of our services."
+				/>
+				<meta
+					name="description"
+					lang="es"
+					content="Detalles sobre el uso de nuestros servicios."
+				/>
+				<meta property="og:image" content={imageLinkPreview} />
+				<title>{intl("terms.of.service.title.tag")}</title>
+			</Helmet>
+			<h2>{intl("terms.of.service.title")}</h2>
 			<div>
 				<p>
 					The following Terms and Conditions govern the use of each of the websites
