@@ -236,7 +236,27 @@
 	"faq.answer.data.security": "La seguridad y confidencialidad de los datos de nuestros clientes son nuestras prioridades. Implementamos prácticas de seguridad de última generación, como encriptación de datos, acceso restringido y auditorías regulares.",
 
 	"terms.of.service.title.tag": "Términos de servicio",
-	"terms.of.service.title": "Terminos de servicio",
+	"terms.of.service.title": "Términos de servicio",
+	"terms.of.service.last.modified": "Última modificación: 14 de Enero del 2024.",
+	"terms.of.service.summary": "Bienvenido a Binland. Al acceder y utilizar nuestros servicios, aceptas cumplir con los siguientes Términos de Servicio. Si no estás de acuerdo con estos términos, no utilices nuestros servicios.",
+	"terms.of.service.acceptance.of.terms.title": "Aceptación de los Términos",
+	"terms.of.service.acceptance.of.terms.content": "Al utilizar nuestros servicios, aceptas estos Términos de Servicio y nuestra Política de Privacidad. Si no estás de acuerdo, no debes usar nuestros servicios.",
+	"terms.of.service.services.title": "Servicios",
+	"terms.of.service.services.content": "Binland proporciona servicios de desarrollo de software, incluyendo pero no limitado a [describir brevemente los servicios ofrecidos, por ejemplo, desarrollo de aplicaciones, diseño de software, consultoría, etc.].",
+	"terms.of.service.use.of.services.title": "Uso de los Servicios",
+	"terms.of.service.use.of.services.content": "Debes usar nuestros servicios de acuerdo con todas las leyes aplicables.No puedes utilizar nuestros servicios para ningún propósito ilegal o no autorizado.No debes interferir con el uso de nuestros servicios por parte de otros usuarios.",
+	"terms.of.service.intellectual.property.title": "Propiedad Intelectual",
+	"terms.of.service.intellectual.property.content": "Todos los derechos de propiedad intelectual sobre los servicios y el contenido proporcionado por [Nombre de la Empresa] son propiedad exclusiva de la empresa. No se otorgan derechos sobre los mismos sin el consentimiento explícito de [Nombre de la Empresa].",
+	"terms.of.service.payments.title": "Pagos",
+	"terms.of.service.payments.content": "Los pagos por nuestros servicios se realizarán de acuerdo con los términos acordados en la propuesta o contrato. El incumplimiento en los pagos puede resultar en la suspensión o terminación de los servicios.",
+	"terms.of.service.modifications.title": "Modificaciones",
+	"terms.of.service.modifications.content": "[Nombre de la Empresa] se reserva el derecho de modificar estos Términos de Servicio en cualquier momento. Te notificaremos sobre cambios significativos. El uso continuo de nuestros servicios después de tales modificaciones constituye tu aceptación de los nuevos términos.",
+	"terms.of.service.limitation.of.liability.title": "Limitación de Responsabilidad",
+	"terms.of.service.limitation.of.liability.content": "[Nombre de la Empresa] no será responsable de ningún daño directo, indirecto, incidental, especial o consecuente que surja del uso o la imposibilidad de uso de nuestros servicios.",
+	"terms.of.service.applicable.law.title": "Ley Aplicable",
+	"terms.of.service.applicable.law.content": "Estos Términos de Servicio se rigen por las leyes de [tu país o estado]. Cualquier disputa que surja en relación con estos términos será resuelta en los tribunales de [jurisdicción].",
+	"terms.of.service.contact.title": "Contacto",
+	"terms.of.service.contact.content": "Si tienes alguna pregunta sobre estos Términos de Servicio, por favor contáctanos en [correo electrónico de contacto].",
 
 	"footer.logotipo.aria.label": "Ir a la pagina Inicio de Binland",
 	"footer.all.rights.reserved": "Todos los derechos reservados",
@@ -276,5 +296,7 @@
 	"image.profile.alt.gustavo.ugarte": "Imagen de uno de los fundadores, Gustavo Ugarte",
 	"image.profile.alt.ricardo.mamani.calcina": "Imagen de uno de los fundadores, Ricardo Mamani",
 	"image.profile.alt.paty.apaestegui.rodriguez": "Colaboradora Paty Apaestegui",
-	"image.profile.alt.diego.lopez.vega": "Colaborador Diego López"
+	"image.profile.alt.diego.lopez.vega": "Colaborador Diego López",
+
+	"component.table.of.content.title": "Tabla de Contenido"
 }

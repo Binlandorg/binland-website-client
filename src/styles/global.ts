@@ -4,6 +4,12 @@ import "./fontaine.css"
 
 export const GlobalStyle = createGlobalStyle`
   /* CSS Reset by Andy Bell (https://piccalil.li/blog/a-modern-css-reset/) */
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    --header-height: 4.5rem;
+  }
 
   /* Box sizing rules */
   *,
@@ -54,13 +60,6 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${colors.body};
   }
 
-  #root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    --header-height: 4.5rem;
-  }
-
   /* A elements that don't have a class get default styles */
   a:not([class]) {
     text-decoration-skip-ink: auto;
@@ -95,5 +94,9 @@ export const GlobalStyle = createGlobalStyle`
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
+  }
+
+  html{
+    scroll-padding-top: 5rem;
   }
 `
