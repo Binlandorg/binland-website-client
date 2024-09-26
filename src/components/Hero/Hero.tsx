@@ -2,6 +2,8 @@ import { BsArrowRight as IconArrowLeft } from "react-icons/bs"
 import { FormattedMessage } from "react-intl"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 
+import heroImgURL3 from "assets/images/people/front-view-young-lady.webp"
+import heroImgURL2 from "assets/images/people/male-student-wearing-headphones-around-neck.webp"
 import useIntlMessages from "hooks/useIntlMessages"
 import useScrollbarWidth from "hooks/useScrollbarWidth"
 import { colors } from "styles/colors"
@@ -33,6 +35,16 @@ const heroImgData: IHeroImgData = {
 	alt: "Girl using virtual reality glasses",
 }
 
+const heroImgData2: IHeroImgData = {
+	src: heroImgURL2,
+	alt: "male student young wearing headphones around neck",
+}
+
+const heroImgData3: IHeroImgData = {
+	src: heroImgURL3,
+	alt: "front view young lady",
+}
+
 const Hero: React.FC = () => {
 	const intl = useIntlMessages()
 	const scrollbarWidth = useScrollbarWidth()
@@ -52,6 +64,26 @@ const Hero: React.FC = () => {
 									<LazyLoadImage
 										src={heroImgData.src}
 										alt={heroImgData.alt}
+										threshold={100}
+										width={600}
+										height={646}
+									/>
+								</picture>
+								<picture>
+									<source srcSet={noImageURL} media="(max-width: 1024px)" />
+									<LazyLoadImage
+										src={heroImgData2.src}
+										alt={heroImgData2.alt}
+										threshold={100}
+										width={600}
+										height={646}
+									/>
+								</picture>
+								<picture>
+									<source srcSet={noImageURL} media="(max-width: 1024px)" />
+									<LazyLoadImage
+										src={heroImgData3.src}
+										alt={heroImgData3.alt}
 										threshold={100}
 										width={600}
 										height={646}
