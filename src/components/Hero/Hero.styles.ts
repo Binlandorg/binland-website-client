@@ -176,6 +176,11 @@ export const ImageWrapper = styled.div`
   width: 10px;
   aspect-ratio: 1 / 1.07;
 
+  & img{
+    height: 100%;
+    width: 100%;
+  }
+
   @media only screen and (min-width: ${breakpoints.lg}) {
     display: inherit;
     width: 140%;
@@ -197,7 +202,6 @@ export const ImageWrapper = styled.div`
     max-height: 100%;
 
     & img {
-      width: 100%;
       filter: drop-shadow(0.75rem 0 0.25rem rgba(0, 0, 0, 0.1));
       -webkit-mask-image: linear-gradient(to top, transparent 1%, black 7%);
       mask-image: linear-gradient(to top, transparent 1%, black 7%);
