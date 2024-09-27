@@ -5,121 +5,124 @@ import { breakpoints } from "shared/breakpoints"
 import Section from "ui/Section/Section"
 
 export const TermsOfServiceSection = styled(Section)`
-    & .container{
-        gap: 2rem;
+	& .container {
+		gap: 2rem;
 
-        @media only screen and (min-width: ${breakpoints.md}) {
-            gap: 4rem;
-        }
-    }
+		@media only screen and (min-width: ${breakpoints.md}) {
+			gap: 4rem;
+		}
+	}
 
-    & main{
-        
-        @media only screen and (min-width: ${breakpoints.md}) {
-            max-width: 100%;
-            padding-inline: 2rem;
-        }
-        
-        @media only screen and (min-width: ${breakpoints.lg}){
-            max-width: 75ch;
-        }
+	& main {
+		@media only screen and (min-width: ${breakpoints.md}) {
+			max-width: 100%;
+			padding-inline: 2rem;
+		}
 
-        & article{
-            & section{
-                &:not(:last-child){
-                    margin-bottom: 2rem;
-                }
+		@media only screen and (min-width: ${breakpoints.lg}) {
+			max-width: 75ch;
+		}
 
-                & h3{
-                    margin-bottom: 1rem;
-                } 
-            }
+		& article {
+			& section {
+				&:not(:last-child) {
+					margin-bottom: 2rem;
+				}
 
-            & section:first-child{
-                font-size: 1.125rem;
+				& h3 {
+					margin-bottom: 1rem;
+				}
+			}
 
-                & p:first-child{
-                    margin-bottom: 1rem;
-                    font-weight: 600;
-                }
-            }
-        }
-    }
+			& section:first-child {
+				font-size: 1.125rem;
 
-    & .content__wrapper{
-        display: flex;
+				& p:first-child {
+					margin-bottom: 1rem;
+					font-weight: 600;
+				}
+			}
+		}
+	}
 
-        @media only screen and (min-width: ${breakpoints.xl}) {
-            gap: 4rem
-        }
+	& .content__wrapper {
+		display: flex;
 
-        @media only screen and (min-width: ${breakpoints.lg}) {
-            gap: 2rem
-        }
+		@media only screen and (min-width: ${breakpoints.xl}) {
+			gap: 4rem;
+		}
 
-        @media only screen and (min-width: ${breakpoints.md}) {
-            gap: 1rem
-        }
-    }
+		@media only screen and (min-width: ${breakpoints.lg}) {
+			gap: 2rem;
+		}
 
-    & .table-of-content{
-        display: none;
+		@media only screen and (min-width: ${breakpoints.md}) {
+			gap: 1rem;
+		}
+	}
 
-        @media only screen and (min-width: ${breakpoints.md}) {
-            display: inherit;
-        }
-    }
+	& .table-of-content {
+		display: none;
+
+		@media only screen and (min-width: ${breakpoints.md}) {
+			display: inherit;
+		}
+	}
 `
 
 export const Hero = styled.div`
-    width: 100%;
-    border-radius: .5rem;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.0);
-    
-    & div{
-        padding: 2rem;
-        background-image: url(${bgImage});
-        background-size: cover;
-        position: relative;
+	width: 100%;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0);
 
-        &::before{
-            content: "";
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.08);
-            backdrop-filter: blur(2px);
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
+	& div {
+		padding: 2rem;
+		background-image: url(${bgImage});
+		background-size: cover;
+		position: relative;
 
-        &::after{
-            content: "";
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(45deg, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0) 100%);
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
+		&::before {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.08);
+			backdrop-filter: blur(2px);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
 
-        @media only screen and (min-width: ${breakpoints.md}){
-            padding: 5rem;
-        }
-    }
+		&::after {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(
+				45deg,
+				rgba(0, 0, 0, 1) 35%,
+				rgba(0, 0, 0, 0) 100%
+			);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
 
-    & h1{
-        position: relative;
-        z-index: 1;
-        text-transform: uppercase;
-        
-        @media only screen and (min-width: ${breakpoints.xl}){
-            text-align: center;
-        }
-    }
+		@media only screen and (min-width: ${breakpoints.md}) {
+			padding: 5rem;
+		}
+	}
 
-    @media only screen and (min-width: ${breakpoints.md}){
-        border-radius: 2rem;
-    }
+	& h1 {
+		position: relative;
+		z-index: 1;
+		text-transform: uppercase;
+
+		@media only screen and (min-width: ${breakpoints.xl}) {
+			text-align: center;
+		}
+	}
+
+	@media only screen and (min-width: ${breakpoints.md}) {
+		border-radius: 2rem;
+	}
 `

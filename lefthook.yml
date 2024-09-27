@@ -1,8 +1,10 @@
 pre-commit:
   parallel: true
   commands:
-    check:
+    check-biome:
       run: npx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true ./src
+    check-prettier:
+      run: npx prettier --write ./src/**/*.styles.ts
 
 pre-push:
   parallel: true

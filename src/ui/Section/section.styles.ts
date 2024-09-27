@@ -23,22 +23,22 @@ const sizeStyles = (size: string) => {
 }
 
 export const StyledSection = styled.section<IStyledSection>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1280px;
-  flex-direction: column;
-  width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1280px;
+	flex-direction: column;
+	width: 100%;
 
-  ${(props) =>
+	${(props) =>
+		props.type === "margin"
+			? `margin: calc(${sizeStyles(props.size)} / 2) auto`
+			: `padding: calc(${sizeStyles(props.size)} / 2) 0`};
+
+	@media only screen and (min-width: ${breakpoints.lg}) {
+		${(props) =>
 			props.type === "margin"
-				? `margin: calc(${sizeStyles(props.size)} / 2) auto`
-				: `padding: calc(${sizeStyles(props.size)} / 2) 0`};
-
-  @media only screen and (min-width: ${breakpoints.lg}) {
-    ${(props) =>
-					props.type === "margin"
-						? `margin: ${sizeStyles(props.size)} auto`
-						: `padding: ${sizeStyles(props.size)} 0`};
-  }
+				? `margin: ${sizeStyles(props.size)} auto`
+				: `padding: ${sizeStyles(props.size)} 0`};
+	}
 `

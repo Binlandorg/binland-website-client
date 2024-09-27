@@ -64,24 +64,24 @@ const sizeStyles = (size: string) => {
 }
 
 export const StyledButton = styled.button<IStyledButton>`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: ${colors.white.main};
-  font-size: 1rem;
-  padding: 0.75rem 1rem;
-  border: none;
-  border-radius: 0.6rem;
-  line-height: 100%;
-  cursor: pointer;
-  height: fit-content;
-  gap: 0.5rem;
-  width: ${({ $isfullwidth }) => ($isfullwidth ? "100%" : "fit-content")};
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: ${colors.white.main};
+	font-size: 1rem;
+	padding: 0.75rem 1rem;
+	border: none;
+	border-radius: 0.6rem;
+	line-height: 100%;
+	cursor: pointer;
+	height: fit-content;
+	gap: 0.5rem;
+	width: ${({ $isfullwidth }) => ($isfullwidth ? "100%" : "fit-content")};
 
-  ${(props) => typeStyles(props.type)}
-  ${(props) => sizeStyles(props.size || "md")}
+	${(props) => typeStyles(props.type)}
+	${(props) => sizeStyles(props.size || "md")}
 
   &:hover {
-    outline: none;
-  }
+		outline: none;
+	}
 `

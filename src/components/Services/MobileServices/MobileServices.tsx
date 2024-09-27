@@ -17,7 +17,7 @@ const MobileServices: React.FC<ITabs> = ({ items }) => {
 			{items.map((item) => {
 				return (
 					<SingleMobileService key={item.key} label={item.label}>
-						children
+						{item.children}
 					</SingleMobileService>
 				)
 			})}
