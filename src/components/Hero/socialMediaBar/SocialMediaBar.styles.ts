@@ -49,40 +49,40 @@ const TypeStyles = (type: string) => {
 }
 
 export const SocialMediaBarWrapper = styled.div<IProps>`
-  display: flex;
-  align-items: center;
-  border-radius: 0 1rem 1rem 0;
-  margin-right: auto;
-  ${(props) => typeDirection(props.direction)}
-  ${(props) => TypeStyles(props.type)}
+	display: flex;
+	align-items: center;
+	border-radius: 0 1rem 1rem 0;
+	margin-right: auto;
+	${(props) => typeDirection(props.direction)}
+	${(props) => TypeStyles(props.type)}
 `
 
 export const WrapperIcon = styled.div`
-  display: grid;
-  place-content: center;
+	display: grid;
+	place-content: center;
 `
 
 export const LinkIcon = styled(Link)`
-  height: 2.25rem;
-  width: 2.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${colors.white.main};
-  border-radius: 100%;
-  cursor: pointer;
+	height: 2.25rem;
+	width: 2.25rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: ${colors.white.main};
+	border-radius: 100%;
+	cursor: pointer;
 
-  &:hover {
-    background-color: ${colors.secondary.hover[400]};
-  }
+	&:hover {
+		background-color: ${colors.secondary.hover[400]};
+	}
 
-  &:active {
-    background-color: ${colors.white.main};
-    color: ${colors.black.main};
-  }
+	&:active {
+		background-color: ${colors.white.main};
+		color: ${colors.black.main};
+	}
 
-  &:focus-visible {
-    background-color: ${colors.white.main};
-    color: ${colors.black.main};
-  }
+	&:focus-visible {
+		background-color: ${colors.white.main};
+		color: ${colors.black.main};
+	}
 `

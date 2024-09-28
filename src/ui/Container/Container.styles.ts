@@ -26,14 +26,14 @@ const sizeStyles = (size: string) => {
 }
 
 export const StyledContainer = styled.div<IStyledContainer>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin: auto;
-  flex-direction: column;
-  width: ${({ $isfullwidth }) => ($isfullwidth ? "100%" : "")};
-  max-width: 80rem; /* 1280px */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	margin: auto;
+	flex-direction: column;
+	width: ${({ $isfullwidth }) => ($isfullwidth ? "100%" : "")};
+	max-width: 80rem; /* 1280px */
 
-  ${(props) => sizeStyles(props.size)}
+	${(props) => sizeStyles(props.size)}
 `

@@ -1,14 +1,21 @@
 import { Helmet } from "react-helmet-async"
 
+import TableOfContent from "components/TableOfContent/TableOfContent"
 import useIntlMessages from "hooks/useIntlMessages"
+import BodyContainer from "ui/BodyContainer/BodyContainer"
 import Container from "ui/Container/Container"
+import H1 from "ui/Titles/H1"
+import H3 from "ui/Titles/H3"
 import imageLinkPreview from "../../assets/images/image-link-preview.webp"
+import { Hero, TermsOfServiceSection } from "./TermsOfService.styles"
+import data from "./TermsOfServices.data"
 
 const TermsOfService: React.FC = () => {
 	const intl = useIntlMessages()
+	const { sectionsData, tableOfContentData } = data
 
 	return (
-		<Container size="sm">
+		<BodyContainer>
 			<Helmet prioritizeSeoTags>
 				<meta
 					name="description"
@@ -23,20 +30,38 @@ const TermsOfService: React.FC = () => {
 				<meta property="og:image" content={imageLinkPreview} />
 				<title>{intl("terms.of.service.title.tag")}</title>
 			</Helmet>
-			<h2>{intl("terms.of.service.title")}</h2>
-			<div>
-				<p>
-					The following Terms and Conditions govern the use of each of the websites
-					located at, or linked to, the URLs www.binland.dev and the services that
-					might be offered in the site
-				</p>
-				<h3>Copyright and trademark Notice</h3>
-				<p>ramdom text here</p>
-				<p>ramdom text here</p>
-				<h3>General Legal Notice and Liability Disclaimer</h3>
-				<p>ramdom text here</p>
-			</div>
-		</Container>
+			<TermsOfServiceSection type="padding" size="sm">
+				<Container className="container" size="xl" isfullwidth>
+					<Hero>
+						<div>
+							<H1>{intl("terms.of.service.title")}</H1>
+						</div>
+					</Hero>
+					<div className="content__wrapper">
+						<aside>
+							<TableOfContent
+								items={tableOfContentData}
+								className="table-of-content"
+							/>
+						</aside>
+						<main>
+							<article>
+								<section>
+									<p>{intl("terms.of.service.last.modified")}</p>
+									<p>{intl("terms.of.service.summary")}</p>
+								</section>
+								{sectionsData?.map(({ id, title, content }, idx) => (
+									<section key={id} id={id}>
+										<H3 $weight="semibold">{`${idx + 1}. ${intl(title)}`}</H3>
+										<p>{intl(content)}</p>
+									</section>
+								))}
+							</article>
+						</main>
+					</div>
+				</Container>
+			</TermsOfServiceSection>
+		</BodyContainer>
 	)
 }
 

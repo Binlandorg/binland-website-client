@@ -8,7 +8,7 @@ import type {
 } from "types/ui/Multiselect"
 
 export const MirroredIcon = styled(FiSearch)`
-  transform: scaleX(-1);
+	transform: scaleX(-1);
 `
 
 const textAnimation = keyframes`
@@ -23,38 +23,40 @@ const textAnimation = keyframes`
 `
 
 export const MultiSelectWrapper = styled.div<IMultiSelectWrapperProps>`
-  position: relative;
+	position: relative;
 
-  &:focus-within {
-    outline: none;
-    border-radius: 0.375rem;
-    outline: 0.125rem solid ${colors.tertiary.focus[500]};
-  }
+	&:focus-within {
+		outline: none;
+		border-radius: 0.375rem;
+		outline: 0.125rem solid ${colors.tertiary.focus[500]};
+	}
 
-  ${(props) =>
-			props.$isOpen &&
-			`
+	${(props) =>
+		props.$isOpen &&
+		`
     outline: none;
     border: none;
   `};
 `
 
 export const InputBox = styled.div<IInputBoxProps>`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: ${colors.tertiary.normal[50]};
-  padding: 1.5rem 1.75rem;
-  border-radius: ${({ $isOpen }) =>
-			$isOpen ? "0.375rem 0.375rem 0 0" : "0.375rem"};
-  gap: 0.6rem;
-  cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: ${colors.tertiary.normal[50]};
+	padding: 1.5rem 1.75rem;
+	border-radius: ${({ $isOpen }) =>
+		$isOpen ? "0.375rem 0.375rem 0 0" : "0.375rem"};
+	gap: 0.6rem;
+	cursor: pointer;
 
-  transition: padding, gap 0.3s ease;
+	transition:
+		padding,
+		gap 0.3s ease;
 
-  ${(props) =>
-			props.$isOpen &&
-			`
+	${(props) =>
+		props.$isOpen &&
+		`
     outline: 0.125rem solid ${colors.tertiary.focus[500]};
     
     &::after {
@@ -69,95 +71,95 @@ export const InputBox = styled.div<IInputBoxProps>`
     }
   `}
 
-  ${(props) =>
-			(props.$isOpen || props.$servicesLength > 0) &&
-			css`
-      & {
-        padding: 1.5rem 1.75rem;
-        gap: 0;
-      }
-      .span-question {
-        animation: ${textAnimation} 0.3s ease forwards;
-      }
-    `};
+	${(props) =>
+		(props.$isOpen || props.$servicesLength > 0) &&
+		css`
+			& {
+				padding: 1.5rem 1.75rem;
+				gap: 0;
+			}
+			.span-question {
+				animation: ${textAnimation} 0.3s ease forwards;
+			}
+		`};
 
-  .span-question {
-    font-weight: 400;
-    line-height: 1.5rem;
-    font-size: 1rem;
-    color: ${colors.secondary.main};
-  }
+	.span-question {
+		font-weight: 400;
+		line-height: 1.5rem;
+		font-size: 1rem;
+		color: ${colors.secondary.main};
+	}
 
-  .input-box-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+	.input-box-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-  .arrow-button {
-    cursor: pointer;
-    color: ${colors.secondary.normal[300]};
-    align-self: center;
-  }
+	.arrow-button {
+		cursor: pointer;
+		color: ${colors.secondary.normal[300]};
+		align-self: center;
+	}
 `
 
 export const TagsWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
 `
 
 export const DisplayOptions = styled.div<IMultiSelectWrapperProps>`
-  position: absolute;
-  top: 100%;
-  z-index: 2;
-  width: 100%;
-  outline: 0.125rem solid ${colors.tertiary.focus[500]};
-  border-radius: 0 0 0.375rem 0.375rem;
-  overflow: hidden;
+	position: absolute;
+	top: 100%;
+	z-index: 2;
+	width: 100%;
+	outline: 0.125rem solid ${colors.tertiary.focus[500]};
+	border-radius: 0 0 0.375rem 0.375rem;
+	overflow: hidden;
 `
 
 export const OptionsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-height: 13.5rem;
-  overflow-y: scroll;
-  border-radius: 0 0 0.375rem 0.375rem;
+	display: flex;
+	flex-direction: column;
+	max-height: 13.5rem;
+	overflow-y: scroll;
+	border-radius: 0 0 0.375rem 0.375rem;
 
-  &::-webkit-scrollbar {
-    width: 0.3rem;
-    border-radius: 0.375rem;
-  }
+	&::-webkit-scrollbar {
+		width: 0.3rem;
+		border-radius: 0.375rem;
+	}
 
-  &::-webkit-scrollbar-thumb {
-    background-color: ${colors.tertiary.focus[500]};
-    border-radius: 1rem;
-  }
+	&::-webkit-scrollbar-thumb {
+		background-color: ${colors.tertiary.focus[500]};
+		border-radius: 1rem;
+	}
 
-  &::-webkit-scrollbar-track {
-    background-color: ${colors.tertiary.normal[200]};
-    border-radius: 0 0 0.2rem 0;
-  }
+	&::-webkit-scrollbar-track {
+		background-color: ${colors.tertiary.normal[200]};
+		border-radius: 0 0 0.2rem 0;
+	}
 `
 
 export const StyledOption = styled.span`
-  padding: 1.5rem 1.75rem;
-  background-color: ${colors.tertiary.normal[50]};
-  border-bottom: 0.0625rem solid ${colors.secondary.normal[200]};
-  color: ${colors.secondary.normal[800]};
-  cursor: pointer;
+	padding: 1.5rem 1.75rem;
+	background-color: ${colors.tertiary.normal[50]};
+	border-bottom: 0.0625rem solid ${colors.secondary.normal[200]};
+	color: ${colors.secondary.normal[800]};
+	cursor: pointer;
 
-  &:last-child {
-    border-bottom: none;
-  }
+	&:last-child {
+		border-bottom: none;
+	}
 
-  &:hover {
-    background-color: ${colors.tertiary.hover[300]};
-    color: ${colors.tertiary.hover[600]};
-  }
+	&:hover {
+		background-color: ${colors.tertiary.hover[300]};
+		color: ${colors.tertiary.hover[600]};
+	}
 
-  &:active {
-    background-color: ${colors.tertiary.active[400]};
-    color: ${colors.tertiary.active[700]};
-  }
+	&:active {
+		background-color: ${colors.tertiary.active[400]};
+		color: ${colors.tertiary.active[700]};
+	}
 `

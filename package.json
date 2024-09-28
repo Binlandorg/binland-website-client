@@ -10,6 +10,8 @@
 		"biome:w": "biome check --write --max-diagnostics=none ./src",
 		"biome:lw": "biome lint --write --max-diagnostics=none ./src",
 		"biome:fw": "biome format --write --max-diagnostics=none ./src",
+		"prettier:cs": "prettier --check ./src/**/*.styles.ts",
+		"prettier:fs": "prettier --write ./src/**/*.styles.ts",
 		"preview": "vite preview",
 		"test": "jest src"
 	},
@@ -54,6 +56,7 @@
 		"jest-environment-jsdom": "^29.7.0",
 		"jsdom": "^22.1.0",
 		"lefthook": "^1.7.15",
+		"prettier": "3.3.3",
 		"sharp": "^0.33.5",
 		"svgo": "^3.3.2",
 		"typescript": "^5.5.4",
