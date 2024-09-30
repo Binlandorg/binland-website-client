@@ -45,6 +45,7 @@
 			"**/*.min.js",
 			"**/vendor/**",
 			"src/legacy/**",
+			"src/**/*.styles.ts",
 			"*.md"
 		]
 	}

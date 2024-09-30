@@ -6,26 +6,26 @@ import Section from "ui/Section/Section"
 import backgroundContact from "./../../assets/images/mockups/mockup-ui-chat.webp"
 
 export const ContactUsHero = styled.div`
-  width: 100%;
-  background-image: url(${backgroundContact});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 21.875rem;
-  display: flex;
-  align-items: center;
+	width: 100%;
+	background-image: url(${backgroundContact});
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 21.875rem;
+	display: flex;
+	align-items: center;
 
-  @media only screen and (max-width: ${breakpoints.lg}) {
-    height: 27.687rem;
-  }
+	@media only screen and (max-width: ${breakpoints.lg}) {
+		height: 27.687rem;
+	}
 `
 
 export const SectionTitleHero = styled(Section)`
-  max-width: 100%;
+	max-width: 100%;
 `
 
 export const HeroWrapper = styled(Container)`
-  flex-direction: row;
-  width: 100%;
-  justify-content: flex-start;
+	flex-direction: row;
+	width: 100%;
+	justify-content: flex-start;
 `
