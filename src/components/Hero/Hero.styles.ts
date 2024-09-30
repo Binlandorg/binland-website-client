@@ -187,16 +187,9 @@ export const ImageWrapper = styled.div`
     bottom: -5rem;
     left: -6rem;
 
-    /* & picture {
-      opacity: 0;
-      animation: fade2 8s reverse;
-    } */
-
     & picture:first-child{
-      /* position: relative; */
-      /* z-index: 1; */
       opacity: 1;
-      animation: fade1 4s, fade2 4s ease infinite 6s;
+      animation: fade1 16s ease-in-out infinite;
     }
 
     & picture:not(:first-child){
@@ -204,7 +197,7 @@ export const ImageWrapper = styled.div`
       top: 0;
       right: 0;
       opacity: 0;
-      animation: fade2 4s ease infinite;
+      animation: fade2 16s ease-in-out infinite;
     }
 
     & picture:nth-child(1){
@@ -216,15 +209,17 @@ export const ImageWrapper = styled.div`
     }
 
     & picture:nth-child(3){
-      animation-delay: 4s;
+      animation-delay: 8s;
     }
 
     @keyframes fade1 {
       0%{
         opacity: 1;
       }
-      100%{
+      20%, 85%{
         opacity: 0;
+      }100%{
+        opacity: 1;
       }
     }
 
@@ -232,10 +227,10 @@ export const ImageWrapper = styled.div`
       0%{
         opacity: 0;
       }
-      50%{
+      30%{
         opacity: 1;
       }
-      100%{
+      40%, 100%{
         opacity: 0;
       }
     }
