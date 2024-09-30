@@ -186,6 +186,12 @@ export const ImageWrapper = styled.div`
 		width: 140%;
 		bottom: -5rem;
 		left: -6rem;
+	}
+	@media only screen and (min-width: ${breakpoints.lg}) {
+		display: inherit;
+		width: 140%;
+		bottom: -5rem;
+		left: -6rem;
 
 		& picture:first-child {
 			opacity: 1;
