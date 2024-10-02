@@ -187,15 +187,30 @@ export const ImageWrapper = styled.div`
 		bottom: -5rem;
 		left: -6rem;
 	}
+
 	@media only screen and (min-width: ${breakpoints.lg}) {
 		display: inherit;
 		width: 140%;
 		bottom: -5rem;
 		left: -6rem;
 
+		--visibleTime: 5;
+		--opacityTime: 1;
+		--delayTime: 12.5;
+		--timeAnimation: calc(
+			var(--visibleTime) + var(--opacityTime) * 2 + var(--delayTime)
+		);
+		--initialDelay-1: 0;
+		--initialDelay-2: calc(
+			var(--initialDelay-1) + var(--visibleTime) + var(--opacityTime) / 2
+		);
+		--initialDelay-3: calc(
+			var(--initialDelay-2) + var(--visibleTime) + var(--opacityTime) * 1.5
+		);
+
 		& picture:first-child {
-			opacity: 1;
-			animation: fade1 16s ease-in-out infinite;
+			opacity: 0;
+			animation: fadeFirst calc(var(--timeAnimation) * 1s) ease-in-out infinite;
 		}
 
 		& picture:not(:first-child) {
@@ -203,27 +218,32 @@ export const ImageWrapper = styled.div`
 			top: 0;
 			right: 0;
 			opacity: 0;
-			animation: fade2 16s ease-in-out infinite;
+			animation: fade calc(var(--timeAnimation) * 1s) ease-in-out infinite;
 		}
 
 		& picture:nth-child(1) {
-			animation-delay: 0s;
+			animation-delay: calc(var(--initialDelay-1) * 1s);
 		}
 
 		& picture:nth-child(2) {
-			animation-delay: 2s;
+			animation-delay: calc(var(--initialDelay-2) * 1s);
 		}
 
 		& picture:nth-child(3) {
-			animation-delay: 8s;
+			animation-delay: calc(var(--initialDelay-3) * 1s);
 		}
 
-		@keyframes fade1 {
+		@keyframes fadeFirst {
 			0% {
 				opacity: 1;
 			}
-			20%,
-			85% {
+			25.5% {
+				opacity: 1;
+			}
+			30.6% {
+				opacity: 0;
+			}
+			94.35% {
 				opacity: 0;
 			}
 			100% {
@@ -231,14 +251,19 @@ export const ImageWrapper = styled.div`
 			}
 		}
 
-		@keyframes fade2 {
+		@keyframes fade {
 			0% {
 				opacity: 0;
 			}
-			30% {
+			5.1% {
 				opacity: 1;
 			}
-			40%,
+			30.6% {
+				opacity: 1;
+			}
+			35.7% {
+				opacity: 0;
+			}
 			100% {
 				opacity: 0;
 			}
