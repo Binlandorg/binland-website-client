@@ -33,7 +33,7 @@ export const PrivacyPolicySection = styled(Section)`
 					margin-bottom: 1rem;
 				}
 
-				& ul{
+				& ul {
 					list-style-position: outside;
 					margin-left: 2em;
 				}
