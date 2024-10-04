@@ -65,30 +65,37 @@ const tableOfContentData: IItems[] = [
 	{
 		id: "information-we-collect",
 		title: "privacy.policy.information.we.collect.title",
+		ariaLabel: "privacy.policy.information.we.collect.aria.label",
 	},
 	{
 		id: "use-of-information",
 		title: "privacy.policy.use.of.information.title",
+		ariaLabel: "privacy.policy.use.of.information.aria.label",
 	},
 	{
 		id: "information-sharing",
 		title: "privacy.policy.information.sharing.title",
+		ariaLabel: "privacy.policy.information.sharing.aria.label",
 	},
 	{
 		id: "data-security",
 		title: "privacy.policy.data.security.title",
+		ariaLabel: "privacy.policy.data.security.aria.label",
 	},
 	{
 		id: "your-rights",
 		title: "privacy.policy.your.rights.title",
+		ariaLabel: "privacy.policy.your.rights.aria.label",
 	},
 	{
 		id: "changes-to-this-policy",
 		title: "privacy.policy.changes.to.this.policy.title",
+		ariaLabel: "privacy.policy.changes.to.this.policy.aria.label",
 	},
 	{
 		id: "contact",
 		title: "privacy.policy.contact.title",
+		ariaLabel: "privacy.policy.contact.aria.label",
 	},
 ]
 

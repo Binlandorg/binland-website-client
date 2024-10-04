@@ -1,3 +1,4 @@
+import { useRef } from "react"
 import { Helmet } from "react-helmet-async"
 
 import TableOfContent from "components/TableOfContent/TableOfContent"
@@ -13,6 +14,12 @@ import { Hero, PrivacyPolicySection } from "./PrivacyPolicy.styles"
 const PrivacyPolicy: React.FC = () => {
 	const intl = useIntlMessages()
 	const { sectionsData, tableOfContentData } = data
+	const sectionsRef = useRef<HTMLElement[]>([])
+
+	const addRef = (element: HTMLElement) => {
+		if (element && !sectionsRef.current.includes(element))
+			sectionsRef.current.push(element)
+	}
 
 	return (
 		<BodyContainer>
@@ -42,6 +49,7 @@ const PrivacyPolicy: React.FC = () => {
 							<TableOfContent
 								items={tableOfContentData}
 								className="table-of-content"
+								sectionsRef={sectionsRef}
 							/>
 						</aside>
 						<main>
@@ -51,7 +59,7 @@ const PrivacyPolicy: React.FC = () => {
 									<p>{intl("privacy.policy.summary")}</p>
 								</section>
 								{sectionsData?.map(({ id, title, content }, idx) => (
-									<section key={id} id={id}>
+									<section key={id} id={id} ref={addRef}>
 										<H3 $weight="semibold">{`${idx + 1}. ${intl(title)}`}</H3>
 										{typeof content === "string" ? <p>{intl(content)}</p> : null}
 										{typeof content === "object" ? (

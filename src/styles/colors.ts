@@ -27,6 +27,7 @@ export const colors = {
 			300: "#FFA0A6",
 			400: "#FF6A73",
 			500: "#F83D48",
+			700: "#C1141E",
 		},
 		active: {
 			400: "#FF6A73",
