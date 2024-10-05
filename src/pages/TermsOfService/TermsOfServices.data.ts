@@ -53,21 +53,48 @@ const tableOfContentData: IItems[] = [
 	{
 		id: "acceptance-of-terms",
 		title: "terms.of.service.acceptance.of.terms.title",
+		ariaLabel: "terms.of.service.acceptance.of.terms.aria.label",
 	},
-	{ id: "services", title: "terms.of.service.services.title" },
-	{ id: "use-of-services", title: "terms.of.service.use.of.services.title" },
+	{
+		id: "services",
+		title: "terms.of.service.services.title",
+		ariaLabel: "terms.of.service.services.aria.label",
+	},
+	{
+		id: "use-of-services",
+		title: "terms.of.service.use.of.services.title",
+		ariaLabel: "terms.of.service.use.of.services.aria.label",
+	},
 	{
 		id: "intellectual-property",
 		title: "terms.of.service.intellectual.property.title",
+		ariaLabel: "terms.of.service.intellectual.property.aria.label",
 	},
-	{ id: "payments", title: "terms.of.service.payments.title" },
-	{ id: "modifications", title: "terms.of.service.modifications.title" },
+	{
+		id: "payments",
+		title: "terms.of.service.payments.title",
+		ariaLabel: "terms.of.service.payments.aria.label",
+	},
+	{
+		id: "modifications",
+		title: "terms.of.service.modifications.title",
+		ariaLabel: "terms.of.service.modifications.aria.label",
+	},
 	{
 		id: "limitation-of-liability",
 		title: "terms.of.service.limitation.of.liability.title",
+		ariaLabel: "terms.of.service.limitation.of.liability.aria.label",
 	},
-	{ id: "applicable-law", title: "terms.of.service.applicable.law.title" },
-	{ id: "contact", title: "terms.of.service.contact.title" },
+	{
+		id: "applicable-law",
+		title: "terms.of.service.applicable.law.title",
+		ariaLabel: "terms.of.service.applicable.law.aria.label",
+	},
+	{
+		id: "contact",
+		title: "terms.of.service.contact.title",
+		ariaLabel: "terms.of.service.contact.aria.label",
+	},
 ]
 
 const data = {

@@ -36,4 +36,26 @@ export const TableOfContentStyled = styled.nav`
 	& li:not(:last-child) {
 		border-bottom: 0.125rem solid ${colors.tertiary.normal[50]};
 	}
+
+	& li {
+		& a {
+			&.active {
+				color: ${colors.primary.normal[500]};
+			}
+
+			&:active {
+				color: ${colors.primary.normal[500]};
+			}
+
+			&:hover {
+				color: ${colors.primary.hover[700]};
+			}
+
+			&:focus-visible {
+				outline: 0.125rem solid ${colors.primary.focus[500]};
+				outline-offset: 0.0625rem;
+				border-radius: 0.25rem;
+			}
+		}
+	}
 `
