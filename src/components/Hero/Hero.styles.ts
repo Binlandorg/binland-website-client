@@ -186,6 +186,66 @@ export const ImageWrapper = styled.div`
 		width: 140%;
 		bottom: -5rem;
 		left: -6rem;
+
+		${() => {
+			const numberOfImages = 3
+			const visibleTime = 5
+			const opacityTime = 2
+			const opacityIntersection = opacityTime / 2
+
+			const timeAnimation =
+				numberOfImages * (visibleTime + opacityTime + opacityIntersection)
+			const delayTime = timeAnimation - visibleTime - opacityTime * 2
+			const percentPerSecond = 100 / timeAnimation
+
+			const initialDelay1 = 0
+			const initialDelay2 = initialDelay1 + visibleTime + opacityIntersection
+			const initialDelay3 =
+				initialDelay2 + opacityTime + visibleTime + opacityIntersection
+
+			return `
+				& picture:first-child {
+					opacity: 0;
+					animation: fadeFirst ${timeAnimation}s ease-in-out infinite;
+				}
+
+				& picture:not(:first-child) {
+					position: absolute;
+					top: 0;
+					right: 0;
+					opacity: 0;
+					animation: fade ${timeAnimation}s ease-in-out infinite;
+				}
+
+				& picture:nth-child(1) {
+					animation-delay: ${initialDelay1}s;
+				}
+
+				& picture:nth-child(2) {
+					animation-delay: ${initialDelay2}s;
+				}
+
+				& picture:nth-child(3) {
+					animation-delay: ${initialDelay3}s;
+				}
+
+				@keyframes fadeFirst {
+					0%{opacity: 1}
+					${visibleTime * percentPerSecond}%{opacity: 1}
+					${(visibleTime + opacityTime) * percentPerSecond}%{opacity: 0}
+					${(visibleTime + opacityTime + delayTime) * percentPerSecond}%{opacity: 0}
+					100%{opacity: 1}
+				}
+
+				@keyframes fade {
+					0%{opacity: 0}
+					${opacityTime * percentPerSecond}%{opacity: 1}
+					${(visibleTime + opacityTime) * percentPerSecond}%{opacity: 1}
+					${(visibleTime + opacityTime * 2) * percentPerSecond}%{opacity: 0}
+					100%{opacity: 0}
+				}
+				`
+		}}
 	}
 
 	@media only screen and (min-width: ${breakpoints.xl}) {
@@ -198,7 +258,7 @@ export const ImageWrapper = styled.div`
 		width: 37.5rem;
 		top: 2rem;
 		bottom: inherit;
-		right: 4rem;
+		right: -1rem;
 		max-height: 100%;
 
 		& img {
