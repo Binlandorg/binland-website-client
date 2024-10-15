@@ -11,7 +11,7 @@ import {
 import Layout from "components/Layout/Layout"
 
 const Home = lazy(() => import("pages/Home/Home"))
-const AboutUs = lazy(() => import("pages/AboutUs/AboutUs"))
+// const AboutUs = lazy(() => import("pages/AboutUs/AboutUs"))
 const ContactUs = lazy(() => import("pages/ContactUs/ContactUs"))
 const PageNotFound = lazy(() => import("pages/PageNotFound/PageNotFound"))
 const PrivacyPolicy = lazy(() => import("pages/PrivacyPolicy/PrivacyPolicy"))
@@ -38,7 +38,7 @@ const router = createBrowserRouter(
 			{/* <Route path="/saas" element={<Saas />} /> */}
 			{/* <Route path="/portafolio" element={<Portafolio />} /> */}
 			{/* <Route path="/lets-learn" element={<LetsLearn />} /> */}
-			<Route path="/about-us" element={<AboutUs />} />
+			{/* <Route path="/about-us" element={<AboutUs />} /> */}
 			{/* <Route path="/services" element={<Services />} /> */}
 			{/* <Route path="/services/seo" element={<Seo />} /> */}
 			<Route path="/privacy-policy" element={<PrivacyPolicy />} />
