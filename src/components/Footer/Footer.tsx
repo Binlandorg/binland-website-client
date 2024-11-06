@@ -1,10 +1,12 @@
+import ReactGA from "react-ga4"
 import { HiOutlineMail } from "react-icons/hi"
 import { LazyLoadImage } from "react-lazy-load-image-component"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 import SocialMedia from "components/SocialMedia/SocialMedia"
 import { COMPANY_CONTACT_EMAIL } from "context/constants/constans"
 import useIntlMessages from "hooks/useIntlMessages"
+import { useEffect } from "react"
 import logo from "../../assets/images/binland/isologo-primary.svg"
 import { enterpriseLinks, legalLinks } from "./Footer.data"
 import {
@@ -19,6 +21,15 @@ import {
 const Footer: React.FC = () => {
 	const intl = useIntlMessages()
 	const currentYear = new Date().getFullYear()
+
+	const location = useLocation()
+
+	useEffect(() => {
+		ReactGA.send({
+			hitType: "pageview",
+			page: location.pathname,
+		})
+	}, [location])
 
 	return (
 		<StyledFooter>
