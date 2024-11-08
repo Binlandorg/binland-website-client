@@ -7,7 +7,7 @@ import { NavLink as ReactRouterNavLink } from "react-router-dom"
 
 import LanguageSwitcher from "components/LanguageSwitcher/LanguageSwitcher"
 import useIntlMessages from "hooks/useIntlMessages"
-import Button from "ui/Button/Button"
+import ButtonLink from "ui/ButtonLink/ButtonLink"
 import NavLink from "ui/NavLink/NavLink"
 import logo from "../../assets/images/binland/logo.svg"
 import { NavbarItems } from "./Header.data"
@@ -78,11 +78,9 @@ const Header: React.FC = () => {
 							))}
 						</ul>
 						<div className="nav-buttons">
-							<a className="temporary-anchor" href="/contact-us">
-								<Button type="secondary" $isfullwidth={isOpen}>
-									{intl("home.navbar.button.contact.us")}
-								</Button>
-							</a>
+							<ButtonLink to={"/contact-us"} type="secondary">
+								{intl("home.navbar.button.contact.us")}
+							</ButtonLink>
 							<LanguageSwitcher />
 						</div>
 					</DesktopNavigation>
@@ -120,11 +118,14 @@ const Header: React.FC = () => {
               >
                 {intl('home.navbar.button.contact.us')}
               </ButtonLink> */}
-							<a className="temporary-anchor" href="/contact-us">
-								<Button type="secondary" onClick={handleIsOpen} $isfullwidth={true}>
-									{intl("home.navbar.button.contact.us")}
-								</Button>
-							</a>
+							<ButtonLink
+								to={"/contact-us"}
+								type="secondary"
+								onClick={handleIsOpen}
+								$isfullwidth={true}
+							>
+								{intl("home.navbar.button.contact.us")}
+							</ButtonLink>
 						</MobileNavigation>
 					)}
 				</AnimatePresence>
