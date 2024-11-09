@@ -6,7 +6,7 @@ import { colors } from "../../styles/colors"
 
 export const TextareaWrapper = styled.div<ITextareaWrapper>`
 	background-color: ${colors.tertiary.normal[50]};
-	padding: 1.5rem 1rem;
+	padding: 1.5rem 1.75rem 1rem;
 	border-radius: 0.375rem;
 	height: auto;
 	min-height: 9.375rem;

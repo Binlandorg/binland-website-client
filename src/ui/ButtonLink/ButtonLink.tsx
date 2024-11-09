@@ -1,38 +1,31 @@
+import type { NavLinkProps } from "react-router-dom"
+
 import type { PropsWithChildren } from "react"
-
 import Button from "ui/Button/Button"
-import { CustonNavLink } from "./ButtonLink.styles"
+import { CustomNavLink } from "./ButtonLink.styles"
 
-interface IButtonLinkProps extends PropsWithChildren {
-	to: string
+interface ICustomProps extends PropsWithChildren {
 	type: "primary" | "secondary"
 	size?: "sm" | "md" | "lg"
-	className?: string
-	isfullwidth?: boolean
-	onClick?: (() => void) | undefined
+	$isfullwidth?: boolean
 }
 
-const ButtonLink: React.FC<IButtonLinkProps> = ({
-	to,
+type INavLinkProps = NavLinkProps & ICustomProps
+
+const ButtonLink: React.FC<INavLinkProps> = ({
 	type,
-	size,
 	className,
-	isfullwidth,
 	children,
-	onClick,
+	size,
+	$isfullwidth,
+	...rest
 }) => {
 	return (
-		<CustonNavLink to={to}>
-			<Button
-				type={type}
-				size={size}
-				className={className}
-				$isfullwidth={isfullwidth}
-				onClick={onClick}
-			>
+		<CustomNavLink {...rest}>
+			<Button type={type} size={size} $isfullwidth={$isfullwidth}>
 				{children}
 			</Button>
-		</CustonNavLink>
+		</CustomNavLink>
 	)
 }
 

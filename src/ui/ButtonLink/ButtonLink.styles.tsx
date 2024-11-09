@@ -2,13 +2,21 @@ import { NavLink } from "react-router-dom"
 import styled from "styled-components"
 import { colors } from "styles/colors"
 
-export const CustonNavLink = styled(NavLink)`
+export const CustomNavLink = styled(NavLink)`
   text-decoration: none;
-  width: fit-content;
+  width: 100%;
 
-  &:focus {
-    outline: none;
-    outline: 0.125rem solid ${colors.primary.main};
+  &:focus button{
+    outline: 0.125rem solid ${colors.secondary.normal[800]};
     border-radius: 0.6rem;
+  }
+
+  &:focus{
+    outline: none;
+  }
+
+  &:active button{
+    background-color: ${colors.secondary.active[900]};
+		color: ${colors.white.main};
   }
 `

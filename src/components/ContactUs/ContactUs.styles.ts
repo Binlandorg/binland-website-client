@@ -5,7 +5,9 @@ import Container from "ui/Container/Container"
 import Section from "ui/Section/Section"
 
 export const SectionContactUs = styled(Section)`
-	margin: auto;
+	& h2 {
+		margin-bottom: 2rem;
+	}
 `
 
 export const ContactUsWrapper = styled(Container)`
@@ -23,7 +25,6 @@ export const ContactUsWrapper = styled(Container)`
 export const ContentWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin-top: 2rem;
 	gap: 0.875rem;
 
 	@media only screen and (min-width: ${breakpoints.lg}) {
