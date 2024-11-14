@@ -1,10 +1,15 @@
 import { NavLink } from "react-router-dom"
 import styled from "styled-components"
+
 import { colors } from "styles/colors"
 
-export const CustomNavLink = styled(NavLink)`
+export interface IStyledButtonLink {
+	$isfullwidth?: boolean
+}
+
+export const CustomNavLink = styled(NavLink)<IStyledButtonLink>`
   text-decoration: none;
-  width: 100%;
+  ${({ $isfullwidth }) => $isfullwidth && "width: 100%;"}
 
   &:focus button{
     outline: 0.125rem solid ${colors.secondary.normal[800]};
