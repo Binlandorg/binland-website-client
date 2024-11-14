@@ -4,15 +4,14 @@ import serviceImg from "./../../assets/images/illustrations/service-img.webp"
 export const serviceContentData: ServicesContentProps = {
 	"grafic-pieces": {
 		id: "grafic-pieces",
-		title: "home.services.design.development.of.graphic.pieces",
-		description: "home.services.design.development.of.graphic.pieces.description",
+		title: "home.services.design.graphic.design",
+		description: "home.services.design.graphic.design.description",
 		includes: [
 			{ id: "1", text: "includes.grafic-pieces.1" },
 			{ id: "2", text: "includes.grafic-pieces.2" },
 			{ id: "3", text: "includes.grafic-pieces.3" },
 			{ id: "4", text: "includes.grafic-pieces.4" },
 			{ id: "5", text: "includes.grafic-pieces.5" },
-			{ id: "6", text: "includes.grafic-pieces.6" },
 		],
 		image: serviceImg,
 		link: "#",

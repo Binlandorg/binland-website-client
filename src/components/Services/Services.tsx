@@ -7,13 +7,10 @@ import useIntlMessages from "hooks/useIntlMessages"
 import type { ITabProperties, IVerticalTabs } from "types/ui/tabs"
 import Container from "ui/Container/Container"
 import Section from "ui/Section/Section"
+import H2 from "ui/Titles/H2"
 import MobileServices from "./MobileServices/MobileServices"
 import { serviceContentData } from "./Services.data"
-import {
-	CustomSingleWord,
-	ServicesTitle,
-	ServicesWrapper,
-} from "./Services.styles"
+import { CustomSingleWord, ServicesWrapper } from "./Services.styles"
 import ServiceContent from "./ServicesContent/ServicesContent"
 
 const Services: React.FC = () => {
@@ -153,19 +150,21 @@ const Services: React.FC = () => {
 		<Section id="services" size="lg" type="margin">
 			<Container size="xl" isfullwidth>
 				<ServicesWrapper size="xl" isfullwidth>
-					<Container size="sm">
-						<ServicesTitle>
-							<FormattedMessage
-								defaultMessage=""
-								id="home.services.title"
-								values={{
-									service: intl("home.services.title.only.services"),
-									b: (str) => <CustomSingleWord>{str}</CustomSingleWord>,
-								}}
-							/>
-							<span className="span-point">.</span>
-						</ServicesTitle>
-					</Container>
+					{/* <Container size="sm"> */}
+					{/* <ServicesTitle> */}
+					<H2 withDot>
+						<FormattedMessage
+							defaultMessage=""
+							id="home.services.title"
+							values={{
+								service: intl("home.services.title.only.services"),
+								b: (str) => <CustomSingleWord>{str}</CustomSingleWord>,
+							}}
+						/>
+						{/* <span className="span-point">.</span> */}
+					</H2>
+					{/* </ServicesTitle> */}
+					{/* </Container> */}
 					<HorizontalTabs items={items} />
 					<MobileServices items={items} />
 				</ServicesWrapper>

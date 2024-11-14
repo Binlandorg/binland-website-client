@@ -26,6 +26,7 @@ export const ServiceContentWrapper = styled.div`
 			display: flex;
 			flex-direction: column;
 			gap: 1rem;
+			color: ${colors.secondary.normal[800]};
 		}
 
 		& .what-includes {

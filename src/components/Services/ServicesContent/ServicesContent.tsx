@@ -1,7 +1,9 @@
 import { FaArrowUpRightFromSquare } from "react-icons/fa6"
 
 import useIntlMessages from "hooks/useIntlMessages"
+import { FormattedMessage } from "react-intl"
 import type { IServiceContent } from "types/components/serviceSection"
+import Paragraph from "ui/Paragraph/Paragraph"
 import H4 from "ui/Titles/H4"
 import { ServiceContentWrapper } from "./ServicesContent.styles"
 
@@ -13,7 +15,15 @@ const ServiceContent: React.FC<IServiceContent> = (props) => {
 			<div className="left-content">
 				<div className="what-is">
 					<H4 $weight="bold">{intl("home.services.content.title.what.is")}</H4>
-					<p>{intl(props.description)}</p>
+					{/* <H4 $weight="bold">{intl(props.title)}</H4> */}
+					{/* <p>{intl(props.description)}</p> */}
+					<Paragraph $weight="regular" $style="normal">
+						<FormattedMessage
+							id={props.description}
+							defaultMessage={intl(props.description)}
+							values={{ b: (chunks) => <b>{chunks}</b> }}
+						/>
+					</Paragraph>
 				</div>
 				<div className="what-includes">
 					<H4 $weight="bold">{intl("home.services.content.title.what.includes")}</H4>
@@ -21,7 +31,9 @@ const ServiceContent: React.FC<IServiceContent> = (props) => {
 						{props.includes.map((item) => (
 							<li key={intl(item.id)}>
 								<span>📌</span>
-								<p>{intl(item.text)}</p>
+								<Paragraph $weight="regular" $style="normal">
+									{intl(item.text)}
+								</Paragraph>
 							</li>
 						))}
 					</ul>
