@@ -6,6 +6,7 @@ import imageLinkPreview from "../../assets/images/image-link-preview.webp"
 
 const Hero = lazy(() => import("components/Hero/Hero"))
 const Services = lazy(() => import("components/Services/Services"))
+const Princing = lazy(() => import("components/Pricing/Pricing"))
 const Clients = lazy(() => import("components/Clients/Clients"))
 const ContactUs = lazy(() => import("components/ContactUs/ContactUs"))
 
@@ -31,6 +32,7 @@ const Home = () => {
 			</Suspense>
 			<Suspense>
 				<Services />
+				<Princing />
 				<Clients />
 				<ContactUs />
 			</Suspense>
