@@ -3,7 +3,7 @@ import {
 	PERU_PHONE_CODE,
 } from "context/constants/constans"
 import useIntlMessages from "hooks/useIntlMessages"
-import ButtonAnchor from "ui/ButtonAnchor/ButtonAnchor"
+import ButtonExternalLink from "ui/ButtonExternalLink/ButtonExternalLink"
 import Check from "ui/Icons/Check"
 import Star from "ui/Icons/Star"
 import Paragraph from "ui/Paragraph/Paragraph"
@@ -55,7 +55,7 @@ const PricingCard: React.FC<IPricingCard> = ({
 					</ul>
 				</div>
 			)}
-			<ButtonAnchor
+			<ButtonExternalLink
 				className="cta"
 				href={linkWhatsappFormatter(
 					PERU_PHONE_CODE,
@@ -69,7 +69,7 @@ const PricingCard: React.FC<IPricingCard> = ({
 				<span className="icon-check">
 					<Check />
 				</span>
-			</ButtonAnchor>
+			</ButtonExternalLink>
 		</PricingCardWrapStyles>
 	)
 }

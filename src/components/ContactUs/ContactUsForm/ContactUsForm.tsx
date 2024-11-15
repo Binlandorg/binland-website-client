@@ -130,12 +130,14 @@ const ContactUsForm: React.FC = () => {
 					}
 				/>
 				<ButtonForm
-					type="primary"
-					rightIcon={<TbSend />}
+					$variant="primary"
 					onClick={formik.handleSubmit}
-					disabled={formik.isSubmitting}
+					$disabled={formik.isSubmitting}
 				>
 					{intl("contact.us.form.button")}
+					<span className="icon-send">
+						<TbSend />
+					</span>
 				</ButtonForm>
 			</FormWrapper>
 			<Toaster />

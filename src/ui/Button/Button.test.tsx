@@ -5,7 +5,7 @@ import Button from "./Button"
 
 describe("Button component tests", () => {
 	test("Should render primary button component", () => {
-		render(<Button type="primary">hello world</Button>)
+		render(<Button $variant="primary">hello world</Button>)
 
 		const button = screen.getByText(/hello world/i)
 
@@ -15,7 +15,7 @@ describe("Button component tests", () => {
 	})
 
 	test("Should render secondary button component", () => {
-		render(<Button type="secondary">hello world</Button>)
+		render(<Button $variant="secondary">hello world</Button>)
 
 		const button = screen.getByText(/hello world/i)
 

@@ -29,12 +29,7 @@ const Subscribe: React.FC = () => {
 							placeholder="Tu e-mail"
 							className="subscribe-input"
 						/>
-						<Button
-							type="primary"
-							size="lg"
-							className="subscribe-button"
-							onClick={() => {}}
-						>
+						<Button className="subscribe-button" onClick={() => {}}>
 							Suscríbete
 						</Button>
 					</div>

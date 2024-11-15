@@ -14,7 +14,7 @@ export const serviceContentData: ServicesContentProps = {
 			{ id: "5", text: "includes.grafic-pieces.5" },
 		],
 		image: serviceImg,
-		link: "#",
+		link: "/contact-us",
 		category: "home.services.design.title",
 	},
 	"brand-development": {
@@ -30,7 +30,7 @@ export const serviceContentData: ServicesContentProps = {
 			{ id: "6", text: "includes.brand-development.6" },
 		],
 		image: serviceImg,
-		link: "#",
+		link: "/contact-us",
 		category: "home.services.design.title",
 	},
 	"ux-ui-design": {
@@ -46,7 +46,7 @@ export const serviceContentData: ServicesContentProps = {
 			{ id: "6", text: "includes.ux-ui-design.6" },
 		],
 		image: serviceImg,
-		link: "#",
+		link: "/contact-us",
 		category: "home.services.design.title",
 	},
 	"ux-writer": {
@@ -62,7 +62,7 @@ export const serviceContentData: ServicesContentProps = {
 			{ id: "6", text: "includes.ux-writer.6" },
 		],
 		image: serviceImg,
-		link: "#",
+		link: "/contact-us",
 		category: "home.services.design.title",
 	},
 	"web-development": {
@@ -79,7 +79,7 @@ export const serviceContentData: ServicesContentProps = {
 			{ id: "6", text: "includes.web-development.6" },
 		],
 		image: serviceImg,
-		link: "#",
+		link: "/contact-us",
 		category: "home.services.software.development.title",
 	},
 	"multiplatform-apps": {
@@ -96,7 +96,7 @@ export const serviceContentData: ServicesContentProps = {
 			{ id: "6", text: "includes.multiplatform-apps.6" },
 		],
 		image: serviceImg,
-		link: "#",
+		link: "/contact-us",
 		category: "home.services.software.development.title",
 	},
 	"mobile-development": {
@@ -146,7 +146,7 @@ export const serviceContentData: ServicesContentProps = {
 			{ id: "6", text: "includes.cloud-migration.6" },
 		],
 		image: serviceImg,
-		link: "#",
+		link: "/contact-us",
 		category: "home.services.software.development.title",
 	},
 	"seo-optimization": {
@@ -178,7 +178,7 @@ export const serviceContentData: ServicesContentProps = {
 			{ id: "6", text: "includes.digital-marketing.6" },
 		],
 		image: serviceImg,
-		link: "#",
+		link: "/contact-us",
 		category: "home.services.digital.management.title",
 	},
 }

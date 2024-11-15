@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 import { breakpoints } from "shared/breakpoints"
 import { colors } from "styles/colors"
+import { iconStyled } from "styles/icon"
 
 export const ServiceContentWrapper = styled.div`
 	display: flex;
@@ -42,7 +43,12 @@ export const ServiceContentWrapper = styled.div`
 
 				& > li {
 					display: flex;
+					align-items: center;
 					gap: 0.5rem;
+
+					& .icon-star {
+						${iconStyled}
+					}
 				}
 			}
 		}
@@ -65,28 +71,8 @@ export const ServiceContentWrapper = styled.div`
 		}
 
 		& .see-more__link {
-			background-color: ${colors.primary.main};
-			color: ${colors.white.main};
-			text-decoration: none;
-			padding: 1rem 1.5rem;
-			border-radius: 0.5rem;
-			align-self: flex-end;
-			display: flex;
-			gap: 1rem;
-			align-items: center;
-
-			&:hover {
-				background-color: ${colors.primary.hover[400]};
-			}
-
-			&:active {
-				background-color: ${colors.primary.active[600]};
-			}
-
-			& span {
-				font-weight: 600;
-				font-size: 1rem;
-				line-height: 1.5;
+			& .icon-external-link {
+				${iconStyled}
 			}
 		}
 

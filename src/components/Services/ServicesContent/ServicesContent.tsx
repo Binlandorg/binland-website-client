@@ -3,6 +3,8 @@ import { FaArrowUpRightFromSquare } from "react-icons/fa6"
 import useIntlMessages from "hooks/useIntlMessages"
 import { FormattedMessage } from "react-intl"
 import type { IServiceContent } from "types/components/serviceSection"
+import ButtonExternalLink from "ui/ButtonExternalLink/ButtonExternalLink"
+import Star from "ui/Icons/Star"
 import Paragraph from "ui/Paragraph/Paragraph"
 import H4 from "ui/Titles/H4"
 import { ServiceContentWrapper } from "./ServicesContent.styles"
@@ -15,9 +17,7 @@ const ServiceContent: React.FC<IServiceContent> = (props) => {
 			<div className="left-content">
 				<div className="what-is">
 					<H4 $weight="bold">{intl("home.services.content.title.what.is")}</H4>
-					{/* <H4 $weight="bold">{intl(props.title)}</H4> */}
-					{/* <p>{intl(props.description)}</p> */}
-					<Paragraph $weight="regular" $style="normal">
+					<Paragraph>
 						<FormattedMessage
 							id={props.description}
 							defaultMessage={intl(props.description)}
@@ -30,10 +30,10 @@ const ServiceContent: React.FC<IServiceContent> = (props) => {
 					<ul className="includes-wrapper">
 						{props.includes.map((item) => (
 							<li key={intl(item.id)}>
-								<span>📌</span>
-								<Paragraph $weight="regular" $style="normal">
-									{intl(item.text)}
-								</Paragraph>
+								<span className="icon-star">
+									<Star />
+								</span>
+								<Paragraph>{intl(item.text)}</Paragraph>
 							</li>
 						))}
 					</ul>
@@ -48,14 +48,16 @@ const ServiceContent: React.FC<IServiceContent> = (props) => {
 					alt={props.title}
 					loading="lazy"
 				/>
-				<a
+				<ButtonExternalLink
 					href={props.link}
 					className="see-more__link"
 					aria-label={intl("home.services.content.link.aria.label")}
 				>
-					<span> {intl("home.services.content.button.see.more")}</span>
-					<FaArrowUpRightFromSquare size={24} />
-				</a>
+					{intl("home.services.content.button.see.more")}
+					<span className="icon-external-link">
+						<FaArrowUpRightFromSquare />
+					</span>
+				</ButtonExternalLink>
 			</div>
 		</ServiceContentWrapper>
 	)
