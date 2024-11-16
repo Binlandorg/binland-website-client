@@ -10,7 +10,8 @@ const Info = lazy(() => import("components/AboutUs/Information/Information"))
 const WhatWeAre = lazy(() => import("components/AboutUs/WhatWeAre/WhatWeAre"))
 const Founders = lazy(() => import("components/AboutUs/Founders/Founders"))
 const Team = lazy(() => import("components/AboutUs/Team/Team"))
-const Office = lazy(() => import("components/AboutUs/Offices/Office"))
+/** TODO: When we have our own offices **/
+// const Office = lazy(() => import("components/AboutUs/Offices/Office"))
 
 const AboutUs = () => {
 	const intl = useIntlMessages()
@@ -39,7 +40,7 @@ const AboutUs = () => {
 				<WhatWeAre />
 				<Founders />
 				<Team />
-				<Office />
+				{/* <Office /> */}
 			</Suspense>
 		</BodyContainer>
 	)

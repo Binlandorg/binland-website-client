@@ -55,5 +55,5 @@ export const SingleTab = styled.li`
 export const ContentWrapper = styled.div`
 	background: ${colors.white.main};
 	border-radius: 1rem;
-	padding: 2rem 1.5rem;
+	padding: 2rem;
 `

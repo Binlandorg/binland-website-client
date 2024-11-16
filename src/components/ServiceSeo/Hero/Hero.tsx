@@ -27,7 +27,6 @@ const Hero: React.FC = () => {
 							<ButtonLink
 								type="primary"
 								to="/contact-us"
-								size="lg"
 								className="button-contact-us"
 							>
 								<span className="button-link-contact-us">Contactanos</span>

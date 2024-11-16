@@ -69,16 +69,25 @@ const Header: React.FC = () => {
 					</HamburgerIcon>
 					<DesktopNavigation>
 						<ul className="nav-items">
-							{navbarItems.map((navItem) => (
-								<NavLink
-									key={navItem.name}
-									item={navItem}
-									ariaLabel={navItem.ariaLabel}
-								/>
-							))}
+							{navbarItems.map((navItem) => {
+								navItem.name = intl("home.navbar.link.about.us")
+
+								return (
+									<NavLink
+										key={navItem.name}
+										item={navItem}
+										ariaLabel={navItem.ariaLabel}
+									/>
+								)
+							})}
 						</ul>
 						<div className="nav-buttons">
-							<ButtonLink to={"/contact-us"} type="secondary">
+							<ButtonLink
+								to={"/contact-us"}
+								$variant="secondary"
+								$size="sm"
+								$style="outline"
+							>
 								{intl("home.navbar.button.contact.us")}
 							</ButtonLink>
 							<LanguageSwitcher />
@@ -109,18 +118,11 @@ const Header: React.FC = () => {
 									/>
 								))}
 							</ul>
-							{/* <ButtonLink
-                to="/contact-us"
-                type="secondary"
-                size="lg"
-                onClick={handleIsOpen}
-                isfullwidth={true}
-              >
-                {intl('home.navbar.button.contact.us')}
-              </ButtonLink> */}
 							<ButtonLink
 								to={"/contact-us"}
-								type="secondary"
+								$variant="secondary"
+								$style="outline"
+								$size="sm"
 								onClick={handleIsOpen}
 								$isfullwidth={true}
 							>

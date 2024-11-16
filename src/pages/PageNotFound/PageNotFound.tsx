@@ -7,7 +7,6 @@ import { colors } from "styles/colors"
 import BodyContainer from "ui/BodyContainer/BodyContainer"
 import ButtonLink from "ui/ButtonLink/ButtonLink"
 import Display from "ui/Display/Display"
-import Paragraph from "ui/Paragraph/Paragraph"
 import H4 from "ui/Titles/H4"
 import NotFoundImg from "../../assets/images/illustrations/not-found.svg"
 import imageLinkPreview from "../../assets/images/image-link-preview.webp"
@@ -54,10 +53,8 @@ const PageNotFound = () => {
 						height={418}
 					/>
 				</ImageWrapper>
-				<ButtonLink to={"/"} type={"secondary"}>
-					<Paragraph $weight="regular" $style="normal">
-						{intl("page.not.found.button.to.home")}
-					</Paragraph>
+				<ButtonLink to={"/"} $variant="secondary" $style="outline">
+					{intl("page.not.found.button.to.home")}
 					<FaArrowRight size={14} />
 				</ButtonLink>
 			</StyledPageNotFound>

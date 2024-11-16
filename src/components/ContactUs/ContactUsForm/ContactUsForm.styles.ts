@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { breakpoints } from "shared/breakpoints"
 import { colors } from "styles/colors"
 import Button from "ui/Button/Button"
+import { iconStyled } from "styles/icon"
 
 export const FormWrapper = styled.form`
 	display: flex;
@@ -58,26 +59,11 @@ export const ContainerForm = styled.div`
 `
 
 export const ButtonForm = styled(Button)`
-	height: 3rem;
-	width: 100%;
-	padding: 1rem 1.5rem;
+	& .icon-send {
+		${iconStyled}
 
-	&:focus-visible {
-		outline: 0.125rem solid ${colors.primary.focus[500]};
-		outline-offset: 0.125rem;
-	}
-
-	&:active {
-		background-color: ${colors.primary.active[600]};
-	}
-
-	&:disabled {
-		background-color: ${colors.primary.disabled[100]};
-		color: ${colors.primary.disabled[400]};
-		cursor: not-allowed;
-	}
-
-	@media only screen and (min-width: ${breakpoints.lg}) {
-		width: fit-content;
+		& path {
+			fill: transparent;
+		}
 	}
 `

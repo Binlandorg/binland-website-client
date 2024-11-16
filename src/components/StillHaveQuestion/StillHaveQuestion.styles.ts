@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 import { breakpoints } from "shared/breakpoints"
 import { colors } from "styles/colors"
+import { iconStyled } from "styles/icon"
 
 export const ContainerHaveQuestion = styled.div`
 	display: flex;
@@ -18,10 +19,12 @@ export const ContainerHaveQuestion = styled.div`
 	}
 
 	.faq-button-contact-us {
-		padding: 1rem 1.5rem;
-		border-radius: 0.5rem;
-		line-height: 1.5;
-		gap: 1rem;
+		& .icon-send {
+			${iconStyled}
+			& path {
+				fill: transparent;
+			}
+		}
 	}
 `
 export const HaveQuestion = styled.div`
