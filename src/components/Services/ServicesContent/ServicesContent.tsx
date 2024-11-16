@@ -1,7 +1,7 @@
 import { FaArrowUpRightFromSquare } from "react-icons/fa6"
+import { FormattedMessage } from "react-intl"
 
 import useIntlMessages from "hooks/useIntlMessages"
-import { FormattedMessage } from "react-intl"
 import type { IServiceContent } from "types/components/serviceSection"
 import ButtonExternalLink from "ui/ButtonExternalLink/ButtonExternalLink"
 import Star from "ui/Icons/Star"
