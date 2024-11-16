@@ -113,7 +113,7 @@ export const serviceContentData: ServicesContentProps = {
 			{ id: "6", text: "includes.mobile-development.6" },
 		],
 		image: serviceImg,
-		link: "/",
+		link: "/contact-us",
 		category: "home.services.software.development.title",
 	},
 	"e-commerce": {
@@ -129,7 +129,7 @@ export const serviceContentData: ServicesContentProps = {
 			{ id: "6", text: "includes.e-commerce.6" },
 		],
 		image: serviceImg,
-		link: "/",
+		link: "/contact-us",
 		category: "home.services.software.development.title",
 	},
 	"cloud-migration": {
@@ -162,7 +162,7 @@ export const serviceContentData: ServicesContentProps = {
 			{ id: "6", text: "includes.seo-optimization.6" },
 		],
 		image: serviceImg,
-		link: "/",
+		link: "/contact-us",
 		category: "home.services.digital.management.title",
 	},
 	"digital-marketing": {
