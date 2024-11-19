@@ -70,7 +70,7 @@ const ContactUsContent: React.FC = () => {
 					{intl("contact.us.information.schedule.an.appointment.title")}
 				</Paragraph>
 				<PopupButton
-					url="https://calendly.com/binland-contacto"
+					url="https://calendly.com/contact-binland/30min"
 					rootElement={document.getElementById("root") as HTMLElement}
 					text={intl("contact.us.information.schedule.an.appointment.button")}
 					className="popup-button-custom"
