@@ -20,7 +20,7 @@ export const ServiceContentWrapper = styled.div`
 		width: 100%;
 
 		@media only screen and (min-width: ${breakpoints.xl}) {
-			flex: 1 1 25.5rem;
+			flex: 1;
 		}
 
 		& .what-is {
@@ -62,12 +62,11 @@ export const ServiceContentWrapper = styled.div`
 		gap: 1.5rem;
 
 		@media only screen and (min-width: ${breakpoints.lg}) {
-			justify-content: space-between;
 			align-items: flex-end;
 		}
 
 		@media only screen and (min-width: ${breakpoints.xl}) {
-			flex: 1 1 13rem;
+			max-width: 18.75rem;
 		}
 
 		& .see-more__link {
@@ -78,14 +77,11 @@ export const ServiceContentWrapper = styled.div`
 
 		& .service__img {
 			object-fit: cover;
-			max-width: 17.5rem;
 			width: 100%;
 			height: auto;
 			display: none;
 
 			@media only screen and (min-width: ${breakpoints.xl}) {
-				margin-top: 3.75rem;
-				margin-bottom: 3.75rem;
 				display: block;
 			}
 		}

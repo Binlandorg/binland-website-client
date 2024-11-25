@@ -49,6 +49,18 @@
 	"home.services.digital.management.seo.optimization.description": "La optimización SEO mejora la <b>visibilidad</b> de tu sitio <b>web</b> en los motores de búsqueda, atrayendo <b>tráfico orgánico</b> y aumentando la relevancia de tu marca en línea. 🔍🚀",
 	"home.services.digital.management.digital.marketing.description": "El marketing digital es <b>esencial</b> para <b>aumentar</b> la visibilidad de tu negocio en internet. Con estrategias personalizadas y herramientas avanzadas, llegamos a tu <b>audiencia</b> ideal, elevando el <b>tráfico</b>, las <b>conversiones</b> y el <b>reconocimiento de tu marca</b>. 📈💡",
 
+	"home.services.design.graphic.design.image.alt": "Ilustración sobre diseño gráfico donde se muestra la edición de un circulo en una tableta",
+	"home.services.design.branding.image.alt": "Ilustración sobre desarrollo de marca donde se muestra las guías de construcción de un isotipo",
+	"home.services.design.ux.ui.design.image.alt": "Ilustración sobre diseño ux/ui donde se muestra un wireframe",
+	"home.services.design.ux.writing.image.alt": "Ilustración sobre escritura ux donde se muestra la letra A seleccionada",
+	"home.services.software.development.full.stack.applications.image.alt": "Ilustración sobre desarrollo web donde se muestra un sitio web y algunas tecnologías de desarrollo",
+	"home.services.software.development.cross.platform.applications.image.alt": "Ilustración sobre desarrollo de aplicaciones multiplataforma donde se muestran varios dispositivos (PC, mobile y tablet)",
+	"home.services.software.development.mobile.development.image.alt": "Ilustración sobre desarrollo de aplicaciones móviles donde se muestra un celular y la estructura de una app",
+	"home.services.software.development.ecommerce.image.alt": "Ilustración sobre desarrollo de e-commerce donde se muestra una tienda web con un boton de carrito de compras y la palabra buy",
+	"home.services.software.development.cloud.migrations.image.alt": "Ilustración sobre migración a la nube donde se muestra una nube conectada a distintos datos",
+	"home.services.digital.management.seo.optimization.image.alt": "Ilustración sobre optimización seo donde se muestra la palabra SEO con un buscador y estadisticas",
+	"home.services.digital.management.digital.marketing.image.alt": "Ilustración sobre marketing digital donde se muestra un megafono y distintas redes sociales",
+
 	"home.pricing.title": "Paquetes",
 	"home.pricing.description": "Elige el plan perfecto para tu negocio. Hemos diseñado paquetes flexibles para adaptarnos a tus necesidades. Descubre cuál se ajusta mejor a ti y comienza a transformar tu visión en realidad.",
 	"home.pricing.package.first.title": "Emprendedor",

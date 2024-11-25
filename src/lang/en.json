@@ -49,6 +49,18 @@
 	"home.services.digital.management.seo.optimization.description": "SEO optimization improves your <b>website's visibility</b> on search engines, attracting <b>organic traffic</b> and increasing your brand's online relevance. 🔍🚀",
 	"home.services.digital.management.digital.marketing.description": "Digital marketing is <b>essential</b> for <b>increasing</b> your business's online visibility. With tailored strategies and advanced tools, we reach your <b>ideal audience</b>, boosting <b>traffic</b>, <b>conversions</b>, and <b>brand recognition</b>. 📈💡",
 
+	"home.services.design.graphic.design.image.alt": "Illustration of graphic design showing the editing of a circle on a tablet",
+	"home.services.design.branding.image.alt": "Illustration of branding development showing the construction guides of a logo",
+	"home.services.design.ux.ui.design.image.alt": "Illustration of UX/UI design showing a wireframe",
+	"home.services.design.ux.writing.image.alt": "Illustration of UX writing showing the selected letter 'A'",
+	"home.services.software.development.full.stack.applications.image.alt": "Illustration of web development showing a website and some development technologies",
+	"home.services.software.development.cross.platform.applications.image.alt": "Illustration of cross-platform application development showing various devices (PC, mobile, and tablet)",
+	"home.services.software.development.mobile.development.image.alt": "Illustration of mobile app development showing a phone and the structure of an app",
+	"home.services.software.development.ecommerce.image.alt": "Illustration of e-commerce development showing an online store with a shopping cart button and the word 'buy'",
+	"home.services.software.development.cloud.migrations.image.alt": "Illustration of cloud migration showing a cloud connected to different data",
+	"home.services.digital.management.seo.optimization.image.alt": "Illustration of SEO optimization showing the word SEO with a search engine and statistics",
+	"home.services.digital.management.digital.marketing.image.alt": "Illustration of digital marketing showing a megaphone and various social media networks",
+
 	"home.pricing.title": "Packages",
 	"home.pricing.description": "Choose the perfect plan for your business. We have designed flexible packages to meet your needs. Discover which one best suits your goals and start bringing your vision to life.",
 	"home.pricing.package.first.title": "Entrepreneur",

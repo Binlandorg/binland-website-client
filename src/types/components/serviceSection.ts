@@ -11,6 +11,7 @@ export interface IServiceContent {
 	image: string
 	link: string
 	category: string
+	alt: string
 }
 
 export type ServicesContentProps = {

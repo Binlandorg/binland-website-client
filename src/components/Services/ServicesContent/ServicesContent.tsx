@@ -45,7 +45,7 @@ const ServiceContent: React.FC<IServiceContent> = (props) => {
 					height="178"
 					className="service__img"
 					src={props.image}
-					alt={props.title}
+					alt={intl(props.alt)}
 					loading="lazy"
 				/>
 				<ButtonExternalLink
