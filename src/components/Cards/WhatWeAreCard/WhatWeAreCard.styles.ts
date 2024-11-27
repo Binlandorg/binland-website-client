@@ -10,20 +10,22 @@ interface ICardImgProps {
 }
 
 export const CardWrapper = styled.div`
+	--var-gap: 1rem;
 	display: flex;
-	padding: 2rem;
+	padding: 1rem;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	border-radius: 1rem;
+	border-radius: 0.5rem;
 	background-color: ${colors.secondary[100]};
-	max-width: 18.75rem;
-	gap: 2rem;
+	width: 100%;
+	gap: var(--var-gap);
 
 	& .info {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
+		margin-top: 1rem;
 
 		& h3 {
 			text-align: center;
@@ -34,12 +36,19 @@ export const CardWrapper = styled.div`
 		}
 	}
 
+	@media only screen and (min-width: ${breakpoints.sm}) {
+		max-width: calc((100% - var(--var-gap)) / 2);
+	}
+
 	@media only screen and (min-width: ${breakpoints.lg}) {
 		flex: 1;
-		max-height: fit-content;
+		max-width: 25rem;
+		width: 100%;
 	}
 `
 
 export const WhatWeAreImg = styled(LazyLoadImage)<ICardImgProps>`
 	aspect-ratio: ${({ width, height }) => `${width} / ${height}`};
+	width: 100%;
+	height: 100%;
 `

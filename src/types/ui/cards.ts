@@ -1,5 +1,7 @@
 interface Iimg {
 	src: string
+	srcMobile: string
+	alt: string
 	width: number
 	height: number
 }
