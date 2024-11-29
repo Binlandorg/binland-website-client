@@ -1,7 +1,10 @@
+import missionImg from "assets/images/illustrations/mission.webp"
+import missionMobileImg from "assets/images/illustrations/mobile/mission.webp"
+import valuesMobileImg from "assets/images/illustrations/mobile/values.webp"
+import visionMobileImg from "assets/images/illustrations/mobile/vision.webp"
+import valuesImg from "assets/images/illustrations/values.webp"
+import visionImg from "assets/images/illustrations/vision.webp"
 import type { IWhatWeAre } from "types/ui/cards"
-import missionImg from "./../../../assets/images/illustrations/bullseye-with-arrow.svg"
-import visionImg from "./../../../assets/images/illustrations/hands-shake.svg"
-import valuesImg from "./../../../assets/images/illustrations/star-medal.svg"
 
 export const whatWeAreData: Array<IWhatWeAre> = [
 	{
@@ -10,8 +13,10 @@ export const whatWeAreData: Array<IWhatWeAre> = [
 		description: "about.us.what.we.are.mission.description",
 		img: {
 			src: missionImg,
-			width: 150.3,
-			height: 189,
+			srcMobile: missionMobileImg,
+			alt: "about.us.what.we.are.mission.alt",
+			width: 368,
+			height: 221,
 		},
 	},
 	{
@@ -20,8 +25,10 @@ export const whatWeAreData: Array<IWhatWeAre> = [
 		description: "about.us.what.we.are.vision.description",
 		img: {
 			src: visionImg,
-			width: 214.31,
-			height: 118.63,
+			srcMobile: visionMobileImg,
+			alt: "about.us.what.we.are.vision.alt",
+			width: 368,
+			height: 221,
 		},
 	},
 	{
@@ -30,8 +37,10 @@ export const whatWeAreData: Array<IWhatWeAre> = [
 		description: "about.us.what.we.are.values.description",
 		img: {
 			src: valuesImg,
-			width: 177.4,
-			height: 241.56,
+			srcMobile: valuesMobileImg,
+			alt: "about.us.what.we.are.values.alt",
+			width: 368,
+			height: 221,
 		},
 	},
 ]
