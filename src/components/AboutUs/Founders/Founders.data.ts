@@ -10,35 +10,6 @@ const founderData: IFoundersData[] = [
 	{
 		id: "1",
 		image: {
-			url: crhisImageURL,
-			urlMobile: crhisImageURLMobile,
-			alt: "image.profile.alt.crhistian.turpo.apaza",
-		},
-		fullName: "Crhistian Turpo Apaza",
-		position: "about.us.position.ceo",
-		quote: "about.us.quote.christian.turpo.apaza",
-		networks: [
-			// {
-			// 	name: "github",
-			// 	url: "https://github.com/CrhistianT7",
-			// 	ariaLabel: "about.us.christian.turpo.apaza.social.media.github.aria.label",
-			// },
-			// {
-			// 	name: "LinkedIn",
-			// 	url: "https://www.linkedin.com/in/crhistianturpo/",
-			// 	ariaLabel:
-			// 		"about.us.christian.turpo.apaza.social.media.linkedin.aria.label",
-			// },
-			// {
-			// 	name: "PersonalWebSite",
-			// 	url: "https://www.andrewturpo.com/",
-			// 	ariaLabel: "about.us.christian.turpo.apaza.web.site.aria.label",
-			// },
-		],
-	},
-	{
-		id: "2",
-		image: {
 			url: jonathanImageURL,
 			urlMobile: jonathanImageURLMobile,
 			alt: "image.profile.alt.jonathan.cervantes.alarcon",
@@ -63,6 +34,35 @@ const founderData: IFoundersData[] = [
 			// 	name: "personalpage",
 			// 	url: "https://mardecera.com",
 			// 	ariaLabel: "about.us.jonathan.cervantes.alarcon.web.site.aria.label",
+			// },
+		],
+	},
+	{
+		id: "2",
+		image: {
+			url: crhisImageURL,
+			urlMobile: crhisImageURLMobile,
+			alt: "image.profile.alt.crhistian.turpo.apaza",
+		},
+		fullName: "Crhistian A. Turpo",
+		position: "about.us.position.ceo",
+		quote: "about.us.quote.christian.turpo.apaza",
+		networks: [
+			// {
+			// 	name: "github",
+			// 	url: "https://github.com/CrhistianT7",
+			// 	ariaLabel: "about.us.christian.turpo.apaza.social.media.github.aria.label",
+			// },
+			// {
+			// 	name: "LinkedIn",
+			// 	url: "https://www.linkedin.com/in/crhistianturpo/",
+			// 	ariaLabel:
+			// 		"about.us.christian.turpo.apaza.social.media.linkedin.aria.label",
+			// },
+			// {
+			// 	name: "PersonalWebSite",
+			// 	url: "https://www.andrewturpo.com/",
+			// 	ariaLabel: "about.us.christian.turpo.apaza.web.site.aria.label",
 			// },
 		],
 	},
