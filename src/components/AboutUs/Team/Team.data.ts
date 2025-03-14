@@ -18,18 +18,18 @@ const teamData: ITeamData[] = [
 		position: "about.us.position.trainee",
 		quote: "about.us.quote.paty.apaestegui.rodriguez",
 		networks: [
-			{
-				name: "GitHub",
-				url: "https://github.com/patyapaestegui",
-				ariaLabel:
-					"about.us.paty.apaestegui.rodriguez.social.media.github.aria.label",
-			},
-			{
-				name: "LinkedIn",
-				url: "https://www.linkedin.com/in/patyapaestegui/",
-				ariaLabel:
-					"about.us.paty.apaestegui.rodriguez.social.media.linkedin.aria.label",
-			},
+			// {
+			// 	name: "GitHub",
+			// 	url: "https://github.com/patyapaestegui",
+			// 	ariaLabel:
+			// 		"about.us.paty.apaestegui.rodriguez.social.media.github.aria.label",
+			// },
+			// {
+			// 	name: "LinkedIn",
+			// 	url: "https://www.linkedin.com/in/patyapaestegui/",
+			// 	ariaLabel:
+			// 		"about.us.paty.apaestegui.rodriguez.social.media.linkedin.aria.label",
+			// },
 		],
 	},
 	{
@@ -43,16 +43,16 @@ const teamData: ITeamData[] = [
 		position: "about.us.position.trainee",
 		quote: "about.us.quote.diego.lopez.vega",
 		networks: [
-			{
-				name: "GitHub",
-				url: "https://github.com/diegolopex",
-				ariaLabel: "about.us.diego.lopez.vega.social.media.github.aria.label",
-			},
-			{
-				name: "LinkedIn",
-				url: "https://www.linkedin.com/in/diegolopex/",
-				ariaLabel: "about.us.diego.lopez.vega.social.media.linkedin.aria.label",
-			},
+			// {
+			// 	name: "GitHub",
+			// 	url: "https://github.com/diegolopex",
+			// 	ariaLabel: "about.us.diego.lopez.vega.social.media.github.aria.label",
+			// },
+			// {
+			// 	name: "LinkedIn",
+			// 	url: "https://www.linkedin.com/in/diegolopex/",
+			// 	ariaLabel: "about.us.diego.lopez.vega.social.media.linkedin.aria.label",
+			// },
 		],
 	},
 	{
@@ -66,17 +66,17 @@ const teamData: ITeamData[] = [
 		position: "about.us.position.trainee",
 		quote: "about.us.quote.ricardo.mamani.calcina",
 		networks: [
-			{
-				name: "github",
-				url: "https://github.com/RicardoC23",
-				ariaLabel: "about.us.ricardo.mamani.calcina.social.media.github.aria.label",
-			},
-			{
-				name: "LinkedIn",
-				url: "https://www.linkedin.com/in/ricardoc23-developer/",
-				ariaLabel:
-					"about.us.ricardo.mamani.calcina.social.media.linkedin.aria.label",
-			},
+			// {
+			// 	name: "github",
+			// 	url: "https://github.com/RicardoC23",
+			// 	ariaLabel: "about.us.ricardo.mamani.calcina.social.media.github.aria.label",
+			// },
+			// {
+			// 	name: "LinkedIn",
+			// 	url: "https://www.linkedin.com/in/ricardoc23-developer/",
+			// 	ariaLabel:
+			// 		"about.us.ricardo.mamani.calcina.social.media.linkedin.aria.label",
+			// },
 		],
 	},
 ]

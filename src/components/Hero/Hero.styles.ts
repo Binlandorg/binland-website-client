@@ -139,6 +139,8 @@ export const ContentText = styled.div`
 `
 
 export const NetworkWrapper = styled.div`
+	visibility: hidden;
+
 	& div[direction="row"] {
 		display: flex;
 		width: fit-content;
@@ -150,6 +152,7 @@ export const NetworkWrapper = styled.div`
 `
 
 export const NetworkWrapperInside = styled.div`
+visibility: hidden;
 	display: none;
 	align-items: center;
 

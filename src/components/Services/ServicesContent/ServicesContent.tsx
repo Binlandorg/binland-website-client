@@ -1,9 +1,11 @@
-import { FaArrowUpRightFromSquare } from "react-icons/fa6"
+// TODO:  uncomment when see more button has page where to go
+// import { FaArrowUpRightFromSquare } from "react-icons/fa6"
 import { FormattedMessage } from "react-intl"
 
 import useIntlMessages from "hooks/useIntlMessages"
 import type { IServiceContent } from "types/components/serviceSection"
-import ButtonExternalLink from "ui/ButtonExternalLink/ButtonExternalLink"
+// TODO:  uncomment when see more button has page where to go
+// import ButtonExternalLink from "ui/ButtonExternalLink/ButtonExternalLink"
 import Star from "ui/Icons/Star"
 import Paragraph from "ui/Paragraph/Paragraph"
 import H4 from "ui/Titles/H4"
@@ -29,7 +31,7 @@ const ServiceContent: React.FC<IServiceContent> = (props) => {
 					<H4 $weight="bold">{intl("home.services.content.title.what.includes")}</H4>
 					<ul className="includes-wrapper">
 						{props.includes.map((item) => (
-							<li key={intl(item.id)}>
+							<li key={intl(item.text)}>
 								<span className="icon-star">
 									<Star />
 								</span>
@@ -48,7 +50,8 @@ const ServiceContent: React.FC<IServiceContent> = (props) => {
 					alt={intl(props.alt)}
 					loading="lazy"
 				/>
-				<ButtonExternalLink
+				{/* TODO:  uncomment when see more button has page where to go*/}
+				{/* <ButtonExternalLink
 					href={props.link}
 					className="see-more__link"
 					aria-label={intl("home.services.content.link.aria.label")}
@@ -57,7 +60,7 @@ const ServiceContent: React.FC<IServiceContent> = (props) => {
 					<span className="icon-external-link">
 						<FaArrowUpRightFromSquare />
 					</span>
-				</ButtonExternalLink>
+				</ButtonExternalLink> */}
 			</div>
 		</ServiceContentWrapper>
 	)
