@@ -100,7 +100,7 @@ export const BrandingsWrapper = styled.div`
 		width: 100%;
 		height: auto;
 		opacity: 0.5;
-		filter: brightness(-50%);
+		filter: grayscale(100%);
 	}
 
 	:first-child {
