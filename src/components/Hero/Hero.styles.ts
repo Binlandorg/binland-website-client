@@ -152,7 +152,7 @@ export const NetworkWrapper = styled.div`
 `
 
 export const NetworkWrapperInside = styled.div`
-visibility: hidden;
+	visibility: hidden;
 	display: none;
 	align-items: center;
 
