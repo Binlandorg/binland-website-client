@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { CgClose } from "react-icons/cg"
 import { GiHamburgerMenu } from "react-icons/gi"
 import { LazyLoadImage } from "react-lazy-load-image-component"
@@ -47,6 +47,22 @@ const Header: React.FC = () => {
 			},
 		},
 	}
+
+	useEffect(() => {
+		const setViewportHeight = () => {
+			const vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+		};
+
+		setViewportHeight();
+		window.addEventListener('resize', setViewportHeight);
+		window.addEventListener('orientationchange', setViewportHeight);
+
+		return () => {
+			window.removeEventListener('resize', setViewportHeight);
+			window.removeEventListener('orientationchange', setViewportHeight);
+		};
+	}, []);
 
 	return (
 		<>
