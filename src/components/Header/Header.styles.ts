@@ -110,12 +110,10 @@ export const MobileNavigation = styled.nav`
 	align-items: center;
 	width: 100%;
 	background: ${colors.white.main};
-	height: 100vh;
-	height: 100svh;
-	height: 100lvh;
-	height: 100dvh;
+	height: calc(var(--vh, 1vh) * 100) !important;
 	font-weight: 500;
 	position: fixed;
+	top: 0;
 	gap: 1.5rem;
 	padding: 1.625rem;
 
