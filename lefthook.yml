@@ -1,15 +1,16 @@
 pre-commit:
- parallel: true
- commands:
-  check-biome:
-   run: npx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
-  check-prettier:
-   run: npx prettier --write {staged_files}
-  git-add-after-format:
-   run: git add {staged_files}
+  parallel: true
+  commands:
+   check-biome:
+    run: npx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+   check-prettier:
+    glob: "src/**/*.styles.ts"
+    run: npx prettier --write {staged_files}
+   git-add-after-format:
+    run: git add {staged_files}
 
 pre-push:
- parallel: true
- commands:
-  test:
-   run: npx jest -b ./src
+  parallel: true
+  commands:
+   test:
+    run: npx jest -b ./src
