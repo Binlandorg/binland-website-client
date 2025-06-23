@@ -7,6 +7,7 @@ import {
 	ClientsSectionContent,
 	ClientsSectionWrapper,
 	TitleAndButtonSection,
+	TitleLine,
 } from "./Clients.styles"
 
 const Clients: React.FC = () => {
@@ -22,6 +23,7 @@ const Clients: React.FC = () => {
 								{intl("home.clients.section.title")}
 								<span className="span-point">.</span>
 							</H2>
+							<TitleLine />
 						</TitleAndButtonSection>
 						<Brandings />
 					</ClientsSectionContent>
