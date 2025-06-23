@@ -1,7 +1,8 @@
 {
 	"home.navbar.link.about.us": "About us",
 	"home.navbar.link.about.us.aria.label": "Go to our About us page",
-	"home.navbar.link.portafolio": "Portafolio",
+	"home.navbar.link.portfolio": "Portfolio",
+	"home.navbar.link.portfolio.aria.label": "Go to our Portfolio page",
 	"home.navbar.link.learn.with.us": "Learn with us",
 	"home.navbar.link.services": "Services",
 	"home.navbar.link.services.aria.label": "Go to our Services page",

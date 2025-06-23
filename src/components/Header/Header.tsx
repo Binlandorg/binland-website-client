@@ -86,12 +86,12 @@ const Header: React.FC = () => {
 					<DesktopNavigation>
 						<ul className="nav-items">
 							{navbarItems.map((navItem) => {
-								navItem.name = intl("home.navbar.link.about.us")
+								const name = intl(navItem.name)
 
 								return (
 									<NavLink
 										key={navItem.name}
-										item={navItem}
+										item={{ ...navItem, name }}
 										ariaLabel={navItem.ariaLabel}
 									/>
 								)
@@ -125,14 +125,18 @@ const Header: React.FC = () => {
 								<CgClose cursor={"pointer"} size={20} />
 							</button>
 							<ul className="nav-items">
-								{navbarItems.map((navItem) => (
-									<NavLink
-										key={navItem.name}
-										item={navItem}
-										onClick={handleIsOpen}
-										ariaLabel={navItem.ariaLabel}
-									/>
-								))}
+								{navbarItems.map((navItem) => {
+									const name = intl(navItem.name)
+
+									return (
+										<NavLink
+											key={navItem.name}
+											item={{ ...navItem, name }}
+											onClick={handleIsOpen}
+											ariaLabel={navItem.ariaLabel}
+										/>
+									)
+								})}
 							</ul>
 							<ButtonLink
 								to={"/contact-us"}
