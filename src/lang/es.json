@@ -2,6 +2,7 @@
 	"home.navbar.link.about.us": "Nosotros",
 	"home.navbar.link.about.us.aria.label": "Ir a nuestra pagina Nosotros",
 	"home.navbar.link.portafolio": "Portafolio",
+	"home.navbar.link.portafolio.aria.label": "Ir a nuestra pagina Portafolio",
 	"home.navbar.link.learn.with.us": "Aprende con nosotros",
 	"home.navbar.link.services": "Servicios",
 	"home.navbar.link.services.aria.label": "Ir a nuestra sección Servicios",
