@@ -19,9 +19,9 @@ export const NavbarItems = [
 	// 	ariaLabel: "home.navbar.link.services.aria.label",
 	// },
 	{
-		name: "home.navbar.link.portafolio",
+		name: "home.navbar.link.portfolio",
 		href: "/portfolio",
-		ariaLabel: "home.navbar.link.portafolio.aria.label",
+		ariaLabel: "home.navbar.link.portfolio.aria.label",
 	},
 	{
 		name: "home.navbar.link.about.us",
