@@ -10,7 +10,7 @@ export const ClientsSection = styled(Section)`
 	background-color: ${colors.white.main};
 	width: calc(100% + var(--padding-section-x));
 	max-width: inherit;
-	padding: 1.5rem;
+	padding: 3.75rem 1.5rem ;
 	position: relative;
 	left: -1.5rem;
 
@@ -18,7 +18,7 @@ export const ClientsSection = styled(Section)`
 		--padding-section-x: calc(5rem * 2);
 		width: calc(100% + var(--padding-section-x));
 		left: -5rem;
-		padding: 5rem;
+		padding: 6.25rem 5rem ;
 	}
 `
 
@@ -27,6 +27,7 @@ export const ClientsSectionWrapper = styled.div`
 
 	@media only screen and (min-width: ${breakpoints.lg}) {
 		padding-inline: 1rem;
+        padding-block: initial;
 	}
 `
 
@@ -34,11 +35,10 @@ export const ClientsSectionContent = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	gap: 2rem;
+	gap: 3.75rem;
 
 	@media only screen and (min-width: ${breakpoints.lg}) {
-		flex-direction: row;
-		gap: 5rem;
+		gap: 7.5rem;
 	}
 `
 
@@ -47,15 +47,11 @@ export const TitleAndButtonSection = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 2rem;
+	gap: 1.5rem;
 	width: 100%;
 
 	& h2 {
 		text-align: center;
-
-		@media only screen and (min-width: ${breakpoints.lg}) {
-			text-align: left;
-		}
 	}
 
 	.clients-title {
@@ -73,43 +69,56 @@ export const TitleAndButtonSection = styled.div`
 	.span-point {
 		color: ${colors.primary.main};
 	}
+`
 
-	@media only screen and (min-width: ${breakpoints.lg}) {
-		gap: 3rem;
-		max-width: 24.5rem;
-		align-items: normal;
-	}
+export const TitleLine = styled.span`
+    width: 10.25rem;
+    height: 0.5rem;
+    background-color: ${colors.primary.normal[500]};
 `
 
 export const BrandingsWrapper = styled.div`
+    --gap: 2.5rem;
+
 	display: flex;
-	padding: 1rem;
-	justify-content: space-evenly;
-	align-items: center;
-	gap: 2rem 3rem;
 	flex-wrap: wrap;
+    gap: var(--gap);
+    max-width: 66.5rem;
+    width: 100%;
+    align-self: center;
+
+    @media only screen and (min-width: ${breakpoints.lg}) {
+        gap: 6.25rem var(--gap);
+    }
 
 	.container-img {
-		width: 10rem;
-		height: 10rem;
-		display: grid;
-		place-content: center;
+        flex: 1 1 calc(50% - var(--gap));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (min-width: 488px) {
+            flex: 1 1 calc(33% - var(--gap));
+        }
 	}
 
 	.branding-img {
 		width: 100%;
-		height: auto;
+        height: 100%;
+		max-height: 3.25rem;
+        object-fit: contain;
 		opacity: 0.5;
 		filter: grayscale(100%);
-	}
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
 
-	:first-child {
-		width: 16rem;
-	}
+        &:hover{
+            opacity: 1;
+            filter: grayscale(0);
+        }
 
-	@media only screen and (min-width: ${breakpoints.lg}) {
-		gap: 4.5rem 10rem;
-		width: 100%;
-		justify-content: center;
+        @media only screen and (min-width: ${breakpoints.lg}) {
+            max-height: 3.75rem;
+        }
 	}
 `
