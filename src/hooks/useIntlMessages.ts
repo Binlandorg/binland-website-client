@@ -2,8 +2,7 @@ import { useIntl } from "react-intl"
 
 const useIntlMessages = () => {
 	const intl = useIntl()
-	const formatMessage = (id: string) => intl.formatMessage({ id })
-	return formatMessage
+	return (id: string) => (intl.messages[id] ? intl.formatMessage({ id }) : id)
 }
 
 export default useIntlMessages

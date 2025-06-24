@@ -385,5 +385,18 @@
 	"image.profile.alt.paty.apaestegui.rodriguez": "Colaboradora Paty Apaestegui",
 	"image.profile.alt.diego.lopez.vega": "Colaborador Diego López",
 
-	"component.table.of.content.title": "Tabla de Contenido"
+	"component.table.of.content.title": "Tabla de Contenido",
+
+	"portfolio.tag.head.title": "Portafolio",
+	"portfolio.hero.image.alt": "Mockup de interfaz de chat",
+	"portfolio.hero.title": "Portafolio",
+	"portfolio.hero.sub.title": "Échale un ojo a lo que hemos hecho.",
+	"portfolio.filter.button.main": "Principales",
+	"portfolio.filter.button.industry": "Industria",
+	"portfolio.filter.button.service": "Servicio",
+	"portfolio.banner.title": "¿Tienes un proyecto en mente?",
+	"portfolio.banner.sub.title": "Nosotros tenemos ideas.",
+	"portfolio.banner.button.label": "Hablemos",
+	"portfolio.section.testimonials.title": "Lo que dicen de nosotros",
+	"portfolio.project.type.web.platform": "Plataforma Web"
 }

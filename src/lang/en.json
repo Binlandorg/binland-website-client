@@ -386,5 +386,18 @@
 	"image.profile.alt.paty.apaestegui.rodriguez": "Collaborator Paty Apaestegui",
 	"image.profile.alt.diego.lopez.vega": "Collaborator Diego López",
 
-	"component.table.of.content.title": "Table of Content"
+	"component.table.of.content.title": "Table of Content",
+
+	"portfolio.tag.head.title": "Portfolio",
+	"portfolio.hero.image.alt": "Mockup of chat interface",
+	"portfolio.hero.title": "Portfolio",
+	"portfolio.hero.sub.title": "Take a look at what we have done.",
+	"portfolio.filter.button.main": "Main",
+	"portfolio.filter.button.industry": "Industry",
+	"portfolio.filter.button.service": "Service",
+	"portfolio.banner.title": "Do you have a project in mind?",
+	"portfolio.banner.sub.title": "We have ideas.",
+	"portfolio.banner.button.label": "Let's talk",
+	"portfolio.section.testimonials.title": "What they say about us",
+	"portfolio.project.type.web.platform": "Web Platform"
 }
