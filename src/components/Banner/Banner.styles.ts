@@ -4,17 +4,16 @@ import { colors } from "styles/colors"
 import { FontWeight } from "styles/typography"
 
 export const BannerWrapper = styled.div`
-	background:
+	background: radial-gradient(
+			33.25% 48.78% at 92.05% 92.99%,
+			rgba(109, 77, 163, 0.2) 0%,
+			rgba(0, 0, 0, 0) 100%
+		),
 		radial-gradient(
-				33.25% 48.78% at 92.05% 92.99%,
-				rgba(109, 77, 163, 0.2) 0%,
-				rgba(0, 0, 0, 0) 100%
-			),
-		radial-gradient(
-				41.82% 57.93% at 12.55% 11.82%,
-				rgba(109, 77, 163, 0.2) 0%,
-				rgba(48, 30, 77, 0) 100%
-			),
+			41.82% 57.93% at 12.55% 11.82%,
+			rgba(109, 77, 163, 0.2) 0%,
+			rgba(48, 30, 77, 0) 100%
+		),
 		#2d2d2d;
 	border-radius: 0.5rem;
 	padding: 1rem;
