@@ -19,6 +19,7 @@ const FrequentlyAskedQuestion = lazy(
 	() => import("pages/FrequentlyAskedQuestion/FrequentlyAskedQuestion"),
 )
 const TermsOfService = lazy(() => import("pages/TermsOfService/TermsOfService"))
+const Portfolio = lazy(() => import("pages/Portfolio/Portfolio"))
 
 // Uncomment the following when pages are ready
 // const Clients = lazy(() => import('pages/Clients/Clients'))
@@ -36,7 +37,7 @@ const router = createBrowserRouter(
 			<Route index element={<Home />} />
 			{/* <Route path="/clients" element={<Clients />} /> */}
 			{/* <Route path="/saas" element={<Saas />} /> */}
-			{/* <Route path="/portafolio" element={<Portafolio />} /> */}
+			<Route path="/portfolio" element={<Portfolio />} />
 			{/* <Route path="/lets-learn" element={<LetsLearn />} /> */}
 			<Route path="/about-us" element={<AboutUs />} />
 			{/* <Route path="/services" element={<Services />} /> */}
