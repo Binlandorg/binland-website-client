@@ -6,6 +6,9 @@ import BodyContainer from "ui/BodyContainer/BodyContainer"
 
 const Hero = lazy(() => import("components/Portfolio/Hero/Hero"))
 const Projects = lazy(() => import("components/Portfolio/Projects/Projects"))
+const Testimonials = lazy(
+	() => import("components/Portfolio/Testimonials/Testimonials"),
+)
 
 const Portfolio: React.FC = () => {
 	const intl = useIntlMessages()
@@ -23,6 +26,7 @@ const Portfolio: React.FC = () => {
 			</Helmet>
 			<Hero />
 			<Projects />
+			<Testimonials />
 		</BodyContainer>
 	)
 }
