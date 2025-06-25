@@ -1,5 +1,7 @@
 import type { To } from "react-router-dom"
 
+export type LanguageType = "en" | "es"
+
 export type TagType =
 	| "e-commerce"
 	| "web design"
@@ -20,4 +22,15 @@ export type PortfolioType = {
 	image: string
 	tags: TagType[]
 	to: To
+}
+
+export type TestimonialType = {
+	id: string
+	client: {
+		name: string
+		image: string
+		position: string
+		company: string
+	}
+	testimonial: Record<LanguageType, string>
 }
