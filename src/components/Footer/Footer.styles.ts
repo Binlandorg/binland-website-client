@@ -52,19 +52,19 @@ export const FooterLogoWrapper = styled.div`
 		height: auto;
 	}
 
-    .container-book {
-        display: none;
+	.container-book {
+		display: none;
 		flex-direction: row;
 		align-items: center;
 		gap: 0.5rem;
 		word-break: break-all;
-        color: ${colors.white.main};
-        cursor: pointer;
-        text-decoration: none;
+		color: ${colors.white.main};
+		cursor: pointer;
+		text-decoration: none;
 
-        @media only screen and (min-width: ${breakpoints.xxl}) {
-            display: flex;
-        }
+		@media only screen and (min-width: ${breakpoints.xxl}) {
+			display: flex;
+		}
 	}
 
 	@media only screen and (min-width: ${breakpoints.lg}) {
@@ -159,22 +159,23 @@ export const FooterSocialMedia = styled.div`
 		align-self: flex-start;
 	}
 
-	.container-email, .container-book {
+	.container-email,
+	.container-book {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		gap: 0.5rem;
 		word-break: break-all;
-        color: ${colors.white.main};
-        cursor: pointer;
-        text-decoration: none;
+		color: ${colors.white.main};
+		cursor: pointer;
+		text-decoration: none;
 	}
 
-    .container-book {
-        @media only screen and (min-width: ${breakpoints.xxl}) {
-            display: none;
-        }
-    }
+	.container-book {
+		@media only screen and (min-width: ${breakpoints.xxl}) {
+			display: none;
+		}
+	}
 
 	@media only screen and (min-width: ${breakpoints.md}) {
 		gap: 2rem;
