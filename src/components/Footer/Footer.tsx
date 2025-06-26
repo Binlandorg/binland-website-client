@@ -7,6 +7,7 @@ import SocialMedia from "components/SocialMedia/SocialMedia"
 import { COMPANY_CONTACT_EMAIL } from "context/constants/constans"
 import useIntlMessages from "hooks/useIntlMessages"
 import { useEffect } from "react"
+import Book from "ui/Icons/Book"
 import logo from "../../assets/images/binland/isologo-primary.svg"
 import { enterpriseLinks, legalLinks } from "./Footer.data"
 import {
@@ -51,6 +52,10 @@ const Footer: React.FC = () => {
 					<p>
 						&copy; Binland {currentYear}. {intl("footer.all.rights.reserved")}.
 					</p>
+					<Link to="/complaints-book" className="container-book">
+						<Book size={20} color="white" />
+						<span className="text-footer">{intl("footer.complaints.book")}</span>
+					</Link>
 				</FooterLogoWrapper>
 				<FooterInfo>
 					<FooterLinks>
@@ -81,6 +86,10 @@ const Footer: React.FC = () => {
 								<HiOutlineMail size={20} style={{ color: "white" }} />
 								<span className="text-footer">{COMPANY_CONTACT_EMAIL}</span>
 							</div>
+							<Link to="/complaints-book" className="container-book">
+								<Book size={20} color="white" />
+								<span className="text-footer">{intl("footer.complaints.book")}</span>
+							</Link>
 						</div>
 					</FooterSocialMedia>
 				</FooterInfo>

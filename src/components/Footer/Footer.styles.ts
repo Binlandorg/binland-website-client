@@ -52,6 +52,21 @@ export const FooterLogoWrapper = styled.div`
 		height: auto;
 	}
 
+	.container-book {
+		display: none;
+		flex-direction: row;
+		align-items: center;
+		gap: 0.5rem;
+		word-break: break-all;
+		color: ${colors.white.main};
+		cursor: pointer;
+		text-decoration: none;
+
+		@media only screen and (min-width: ${breakpoints.xxl}) {
+			display: flex;
+		}
+	}
+
 	@media only screen and (min-width: ${breakpoints.lg}) {
 		width: 35%;
 	}
@@ -134,7 +149,7 @@ export const FooterSocialMedia = styled.div`
 	.social-media__content {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
+		gap: 1.5rem;
 		@media only screen and (min-width: ${breakpoints.md}) {
 			gap: 1.5rem;
 		}
@@ -144,12 +159,22 @@ export const FooterSocialMedia = styled.div`
 		align-self: flex-start;
 	}
 
-	.container-email {
+	.container-email,
+	.container-book {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		gap: 0.5rem;
 		word-break: break-all;
+		color: ${colors.white.main};
+		cursor: pointer;
+		text-decoration: none;
+	}
+
+	.container-book {
+		@media only screen and (min-width: ${breakpoints.xxl}) {
+			display: none;
+		}
 	}
 
 	@media only screen and (min-width: ${breakpoints.md}) {
