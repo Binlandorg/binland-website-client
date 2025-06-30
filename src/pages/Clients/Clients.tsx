@@ -75,7 +75,7 @@ const Clients: React.FC = () => {
 									oia del que simpatias soy reintegra.
 								</p>
 							</div>
-							<ButtonLink to="/" type="primary" className="button-see-all">
+							<ButtonLink to="/" className="button-see-all">
 								Ver todos
 								<TbExternalLink size={20} />
 							</ButtonLink>

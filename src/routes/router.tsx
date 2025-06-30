@@ -20,6 +20,7 @@ const FrequentlyAskedQuestion = lazy(
 )
 const TermsOfService = lazy(() => import("pages/TermsOfService/TermsOfService"))
 const Portfolio = lazy(() => import("pages/Portfolio/Portfolio"))
+const ComplaintsBook = lazy(() => import("pages/ComplaintsBook/ComplaintsBook"))
 
 // Uncomment the following when pages are ready
 // const Clients = lazy(() => import('pages/Clients/Clients'))
@@ -51,6 +52,7 @@ const router = createBrowserRouter(
 				path="/frequently-asked-question"
 				element={<FrequentlyAskedQuestion />}
 			/>
+			<Route path="/complaints-book" element={<ComplaintsBook />} />
 			<Route path="*" element={<PageNotFound />} />
 		</Route>,
 	),

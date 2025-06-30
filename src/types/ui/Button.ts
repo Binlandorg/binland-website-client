@@ -13,5 +13,6 @@ export interface IButton
 	extends PropsWithChildren,
 		IStyledButton,
 		WithClassName {
-	onClick?: (() => void) | undefined
+	onClick?: React.MouseEventHandler<HTMLElement> | undefined | (() => void)
+	type?: "button" | "submit" | "reset"
 }
