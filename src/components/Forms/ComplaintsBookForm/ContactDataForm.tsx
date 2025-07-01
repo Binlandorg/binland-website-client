@@ -146,7 +146,7 @@ const ContactDataForm: React.FC<Props> = ({ formik }) => {
 					name="isAccepted"
 				>
 					{intl("complaints.book.form.info.authorization")}
-					<Link to={"/privacy-policy"}>
+					<Link to={"/privacy-policy"} target="_blank" rel="noopener noreferrer">
 						{intl("complaints.book.form.info.authorization.link")}
 					</Link>
 				</Checkbox>
