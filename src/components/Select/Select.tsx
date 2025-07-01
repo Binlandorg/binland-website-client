@@ -3,7 +3,9 @@ import ReactDOM from "react-dom"
 import { HiChevronDown } from "react-icons/hi"
 import { MdError } from "react-icons/md"
 
-import { ErrorMessage, Label, Option } from "./Select.styles"
+import cleanClass from "utils/cleanClass"
+import { ErrorMessage, Input, Label, Option } from "./Select.styles"
+import { SelectContainer, SelectLabel, Value } from "./Select.styles"
 import { Options, SelectWrapper } from "./Select.styles"
 
 type OptionType = {
@@ -25,15 +27,15 @@ type Props = {
 const Select: React.FC<Props> = ({
 	options,
 	label = "Select an option",
-	width,
 	error,
 	onChange,
 	value,
 	onBlur,
 }) => {
 	const [open, setOpen] = useState(false)
-	const [coords, setCoords] = useState({ top: 0, left: 0, width: 0 })
-	const selectRef = useRef<HTMLDivElement>(null)
+	const [optionsStyle, setOptionsStyle] = useState<React.CSSProperties>({})
+	const containerRef = useRef<HTMLDivElement>(null)
+	const optionRef = useRef<HTMLDivElement>(null)
 
 	const selectedOption = useMemo(
 		() => options?.find((opt) => opt.value === value),
@@ -42,22 +44,39 @@ const Select: React.FC<Props> = ({
 	const [option, setOption] = useState<OptionType | null>(selectedOption || null)
 
 	useEffect(() => {
-		if (!open || !selectRef.current) return
+		const calcCss = () => {
+			if (open && containerRef.current && optionRef.current) {
+				const rect = containerRef.current.getBoundingClientRect()
+				const optionRect = optionRef.current.getBoundingClientRect()
+				const size = options?.length || 0
+				const limit = 3
+				const quantity = size < limit ? size : limit
 
-		const rect = selectRef.current.getBoundingClientRect()
-		const newCoords = {
-			top: rect.bottom + window.scrollY,
-			left: rect.left + window.scrollX,
-			width: rect.width,
+				const newStyle: React.CSSProperties = {
+					position: "absolute",
+					top: rect.bottom + window.scrollY,
+					left: rect.left + window.scrollX,
+					width: rect.width,
+					height: optionRect.height * quantity,
+				}
+
+				setOptionsStyle((prev) => {
+					if (JSON.stringify(prev) !== JSON.stringify(newStyle)) {
+						return newStyle
+					}
+					return prev
+				})
+			}
 		}
 
-		setCoords((prev) => {
-			if (JSON.stringify(prev) !== JSON.stringify(newCoords)) {
-				return newCoords
-			}
-			return prev
-		})
-	}, [open])
+		calcCss()
+
+		window.addEventListener("resize", calcCss)
+
+		return () => {
+			window.removeEventListener("resize", calcCss)
+		}
+	}, [open, options])
 
 	const handleMouseEnter = () => {
 		setOpen(true)
@@ -65,56 +84,55 @@ const Select: React.FC<Props> = ({
 
 	const handleMouseLeave = () => {
 		setOpen(false)
-		onBlur?.()
 	}
 
 	const handleChange = (option: OptionType) => {
 		setOption(option)
+		setOpen(false)
 		onChange?.(option.value.toString())
+	}
+
+	const handleBlur = () => {
+		onBlur?.()
 	}
 
 	return (
 		<>
 			<SelectWrapper
-				onClick={() => setOpen(!open)}
 				onMouseEnter={handleMouseEnter}
 				onMouseLeave={handleMouseLeave}
-				$width={width || coords.width}
-				$open={open}
+				tabIndex={0}
+				onBlur={handleBlur}
 			>
-				<Label
-					ref={selectRef}
-					$width={width || coords.width}
+				<SelectContainer
+					ref={containerRef}
 					$open={open}
 					$isError={Boolean(error)}
-					tabIndex={0}
+					className={cleanClass("select-container", open && "open")}
 				>
-					<span className="content">
-						<span className="value">{option?.label || ""}</span>
-						<span className={`label ${option ? "to-up" : "to-down"}`}>{label}</span>
-					</span>
-					<HiChevronDown
-						size={24}
-						className={`icon ${open ? "to-up" : "to-down"}`}
-					/>
+					<SelectLabel onClick={() => setOpen(!open)}>
+						<Input disabled tabIndex={-1} />
+						<Value>{option?.label}</Value>
+						<Label className={option || open ? "to-up" : "to-down"}>{label}</Label>
+						<HiChevronDown
+							size={24}
+							className={`icon ${open ? "to-up" : "to-down"}`}
+						/>
+					</SelectLabel>
 					{open &&
 						ReactDOM.createPortal(
 							<Options
-								className="options"
-								$width={width || coords.width}
+								style={optionsStyle}
 								$open={open}
 								$isError={Boolean(error)}
-								style={{
-									top: coords.top,
-									left: coords.left,
-									position: "absolute",
-								}}
+								className={cleanClass(open && "open")}
 							>
 								{options?.map((opt) => (
 									<Option
+										ref={optionRef}
 										key={opt.value}
 										onClick={() => handleChange(opt)}
-										className={opt.value === option?.value ? "selected" : ""}
+										className={cleanClass(opt.value === option?.value && "selected")}
 									>
 										{opt.label}
 									</Option>
@@ -122,7 +140,7 @@ const Select: React.FC<Props> = ({
 							</Options>,
 							document.body,
 						)}
-				</Label>
+				</SelectContainer>
 				{error && (
 					<ErrorMessage>
 						<MdError />
