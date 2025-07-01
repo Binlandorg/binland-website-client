@@ -51,7 +51,7 @@ export const typeStyles = (type: string, $variant: string) => {
 		case "outline":
 			return css`
                 color: ${variantStyles($variant).main};
-                border: 2px solid ${variantStyles($variant).main};
+                box-shadow: inset 0 0 0 2px ${variantStyles($variant).main};
                 background-color: transparent;
 
                 & path{
