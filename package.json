@@ -18,7 +18,8 @@
 	"dependencies": {
 		"@custom-react-hooks/use-element-size": "^1.4.19",
 		"@react-icons/all-files": "^4.1.0",
-		"axios": "^1.6.7",
+		"@tanstack/react-query": "^5.81.5",
+		"axios": "^1.10.0",
 		"formik": "^2.4.5",
 		"framer-motion": "^11.0.5",
 		"react": "^18.2.0",
