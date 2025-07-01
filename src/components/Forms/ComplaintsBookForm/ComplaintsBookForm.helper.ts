@@ -1,10 +1,6 @@
 import { capitalize } from "utils/capitalize"
-import type {
-	FormikType,
-	IntlType,
-	KeyType,
-	LocationType,
-} from "./ComplaintsBookForm.types"
+import type { FormikType, IntlType, KeyType } from "./ComplaintsBookForm.types"
+import type { LocationType } from "./ComplaintsBookForm.types"
 
 export const arrayToOptions = <T>(array: T[]) => {
 	if (!array) return []

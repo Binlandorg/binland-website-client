@@ -9,16 +9,10 @@ import { useLocation } from "hooks/useLocation"
 import H5 from "ui/Titles/H5"
 import Input from "ui/input/Input"
 import { contactDetails, ownerData } from "./ComplaintsBookForm.data"
-import {
-	arrayToOptions,
-	getCity,
-	getCounties,
-	getDefaultCity,
-	getDefaultCounty,
-	getDefaultState,
-	getStates,
-	reviewErrors,
-} from "./ComplaintsBookForm.helper"
+import { arrayToOptions, getCity } from "./ComplaintsBookForm.helper"
+import { getCounties, getDefaultCity } from "./ComplaintsBookForm.helper"
+import { getDefaultCounty, getDefaultState } from "./ComplaintsBookForm.helper"
+import { getStates, reviewErrors } from "./ComplaintsBookForm.helper"
 import { ContactDetails, InfoAuthorization } from "./ComplaintsBookForm.styles"
 import { OwnerData } from "./ComplaintsBookForm.styles"
 import type { InitialValuesType } from "./ComplaintsBookForm.types"
