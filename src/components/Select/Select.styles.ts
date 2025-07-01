@@ -67,18 +67,27 @@ export const Input = styled.input`
 export const Value = styled.div`
 	align-self: end;
 	flex: 1;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
 `
 
 export const Label = styled.div`
 	position: absolute;
 	left: 1.75rem;
 	transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 60%;
 
 	&.to-up {
 		opacity: 0.5;
 		transform: scale(0.8) translateY(-100%);
 		transform-origin: left;
 		transition: all 0.3s ease-in-out;
+		max-width: 100%;
 	}
 `
 
