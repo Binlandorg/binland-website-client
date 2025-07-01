@@ -443,6 +443,9 @@
 	"complaints.book.form.question.method.response": "By which means would you like to receive your response?",
 	"complaints.book.form.select.email": "Email",
 	"complaints.book.form.select.address": "Address",
+	"complaints.book.confirm.register.number": "Registered No.: {registerNumber}",
+	"complaints.book.confirm.title": "Your claim has been successfully submitted!",
+	"complaints.book.confirm.description": "Thank you for contacting us. We will process your request in accordance with the Consumer Protection and Defense Code. You will receive a response within a maximum of 15 calendar days.",
 
 	"schema.validation.only.numbers": "Must contain numbers only",
 	"schema.validation.only.text": "Must contain letters only",

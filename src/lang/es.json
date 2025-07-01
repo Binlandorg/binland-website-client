@@ -442,6 +442,9 @@
 	"complaints.book.form.question.method.response": "¿Por qué medio quieres recibir tu respuesta?",
 	"complaints.book.form.select.email": "Email",
 	"complaints.book.form.select.address": "Domicilio",
+	"complaints.book.confirm.register.number": "N° de Registro: {registerNumber}",
+	"complaints.book.confirm.title": "¡Tu reclamo ha sido registrado correctamente!",
+	"complaints.book.confirm.description": "Te agradecemos por comunicarte con nosotros. Atenderemos tu solicitud conforme a lo establecido por el Código de Protección y Defensa del Consumidor. Recibirás una respuesta en un plazo máximo de 15 días calendario.",
 
 	"schema.validation.only.numbers": "Debe contener solo números",
 	"schema.validation.only.text": "Debe contener solo texto",
