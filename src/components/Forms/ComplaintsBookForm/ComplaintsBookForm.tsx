@@ -1,5 +1,6 @@
 import { useFormik } from "formik"
 import { useState } from "react"
+import type { Dispatch, SetStateAction } from "react"
 import { FaArrowLeft } from "react-icons/fa"
 import { FiSend } from "react-icons/fi"
 
@@ -15,14 +16,27 @@ import ContactDataForm from "./ContactDataForm"
 import DetailsForm from "./DetailsForm"
 import InformationForm from "./InformationForm"
 
-const ComplaintsBookForm: React.FC = () => {
+type Props = {
+	onConfirm: Dispatch<SetStateAction<boolean>>
+	onRegisterNumber: Dispatch<SetStateAction<string>>
+}
+
+const ComplaintsBookForm: React.FC<Props> = ({
+	onConfirm,
+	onRegisterNumber,
+}) => {
 	const [step, setStep] = useState<number>(1)
 	const intl = useIntlMessages()
 
 	const formik = useFormik({
 		initialValues,
 		validationSchema: validationSchemas[step - 1],
-		onSubmit: () => {},
+		onSubmit: () => {
+			// TODO: Implement register number generation
+			// TODO: These are just placeholders
+			onConfirm(true)
+			onRegisterNumber("123456")
+		},
 	})
 
 	const items = [

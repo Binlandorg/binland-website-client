@@ -91,3 +91,34 @@ export const Info = styled.div`
 		text-align: left !important;
 	}
 `
+export const Confirm = styled(Section)`
+	margin-block: 3.5rem;
+	text-align: center;
+
+	@media only screen and (min-width: ${breakpoints.lg}) {
+		margin-block: 6.25rem;
+	}
+
+	@media only screen and (min-width: ${breakpoints.xxl}) {
+		margin-block: 7rem;
+	}
+`
+export const ConfirmRegisterNumber = styled.div`
+	& h5 {
+		color: ${colors.primary.main};
+	}
+`
+export const ConfirmTitle = styled.div`
+	margin-top: 0.75rem;
+
+	& h2 {
+		color: ${colors.tertiary.active[900]};
+	}
+`
+export const ConfirmDescription = styled.div`
+	margin-top: 1.5rem;
+
+	& h5 {
+		color: ${colors.black.main};
+	}
+`
