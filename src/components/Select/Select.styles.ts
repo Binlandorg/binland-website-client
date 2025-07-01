@@ -117,6 +117,11 @@ export const Option = styled.div`
 	&:hover {
 		background-color: ${colors.tertiary.normal[200]};
 	}
+
+	&.selected {
+		background-color: ${colors.tertiary.normal[200]};
+		color: ${colors.black.main};
+	}
 `
 
 export const ErrorMessage = styled.div`

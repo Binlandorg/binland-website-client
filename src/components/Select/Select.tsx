@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import ReactDOM from "react-dom"
 import { HiChevronDown } from "react-icons/hi"
 import { MdError } from "react-icons/md"
@@ -36,12 +36,18 @@ const Select: React.FC<Props> = ({
 	const [optionsStyle, setOptionsStyle] = useState<React.CSSProperties>({})
 	const containerRef = useRef<HTMLDivElement>(null)
 	const optionRef = useRef<HTMLDivElement>(null)
+	const [option, setOption] = useState<OptionType | null>(null)
 
-	const selectedOption = useMemo(
-		() => options?.find((opt) => opt.value === value),
-		[options, value],
-	)
-	const [option, setOption] = useState<OptionType | null>(selectedOption || null)
+	useEffect(() => {
+		const selectedOption = options?.find((opt) => opt.value === value) || null
+
+		setOption((prev) => {
+			if (prev?.value !== selectedOption?.value) {
+				return selectedOption
+			}
+			return prev
+		})
+	}, [value, options])
 
 	useEffect(() => {
 		const calcCss = () => {

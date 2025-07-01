@@ -1,3 +1,5 @@
+import type { FormikProps } from "formik"
+
 export type ContactDataFormType = {
 	documentType: string
 	documentNumber: string
@@ -39,3 +41,14 @@ export type DetailsDataFieldsType = {
 	label: string
 	name: Partial<keyof DetailsFormType>
 }
+
+export type LocationType = Record<
+	string,
+	Record<string, Record<string, string>>
+>
+
+export type FormikType = FormikProps<InitialValuesType>
+
+export type IntlType = (key: string) => string
+
+export type KeyType = keyof InitialValuesType
