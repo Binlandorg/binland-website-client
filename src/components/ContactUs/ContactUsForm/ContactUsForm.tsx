@@ -132,7 +132,7 @@ const ContactUsForm: React.FC = () => {
 				<ButtonForm
 					$variant="primary"
 					onClick={formik.handleSubmit}
-					$disabled={formik.isSubmitting}
+					disabled={formik.isSubmitting}
 				>
 					{intl("contact.us.form.button")}
 					<span className="icon-send">

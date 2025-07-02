@@ -1,10 +1,12 @@
 import { useFormik } from "formik"
 import { useState } from "react"
 import type { Dispatch, SetStateAction } from "react"
+import toast, { Toaster } from "react-hot-toast"
 import { FaArrowLeft } from "react-icons/fa"
 import { FiSend } from "react-icons/fi"
 
 import Steps from "components/Steps/Steps"
+import { useGoogleSheet } from "hooks/useGoogleSheet"
 import useIntlMessages from "hooks/useIntlMessages"
 import Button from "ui/Button/Button"
 import { initialValues } from "./ComplaintsBookForm.data"
@@ -27,15 +29,28 @@ const ComplaintsBookForm: React.FC<Props> = ({
 }) => {
 	const [step, setStep] = useState<number>(1)
 	const intl = useIntlMessages()
+	const mutation = useGoogleSheet()
 
 	const formik = useFormik({
 		initialValues,
 		validationSchema: validationSchemas[step - 1],
-		onSubmit: () => {
-			// TODO: Implement register number generation
-			// TODO: These are just placeholders
-			onConfirm(true)
-			onRegisterNumber("123456")
+		onSubmit: async (values) => {
+			mutation.mutate(values, {
+				onSuccess: (response) => {
+					const registerNumber = response?.registerNumber
+
+					onConfirm(true)
+					onRegisterNumber(registerNumber)
+					formik.resetForm()
+				},
+				onError: (error) => {
+					toast.error(intl("toast.complaints.book.error"))
+
+					if (error instanceof Error) {
+						console.error(error.message)
+					}
+				},
+			})
 		},
 	})
 
@@ -78,6 +93,7 @@ const ComplaintsBookForm: React.FC<Props> = ({
 
 	return (
 		<ComplaintsBookFormWrapper>
+			<Toaster />
 			<form onSubmit={formik.handleSubmit}>
 				<Steps disabledManual current={step} items={items} />
 				<Footer>
@@ -92,12 +108,22 @@ const ComplaintsBookForm: React.FC<Props> = ({
 						</Button>
 					)}
 					{!isFinalStep && (
-						<Button $variant="primary" type="button" onClick={handleCheck}>
+						<Button
+							$variant="primary"
+							type="button"
+							onClick={handleCheck}
+							disabled={!formik.values.isAccepted}
+						>
 							{intl("button.next")}
 						</Button>
 					)}
 					{isFinalStep && (
-						<Button $variant="primary" type="submit">
+						<Button
+							$variant="primary"
+							type="submit"
+							disabled={mutation.isPending}
+							loading={mutation.isPending}
+						>
 							{intl("button.send")} <FiSend />
 						</Button>
 					)}

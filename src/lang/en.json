@@ -456,6 +456,8 @@
 	"schema.validation.email": "Invalid email address",
 	"schema.validation.phone": "Must contain numbers only and be between 7 and 15 digits",
 
+	"toast.complaints.book.error": "Error to send the form",
+
 	"button.send": "Send",
 	"button.back": "Back",
 	"button.next": "Next"

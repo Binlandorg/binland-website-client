@@ -106,4 +106,13 @@ cursor: pointer;
 ${({ $style = "solid", $variant = "primary" }) => typeStyles($style, $variant)}
 ${({ $isfullwidth }) => ($isfullwidth ? "width: 100%;" : "max-width: fit-content;")}
 ${({ $size = "md" }) => sizeStyles($size)}
+
+&:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+&:disabled:hover {
+    background-color: ${colors.primary.main};
+}
 `

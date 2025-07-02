@@ -4,6 +4,10 @@ import Container from "ui/Container/Container"
 import Section from "ui/Section/Section"
 import backgroundContact from "./../../assets/images/mockups/mockup-ui-chat.webp"
 
+export const ContactUsWrapper = styled.div`
+	width: 100%;
+`
+
 export const ContactUsHero = styled.div`
 	width: 100%;
 	display: flex;
