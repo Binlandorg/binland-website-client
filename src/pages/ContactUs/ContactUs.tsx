@@ -8,7 +8,8 @@ import {
 import useIntlMessages from "hooks/useIntlMessages"
 import H1 from "ui/Titles/H1"
 import imageLinkPreview from "../../assets/images/image-link-preview.webp"
-import { ContactUsHero, SectionTitleHero } from "./ContactUs.styles"
+import { ContactUsHero, ContactUsWrapper } from "./ContactUs.styles"
+import { SectionTitleHero } from "./ContactUs.styles"
 
 const Info = lazy(
 	() => import("components/ContactUs/ContactUsInformation/ContactUsInformation"),
@@ -22,7 +23,7 @@ const ContactUs: React.FC = () => {
 	const intl = useIntlMessages()
 
 	return (
-		<>
+		<ContactUsWrapper>
 			<Helmet prioritizeSeoTags>
 				<meta
 					name="description"
@@ -54,7 +55,7 @@ const ContactUs: React.FC = () => {
 					</ContentWrapper>
 				</SectionContactUs>
 			</BodyContainer>
-		</>
+		</ContactUsWrapper>
 	)
 }
 

@@ -6,7 +6,6 @@ export interface IStyledButton {
 	$size?: "sm" | "md"
 	$style?: "solid" | "outline" | "text"
 	$isfullwidth?: boolean | undefined
-	$disabled?: boolean
 }
 
 export interface IButton
@@ -15,4 +14,6 @@ export interface IButton
 		WithClassName {
 	onClick?: React.MouseEventHandler<HTMLElement> | undefined | (() => void)
 	type?: "button" | "submit" | "reset"
+	disabled?: boolean
+	loading?: boolean
 }
