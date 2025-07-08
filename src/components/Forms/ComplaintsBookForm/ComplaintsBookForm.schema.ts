@@ -10,6 +10,7 @@ const MAX_20 = "schema.validation.max.20"
 const MIN_3 = "schema.validation.min.3"
 const NAME_REGEX = /^[A-Za-zÁÉÍÓÚÑáéíóúñ\s]+$/
 const EMAIL_MESSAGE = "schema.validation.email"
+const EMAIL_REGEX = /^[a-zA-Z0-9_.]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/
 const PHONE_REGEX = /^\d{7,15}$/
 const PHONE_MESSAGE = "schema.validation.phone"
 
@@ -35,7 +36,9 @@ export const validationSchemas = [
 		state: Yup.string().required(VALIDATION_MESSAGE),
 		county: Yup.string().required(VALIDATION_MESSAGE),
 		city: Yup.string().required(VALIDATION_MESSAGE),
-		email: Yup.string().required(VALIDATION_MESSAGE).email(EMAIL_MESSAGE),
+		email: Yup.string()
+			.required(VALIDATION_MESSAGE)
+			.matches(EMAIL_REGEX, EMAIL_MESSAGE),
 		phone: Yup.string()
 			.required(VALIDATION_MESSAGE)
 			.matches(PHONE_REGEX, PHONE_MESSAGE),
