@@ -51,7 +51,7 @@ export const validationSchemas = [
 		detailsOfTheRequest: Yup.string()
 			.required(VALIDATION_MESSAGE)
 			.min(6, MIN_6_STR_MESSAGE),
-		attachedFile: Yup.mixed(),
+		attachedFile: Yup.mixed().nullable(),
 		orderDetails: Yup.string()
 			.required(VALIDATION_MESSAGE)
 			.min(6, MIN_6_STR_MESSAGE),
