@@ -436,6 +436,7 @@
 	"complaints.book.form.select.request.type.complaint.description": "Cuando sentiste alguna molestia o descontento al momento de recibirnuestra atención.",
 	"complaints.book.form.input.request.details": "Detalle del reclamo o queja",
 	"complaints.book.form.input.attached.file": "Adjuntar archivo",
+	"complaints.book.form.input.attached.file.description": "Puedes adjuntar fotos, capturas u otros documentos que respalden tu reclamo o queja.",
 	"complaints.book.form.input.order.details": "Detalle de la orden",
 	"complaints.book.form.info.description": "Por tu seguridad, la respuesta a tu solicitud será enviada al correo electrónico o dirección física brindada.",
 	"complaints.book.form.fieldset.contact.info": "Información de contacto",

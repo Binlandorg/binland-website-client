@@ -193,6 +193,19 @@ export const RequestType = styled.div`
 	}
 `
 
+export const UploadDescription = styled.div`
+	display: flex;
+	gap: 0.75rem;
+	align-items: baseline;
+
+	& .icon-info {
+		flex-shrink: 0;
+		font-size: 1rem;
+		color: ${colors.tertiary.normal[700]};
+		margin-top: 0.25rem;
+	}
+`
+
 export const InformationDetails = styled.div`
 	display: flex;
 	text-align: left;
