@@ -437,6 +437,7 @@
 	"complaints.book.form.select.request.type.complaint.description": "If you experienced any discomfort or dissatisfaction during your interaction with our service.",
 	"complaints.book.form.input.request.details": "Request details",
 	"complaints.book.form.input.attached.file": "Attached file",
+	"complaints.book.form.input.attached.file.description": "You can attach photos, screenshots, or other documents to support your claim or complaint.",
 	"complaints.book.form.input.order.details": "Order details",
 	"complaints.book.form.info.description": "For your security, the response to your request will be sent to the email address or physical address you provided.",
 	"complaints.book.form.fieldset.contact.info": "Contact information",

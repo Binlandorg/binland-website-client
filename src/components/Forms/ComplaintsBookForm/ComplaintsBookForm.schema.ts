@@ -18,6 +18,7 @@ const ONLY_NUMBERS_REGEX = /^\d+$/
 const ONLY_TEXT_REGEX = /^[A-Za-zÁÉÍÓÚÑáéíóúñ\s]+$/
 const NUMBERS_AND_LETTERS_REGEX = /^[A-Z0-9]+$/
 const RUC_REGEX = /^\d{11}$/
+const EMAIL_REGEX = /^[a-zA-Z0-9_.]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/
 const PHONE_REGEX = /^\d{7,15}$/
 
 export const validationSchemas = [
@@ -61,7 +62,9 @@ export const validationSchemas = [
 		state: Yup.string().required(VALIDATION_MESSAGE),
 		county: Yup.string().required(VALIDATION_MESSAGE),
 		city: Yup.string().required(VALIDATION_MESSAGE),
-		email: Yup.string().required(VALIDATION_MESSAGE).email(EMAIL_MESSAGE),
+		email: Yup.string()
+			.required(VALIDATION_MESSAGE)
+			.matches(EMAIL_REGEX, EMAIL_MESSAGE),
 		phone: Yup.string()
 			.required(VALIDATION_MESSAGE)
 			.matches(PHONE_REGEX, PHONE_MESSAGE),
@@ -77,7 +80,7 @@ export const validationSchemas = [
 		detailsOfTheRequest: Yup.string()
 			.required(VALIDATION_MESSAGE)
 			.min(6, MIN_6_TEXT_MESSAGE),
-		attachedFile: Yup.mixed(),
+		attachedFile: Yup.mixed().nullable(),
 		orderDetails: Yup.string()
 			.required(VALIDATION_MESSAGE)
 			.min(6, MIN_6_TEXT_MESSAGE),

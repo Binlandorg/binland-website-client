@@ -13,6 +13,7 @@ import H5 from "ui/Titles/H5"
 import Input from "ui/input/Input"
 import { requestDetails, services } from "./ComplaintsBookForm.data"
 import { RequestDetails, RequestType } from "./ComplaintsBookForm.styles"
+import { UploadDescription } from "./ComplaintsBookForm.styles"
 import type { InitialValuesType } from "./ComplaintsBookForm.types"
 
 type Props = {
@@ -128,6 +129,12 @@ const DetailsForm: React.FC<Props> = ({ formik }) => {
 						label={intl("complaints.book.form.input.attached.file")}
 						onFileChange={handleFileChange}
 					/>
+					<UploadDescription>
+						<CgInfo className="icon-info" />
+						<Paragraph>
+							{intl("complaints.book.form.input.attached.file.description")}
+						</Paragraph>
+					</UploadDescription>
 					<Textarea
 						id="orderDetails"
 						name="orderDetails"
