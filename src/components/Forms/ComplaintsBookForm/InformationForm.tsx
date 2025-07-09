@@ -5,7 +5,7 @@ import RadioGroup from "components/RadioGroup/RadioGroup"
 import useIntlMessages from "hooks/useIntlMessages"
 import Paragraph from "ui/Paragraph/Paragraph"
 import H5 from "ui/Titles/H5"
-import { ContactInformation } from "./ComplaintsBookForm.styles"
+import { ContactInformation, InfoParagraph } from "./ComplaintsBookForm.styles"
 import { InformationDetails } from "./ComplaintsBookForm.styles"
 import type { InitialValuesType } from "./ComplaintsBookForm.types"
 
@@ -39,7 +39,9 @@ const InformationForm: React.FC<Props> = ({ formik }) => {
 		<>
 			<InformationDetails>
 				<CgInfo className="icon-info" />
-				<Paragraph>{intl("complaints.book.form.info.description")}</Paragraph>
+				<InfoParagraph>
+					{intl("complaints.book.form.info.description")}
+				</InfoParagraph>
 			</InformationDetails>
 			<ContactInformation>
 				<H5 $weight="medium">
