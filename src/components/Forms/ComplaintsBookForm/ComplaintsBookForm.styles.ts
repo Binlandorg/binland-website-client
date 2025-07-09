@@ -254,5 +254,5 @@ export const ContactInformation = styled.div`
 `
 
 export const InfoParagraph = styled(Paragraph)`
-	font-size: 12px;
+	font-size: 0.75rem;
 `
