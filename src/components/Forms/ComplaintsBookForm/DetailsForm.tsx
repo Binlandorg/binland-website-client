@@ -11,11 +11,8 @@ import H4 from "ui/Titles/H4"
 import H5 from "ui/Titles/H5"
 import Input from "ui/input/Input"
 import { requestDetails, services } from "./ComplaintsBookForm.data"
-import {
-	InfoParagraph,
-	RequestDetails,
-	RequestType,
-} from "./ComplaintsBookForm.styles"
+import { InfoParagraph, RequestDetails } from "./ComplaintsBookForm.styles"
+import { RequestType } from "./ComplaintsBookForm.styles"
 import { UploadDescription } from "./ComplaintsBookForm.styles"
 import type { InitialValuesType } from "./ComplaintsBookForm.types"
 
