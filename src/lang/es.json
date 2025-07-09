@@ -451,10 +451,14 @@
 	"schema.validation.only.text": "Debe contener solo texto",
 	"schema.validation.min.6.numbers": "Mínimo 6 dígitos",
 	"schema.validation.min.6.text": "Mínimo 6 caracteres",
-	"schema.validation.max.20": "Máximo 20 dígitos",
-	"schema.validation.min.3": "Mínimo 3 dígitos",
+	"schema.validation.max.20.text": "Máximo 20 caracteres",
+	"schema.validation.min.3.text": "Mínimo 3 caracteres",
 	"schema.validation.email": "Correo electrónico inválido",
 	"schema.validation.phone": "Debe contener solo números y tener entre 7 y 15 dígitos",
+	"schema.validation.length.8.numbers": "Debe tener 8 dígitos",
+	"schema.validation.ruc": "Debe tener 11 dígitos",
+	"schema.validation.max.12.numbers": "Debe tener máximo 12 dígitos",
+	"schema.validation.numbers.and.letters": "Debe contener solo números y letras",
 
 	"toast.complaints.book.error": "Error al enviar el formulario",
 

@@ -452,10 +452,14 @@
 	"schema.validation.only.text": "Must contain letters only",
 	"schema.validation.min.6.numbers": "Minimum 6 digits",
 	"schema.validation.min.6.text": "Minimum 6 characters",
-	"schema.validation.max.20": "Maximum 20 digits",
-	"schema.validation.min.3": "Minimum 3 digits",
+	"schema.validation.max.20.text": "Maximum 20 digits",
+	"schema.validation.min.3.text": "Minimum 3 digits",
 	"schema.validation.email": "Invalid email address",
 	"schema.validation.phone": "Must contain numbers only and be between 7 and 15 digits",
+	"schema.validation.length.8.numbers": "Must contain 8 digits",
+	"schema.validation.ruc": "Must contain 11 digits",
+	"schema.validation.max.12.numbers": "Must contain maximum 12 digits",
+	"schema.validation.numbers.and.letters": "Must contain numbers and letters only",
 
 	"toast.complaints.book.error": "Error to send the form",
 
