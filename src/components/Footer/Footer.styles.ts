@@ -62,6 +62,20 @@ export const FooterLogoWrapper = styled.div`
 		cursor: pointer;
 		text-decoration: none;
 
+		&:hover {
+			color: ${colors.primary.main};
+		}
+
+		&:active {
+			color: ${colors.primary.active[700]};
+		}
+
+		&:focus-visible {
+			outline: 0.125rem solid ${colors.primary.focus[500]};
+			border-radius: 0.5rem;
+			color: ${colors.primary.focus[500]};
+		}
+
 		@media only screen and (min-width: ${breakpoints.xxl}) {
 			display: flex;
 		}
@@ -172,6 +186,20 @@ export const FooterSocialMedia = styled.div`
 	}
 
 	.container-book {
+		&:hover {
+			color: ${colors.primary.main};
+		}
+
+		&:active {
+			color: ${colors.primary.active[700]};
+		}
+
+		&:focus-visible {
+			outline: 0.125rem solid ${colors.primary.focus[500]};
+			border-radius: 0.5rem;
+			color: ${colors.primary.focus[500]};
+		}
+
 		@media only screen and (min-width: ${breakpoints.xxl}) {
 			display: none;
 		}

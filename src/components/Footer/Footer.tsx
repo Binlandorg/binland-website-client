@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
 						&copy; Binland {currentYear}. {intl("footer.all.rights.reserved")}.
 					</p>
 					<Link to="/complaints-book" className="container-book">
-						<Book size={20} color="white" />
+						<Book size={20} />
 						<span className="text-footer">{intl("footer.complaints.book")}</span>
 					</Link>
 				</FooterLogoWrapper>
@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
 								<span className="text-footer">{COMPANY_CONTACT_EMAIL}</span>
 							</div>
 							<Link to="/complaints-book" className="container-book">
-								<Book size={20} color="white" />
+								<Book size={20} />
 								<span className="text-footer">{intl("footer.complaints.book")}</span>
 							</Link>
 						</div>
