@@ -84,14 +84,6 @@ const Select: React.FC<Props> = ({
 		}
 	}, [open, options])
 
-	const handleMouseEnter = () => {
-		setOpen(true)
-	}
-
-	const handleMouseLeave = () => {
-		setOpen(false)
-	}
-
 	const handleChange = (option: OptionType) => {
 		setOption(option)
 		setOpen(false)
@@ -99,17 +91,17 @@ const Select: React.FC<Props> = ({
 	}
 
 	const handleBlur = () => {
-		onBlur?.()
+		const time = setTimeout(() => {
+			onBlur?.()
+			setOpen(false)
+		}, 100)
+
+		return () => clearTimeout(time)
 	}
 
 	return (
 		<>
-			<SelectWrapper
-				onMouseEnter={handleMouseEnter}
-				onMouseLeave={handleMouseLeave}
-				tabIndex={0}
-				onBlur={handleBlur}
-			>
+			<SelectWrapper tabIndex={0} onBlur={handleBlur}>
 				<SelectContainer
 					ref={containerRef}
 					$open={open}
