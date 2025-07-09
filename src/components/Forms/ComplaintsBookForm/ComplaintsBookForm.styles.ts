@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 import { breakpoints } from "shared/breakpoints"
 import { colors } from "styles/colors"
+import Paragraph from "ui/Paragraph/Paragraph"
 
 export const ComplaintsBookFormWrapper = styled.div`
 	background-color: ${colors.white.main};
@@ -250,4 +251,8 @@ export const ContactInformation = styled.div`
 			}
 		}
 	}
+`
+
+export const InfoParagraph = styled(Paragraph)`
+	font-size: 12px;
 `

@@ -6,13 +6,16 @@ import RadioGroup from "components/RadioGroup/RadioGroup"
 import Select from "components/Select/Select"
 import Upload from "components/Upload/Upload"
 import useIntlMessages from "hooks/useIntlMessages"
-import Paragraph from "ui/Paragraph/Paragraph"
 import Textarea from "ui/Textarea/Textarea"
 import H4 from "ui/Titles/H4"
 import H5 from "ui/Titles/H5"
 import Input from "ui/input/Input"
 import { requestDetails, services } from "./ComplaintsBookForm.data"
-import { RequestDetails, RequestType } from "./ComplaintsBookForm.styles"
+import {
+	InfoParagraph,
+	RequestDetails,
+	RequestType,
+} from "./ComplaintsBookForm.styles"
 import { UploadDescription } from "./ComplaintsBookForm.styles"
 import type { InitialValuesType } from "./ComplaintsBookForm.types"
 
@@ -104,15 +107,15 @@ const DetailsForm: React.FC<Props> = ({ formik }) => {
 					<div className="request-info">
 						<div className="claim-info">
 							<CgInfo className="icon-info" />
-							<Paragraph>
+							<InfoParagraph>
 								{intl("complaints.book.form.select.request.type.claim.description")}
-							</Paragraph>
+							</InfoParagraph>
 						</div>
 						<div className="complaint-info">
 							<CgInfo className="icon-info" />
-							<Paragraph>
+							<InfoParagraph>
 								{intl("complaints.book.form.select.request.type.complaint.description")}
-							</Paragraph>
+							</InfoParagraph>
 						</div>
 					</div>
 					<Textarea
@@ -131,9 +134,9 @@ const DetailsForm: React.FC<Props> = ({ formik }) => {
 					/>
 					<UploadDescription>
 						<CgInfo className="icon-info" />
-						<Paragraph>
+						<InfoParagraph>
 							{intl("complaints.book.form.input.attached.file.description")}
-						</Paragraph>
+						</InfoParagraph>
 					</UploadDescription>
 					<Textarea
 						id="orderDetails"
