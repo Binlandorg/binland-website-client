@@ -1,94 +1,255 @@
 import styled from "styled-components"
 
-import { breakpoints } from "shared/breakpoints"
 import { colors } from "styles/colors"
 import { FontWeight } from "styles/typography"
-import sloganBGImageURLMobile from "../../../assets/images/mockups/mobile/mockup-ui-chat.webp"
-import sloganBGImageURL from "../../../assets/images/mockups/mockup-ui-chat.webp"
+import H1 from "ui/Titles/H1"
 
-export const StyledQuote = styled.div`
-	color: ${colors.white.main};
-	padding: 1.5rem;
-	border-radius: 1rem;
-	font-style: italic;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	overflow: hidden;
+export const HeroWrapper = styled.div`
+    --color: ${colors.body};
+    --size: 1rem;
+    --border-radius: calc(var(--size) * 0.5);
 
-	&::after {
-		content: "";
-		width: 110%;
-		height: 110%;
-		background-image: url(${sloganBGImageURLMobile});
-		background-size: cover;
-		background-position-y: 22%;
-		position: absolute;
-		z-index: -1;
-		filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
 
-		@media only screen and (min-width: ${breakpoints.lg}) {
-			background-image: url(${sloganBGImageURL});
-		}
-	}
+    @media only screen and (min-width: 900px) {
+        --size: 2rem;
 
-	@media only screen and (min-width: ${breakpoints.md}) {
-		padding: 5rem;
-	}
-
-	@media only screen and (min-width: ${breakpoints.xxl}) {
-		padding: 5rem 12.5rem;
-	}
+        margin-top: 5rem;
+        gap: initial;
+    }
 `
+
+export const HeroText = styled.div<{ $heightDiff: number }>`
+    --fix-size: min(${props => Math.round(props.$heightDiff / 2)}px, var(--size));
+
+    @media only screen and (min-width: 900px) {
+        display: flex;
+        position: relative;
+        z-index: 2;
+
+        & .title, & .text{
+            flex: 1;
+        }
+
+        & .title{
+            background-color: var(--color);
+            height: fit-content;
+            padding-bottom: 1rem;
+            border-bottom-right-radius: var(--border-radius);
+            position: relative;
+            padding-right: 2rem;
+
+            &.padding-none{
+                padding-right: initial;
+            }
+
+            & .display-none{
+                display: none;
+            }
+
+            & .border-radius-left-bottom, 
+            & .border-radius-right-bottom{
+                position: absolute;
+                background-color: transparent;
+                overflow: hidden;
+
+                &::after{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    border-radius: var(--border-radius);
+                    background-color: transparent;
+                    position: absolute;
+                }
+            }
+
+            & .border-radius-left-bottom{
+                width: var(--size);
+                height: var(--size);
+                left: 0;
+                top: 100%;
+
+                &::after{
+                    top: 0;
+                    left: 0;
+                    box-shadow: calc(var(--size) * -0.5) calc(var(--size) * -0.5) 0 0px var(--color);
+                }
+            }
+
+            & .border-radius-right-bottom{
+                width: var(--fix-size);
+                height: var(--fix-size);
+                right: 0;
+                top: 100%;
+
+                &::after{
+                    top: 0;
+                    left: 0;
+                    box-shadow: calc(var(--fix-size) * 0.5) calc(var(--fix-size) * -0.5) 0 0px var(--color);
+                }
+            }
+        }
+
+        & .text{
+            background-color: var(--color);
+            height: fit-content;
+            padding-bottom: 2rem;
+            padding-left: 2rem;
+            border-bottom-left-radius: var(--border-radius);
+            position: relative;
+
+            &.padding-none{
+                padding-left: initial;
+            }
+
+            & .display-none{
+                display: none;
+            }
+
+            & .border-radius-right-bottom, .border-radius-left-bottom{
+                position: absolute;
+                background-color: transparent;
+                overflow: hidden;
+
+                &::after{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    border-radius: var(--border-radius);
+                    background-color: transparent;
+                    position: absolute;
+                }
+            }
+
+            & .border-radius-left-bottom{
+                width: var(--fix-size);
+                height: var(--fix-size);
+                top: 100%;
+                left: 0;
+
+                &::after{
+                    top: 0;
+                    left: 0;
+                    box-shadow: calc(var(--fix-size) * -0.5) calc(var(--fix-size) * -0.5) 0 0px var(--color);
+                }
+            }
+
+            & .border-radius-right-bottom{
+                width: var(--size);
+                height: var(--size);
+                top: 100%;
+                right: 0;
+
+                &::after{
+                    top: 0;
+                    left: 0;
+                    box-shadow: calc(var(--size) * 0.5) calc(var(--size) * -0.5) 0 0px var(--color);
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 900px) {
+        & .title {
+            max-width: min-content;
+        }
+    }
+`
+
+export const H1Bold = styled(H1)`
+	font-weight: ${FontWeight.bold};
+    color: ${colors.black.main};
+    text-transform: uppercase;
+
+    @media only screen and (min-width: 900px) {
+        width: min-content;
+        margin-top: -1.5rem;
+    }
+`
+
+export const ImageContainer = styled.div<{$heightDiff: number}>`
+  
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+
+    & .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 15%;
+        background-color: var(--color);
+        border-bottom-right-radius: var(--border-radius);
+        z-index: 1;
+
+        &::after, &::before{
+            content: "";
+            position: absolute;
+            width: var(--size);
+            height: var(--size);
+            border-radius: var(--border-radius);
+            background-color:transparent;
+            box-shadow: calc(var(--size) * -0.5) calc(var(--size) * -0.5) 0 0px var(--color);
+        }
+
+        &::after{
+            top: 100%;
+            left: 0;
+        }
+
+        &::before{
+            top: 0;
+            left: 100%;
+        }
+    }
+
+    @media only screen and (min-width: 900px) {
+        --size: 6rem;
+
+        margin-top: -${({$heightDiff}) => $heightDiff}px;
+        z-index: -1;
+
+        & .overlay{
+            display: none;
+        }
+    }
+`
+
+export const Image = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1.2;
+    transform-origin: left top;
+
+    @media only screen and (min-width: 900px) {
+        scale: initial;
+    }
+`
+
 export const QuoteWrapper = styled.div`
-	--size-icon: 2rem;
-	display: grid;
-	grid-template-columns: var(--size-icon) auto var(--size-icon);
-	grid-template-rows: var(--size-icon) auto var(--size-icon);
-	width: 100%;
-	max-width: 885px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+    & .quote-icon{
+        width: 2.25rem;
 
-	& > * {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+        & path{
+            fill: ${colors.secondary.normal[300]};
+        }
+    }
 
-	& > div:nth-child(2) {
-		grid-column: 2/3;
-		grid-row: 2/3;
-		padding: 0.625rem;
-	}
+    & .quote-text{
+        font-weight: ${FontWeight.regular};
+    }
 
-	& > div:nth-child(3) {
-		grid-column: 3/4;
-		grid-row: 3/4;
-	}
-
-	& .quote {
-		font-weight: ${FontWeight.regular};
-		text-align: center;
-	}
-
-	& .icon-open-quote,
-	& .icon-close-quote {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		& svg {
-			width: 100%;
-			fill: ${colors.white.main};
-		}
-	}
-
-	@media only screen and (min-width: ${breakpoints.lg}) {
-		--size-icon: 4rem;
-		grid-template-columns: var(--size-icon) auto var(--size-icon);
-		grid-template-rows: var(--size-icon) auto var(--size-icon);
-	}
+    & .quote-icon:last-child{
+        align-self: end;
+    }
 `
