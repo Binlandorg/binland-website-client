@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 	@media only screen and (min-width: 900px) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto 1fr;
+		grid-template-rows: 1fr auto;
 		gap: 2rem 1rem;
 	}
 `
