@@ -28,7 +28,6 @@ export const QuoteContainer = styled.div`
 
 	& .quote-text {
 		font-weight: ${FontWeight.normal};
-		/* text-align: center; */
 	}
 
 	& .quote-icon {
