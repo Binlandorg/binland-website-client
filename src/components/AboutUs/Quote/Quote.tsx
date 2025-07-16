@@ -1,15 +1,15 @@
 import { useRef } from "react"
 
+import Reveal from "components/Reveal/Reveal"
 import useHeightDifference from "hooks/useHeightDifference"
 import useIntlMessages from "hooks/useIntlMessages"
 import useIsTallerThan from "hooks/useIsTallerThan"
 import { FormattedMessage } from "react-intl"
-import Container from "ui/Container/Container"
 import Paragraph from "ui/Paragraph/Paragraph"
-import Section from "ui/Section/Section"
 import cleanClass from "utils/cleanClass"
 import HeroIMG from "../../../assets/images/people/screens-with-binland-website.webp"
-import { H1Bold, HeroText, HeroWrapper } from "./Quote.styles"
+import { H1Bold, HeroContainer, HeroSection } from "./Quote.styles"
+import { HeroText, HeroWrapper } from "./Quote.styles"
 import { Image, ImageContainer } from "./Quote.styles"
 
 export const Quote: React.FC = () => {
@@ -22,8 +22,8 @@ export const Quote: React.FC = () => {
 	const hasTextInnerEdge = !useIsTallerThan(textRef, titleRef)
 
 	return (
-		<Section size="sm" type="margin">
-			<Container size="xl" isfullwidth>
+		<HeroSection size="sm" type="margin">
+			<HeroContainer size="xl" isfullwidth>
 				<HeroWrapper>
 					<HeroText $heightDiff={heightDiff}>
 						<div
@@ -59,11 +59,13 @@ export const Quote: React.FC = () => {
 					</HeroText>
 					<ImageContainer $heightDiff={heightDiff}>
 						<span className="overlay" />
-						<Image src={HeroIMG} alt="" />
+						<Reveal>
+							<Image src={HeroIMG} alt="" />
+						</Reveal>
 					</ImageContainer>
 				</HeroWrapper>
-			</Container>
-		</Section>
+			</HeroContainer>
+		</HeroSection>
 	)
 }
 

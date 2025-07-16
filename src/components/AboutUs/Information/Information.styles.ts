@@ -1,119 +1,97 @@
 import styled from "styled-components"
 
-import { breakpoints } from "shared/breakpoints"
 import { colors } from "styles/colors"
-import setupImgURL from "assets/images/photos/screens-with-binland-website.webp"
-import setupImgURLMobile from "assets/images/photos/mobile/screens-with-binland-website-mobile.webp"
+import { FontWeight } from "styles/typography"
+import Section from "ui/Section/Section"
+import Container from "ui/Container/Container"
 
-export const StyledInformation = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 1.5rem;
-	width: 100%;
+export const InfoSection = styled(Section)`
+	margin-block: initial;
+`
 
-	@media only screen and (min-width: ${breakpoints.md}) {
-		gap: 3.125rem;
-		flex-direction: row;
+export const InfoContainer = styled(Container)`
+	margin-block: initial;
+`
+
+export const Wrapper = styled.div`
+	@media only screen and (min-width: 900px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto 1fr;
+		gap: 2rem 1rem;
 	}
 `
 
-export const InformationDescription = styled.div`
-	width: 100%;
+export const QuoteContainer = styled.div`
+	display: flex;
+	flex-direction: column;
 
-	& > div:first-child {
-		margin-bottom: 1rem;
+	& .quote-text {
+		font-weight: ${FontWeight.normal};
+		/* text-align: center; */
 	}
 
-	& h3 .dot {
-		color: ${colors.primary.main};
-	}
+	& .quote-icon {
+		width: 2rem;
 
-	& h3,
-	& h4 {
-		text-transform: uppercase;
-	}
+		& path {
+			fill: ${colors.secondary.disabled[300]};
+		}
 
-	& .description {
-		& p:first-child {
-			margin-bottom: 0.5rem;
+		&:last-child {
+			align-self: end;
 		}
 	}
 `
-/** TODO: When there are metrics. **/
 
-// export const InformationDetails = styled.div`
-// 	width: 100%;
-// 	display: grid;
-// 	grid-template-columns: 1fr;
-// 	grid-template-rows: repeat(3, 1fr);
-// 	gap: 0.625rem;
-
-// 	& > div {
-// 		background-color: ${colors.white.main};
-// 		padding: 1rem;
-// 		border-radius: 0.5rem;
-// 		width: 100%;
-// 		height: 100%;
-
-// 		& h5 {
-// 			opacity: 0.5;
-// 			margin: 0;
-// 		}
-
-// 		& h5::first-letter {
-// 			text-transform: capitalize;
-// 		}
-// 	}
-
-// 	& .detail-amount {
-// 		color: ${colors.secondary.normal[800]};
-// 	}
-
-// 	& .detail-image {
-// 		display: none;
-// 		background-image: url(${girlImgURLMobile});
-// 		background-size: cover;
-// 		background-position-y: 65%;
-
-// 		@media only screen and (min-width: ${breakpoints.lg}) {
-// 			background-image: url(${girlImgURL});
-// 		}
-// 	}
-
-// 	@media only screen and (min-width: ${breakpoints.xs}) {
-// 		grid-template-columns: repeat(2, minmax(150px, 1fr));
-// 		grid-template-rows: auto auto;
-
-// 		& .detail-image {
-// 			display: inherit;
-// 			grid-column: 1/2;
-// 			grid-row: 2/3;
-// 		}
-// 	}
-
-// 	@media only screen and (min-width: ${breakpoints.xxl}) {
-// 		gap: 2rem;
-
-// 		& > div {
-// 			padding: 2rem;
-// 		}
-// 	}
-// `
-
-export const InformationDetails = styled.div`
-	width: 100%;
-	height: 10rem;
-	background-image: url(${setupImgURLMobile});
+export const Image = styled.img`
 	border-radius: 0.5rem;
-	background-size: cover;
-	background-position-y: 10%;
+	margin-top: 1.5rem;
+	margin-bottom: 0.75rem;
+	width: 100%;
 
-	@media only screen and (min-width: ${breakpoints.md}) {
-		height: initial;
+	@media only screen and (min-width: 900px) {
+		width: 100%;
+		object-fit: cover;
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;
+		aspect-ratio: 1 / 1;
+		border-radius: 1rem;
+		margin-top: initial;
+		margin-bottom: initial;
 	}
 
-	@media only screen and (min-width: ${breakpoints.lg}) {
-		background-image: url(${setupImgURL});
-		background-position-y: 15%;
+	@media only screen and (min-width: 1200px) {
+		aspect-ratio: 3 / 1;
+		object-position: 0px 0px;
 	}
+`
+
+export const HistoryContainer = styled.div`
+	background-color: ${colors.tertiary.active[900]};
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+	color: ${colors.white.main};
+
+	@media only screen and (min-width: 900px) {
+		grid-column: 2 / 3;
+		grid-row: 1 / 3;
+		border-radius: 1rem;
+	}
+
+	& .history-title {
+		color: ${colors.primary.main};
+		text-align: center;
+		margin-bottom: 1rem;
+
+		@media only screen and (min-width: 900px) {
+			text-align: right;
+		}
+	}
+`
+
+export const HistoryText = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 `
