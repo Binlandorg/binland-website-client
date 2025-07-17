@@ -1,54 +1,37 @@
-import { LazyLoadImage } from "react-lazy-load-image-component"
 import styled from "styled-components"
 
-import { breakpoints } from "shared/breakpoints"
 import { colors } from "styles/colors"
 
-interface ICardImgProps {
-	width: number
-	height: number
-}
-
 export const CardWrapper = styled.div`
-	--var-gap: 1rem;
+	--bg-color: ${colors.body};
+	--main-color: ${colors.primary.main};
+	--white-color: ${colors.white.main};
+
 	display: flex;
-	padding: 1rem;
+	padding: 2rem 1rem;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
-	border-radius: 0.5rem;
+	border-radius: 2rem;
 	background-color: ${colors.secondary[100]};
 	width: 100%;
-	gap: var(--var-gap);
+	gap: 1.5rem;
+	background:
+		linear-gradient(var(--bg-color), var(--bg-color)) padding-box,
+		linear-gradient(130deg, var(--white-color), var(--main-color)) border-box;
+	border: 3px solid transparent;
 
-	& .info {
+	& .info-wrapper {
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
-		margin-top: 1rem;
+		gap: 0.5rem;
 
-		& h3 {
+		& h4 {
 			text-align: center;
+			color: var(--main-color);
 		}
 
-		& .mision__description {
+		& .info-description {
 			text-align: center;
 		}
 	}
-
-	@media only screen and (min-width: ${breakpoints.sm}) {
-		max-width: calc((100% - var(--var-gap)) / 2);
-	}
-
-	@media only screen and (min-width: ${breakpoints.lg}) {
-		flex: 1;
-		max-width: 25rem;
-		width: 100%;
-	}
-`
-
-export const WhatWeAreImg = styled(LazyLoadImage)<ICardImgProps>`
-	aspect-ratio: ${({ width, height }) => `${width} / ${height}`};
-	width: 100%;
-	height: 100%;
 `
