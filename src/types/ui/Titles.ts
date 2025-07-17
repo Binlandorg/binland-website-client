@@ -17,6 +17,7 @@ export interface IH3Props extends PropsWithChildren {
 export interface IH4Props extends PropsWithChildren {
 	$weight: "regular" | "medium" | "bold"
 	color?: string
+	className?: string
 }
 
 export interface IH5Props extends IH4Props {}
