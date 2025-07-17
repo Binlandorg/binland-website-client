@@ -1,15 +1,14 @@
 import useIntlMessages from "hooks/useIntlMessages"
 import { colors } from "styles/colors"
-import Section from "ui/Section/Section"
 import H2 from "ui/Titles/H2"
 import WhatWeAreCard from "../../Cards/WhatWeAreCard/WhatWeAreCard"
 import { whatWeAreData } from "./WhatWeAre.data"
-import { WhatWeAreWrapper, Wrapper } from "./WhatWeAre.styles"
+import { Section, WhatWeAreWrapper, Wrapper } from "./WhatWeAre.styles"
 
 const WhatWeAre: React.FC = () => {
 	const intl = useIntlMessages()
 	return (
-		<Section type="padding" size="lg">
+		<Section type="margin" size="lg">
 			<Wrapper>
 				<span className="icon">
 					<svg

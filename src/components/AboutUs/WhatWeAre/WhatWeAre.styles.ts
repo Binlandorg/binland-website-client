@@ -1,6 +1,15 @@
 import styled from "styled-components"
 
 import { colors } from "styles/colors"
+import SectionUI from "ui/Section/Section"
+
+export const Section = styled(SectionUI)`
+	margin-block: initial;
+
+	@media only screen and (min-width: 768px) {
+		margin-top: 5rem;
+	}
+`
 
 export const Wrapper = styled.div`
 	position: relative;
@@ -10,6 +19,10 @@ export const Wrapper = styled.div`
 
 	@media only screen and (min-width: 768px) {
 		margin-bottom: 15%;
+	}
+
+	@media only screen and (min-width: 1200px) {
+		margin-bottom: 5%;
 	}
 
 	& .icon {
