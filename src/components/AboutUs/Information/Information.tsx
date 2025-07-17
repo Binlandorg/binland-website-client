@@ -1,69 +1,56 @@
-import { FormattedMessage } from "react-intl"
-
+import Reveal from "components/Reveal/Reveal"
 import useIntlMessages from "hooks/useIntlMessages"
-import { colors } from "styles/colors"
-import Container from "ui/Container/Container"
+import Display from "ui/Display/Display"
+import CloseQuote from "ui/Icons/CloseQuote"
+import OpenQuote from "ui/Icons/OpenQuote"
 import Paragraph from "ui/Paragraph/Paragraph"
-import Section from "ui/Section/Section"
-import H3 from "ui/Titles/H3"
 import H4 from "ui/Titles/H4"
-/** TODO: When there are metrics. **/
-// import Reveal from "components/Reveal/Reveal"
-// import type { IDetailData } from "types/components/aboutus"
-// import Display from "ui/Display/Display"
-// import H5 from "ui/Titles/H5"
-// import { detailsData } from "./Information.data"
+import IMG from "../../../assets/images/people/screens-with-binland.webp"
 import {
-	InformationDescription,
-	InformationDetails,
-	StyledInformation,
+	HistoryContainer,
+	HistoryText,
+	Image,
+	InfoContainer,
 } from "./Information.styles"
+import { InfoSection, QuoteContainer, Wrapper } from "./Information.styles"
 
 const Information: React.FC = () => {
 	const intl = useIntlMessages()
 
 	return (
-		<Section size="sm" type="margin">
-			<Container size="xl" isfullwidth>
-				<StyledInformation>
-					<InformationDescription>
-						<div>
-							<H4 $weight="regular" color={colors.primary.main}>
-								{intl("about.us.binland.information.sub.title")}
-							</H4>
-							<H3 $weight="bold">
-								{intl("about.us.binland.information.title")}
-								<span className="dot">.</span>
-							</H3>
-						</div>
-						<div className="description">
-							<FormattedMessage
-								id="about.us.binland.information.description"
-								defaultMessage={intl("about.us.binland.information.description")}
-								values={{ p: (chunks) => <Paragraph>{chunks}</Paragraph> }}
-							/>
-						</div>
-					</InformationDescription>
-					<InformationDetails>
-						{/** TODO: When there are metrics. **/}
-						{/* {detailsData.map((detail) => {
-							const { id, amount, name }: IDetailData = detail
-							return (
-								<div key={id}>
-									<Reveal>
-										<Display size="md" className="detail-amount">
-											{amount}
-										</Display>
-										<H5 $weight="regular">{intl(name)}</H5>
-									</Reveal>
-								</div>
-							)
-						})} */}
-						<div className="detail-image" />
-					</InformationDetails>
-				</StyledInformation>
-			</Container>
-		</Section>
+		<InfoSection size="sm" type="margin">
+			<InfoContainer size="xl" isfullwidth>
+				<Wrapper>
+					<QuoteContainer>
+						<OpenQuote className="quote-icon" />
+						<Display fontStyle="italic" size="sm" className="quote-text">
+							{intl("about.us.binland.information.sub.title")}
+						</Display>
+						<CloseQuote className="quote-icon" />
+					</QuoteContainer>
+					<Reveal>
+						<Image
+							src={IMG}
+							alt={intl("about.us.binland.information.history.image.alt")}
+							loading="lazy"
+						/>
+					</Reveal>
+					<HistoryContainer>
+						<H4 $weight="bold" className="history-title">
+							{intl("about.us.binland.information.history.title")}
+						</H4>
+						<HistoryText>
+							<Paragraph>
+								{intl("about.us.binland.information.history.text.one")}
+							</Paragraph>
+							<Paragraph>
+								{intl("about.us.binland.information.history.text.two")}
+							</Paragraph>
+						</HistoryText>
+					</HistoryContainer>
+				</Wrapper>
+			</InfoContainer>
+		</InfoSection>
 	)
 }
 

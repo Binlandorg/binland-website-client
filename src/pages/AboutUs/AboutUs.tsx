@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async"
 import useIntlMessages from "hooks/useIntlMessages"
 import BodyContainer from "ui/BodyContainer/BodyContainer"
 import imageLinkPreview from "../../assets/images/image-link-preview.webp"
+import { Wrapper } from "./AboutUs.styles"
 
 const Quote = lazy(() => import("components/AboutUs/Quote/Quote"))
 const Info = lazy(() => import("components/AboutUs/Information/Information"))
@@ -32,16 +33,18 @@ const AboutUs = () => {
 				<meta property="og:image" content={imageLinkPreview} />
 				<title>{intl("about.us.title.tag")}</title>
 			</Helmet>
-			<Suspense>
-				<Quote />
-			</Suspense>
-			<Suspense>
-				<Info />
-				<WhatWeAre />
-				<Founders />
-				<Team />
-				{/* <Office /> */}
-			</Suspense>
+			<Wrapper>
+				<Suspense>
+					<Quote />
+				</Suspense>
+				<Suspense>
+					<Info />
+					<WhatWeAre />
+					<Founders />
+					<Team />
+					{/* <Office /> */}
+				</Suspense>
+			</Wrapper>
 		</BodyContainer>
 	)
 }

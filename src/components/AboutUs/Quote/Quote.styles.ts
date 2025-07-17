@@ -2,7 +2,17 @@ import styled from "styled-components"
 
 import { colors } from "styles/colors"
 import { FontWeight } from "styles/typography"
+import Container from "ui/Container/Container"
+import Section from "ui/Section/Section"
 import H1 from "ui/Titles/H1"
+
+export const HeroSection = styled(Section)`
+	margin-bottom: initial;
+`
+
+export const HeroContainer = styled(Container)`
+	margin-bottom: initial;
+`
 
 export const HeroWrapper = styled.div`
 	--color: ${colors.body};
@@ -183,7 +193,7 @@ export const ImageContainer = styled.div<{ $heightDiff: number }>`
 	position: relative;
 	border-radius: var(--border-radius);
 	overflow: hidden;
-	margin-bottom: 2.5rem;
+	/* margin-bottom: 2.5rem; */
 
 	& .overlay {
 		position: absolute;
