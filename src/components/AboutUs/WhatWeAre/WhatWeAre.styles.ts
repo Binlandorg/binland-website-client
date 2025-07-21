@@ -5,7 +5,7 @@ import SectionUI from "ui/Section/Section"
 
 export const Section = styled(SectionUI)`
 	margin-block: initial;
-    position: relative;
+	position: relative;
 
 	@media only screen and (min-width: 768px) {
 		margin-top: 5rem;
@@ -43,35 +43,35 @@ export const Wrapper = styled.div`
 		}
 	}
 
-    & .front-circuit__container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        padding-top: 2rem;
-        display: none;
-        margin: 0 auto;
-        
-        @media only screen and (min-width: 768px) {
-            display: flex;
-        }
+	& .front-circuit__container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		padding-top: 2rem;
+		display: none;
+		margin: 0 auto;
 
-        & .front-circuit__dot{
-            width: var(--size);
-            height: var(--size);
-            background-color: ${colors.primary.main};
-            position: absolute;
-            border-radius: 50%;
-            left: 0;
-            top: 0;
-            margin-top: 2rem;
-            box-shadow: 0 0 0.5rem ${colors.primary.main};
-        }
-    }
+		@media only screen and (min-width: 768px) {
+			display: flex;
+		}
+
+		& .front-circuit__dot {
+			width: var(--size);
+			height: var(--size);
+			background-color: ${colors.primary.main};
+			position: absolute;
+			border-radius: 50%;
+			left: 0;
+			top: 0;
+			margin-top: 2rem;
+			box-shadow: 0 0 0.5rem ${colors.primary.main};
+		}
+	}
 
 	& h2 {
 		text-align: center;
