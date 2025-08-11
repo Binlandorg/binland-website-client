@@ -452,6 +452,11 @@
 	"complaints.book.confirm.title": "Your claim has been successfully submitted!",
 	"complaints.book.confirm.description": "Thank you for contacting us. We will process your request in accordance with the Consumer Protection and Defense Code. You will receive a response within a maximum of 15 calendar days.",
 
+	"under.construction.title.tag": "Under Construction",
+	"under.construction.description.title": "PAGE UNDER <span>CONSTRUCTION</span>",
+	"under.construction.description.sub.title": "This page will be available sooner than you think!",
+	"under.construction.button.home": "Return to Home",
+
 	"schema.validation.only.numbers": "Must contain numbers only",
 	"schema.validation.only.text": "Must contain letters only",
 	"schema.validation.min.6.numbers": "Minimum 6 digits",

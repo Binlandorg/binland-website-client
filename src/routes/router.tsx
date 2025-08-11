@@ -21,6 +21,9 @@ const FrequentlyAskedQuestion = lazy(
 const TermsOfService = lazy(() => import("pages/TermsOfService/TermsOfService"))
 const Portfolio = lazy(() => import("pages/Portfolio/Portfolio"))
 const ComplaintsBook = lazy(() => import("pages/ComplaintsBook/ComplaintsBook"))
+const UnderConstruction = lazy(
+	() => import("pages/UnderConstruction/UnderConstruction"),
+)
 
 // Uncomment the following when pages are ready
 // const Clients = lazy(() => import('pages/Clients/Clients'))
@@ -38,7 +41,14 @@ const router = createBrowserRouter(
 			<Route index element={<Home />} />
 			{/* <Route path="/clients" element={<Clients />} /> */}
 			{/* <Route path="/saas" element={<Saas />} /> */}
-			<Route path="/portfolio" element={<Portfolio />} />
+			{/* <Route path="/portfolio" element={<Portfolio />} /> */}
+			<Route path="/portfolio">
+				<Route index element={<Portfolio />} />
+				<Route path="binland-e-commerce" element={<UnderConstruction />} />
+				<Route path="agroamym-app-web" element={<UnderConstruction />} />
+				<Route path="dicovert-web-design" element={<UnderConstruction />} />
+				<Route path="polloscontrol-app-web" element={<UnderConstruction />} />
+			</Route>
 			{/* <Route path="/lets-learn" element={<LetsLearn />} /> */}
 			<Route path="/about-us" element={<AboutUs />} />
 			{/* <Route path="/services" element={<Services />} /> */}
