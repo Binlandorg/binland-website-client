@@ -451,6 +451,11 @@
 	"complaints.book.confirm.title": "¡Tu reclamo ha sido registrado correctamente!",
 	"complaints.book.confirm.description": "Te agradecemos por comunicarte con nosotros. Atenderemos tu solicitud conforme a lo establecido por el Código de Protección y Defensa del Consumidor. Recibirás una respuesta en un plazo máximo de 15 días calendario.",
 
+	"under.construction.title.tag": "En construcción",
+	"under.construction.description.title": "PÁGINA EN <span>CONSTRUCCIÓN</span>",
+	"under.construction.description.sub.title": "¡Esta página está estará disponible más pronto de lo que crees!",
+	"under.construction.button.home": "Volver a inicio",
+
 	"schema.validation.only.numbers": "Debe contener solo números",
 	"schema.validation.only.text": "Debe contener solo texto",
 	"schema.validation.min.6.numbers": "Mínimo 6 dígitos",

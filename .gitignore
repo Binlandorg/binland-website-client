@@ -24,4 +24,5 @@ dist-ssr
 .env
 .env.development
 .env.production
+.env.staging
 pnpm-lock.yaml
