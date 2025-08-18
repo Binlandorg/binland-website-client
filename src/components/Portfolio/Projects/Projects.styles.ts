@@ -81,35 +81,29 @@ export const ProjectItem = styled.li`
 	width: 100%;
 	cursor: pointer;
 
-	&:hover {
-		& img {
-			transition: all 0.3s ease-in-out;
-			transform: scale(1.4);
-		}
-	}
-
-	& img {
-		transition: all 0.1s ease-in-out;
-	}
-
 	@media only screen and (min-width: 1024px) {
 		height: 100%;
 	}
 
-	& picture {
-		width: 100%;
+	& .thumbnail-wrapper {
 		height: 100%;
-		display: block;
+		width: 100%;
 
 		& img {
 			width: 100%;
 			height: 100%;
-			display: block;
 			object-fit: cover;
 		}
 	}
 
+	& video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
 	& .text {
+		pointer-events: none;
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -123,68 +117,63 @@ export const ProjectItem = styled.li`
 		}
 	}
 
-	&:nth-of-type(3),
-	&:nth-of-type(4) {
-		& .text {
-			bottom: initial;
-			top: 0;
-		}
+	&:not(.banner):hover {
+		aspect-ratio: 16 / 9;
 	}
 
 	&:nth-of-type(1),
 	&:nth-of-type(3) {
 		color: ${colors.white.main};
+
+		& .name {
+			color: ${colors.white.main};
+		}
 	}
 
 	&:nth-of-type(1) {
-		& picture {
-			& img {
-				width: 170%;
-				height: 170%;
-				object-position: 0px -3rem;
-			}
+		& .text {
+			bottom: 0;
+		}
+
+		& img {
+			object-position: 0px 20%;
 		}
 
 		@media only screen and (min-width: 1024px) {
-			grid-column: 1/4;
-			grid-row: 1/2;
-
-			& picture {
-				& img {
-					width: 100%;
-					height: 100%;
-					object-position: center;
-				}
-			}
+			grid-column: 1 / 4;
+			grid-row: 3 / 4;
 
 			& .text {
 				top: 0;
-				bottom: initial;
 			}
 		}
 
 		@media only screen and (min-width: 1440px) {
-			grid-column: 1/8;
-			grid-row: 1/2;
+			grid-column: 1 / 8;
+			grid-row: 3 / 4;
 		}
 	}
 
 	&:nth-of-type(2) {
-		& picture {
-			& img {
-				object-fit: cover;
-				object-position: 0 5%;
-			}
+		& .text {
+			bottom: 0;
+		}
+
+		& img {
+			object-position: 0px 20%;
 		}
 
 		@media only screen and (min-width: 1024px) {
-			grid-column: 4/7;
-			grid-row: 1/2;
-
 			& .text {
 				top: 0;
-				bottom: initial;
+
+				& .description {
+					max-width: min-content;
+				}
 			}
+
+			grid-column: 4/7;
+			grid-row: 1/2;
 		}
 
 		@media only screen and (min-width: 1440px) {
@@ -196,47 +185,78 @@ export const ProjectItem = styled.li`
 	&:nth-of-type(3) {
 		order: 2;
 
-		& picture {
-			& img {
-				object-fit: cover;
-				object-position: center;
-			}
+		& .text {
+			top: 0;
+		}
+
+		& img {
+			object-position: 0px 30%;
 		}
 
 		@media only screen and (min-width: 1024px) {
-			grid-column: 4/7;
-			grid-row: 2/3;
+			grid-column: 1 / 4;
+			grid-row: 1 / 2;
 		}
 
 		@media only screen and (min-width: 1440px) {
-			grid-column: 6/13;
-			grid-row: 2/3;
+			grid-column: 1 / 8;
+			grid-row: 1 / 2;
 		}
 	}
 
 	&:nth-of-type(4) {
-		order: 3;
+		order: 2;
 
-		& picture {
-			& img {
-				object-fit: cover;
-				object-position: 0 30%;
-			}
+		& .text {
+			top: 0;
+		}
+
+		& img {
+			object-position: 0px 20%;
 		}
 
 		@media only screen and (min-width: 1024px) {
-			grid-column: 1/3;
-			grid-row: 3/4;
+			grid-column: 4 / 7;
+			grid-row: 2 / 3;
 		}
 
 		@media only screen and (min-width: 1440px) {
-			grid-column: 1 / 5;
+			grid-column: 6 / 13;
+			grid-row: 2 / 3;
+		}
+	}
+
+	&:nth-of-type(5) {
+		order: 2;
+
+		& .text {
+			top: 0;
+		}
+
+		& img {
+			object-fit: cover;
+			object-position: 0% 0%;
+		}
+
+		@media only screen and (min-width: 1024px) {
+			grid-column: 4 / 7;
+			grid-row: 3 / 4;
+
+			& .text {
+				& .name {
+					max-width: 70%;
+				}
+			}
+		}
+
+		@media only screen and (min-width: 1440px) {
+			grid-column: 8 / 13;
 			grid-row: 3 / 4;
 		}
 	}
 
 	&.banner {
-		order: 1 !important;
+		order: 1;
 
 		@media only screen and (min-width: 1024px) {
 			grid-column: 1/4;
