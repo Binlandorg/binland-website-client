@@ -20,6 +20,7 @@ export type PortfolioType = {
 	name: string
 	description: string
 	image: string
+	video: string
 	tags: TagType[]
 	to: To
 }

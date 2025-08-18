@@ -1,6 +1,4 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
-import type { To } from "react-router-dom"
 
 import Banner from "components/Banner/Banner"
 import { portfolios } from "data/portfolio"
@@ -8,7 +6,7 @@ import useIntlMessages from "hooks/useIntlMessages"
 import type { TagType } from "types/global"
 import ButtonText from "ui/ButtonText/ButtonText"
 import Star from "ui/Icons/Star"
-import SubTab from "ui/SubTab/SubTab"
+import Project from "./Project"
 import { FilterButton, Filters, ProjectsList } from "./Projects.styles"
 import { ProjectItem, ProjectsWrapper } from "./Projects.styles"
 import { SectionProjects } from "./Projects.styles"
@@ -19,9 +17,6 @@ const Projects: React.FC = () => {
 		portfolio.tags.includes(filter),
 	)
 	const intl = useIntlMessages()
-	const navigate = useNavigate()
-
-	const handleClick = (to: To) => navigate(to)
 
 	const handleFilter = (tag: TagType) => {
 		setFilter(tag)
@@ -44,15 +39,7 @@ const Projects: React.FC = () => {
 				</Filters>
 				<ProjectsList>
 					{filtered.map((portfolio) => (
-						<ProjectItem key={portfolio.id} onClick={() => handleClick(portfolio.to)}>
-							<picture>
-								<img src={portfolio.image} alt={portfolio.name} />
-							</picture>
-							<div className="text">
-								<ButtonText className="name">{portfolio.name}</ButtonText>
-								<SubTab className="description">{intl(portfolio.description)}</SubTab>
-							</div>
-						</ProjectItem>
+						<Project key={portfolio.id} portfolio={portfolio} />
 					))}
 					<ProjectItem className="banner">
 						<Banner />

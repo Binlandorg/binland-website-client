@@ -48,6 +48,10 @@ const router = createBrowserRouter(
 				<Route path="agroamym-app-web" element={<UnderConstruction />} />
 				<Route path="dicovert-web-design" element={<UnderConstruction />} />
 				<Route path="polloscontrol-app-web" element={<UnderConstruction />} />
+				<Route
+					path="naturaleza-eco-amigable-diseno"
+					element={<UnderConstruction />}
+				/>
 			</Route>
 			{/* <Route path="/lets-learn" element={<LetsLearn />} /> */}
 			<Route path="/about-us" element={<AboutUs />} />
