@@ -81,9 +81,9 @@ export const ProjectItem = styled.li`
 	width: 100%;
 	cursor: pointer;
 
-    @media only screen and (min-width: 1024px) {
-        height: 100%;
-    }
+	@media only screen and (min-width: 1024px) {
+		height: 100%;
+	}
 
 	& .thumbnail-wrapper {
 		height: 100%;
@@ -94,17 +94,16 @@ export const ProjectItem = styled.li`
 			height: 100%;
 			object-fit: cover;
 		}
-
 	}
 
-    & video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+	& video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 
 	& .text {
-        pointer-events: none;
+		pointer-events: none;
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -118,36 +117,35 @@ export const ProjectItem = styled.li`
 		}
 	}
 
-    &:not(.banner):hover{
-        aspect-ratio: 16 / 9;
-    }
+	&:not(.banner):hover {
+		aspect-ratio: 16 / 9;
+	}
 
 	&:nth-of-type(1),
 	&:nth-of-type(3) {
 		color: ${colors.white.main};
 
-        & .name{
-            color: ${colors.white.main};
-        }
+		& .name {
+			color: ${colors.white.main};
+		}
 	}
 
 	&:nth-of-type(1) {
+		& .text {
+			bottom: 0;
+		}
 
-        & .text{
-            bottom: 0;
-        }
-
-        & img{
-            object-position: 0px 20%;
-        }
+		& img {
+			object-position: 0px 20%;
+		}
 
 		@media only screen and (min-width: 1024px) {
 			grid-column: 1 / 4;
 			grid-row: 3 / 4;
 
-            & .text{
-            top: 0;
-        }
+			& .text {
+				top: 0;
+			}
 		}
 
 		@media only screen and (min-width: 1440px) {
@@ -157,24 +155,22 @@ export const ProjectItem = styled.li`
 	}
 
 	&:nth-of-type(2) {
-        & .text{
-            bottom: 0;
+		& .text {
+			bottom: 0;
+		}
 
-            
-        }
-
-            & img{
-                object-position: 0px 20%;
-            }
+		& img {
+			object-position: 0px 20%;
+		}
 
 		@media only screen and (min-width: 1024px) {
-            & .text{
-            top: 0;
+			& .text {
+				top: 0;
 
-            & .description{
-                max-width: min-content;
-            }
-        }
+				& .description {
+					max-width: min-content;
+				}
+			}
 
 			grid-column: 4/7;
 			grid-row: 1/2;
@@ -189,13 +185,13 @@ export const ProjectItem = styled.li`
 	&:nth-of-type(3) {
 		order: 2;
 
-        & .text{
-            top: 0;
-        }
+		& .text {
+			top: 0;
+		}
 
-            & img{
-                object-position: 0px 30%;
-            }
+		& img {
+			object-position: 0px 30%;
+		}
 
 		@media only screen and (min-width: 1024px) {
 			grid-column: 1 / 4;
@@ -211,13 +207,13 @@ export const ProjectItem = styled.li`
 	&:nth-of-type(4) {
 		order: 2;
 
-        & .text{
-            top: 0;
-        }
+		& .text {
+			top: 0;
+		}
 
-            & img{
-                object-position: 0px 20%;
-            }
+		& img {
+			object-position: 0px 20%;
+		}
 
 		@media only screen and (min-width: 1024px) {
 			grid-column: 4 / 7;
@@ -230,34 +226,34 @@ export const ProjectItem = styled.li`
 		}
 	}
 
-    &:nth-of-type(5) {    
-        order: 2;
+	&:nth-of-type(5) {
+		order: 2;
 
-        & .text{
-            top: 0;
-        }
+		& .text {
+			top: 0;
+		}
 
-        & img {
-				object-fit: cover;
-				object-position: 0% 0%;
-			}
+		& img {
+			object-fit: cover;
+			object-position: 0% 0%;
+		}
 
-        @media only screen and (min-width: 1024px) {
+		@media only screen and (min-width: 1024px) {
 			grid-column: 4 / 7;
 			grid-row: 3 / 4;
 
-            & .text{
-                & .name{
-                    max-width: 70%;
-                }
-            }
+			& .text {
+				& .name {
+					max-width: 70%;
+				}
+			}
 		}
 
-        @media only screen and (min-width: 1440px) {
-            grid-column: 8 / 13;
-            grid-row: 3 / 4;
-        }        
-    }
+		@media only screen and (min-width: 1440px) {
+			grid-column: 8 / 13;
+			grid-row: 3 / 4;
+		}
+	}
 
 	&.banner {
 		order: 1;
