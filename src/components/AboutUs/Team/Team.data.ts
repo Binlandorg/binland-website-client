@@ -1,12 +1,44 @@
 import type { ITeamData } from "types/components/aboutus"
 import diegoImageURL from "../../../assets/images/binland/team/diego-profile.webp"
+import jonathanImageURL from "../../../assets/images/binland/team/jonathan-profile.webp"
 import diegoImageURLMobile from "../../../assets/images/binland/team/mobile/diego-profile.webp"
+import jonathanImageURLMobile from "../../../assets/images/binland/team/mobile/jonathan-profile.webp"
 import patyImageURLMobile from "../../../assets/images/binland/team/mobile/paty-profile.webp"
 import ricardoImageURLMobile from "../../../assets/images/binland/team/mobile/ricardo-profile.webp"
 import patyImageURL from "../../../assets/images/binland/team/paty-profile.webp"
 import ricardoImageURL from "../../../assets/images/binland/team/ricardo-profile.webp"
 
 const teamData: ITeamData[] = [
+	{
+		id: "jhon",
+		image: {
+			url: jonathanImageURL,
+			urlMobile: jonathanImageURLMobile,
+			alt: "image.profile.alt.jonathan.cervantes.alarcon",
+		},
+		fullName: "Jonathan M. Alarcón",
+		position: "about.us.position.software.developer",
+		quote: "about.us.quote.jonathan.cervantes.alarcon",
+		// networks: [
+		// 	{
+		// 		name: "github",
+		// 		url: "https://github.com/mardecera",
+		// 		ariaLabel:
+		// 			"about.us.jonathan.cervantes.alarcon.social.media.github.aria.label",
+		// 	},
+		// 	{
+		// 		name: "LinkedIn",
+		// 		url: "https://www.linkedin.com/in/mardecerax/",
+		// 		ariaLabel:
+		// 			"about.us.jonathan.cervantes.alarcon.social.media.linkedin.aria.label",
+		// 	},
+		// 	{
+		// 		name: "personalpage",
+		// 		url: "https://mardecera.com",
+		// 		ariaLabel: "about.us.jonathan.cervantes.alarcon.web.site.aria.label",
+		// 	},
+		// ],
+	},
 	{
 		id: "1",
 		image: {
