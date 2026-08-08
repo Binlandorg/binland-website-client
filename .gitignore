@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+.env.production
 
 # Editor directories and files
 !.vscode/extensions.json
@@ -24,4 +25,3 @@ dist-ssr
 .env
 .env.development
 .env.production
-pnpm-lock.yaml

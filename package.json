@@ -3,6 +3,7 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
+	"packageManager": "pnpm@10.34.5",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
@@ -16,7 +17,7 @@
 		"test": "jest src"
 	},
 	"dependencies": {
-		"@custom-react-hooks/use-element-size": "^1.4.19",
+		"@custom-react-hooks/use-element-size": "1.4.19",
 		"@react-icons/all-files": "^4.1.0",
 		"axios": "^1.6.7",
 		"formik": "^2.4.5",
@@ -68,5 +69,14 @@
 	},
 	"jest": {
 		"testEnvironment": "jsdom"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"@biomejs/biome",
+			"@swc/core",
+			"esbuild",
+			"lefthook",
+			"sharp"
+		]
 	}
 }
